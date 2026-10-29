@@ -18,8 +18,8 @@ This repository provides the verification test scripts for the discovered thin-f
   - `PREDICTIONS_FROZEN.json`: Full-precision calibrated state amplitudes (Table 6) and predicted corrosion trajectories (Table 7 & Fig. 9).
 - `tests/`
   - `test_laboratory_equations.py`: Reproduces full-dataset training log-RMSE (`0.507` and `0.496`) and analytical interior corrosion maxima ($C^* = 4.00\text{–}4.05\,\mathrm{wt\%}$, $H^* = 167.7\text{–}184.3\,\mu\mathrm{m}$, Table 5).
-  - `test_engineering_prediction.py`: Verifies the source-calibrated Bernstein state amplitudes (Table 6) and target trajectory RMSE, normalised RMSE (`6.3%`), pointwise MAPE (`11.4%`), and endpoint errors across Jinhai, swimming pool, and NASA KSC (`1.16%` mean absolute endpoint error for the 5-parameter KGED law, Table 7).
-  - `test_salinity_film_coupling_extension.py`: Post-discovery verification of the 7-parameter salinity-modulated film-length rate law ($\lambda(c) = \lambda_0(1+c)^\beta$, Section 3.4) across the 23-fold laboratory cross-validation benchmark (`CV = 0.461`) and the 4-site field integration pipeline (`mean nRMSE = 6.7%`, `mean endpoint APE = 2.94%`, `Jinhai RMSE = 13.07 um`).
+  - `test_engineering_prediction.py`: Verifies the source-calibrated Bernstein state amplitudes (Table 6) and target trajectory RMSE and endpoint errors across Jinhai, swimming pool, and NASA KSC (`1.16%` mean absolute endpoint error for the 5-parameter KGED law, Table 7).
+  - `test_salinity_film_coupling_extension.py`: Post-discovery verification of the 7-parameter salinity-modulated film-length rate law ($\lambda(c) = \lambda_0(1+c)^\beta$, Section 3.4) across the 23-fold laboratory cross-validation benchmark (`CV = 0.461`) and the 4-site field integration pipeline (`mean absolute endpoint error = 2.94%`, `Jinhai RMSE = 13.07 um`).
 
 ## Quick Start
 
