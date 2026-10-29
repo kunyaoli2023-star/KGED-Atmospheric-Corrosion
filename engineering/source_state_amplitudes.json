@@ -1,0 +1,46 @@
+{
+  "source": "engineering/data/current_conditioned_forecast.json",
+  "coefficient_role": "dimensionless cubic Bernstein state-factor amplitudes, j=0..3",
+  "configurations": [
+    {
+      "configuration": "parsimonious",
+      "laboratory_parameter_count": 5,
+      "balanced_development_cv_log_rmse": 0.5696228917127226,
+      "equation_key": "098a8f40178a2c4452ab82923403f07336209f5b5f12415c499e544bfedebfe9",
+      "amplitude_order": [
+        "a0",
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "amplitudes": [
+        7.178381075550775,
+        6.497257826171813,
+        4.850725362507502,
+        4.3764314080780125
+      ],
+      "source_observations": 9,
+      "source_field": "models.parsimonious.source_fit.coefficients"
+    },
+    {
+      "configuration": "best_accuracy",
+      "laboratory_parameter_count": 8,
+      "balanced_development_cv_log_rmse": 0.5667032393919123,
+      "equation_key": "4c761eeb9391136436a18efaa671956694979cb6b374b07c19639edc9d13e46e",
+      "amplitude_order": [
+        "a0",
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "amplitudes": [
+        7.425614542835219,
+        6.561973996834341,
+        4.771373455336754,
+        4.20022387382395
+      ],
+      "source_observations": 9,
+      "source_field": "models.best_accuracy.source_fit.coefficients"
+    }
+  ]
+}

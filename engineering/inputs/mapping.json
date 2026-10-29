@@ -1,0 +1,24 @@
+{
+  "fixed_state_structure": {
+    "family": "bernstein",
+    "degree": 3,
+    "tau": 0.25,
+    "k": 4,
+    "driver": "laboratory_dose",
+    "lam": 0.03,
+    "objective": "balanced",
+    "id": "laboratory_dose_bernstein_3_0.25_0.03"
+  },
+  "Cbg": 0.11391973572494757,
+  "Ccap": 0.5170650867059763,
+  "Gamma": 0.3686577318304568,
+  "limits": [
+    "Retrospective zero-target-label transfer, not a fresh blind test.",
+    "Effective q/C/H are inherited empirical proxies, not measured water film or surface salt inventory.",
+    "Weather beyond one measured Q235 year is repeated; salt tails held; KSC monthly forcing is not reconstructed daily weather.",
+    "Fixed state structure was historically developed using source observations; prefix results are conditional refit diagnostics, not fully nested fresh validation.",
+    "Target temperatures or states outside laboratory/source support are extrapolation."
+  ],
+  "KSC": "User-selected old10-point data and 7.85g/cm3 mass-depth convention unchanged.",
+  "prediction_unit": "Working A/cm2 convention with Fe(II) Faraday conversion to um; original instrument unit not re-established here."
+}

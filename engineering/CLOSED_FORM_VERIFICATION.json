@@ -1,0 +1,10 @@
+{
+  "parsimonious": {
+    "independent_closed_form_max_log_difference": 0.0,
+    "i_reference": 3.4521848848307586e-05
+  },
+  "best_accuracy": {
+    "independent_closed_form_max_log_difference": 1.7763568394002505e-14,
+    "i_reference": 3.570215510892371e-05
+  }
+}

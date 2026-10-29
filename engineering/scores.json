@@ -1,0 +1,90 @@
+[
+  {
+    "model": "parsimonious",
+    "case": "linhai",
+    "role": "source_calibration",
+    "increment_r2": 0.8904162700525726,
+    "actual_final_depth_um": 272.147009481601,
+    "predicted_final_depth_um": 230.34810616152188,
+    "endpoint_error_pct": -15.358942727204584,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 22.815881966415215
+  },
+  {
+    "model": "best_accuracy",
+    "case": "linhai",
+    "role": "source_calibration",
+    "increment_r2": 0.8889860196094862,
+    "actual_final_depth_um": 272.147009481601,
+    "predicted_final_depth_um": 229.6718999222408,
+    "endpoint_error_pct": -15.607413669644533,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 22.961181919281486
+  },
+  {
+    "model": "parsimonious",
+    "case": "jinhai",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.952466977562197,
+    "actual_final_depth_um": 223.495030132935,
+    "predicted_final_depth_um": 223.61014191446947,
+    "endpoint_error_pct": 0.0515052981115538,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 13.413300543979584
+  },
+  {
+    "model": "best_accuracy",
+    "case": "jinhai",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9185885356536925,
+    "actual_final_depth_um": 223.495030132935,
+    "predicted_final_depth_um": 233.60038891637248,
+    "endpoint_error_pct": 4.52151386875439,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 17.45506004059431
+  },
+  {
+    "model": "parsimonious",
+    "case": "pool",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9349501484902568,
+    "actual_final_depth_um": 419.623321882245,
+    "predicted_final_depth_um": 426.87627170541185,
+    "endpoint_error_pct": 1.7284429737206342,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 24.80047286347404
+  },
+  {
+    "model": "best_accuracy",
+    "case": "pool",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9349981699886752,
+    "actual_final_depth_um": 419.623321882245,
+    "predicted_final_depth_um": 513.3884479648497,
+    "endpoint_error_pct": 22.34507025539374,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 36.70563731243172
+  },
+  {
+    "model": "parsimonious",
+    "case": "ksc",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9625977055457223,
+    "actual_final_depth_um": 103.18471337579618,
+    "predicted_final_depth_um": 92.67902840416599,
+    "endpoint_error_pct": -10.181435435468767,
+    "increment_scored_points": 9,
+    "depth_rmse_um": 8.928855826467771
+  },
+  {
+    "model": "best_accuracy",
+    "case": "ksc",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9647451269742757,
+    "actual_final_depth_um": 103.18471337579618,
+    "predicted_final_depth_um": 99.54966198843938,
+    "endpoint_error_pct": -3.522858443302579,
+    "increment_scored_points": 9,
+    "depth_rmse_um": 5.7317657958041055
+  }
+]
