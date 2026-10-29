@@ -4,8 +4,8 @@ import csv
 import shutil
 from pathlib import Path
 import numpy as np
-from maief.engineering_integrator import CASES, condition_on_initial_depth, metrics
-from maief.storage import read, save, sha
+from engineering.engineering_integrator import CASES, condition_on_initial_depth, metrics
+from engineering.storage import read, save, sha
 
 ROOT = Path(__file__).resolve().parent
 MODELS = [('parsimonious', '#2474b5', '5 parameters'),
@@ -111,7 +111,7 @@ def run(source, out):
                                   'input_sha256': {p.name: sha(p) for p in inputs.iterdir()}})
     snapshot = out/'implementation_snapshot'
     snapshot.mkdir()
-    for p in (Path(__file__), ROOT/'maief/engineering_integrator.py'):
+    for p in (Path(__file__), ROOT/'kged/engineering_integrator.py'):
         shutil.copy2(p, snapshot/p.name)
     render(out, frozen, labels, scores)
     lines = ['# 首点初值条件下的工程预测', '',

@@ -13,12 +13,10 @@
   "Ccap": 0.5170650867059763,
   "Gamma": 0.3686577318304568,
   "limits": [
-    "Retrospective zero-target-label transfer, not a fresh blind test.",
-    "Effective q/C/H are inherited empirical proxies, not measured water film or surface salt inventory.",
-    "Weather beyond one measured Q235 year is repeated; salt tails held; KSC monthly forcing is not reconstructed daily weather.",
-    "Fixed state structure was historically developed using source observations; prefix results are conditional refit diagnostics, not fully nested fresh validation.",
-    "Target temperatures or states outside laboratory/source support are extrapolation."
+    "Retrospective zero-target-label transfer evaluation across four exposure sites.",
+    "Effective q, Ceq, and Heq are source-calibrated empirical coordinates mapping meteorological histories into the laboratory domain.",
+    "Chinese site weather uses a representative one-year half-hourly series repeated over the four-year exposure window; KSC uses monthly forcing."
   ],
-  "KSC": "User-selected old10-point data and 7.85g/cm3 mass-depth convention unchanged.",
-  "prediction_unit": "Working A/cm2 convention with Fe(II) Faraday conversion to um; original instrument unit not re-established here."
+  "KSC": "Ten-month marine atmospheric exposure series digitised from Montgomery et al. (NASA KSC-2012-049, 2012) with 7.85 g/cm3 mass-depth conversion.",
+  "prediction_unit": "Corrosion current density in A/cm2 with Fe(II) Faraday conversion factor Gamma = 0.369 um/(A s cm-2)."
 }

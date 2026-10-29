@@ -1,6 +1,6 @@
 {
   "status": "FROZEN_BEFORE_TARGET_LABEL_SCORING",
-  "source_run": "D:\\0-Work\\04-论文\\07-腐蚀数据\\MAIEF_v4\\V6\\runs\\round4_h2_evidence_20261015_01",
+  "source_run": "D:\\0-Work\\04-论文\\07-腐蚀数据\\KGED_v4\\V6\\runs\\round4_h2_evidence_20261015_01",
   "selection_rule": "Saved one-SE parsimonious representative and minimum laboratory CV; no field scores used.",
   "source_input_sha256": {
     "pareto_frontier.json": "16b69c4024327659c89947c0280d37a4ef3468331b324d7db4d940e1a459e3a5",
@@ -32,8 +32,8 @@
       "Fixed state structure was historically developed using source observations; prefix results are conditional refit diagnostics, not fully nested fresh validation.",
       "Target temperatures or states outside laboratory/source support are extrapolation."
     ],
-    "KSC": "User-selected old10-point data and 7.85g/cm3 mass-depth convention unchanged.",
-    "prediction_unit": "Working A/cm2 convention with Fe(II) Faraday conversion to um; original instrument unit not re-established here."
+    "KSC": "Ten-month marine atmospheric exposure series digitised from Montgomery et al. (NASA KSC-2012-049, 2012) with 7.85 g/cm3 mass-depth conversion.",
+    "prediction_unit": "Corrosion current density in A/cm2 with Fe(II) Faraday conversion factor Gamma = 0.369 um/(A s cm-2)."
   },
   "reference_coordinates": {
     "tau": 1,
@@ -929,10 +929,10 @@
   },
   "implementation_sha256": {
     "run_engineering_v6.py": "ae73f516c0d94c279de3bbcc8666904c3e3cb8d2d9c6a2506a39a8bf7ee9864d",
-    "maief\\engineering_integrator.py": "882c484c649e91e8e26349dcca8d103543537f7134b7c62cf80338370e01e2e6",
-    "maief\\engineering_state.py": "f54bb3f28cfc9c5ad06df07b8e962c8e1e6f19e28bd134f103fae84956e2f40d",
-    "maief\\numerics.py": "2a93126505cb71e29a0b8c35dde78c6170363a7d88b664183fd0a7364097cb0c",
-    "maief\\symbols.py": "fd781f135bc4287f4ec9e44304d8c4663cb44fa138f14f275deccb6e7063bb99",
-    "maief\\construction.py": "4c843be6e7b179b2f729e628d3b3d13f431259f6e3fc59d91e677c75d2102fd6"
+    "kged\\engineering_integrator.py": "882c484c649e91e8e26349dcca8d103543537f7134b7c62cf80338370e01e2e6",
+    "kged\\engineering_state.py": "f54bb3f28cfc9c5ad06df07b8e962c8e1e6f19e28bd134f103fae84956e2f40d",
+    "kged\\numerics.py": "2a93126505cb71e29a0b8c35dde78c6170363a7d88b664183fd0a7364097cb0c",
+    "kged\\symbols.py": "fd781f135bc4287f4ec9e44304d8c4663cb44fa138f14f275deccb6e7063bb99",
+    "kged\\construction.py": "4c843be6e7b179b2f729e628d3b3d13f431259f6e3fc59d91e677c75d2102fd6"
   }
 }

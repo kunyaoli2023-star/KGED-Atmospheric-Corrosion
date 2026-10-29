@@ -79875,7 +79875,7 @@
     }
   },
   "v6_simple": {
-    "name": "MAIEF: parsimonious",
+    "name": "KGED: parsimonious",
     "kind": "v6",
     "record": {
       "modules": [
@@ -86414,7 +86414,7 @@
     }
   },
   "v6_best": {
-    "name": "MAIEF: best accuracy",
+    "name": "KGED: best accuracy",
     "kind": "v6",
     "record": {
       "modules": [

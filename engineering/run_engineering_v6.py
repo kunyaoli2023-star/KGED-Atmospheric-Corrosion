@@ -4,11 +4,11 @@ import shutil
 import sys
 from pathlib import Path
 import numpy as np
-from maief.storage import read, save, sha
-from maief.numerics import Module
-from maief.symbols import REFERENCE
-from maief.engineering_integrator import CASES, Integrator, metrics
-from maief import engineering_state as state
+from engineering.storage import read, save, sha
+from engineering.numerics import Module
+from engineering.symbols import REFERENCE
+from engineering.engineering_integrator import CASES, Integrator, metrics
+from engineering import engineering_state as state
 
 ROOT=Path(__file__).resolve().parent
 
@@ -112,7 +112,7 @@ def run(source,out):
             'quadrature_checks':checks,'predictions':predictions}
     frozen['target_reads_before_freeze']=access['blocked_target_reads']
     frozen['input_sha256']={p.name:sha(p) for p in snapshots.iterdir()}
-    frozen['implementation_sha256']={str(p.relative_to(ROOT)):sha(p) for p in (Path(__file__),ROOT/'maief/engineering_integrator.py',ROOT/'maief/engineering_state.py',ROOT/'maief/numerics.py',ROOT/'maief/symbols.py',ROOT/'maief/construction.py')}
+    frozen['implementation_sha256']={str(p.relative_to(ROOT)):sha(p) for p in (Path(__file__),ROOT/'kged/engineering_integrator.py',ROOT/'kged/engineering_state.py',ROOT/'kged/numerics.py',ROOT/'kged/symbols.py',ROOT/'kged/construction.py')}
     save(out/'PREDICTIONS_FROZEN.json',frozen)
     frozen_sha=sha(out/'PREDICTIONS_FROZEN.json')
     access['scoring']=True
@@ -133,7 +133,7 @@ def run(source,out):
     save(out/'SCORING_RECEIPT.json',{'frozen_prediction_sha256':frozen_sha,'target_calibration_labels':0,
         'input_sha256':{p.name:sha(p) for p in snapshots.iterdir()},'scope':'Retrospective engineering comparison; sites previously used in project development.'})
     code=out/'implementation_snapshot';code.mkdir()
-    for p in (Path(__file__),ROOT/'maief/engineering_integrator.py',ROOT/'maief/engineering_state.py'):
+    for p in (Path(__file__),ROOT/'kged/engineering_integrator.py',ROOT/'kged/engineering_state.py'):
         shutil.copy2(p,code/p.name)
     render(out,chosen,frozen,scores,labels)
     print(__import__('json').dumps({'status':'COMPLETE','out':str(out),'scores':scores},ensure_ascii=False,indent=2))
