@@ -64,6 +64,13 @@ MODELS = {
         + salt(p[1], p[2], c)
         + film_peaked(p[3], 1.0, p[4] * ((1.0 + c) ** p[5]), p[4] * ((1.0 + C0) ** p[5]), h),
     ),
+    "7p: K19 with lam(c) = lam0*exp(beta*c)": (
+        6,
+        lambda p, b, tau, c, h: b
+        + p[0] * (1.0 - 1.0 / tau)
+        + salt(p[1], p[2], c)
+        + film_peaked(p[3], 1.0, p[4] * np.exp(p[5] * c), p[4] * np.exp(p[5] * C0), h),
+    ),
     "9p: KGED-8 with lam(c) = lam0*exp(beta*c)": (
         8,
         lambda p, b, tau, c, h: b
@@ -131,11 +138,12 @@ def main():
         J = full.jac / np.linalg.norm(full.jac, axis=0)
         sv = np.linalg.svd(J, compute_uv=False)
         rank = int(np.sum(sv > 1e-7 * sv[0]))
+        cond = float(sv[0] / sv[-1]) if sv[-1] > 0 else float("inf")
         fitted_full[name] = (full.x[0], np.exp(full.x[1:]), fn, bal)
         print(
             f"{name:42s} {k:2d} {rmse:6.3f} {bal:6.3f} | "
             f"{ax['shape_group']:5.3f} {ax['T_C']:5.3f} {ax['h_um']:5.3f} {ax['C_wt']:5.3f} | "
-            f"{bic:7.1f} {rank:2d}/{k:<2d}"
+            f"{bic:7.1f} {rank:2d}/{k:<2d} (cond={cond:4.1f})"
         )
 
     # Verify 7-parameter field integration under the frozen engineering protocol
@@ -185,7 +193,7 @@ def main():
     )
     amps = sol_lh.x
     print(f"\n[KGED-7 Field Integration Check] Linhai Bernstein amplitudes: {np.round(amps, 4).tolist()}")
-    apes, mapes, nrmses = [], [], []
+    apes = []
     for cs in ("jinhai", "pool", "ksc"):
         y_obs = np.asarray(labels[cs]["observed_depth_um"], float)
         raw_pred = bases[cs] @ amps
@@ -193,13 +201,9 @@ def main():
         err = y_cond[1:] - y_obs[1:]
         rmse = float(np.sqrt(np.mean(err ** 2)))
         ep_err = float((y_cond[-1] - y_obs[-1]) / y_obs[-1] * 100.0)
-        mape = float(np.mean(np.abs(err / y_obs[1:])) * 100.0)
-        nrmse = float(rmse / y_obs[-1] * 100.0)
         apes.append(abs(ep_err))
-        mapes.append(mape)
-        nrmses.append(nrmse)
-        print(f"  * {cs:8s}: RMSE = {rmse:6.2f} um | Endpoint error = {ep_err:+6.2f}% | PointMAPE = {mape:5.1f}% | nRMSE = {nrmse:5.1f}%")
-    print(f"  => Target-site Mean Endpoint APE = {np.mean(apes):.2f}% | Mean PointMAPE = {np.mean(mapes):.1f}% | Mean nRMSE = {np.mean(nrmses):.1f}%")
+        print(f"  * {cs:8s}: RMSE = {rmse:6.2f} um | Endpoint error = {ep_err:+6.2f}%")
+    print(f"  => Target-site Mean Endpoint APE = {np.mean(apes):.2f}%")
     print("\nPASSED: Post-discovery 7-parameter coupling verification complete.")
 
 
