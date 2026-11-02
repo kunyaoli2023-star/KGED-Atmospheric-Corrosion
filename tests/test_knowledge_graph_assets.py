@@ -61,9 +61,9 @@ def test_two_layer_knowledge_graph():
     assert len(hyp_nodes) == 4, f"Expected 4 hypotheses (H1-H4, Table S1), got {len(hyp_nodes)}"
     assert len(construction_nodes) == 2
 
-    # 3. Verify 41 candidate modules (M01-M41, Table S13)
+    # 3. Verify 41 candidate modules (M01-M41, Table S12)
     mods = json.loads((kg_dir / "modules_M01_M41_4round.json").read_text(encoding="utf-8"))
-    assert len(mods) == 41, f"Expected 41 modules (M01-M41, Table S13), got {len(mods)}"
+    assert len(mods) == 41, f"Expected 41 modules (M01-M41, Table S12), got {len(mods)}"
     r1_mods = [m for m in mods if m["round"] == 1]
     r2_4_mods = [m for m in mods if m["round"] in (2, 3, 4)]
     assert len(r1_mods) == 20, f"Expected 20 literature-direct baseline modules in Round 1 (M01-M20), got {len(r1_mods)}"
@@ -74,4 +74,4 @@ if __name__ == "__main__":
     test_literature_corpus_and_saturation()
     test_two_layer_knowledge_graph()
     print("[PASS] 50-paper literature corpus, 302 extracted relationships, and 3-resolution saturation audit verified (Table S2 & Fig. S1).")
-    print("[PASS] Raw literature graph (50 papers, 1,057 nodes, 3,116 edges) and executable two-layer knowledge graph (12 process categories, 31 kernels K01-K31, 20 tags, 41 modules M01-M41) verified (Tables S1, S3-S6, S13).")
+    print("[PASS] Raw literature graph (50 papers, 1,057 nodes, 3,116 edges) and executable two-layer knowledge graph (12 process categories, 31 kernels K01-K31, 20 tags, 41 modules M01-M41) verified (Tables S1, S3-S6, S12).")
