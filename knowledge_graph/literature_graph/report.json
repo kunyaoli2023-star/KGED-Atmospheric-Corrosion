@@ -1,0 +1,582 @@
+{
+  "input_path": "d:\\0-Work\\04-论文\\07-腐蚀数据\\llm方程\\extracted_formulas_vision\\all_formulas_merged_with_time.json",
+  "num_papers": 50,
+  "num_nodes": 1057,
+  "num_edges": 3116,
+  "ontologies": {
+    "kinetics_T": "Temperature",
+    "environment_Cl": "Chloride",
+    "transport_H": "Film/Moisture"
+  },
+  "core_factors": {
+    "T_core": "Thermal activation state (T*)",
+    "Cl_core": "Effective chloride activity/load (Cl*)",
+    "delta_core": "Effective electrolyte geometry/wetness (δ*)"
+  },
+  "operator_stability_summary": {
+    "environment_Cl": {
+      "papers_with_factor": 48,
+      "top_operators": [
+        {
+          "operator": "OTHER",
+          "stability": 0.3958333333333333,
+          "papers_with_operator": 19
+        },
+        {
+          "operator": "POW_VAR",
+          "stability": 0.1875,
+          "papers_with_operator": 9
+        },
+        {
+          "operator": "EXP",
+          "stability": 0.14583333333333334,
+          "papers_with_operator": 7
+        },
+        {
+          "operator": "ARRHENIUS",
+          "stability": 0.020833333333333332,
+          "papers_with_operator": 1
+        },
+        {
+          "operator": "EQCIRCUIT",
+          "stability": 0.020833333333333332,
+          "papers_with_operator": 1
+        },
+        {
+          "operator": "INT",
+          "stability": 0.020833333333333332,
+          "papers_with_operator": 1
+        }
+      ]
+    },
+    "kinetics_T": {
+      "papers_with_factor": 45,
+      "top_operators": [
+        {
+          "operator": "OTHER",
+          "stability": 0.24444444444444444,
+          "papers_with_operator": 11
+        },
+        {
+          "operator": "EXP",
+          "stability": 0.13333333333333333,
+          "papers_with_operator": 6
+        },
+        {
+          "operator": "ARRHENIUS",
+          "stability": 0.06666666666666667,
+          "papers_with_operator": 3
+        },
+        {
+          "operator": "POW_VAR",
+          "stability": 0.06666666666666667,
+          "papers_with_operator": 3
+        },
+        {
+          "operator": "INT",
+          "stability": 0.044444444444444446,
+          "papers_with_operator": 2
+        },
+        {
+          "operator": "EQCIRCUIT",
+          "stability": 0.022222222222222223,
+          "papers_with_operator": 1
+        },
+        {
+          "operator": "INV_T",
+          "stability": 0.022222222222222223,
+          "papers_with_operator": 1
+        }
+      ]
+    },
+    "transport_H": {
+      "papers_with_factor": 50,
+      "top_operators": [
+        {
+          "operator": "OTHER",
+          "stability": 0.62,
+          "papers_with_operator": 31
+        },
+        {
+          "operator": "POW_VAR",
+          "stability": 0.18,
+          "papers_with_operator": 9
+        },
+        {
+          "operator": "EXP",
+          "stability": 0.14,
+          "papers_with_operator": 7
+        },
+        {
+          "operator": "EQCIRCUIT",
+          "stability": 0.06,
+          "papers_with_operator": 3
+        },
+        {
+          "operator": "ARRHENIUS",
+          "stability": 0.04,
+          "papers_with_operator": 2
+        },
+        {
+          "operator": "INT",
+          "stability": 0.02,
+          "papers_with_operator": 1
+        },
+        {
+          "operator": "INV_delta",
+          "stability": 0.02,
+          "papers_with_operator": 1
+        },
+        {
+          "operator": "POW_SCI",
+          "stability": 0.02,
+          "papers_with_operator": 1
+        },
+        {
+          "operator": "THRESH",
+          "stability": 0.02,
+          "papers_with_operator": 1
+        }
+      ]
+    }
+  },
+  "top_symbol_summary": {
+    "environment_Cl": {
+      "top_symbols": [
+        {
+          "symbol": "Cl-",
+          "paper_freq": 20,
+          "operator_diversity": 2,
+          "weighted_degree": 49,
+          "betweenness": 0.4515691704165226
+        },
+        {
+          "symbol": "Cl",
+          "paper_freq": 10,
+          "operator_diversity": 4,
+          "weighted_degree": 23,
+          "betweenness": 0.17454136379370025
+        },
+        {
+          "symbol": "NaCl",
+          "paper_freq": 9,
+          "operator_diversity": 1,
+          "weighted_degree": 34,
+          "betweenness": 0.2744029075804777
+        },
+        {
+          "symbol": "salinity",
+          "paper_freq": 7,
+          "operator_diversity": 0,
+          "weighted_degree": 33,
+          "betweenness": 0.17457020883812155
+        },
+        {
+          "symbol": "Cl¯",
+          "paper_freq": 3,
+          "operator_diversity": 1,
+          "weighted_degree": 7,
+          "betweenness": 0.07528556593977155
+        },
+        {
+          "symbol": "chloride ions",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 14,
+          "betweenness": 0.15835929387331257
+        },
+        {
+          "symbol": "chloride concentration",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 12,
+          "betweenness": 0.0007499711549555786
+        },
+        {
+          "symbol": "Salinity",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 11,
+          "betweenness": 0.0006057459328487366
+        },
+        {
+          "symbol": "chloride",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 5,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "[Cl]",
+          "paper_freq": 2,
+          "operator_diversity": 4,
+          "weighted_degree": 8,
+          "betweenness": 0.07528556593977155
+        },
+        {
+          "symbol": "FeCl2",
+          "paper_freq": 2,
+          "operator_diversity": 1,
+          "weighted_degree": 22,
+          "betweenness": 0.009691934925579786
+        },
+        {
+          "symbol": "FeCl3",
+          "paper_freq": 2,
+          "operator_diversity": 1,
+          "weighted_degree": 22,
+          "betweenness": 0.009691934925579786
+        },
+        {
+          "symbol": "Cl⁻",
+          "paper_freq": 2,
+          "operator_diversity": 1,
+          "weighted_degree": 5,
+          "betweenness": 0.06092073381793008
+        },
+        {
+          "symbol": "chlorine",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 10,
+          "betweenness": 0.0012114918656974732
+        },
+        {
+          "symbol": "MgCl2",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 10,
+          "betweenness": 0.0002307603553709473
+        },
+        {
+          "symbol": "[Cl-]",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 8,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "Cl concentration",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 7,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "airborne salts",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 6,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "chlorides",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 5,
+          "betweenness": 0.0006922810661128419
+        },
+        {
+          "symbol": "Cl deposition rate",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 5,
+          "betweenness": 0.0
+        }
+      ]
+    },
+    "kinetics_T": {
+      "top_symbols": [
+        {
+          "symbol": "T",
+          "paper_freq": 22,
+          "operator_diversity": 7,
+          "weighted_degree": 39,
+          "betweenness": 0.6747030048916841
+        },
+        {
+          "symbol": "temperature",
+          "paper_freq": 12,
+          "operator_diversity": 0,
+          "weighted_degree": 14,
+          "betweenness": 0.3382250174703005
+        },
+        {
+          "symbol": "Average temperature",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 5,
+          "betweenness": 0.06429070580013976
+        },
+        {
+          "symbol": "Temperature",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 4,
+          "betweenness": 0.09433962264150943
+        },
+        {
+          "symbol": "To",
+          "paper_freq": 2,
+          "operator_diversity": 4,
+          "weighted_degree": 12,
+          "betweenness": 0.006289308176100628
+        },
+        {
+          "symbol": "K",
+          "paper_freq": 2,
+          "operator_diversity": 1,
+          "weighted_degree": 13,
+          "betweenness": 0.008385744234800839
+        },
+        {
+          "symbol": "τ25-35",
+          "paper_freq": 2,
+          "operator_diversity": 1,
+          "weighted_degree": 4,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "τ5-25",
+          "paper_freq": 2,
+          "operator_diversity": 1,
+          "weighted_degree": 4,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "25 °C",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 4,
+          "betweenness": 0.0006988120195667365
+        },
+        {
+          "symbol": "40 °C",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 3,
+          "betweenness": 0.03284416491963662
+        },
+        {
+          "symbol": "30 °C",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 3,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "temp.",
+          "paper_freq": 2,
+          "operator_diversity": 0,
+          "weighted_degree": 0,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "B",
+          "paper_freq": 1,
+          "operator_diversity": 5,
+          "weighted_degree": 8,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "f(T)",
+          "paper_freq": 1,
+          "operator_diversity": 4,
+          "weighted_degree": 8,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "F",
+          "paper_freq": 1,
+          "operator_diversity": 3,
+          "weighted_degree": 2,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "R",
+          "paper_freq": 1,
+          "operator_diversity": 3,
+          "weighted_degree": 2,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "RT",
+          "paper_freq": 1,
+          "operator_diversity": 3,
+          "weighted_degree": 1,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "Ea",
+          "paper_freq": 1,
+          "operator_diversity": 2,
+          "weighted_degree": 8,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "k",
+          "paper_freq": 1,
+          "operator_diversity": 2,
+          "weighted_degree": 1,
+          "betweenness": 0.0
+        },
+        {
+          "symbol": "H(0)",
+          "paper_freq": 1,
+          "operator_diversity": 1,
+          "weighted_degree": 5,
+          "betweenness": 0.0
+        }
+      ]
+    },
+    "transport_H": {
+      "top_symbols": [
+        {
+          "symbol": "RH",
+          "paper_freq": 30,
+          "operator_diversity": 5,
+          "weighted_degree": 176,
+          "betweenness": 0.6318120476015214
+        },
+        {
+          "symbol": "TOW",
+          "paper_freq": 8,
+          "operator_diversity": 3,
+          "weighted_degree": 42,
+          "betweenness": 0.029022512575144162
+        },
+        {
+          "symbol": "H2O",
+          "paper_freq": 7,
+          "operator_diversity": 1,
+          "weighted_degree": 56,
+          "betweenness": 0.07588792786161211
+        },
+        {
+          "symbol": "O2",
+          "paper_freq": 6,
+          "operator_diversity": 1,
+          "weighted_degree": 40,
+          "betweenness": 0.025955404244877932
+        },
+        {
+          "symbol": "humidity",
+          "paper_freq": 6,
+          "operator_diversity": 0,
+          "weighted_degree": 27,
+          "betweenness": 0.08757207704576124
+        },
+        {
+          "symbol": "A",
+          "paper_freq": 4,
+          "operator_diversity": 4,
+          "weighted_degree": 52,
+          "betweenness": 0.018233959023432722
+        },
+        {
+          "symbol": "N",
+          "paper_freq": 4,
+          "operator_diversity": 2,
+          "weighted_degree": 37,
+          "betweenness": 0.01392467181940865
+        },
+        {
+          "symbol": "t",
+          "paper_freq": 4,
+          "operator_diversity": 2,
+          "weighted_degree": 29,
+          "betweenness": 0.025407158630842842
+        },
+        {
+          "symbol": "n",
+          "paper_freq": 4,
+          "operator_diversity": 2,
+          "weighted_degree": 20,
+          "betweenness": 0.004497147589252852
+        },
+        {
+          "symbol": "rust layer thickness",
+          "paper_freq": 4,
+          "operator_diversity": 0,
+          "weighted_degree": 31,
+          "betweenness": 0.017714084161452582
+        },
+        {
+          "symbol": "rust layer",
+          "paper_freq": 4,
+          "operator_diversity": 0,
+          "weighted_degree": 22,
+          "betweenness": 0.004624432584958902
+        },
+        {
+          "symbol": "C",
+          "paper_freq": 3,
+          "operator_diversity": 4,
+          "weighted_degree": 18,
+          "betweenness": 0.0007936142804563858
+        },
+        {
+          "symbol": "W",
+          "paper_freq": 3,
+          "operator_diversity": 3,
+          "weighted_degree": 31,
+          "betweenness": 0.003726536621273463
+        },
+        {
+          "symbol": "DRH",
+          "paper_freq": 3,
+          "operator_diversity": 1,
+          "weighted_degree": 18,
+          "betweenness": 0.0004140596245859403
+        },
+        {
+          "symbol": "wetness",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 26,
+          "betweenness": 0.057870966752545716
+        },
+        {
+          "symbol": "moisture",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 22,
+          "betweenness": 0.005585204269414795
+        },
+        {
+          "symbol": "electrolyte",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 17,
+          "betweenness": 0.02832091154459571
+        },
+        {
+          "symbol": "Relative humidity",
+          "paper_freq": 3,
+          "operator_diversity": 0,
+          "weighted_degree": 15,
+          "betweenness": 0.014732854864433823
+        },
+        {
+          "symbol": "AW",
+          "paper_freq": 2,
+          "operator_diversity": 2,
+          "weighted_degree": 14,
+          "betweenness": 4.6006624953993374e-05
+        },
+        {
+          "symbol": "L",
+          "paper_freq": 2,
+          "operator_diversity": 1,
+          "weighted_degree": 25,
+          "betweenness": 0.0010121457489878543
+        }
+      ]
+    }
+  },
+  "files": {
+    "graphml": "kg_outputs\\graph.graphml",
+    "stability_csv": "kg_outputs\\stability_table.csv",
+    "top_symbols_csv": "kg_outputs\\top_symbols.csv"
+  }
+}

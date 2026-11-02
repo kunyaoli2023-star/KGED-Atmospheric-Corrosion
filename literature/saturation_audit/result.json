@@ -1,0 +1,46 @@
+{
+  "schema": "rhe_v3_multiresolution_knowledge_saturation_v1",
+  "paper_count": 50,
+  "formula_count": 302,
+  "summaries": {
+    "coarse": {
+      "resolution": "coarse",
+      "observed_unique_units": 17,
+      "singleton_units_q1": 8,
+      "doubleton_units_q2": 2,
+      "chao2_estimated_units": 26.333333333333336,
+      "estimated_completeness": 0.6455696202531644,
+      "actual_order_last_novel_paper": 32,
+      "actual_order_new_units_last_10_papers": 0,
+      "order_robust_saturation_paper_count": 50,
+      "passes_saturation_rule": false
+    },
+    "medium": {
+      "resolution": "medium",
+      "observed_unique_units": 9,
+      "singleton_units_q1": 0,
+      "doubleton_units_q2": 2,
+      "chao2_estimated_units": 9.0,
+      "estimated_completeness": 1.0,
+      "actual_order_last_novel_paper": 33,
+      "actual_order_new_units_last_10_papers": 0,
+      "order_robust_saturation_paper_count": 42,
+      "passes_saturation_rule": true
+    },
+    "fine": {
+      "resolution": "fine",
+      "observed_unique_units": 70,
+      "singleton_units_q1": 66,
+      "doubleton_units_q2": 1,
+      "chao2_estimated_units": 1142.5,
+      "estimated_completeness": 0.061269146608315096,
+      "actual_order_last_novel_paper": 46,
+      "actual_order_new_units_last_10_papers": 2,
+      "order_robust_saturation_paper_count": null,
+      "passes_saturation_rule": false
+    }
+  },
+  "joint_knowledge_saturation": false,
+  "interpretation": "The curated corpus is not jointly saturated across resolutions; a coarse plateau cannot justify global knowledge closure.",
+  "claim_boundary": "Saturation of the available curated corpus and ontology, not saturation of the global corrosion literature."
+}

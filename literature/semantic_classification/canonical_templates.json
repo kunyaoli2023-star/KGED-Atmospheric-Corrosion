@@ -1,0 +1,553 @@
+{
+  "schema_version": "0.1-draft",
+  "purpose": "Literature-distilled canonical operator templates for MAIEF-style corrosion equation discovery. These are mechanism-level template families, not fixed final equations.",
+  "source_corpus": {
+    "root": "llm方程",
+    "primary_files": [
+      "1_all_formulas.json",
+      "extracted_formulas_vision/analysis_result.txt",
+      "IccorAgent/kg_outputs/graph.graphml"
+    ],
+    "notes": [
+      "The current 1_all_formulas.json contains useful extracted content but is not strict JSON in all places; this draft is distilled from readable formula evidence plus the existing analysis_result and graph ontology.",
+      "Templates are grouped by task variables T, Cl, h(delta/wetness), and coupling.",
+      "Measurement definitions, pure reaction equations, black-box f(...) placeholders, and paper-specific regression equations are listed as excluded patterns rather than core templates."
+    ]
+  },
+  "selection_policy": {
+    "core_template_goal": "Keep a small stable core while allowing 1-2 controlled variants per family.",
+    "core_template_count_target": {
+      "T": "2-3",
+      "Cl": "3-4",
+      "h": "3-4",
+      "coupling": "4-6"
+    },
+    "keep_if": [
+      "The functional family recurs across the corrosion literature or appears in the extracted KG as an OperatorFamily.",
+      "The template maps cleanly to one of the task variables T, Cl, h, or a physically meaningful interaction.",
+      "The template has interpretable parameters or can support derived diagnostics such as Ea, Cl_opt, or h_opt.",
+      "The template is low to moderate complexity, preferably 1-3 parameters."
+    ],
+    "drop_if": [
+      "It is only a measurement definition rather than a mechanistic rate factor.",
+      "It is a chemical reaction equation without a rate law.",
+      "It is a dataset-specific empirical regression with many environment bins.",
+      "It is a black-box placeholder such as f(T, RH, Cl, t) without mathematical topology.",
+      "It is algebraically equivalent to a simpler retained template."
+    ]
+  },
+  "templates": {
+    "T": [
+      {
+        "template_id": "T_arrhenius_inverse",
+        "status": "core_keep",
+        "mechanism": "thermal activation",
+        "canonical_formula_py": "-p0 / x",
+        "operator_variable": "T",
+        "param_count": 1,
+        "diagnostics": ["Ea_extractable"],
+        "literature_evidence": [
+          {
+            "source": "22_Atmospheric corrosion prediction a review.pdf",
+            "pattern": "AF(T) = exp(B*(1/T0 - 1/T)); exp(-Ea/(R*T))"
+          },
+          {
+            "source": "IccorAgent/kg_outputs/graph.graphml",
+            "pattern": "OperatorFamily::ARRHENIUS and OperatorFamily::INV_T"
+          }
+        ],
+        "why_keep": "This is the most portable temperature mechanism and gives an interpretable activation-energy-like parameter.",
+        "allowed_variants": [
+          "p0*(1/p1 - 1/x) when a reference temperature is explicitly needed",
+          "p0*exp(-p1/x) only as a multiplicative external factor, not as a separate additive operator"
+        ],
+        "deprioritize_variants": [
+          "-p0/(x+p1) unless there is evidence for a shifted inverse-temperature scale",
+          "high-order polynomial temperature terms"
+        ]
+      },
+      {
+        "template_id": "T_linear_lograte",
+        "status": "core_keep",
+        "mechanism": "local linearized thermal response",
+        "canonical_formula_py": "p0 * x",
+        "operator_variable": "T",
+        "param_count": 1,
+        "diagnostics": [],
+        "literature_evidence": [
+          {
+            "source": "analysis_result.txt",
+            "pattern": "Multiple dose-response formulas use exp(beta*T + ...), equivalent to linear T in log-rate space."
+          },
+          {
+            "source": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf",
+            "pattern": "rcorr = beta0 + beta1*T + beta2*RH + beta3*CDR + beta4*SO2"
+          }
+        ],
+        "why_keep": "It is a simple baseline and helps distinguish true Arrhenius behavior from approximately linear temperature response over a narrow range.",
+        "allowed_variants": [
+          "p0*(x-p1) only when p1 is fixed or tied to a reference value"
+        ],
+        "deprioritize_variants": [
+          "p0*x + p1 as an operator if the global model already has an intercept",
+          "quadratic T-only terms in the core library"
+        ]
+      },
+      {
+        "template_id": "T_saturating_activation",
+        "status": "explore_keep",
+        "mechanism": "monotonic activated rise with finite plateau",
+        "canonical_formula_py": "p0 * (1 - np.exp(-p1 * x))",
+        "operator_variable": "T",
+        "param_count": 2,
+        "diagnostics": [],
+        "literature_evidence": [
+          {
+            "source": "analysis_result.txt",
+            "pattern": "Temperature response appears as exponential or empirical monotonic terms in several atmospheric corrosion models."
+          }
+        ],
+        "why_keep": "Useful as a controlled alternative when Arrhenius overstates the high-temperature change.",
+        "allowed_variants": [
+          "p0*x/(p1+x)"
+        ],
+        "deprioritize_variants": [
+          "p0 - p1*exp(-p2*x) unless the offset is needed by the model structure"
+        ]
+      }
+    ],
+    "Cl": [
+      {
+        "template_id": "Cl_power_law",
+        "status": "core_keep",
+        "mechanism": "chloride promotion",
+        "canonical_formula_py": "p0 * np.log(np.maximum(x, 1e-10))",
+        "operator_variable": "Cl",
+        "param_count": 1,
+        "diagnostics": [],
+        "literature_evidence": [
+          {
+            "source": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf",
+            "pattern": "K = a*t^b*[Cl]^c*(W/D)^d"
+          },
+          {
+            "source": "22_Atmospheric corrosion prediction a review.pdf",
+            "pattern": "AF(Cl) = (Cl/Cl0)^G; E*Cl^F"
+          }
+        ],
+        "why_keep": "Power-law chloride acceleration is one of the clearest repeated quantitative forms in the literature; in additive log-rate representation it becomes log(Cl).",
+        "allowed_variants": [
+          "p0*np.log1p(p1*x) for finite behavior at x=0"
+        ],
+        "deprioritize_variants": [
+          "unbounded raw x**p as an additive operator without log-rate interpretation"
+        ]
+      },
+      {
+        "template_id": "Cl_linear_promotion",
+        "status": "core_keep",
+        "mechanism": "linear chloride promotion",
+        "canonical_formula_py": "p0 * x",
+        "operator_variable": "Cl",
+        "param_count": 1,
+        "diagnostics": [],
+        "literature_evidence": [
+          {
+            "source": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf",
+            "pattern": "A + B*[Cl] - C*W"
+          },
+          {
+            "source": "analysis_result.txt",
+            "pattern": "Linear Cl terms appear frequently in dose-response models."
+          }
+        ],
+        "why_keep": "Acts as a simple promotion baseline and a guard against overusing bell-shaped chloride forms.",
+        "allowed_variants": [
+          "p0*x/(p1+x) for saturation"
+        ],
+        "deprioritize_variants": [
+          "multiple independent linear Cl aliases"
+        ]
+      },
+      {
+        "template_id": "Cl_log_linear_optimum",
+        "status": "core_keep",
+        "mechanism": "low-Cl activation plus high-Cl inhibition/transport limitation",
+        "canonical_formula_py": "p0 * (np.log(np.maximum(x, 1e-10)) - p1 * x)",
+        "operator_variable": "Cl",
+        "param_count": 2,
+        "diagnostics": ["Cl_opt_extractable"],
+        "literature_evidence": [
+          {
+            "source": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf",
+            "pattern": "Ion concentration has a competing effect and intermediate electrolyte thickness/concentration can maximize corrosion."
+          },
+          {
+            "source": "26_New insights into the effect of chloride ions on structure and composition of rust layers.pdf",
+            "pattern": "High chloride can suppress protective transformations and change transport; nonmonotonic logic is plausible."
+          }
+        ],
+        "why_keep": "This is the compact two-parameter form that expresses a chloride danger window and keeps Cl_opt interpretable.",
+        "allowed_variants": [
+          "p0*np.log1p(p1*x) - p2*x when finite x=0 behavior is required"
+        ],
+        "deprioritize_variants": [
+          "p0*log(x)-p1*x as a separate template if Cl_log_linear_optimum is already present",
+          "shifted log-linear variants unless x=0 numerical stability requires them"
+        ]
+      },
+      {
+        "template_id": "Cl_langmuir_bell",
+        "status": "core_keep",
+        "mechanism": "chloride activation with inhibited high-concentration branch",
+        "canonical_formula_py": "np.log(1 + p0 * x * np.exp(-p1 * x))",
+        "operator_variable": "Cl",
+        "param_count": 2,
+        "diagnostics": ["Cl_opt_extractable"],
+        "literature_evidence": [
+          {
+            "source": "analysis_result.txt",
+            "pattern": "Cl threshold, promotion, and high-concentration inhibition logic appears repeatedly."
+          },
+          {
+            "source": "IccorAgent/kg_outputs/graph.graphml",
+            "pattern": "Cl_core is connected to POW_VAR, EXP, THRESH, and interaction families."
+          }
+        ],
+        "why_keep": "Finite at x=0 and close to a Langmuir-like activated/inhibited process.",
+        "allowed_variants": [
+          "np.log1p(p0*x**p1*np.exp(-p2*x)) as the single controlled power-bell variant"
+        ],
+        "deprioritize_variants": [
+          "several simultaneous Gaussian, shifted, scaled, and Hill chloride bells"
+        ]
+      },
+      {
+        "template_id": "Cl_threshold_gate",
+        "status": "explore_keep",
+        "mechanism": "chloride activation threshold",
+        "canonical_formula_py": "p0 / (1 + np.exp(-p1 * (x - p2)))",
+        "operator_variable": "Cl",
+        "param_count": 3,
+        "diagnostics": ["Cl_threshold_extractable"],
+        "literature_evidence": [
+          {
+            "source": "13_A Micro-Raman Spectroscopic Study of Marine Atmospheric Corrosion of Carbon Steel The Effect of Akaganeite.pdf",
+            "pattern": "Corrosion or akaganeite formation becomes chloride-dependent above a deposition threshold."
+          }
+        ],
+        "why_keep": "The threshold idea appears in the literature, but it should remain exploratory because it is harder to identify from small data.",
+        "allowed_variants": [
+          "p0*np.maximum(x-p1, 0.0) if piecewise forms are allowed"
+        ],
+        "deprioritize_variants": [
+          "4-parameter Hill activation-inhibition forms in the core library"
+        ]
+      }
+    ],
+    "h": [
+      {
+        "template_id": "h_standard_bell",
+        "status": "core_keep",
+        "mechanism": "film thickness optimum",
+        "canonical_formula_py": "p0 * x * np.exp(-p1 * x)",
+        "operator_variable": "h",
+        "param_count": 2,
+        "diagnostics": ["h_opt_extractable"],
+        "literature_evidence": [
+          {
+            "source": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf",
+            "pattern": "Intermediate moisture layer/electrolyte thickness can maximize corrosion due to competing anodic and cathodic effects."
+          },
+          {
+            "source": "graph.graphml",
+            "pattern": "CoreFactor::delta_core maps film, thin water film, electrolyte films, TOW, and wetness."
+          }
+        ],
+        "why_keep": "This is the simplest interpretable film-optimum template and directly supports h_opt extraction.",
+        "allowed_variants": [
+          "x*np.exp(-p0*x) with fixed amplitude handled by the global coefficient"
+        ],
+        "deprioritize_variants": [
+          "shifted exponential bell as a core substitute",
+          "Gaussian amplitude versions unless symmetry is specifically required"
+        ]
+      },
+      {
+        "template_id": "h_power_bell",
+        "status": "core_keep",
+        "mechanism": "asymmetric film activation and transport damping",
+        "canonical_formula_py": "p0 * x**p1 * np.exp(-p2 * x)",
+        "operator_variable": "h",
+        "param_count": 3,
+        "diagnostics": ["h_opt_extractable"],
+        "literature_evidence": [
+          {
+            "source": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf",
+            "pattern": "Competing film-thickness effects imply rise then decay."
+          },
+          {
+            "source": "analysis_result.txt",
+            "pattern": "Wetness and film effects are repeatedly tied to transport and diffusion limits."
+          }
+        ],
+        "why_keep": "Allows asymmetric film response while still keeping a simple peak at p1/p2.",
+        "allowed_variants": [
+          "np.log(np.maximum(x, 1e-10)) - p0*x as a two-parameter log-rate equivalent"
+        ],
+        "deprioritize_variants": [
+          "power_bell_log if standard power_bell is present",
+          "multiple independent shifted power-bell aliases"
+        ]
+      },
+      {
+        "template_id": "h_rational_optimum",
+        "status": "core_keep",
+        "mechanism": "film growth with transport-limited attenuation",
+        "canonical_formula_py": "np.log(np.maximum(x / (p0 + p1 * x**2), 1e-10))",
+        "operator_variable": "h",
+        "param_count": 2,
+        "diagnostics": ["h_opt_extractable"],
+        "literature_evidence": [
+          {
+            "source": "analysis_result.txt",
+            "pattern": "Wetness, diffusion, and electrolyte geometry repeatedly control corrosion rate."
+          }
+        ],
+        "why_keep": "Compact two-parameter inverse-U response with interpretable optimum sqrt(p0/p1).",
+        "allowed_variants": [
+          "x/(p0+p1*x**2) if operating outside log-rate representation"
+        ],
+        "deprioritize_variants": [
+          "3-parameter offset rational variants in the core library"
+        ]
+      },
+      {
+        "template_id": "h_diffusion_inhibition",
+        "status": "explore_keep",
+        "mechanism": "thick film/rust diffusion limitation",
+        "canonical_formula_py": "-p0 * np.log1p(p1 * x)",
+        "operator_variable": "h",
+        "param_count": 2,
+        "diagnostics": [],
+        "literature_evidence": [
+          {
+            "source": "20_Atmospheric corrosion of mild steel.pdf",
+            "pattern": "Corrosion rate can be limited by oxygen diffusion through electrolyte/rust layers."
+          },
+          {
+            "source": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf",
+            "pattern": "Rust layer thickness affects Cl and oxygen diffusion paths."
+          }
+        ],
+        "why_keep": "Useful when the data favors monotonic thick-film suppression rather than an interior optimum.",
+        "allowed_variants": [
+          "-p0*x/(p1+x)"
+        ],
+        "deprioritize_variants": [
+          "large families of monotonic h-only alternatives"
+        ]
+      }
+    ],
+    "coupling": [
+      {
+        "template_id": "T_Cl_arrhenius_barrier_modulation",
+        "status": "core_keep",
+        "mechanism": "chloride changes apparent thermal activation",
+        "canonical_formula_py": "-p0 * X1 / X0",
+        "operator_variable": "T_Cl",
+        "param_count": 1,
+        "diagnostics": ["apparent_Ea_modulation"],
+        "literature_evidence": [
+          {
+            "source": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf",
+            "pattern": "Terms such as Cl*t_lowT and Cl*t_highT indicate temperature-window-modulated chloride effects."
+          },
+          {
+            "source": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf",
+            "pattern": "Cl multiplied by temperature wetness windows."
+          }
+        ],
+        "why_keep": "The literature repeatedly links chloride impact to temperature/wetness windows; this is the simplest continuous T-Cl coupling.",
+        "allowed_variants": [
+          "-p0*np.log1p(p1*X1)/X0"
+        ],
+        "deprioritize_variants": [
+          "unbounded X0*X1 products as the only T-Cl coupling"
+        ]
+      },
+      {
+        "template_id": "T_Cl_amplitude_gate",
+        "status": "explore_keep",
+        "mechanism": "temperature response amplitude gated by chloride",
+        "canonical_formula_py": "p0 * np.log1p(p1 * X1) * (X0 - p2)",
+        "operator_variable": "T_Cl",
+        "param_count": 3,
+        "diagnostics": [],
+        "literature_evidence": [
+          {
+            "source": "analysis_result.txt",
+            "pattern": "Dose-response models contain products of chloride and temperature-dependent wetness periods."
+          }
+        ],
+        "why_keep": "Captures non-separable T-Cl response without forcing the entire effect into Ea.",
+        "allowed_variants": [
+          "p0*X1*(X0-p1)"
+        ],
+        "deprioritize_variants": [
+          "many shifted/scaled duplicates of the same product gate"
+        ]
+      },
+      {
+        "template_id": "h_Cl_optimum_shift",
+        "status": "core_keep",
+        "mechanism": "chloride shifts the optimal film thickness",
+        "canonical_formula_py": "-p0 * ((X0 - (p1 + p2 * np.log1p(X1))) / (p3 + 1e-9))**2",
+        "operator_variable": "h_Cl",
+        "param_count": 4,
+        "diagnostics": ["h_opt_depends_on_Cl"],
+        "literature_evidence": [
+          {
+            "source": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf",
+            "pattern": "Ion concentration and moisture layer thickness have competing effects."
+          },
+          {
+            "source": "graph.graphml",
+            "pattern": "Multiple couplings connect Cl_core and delta_core."
+          }
+        ],
+        "why_keep": "This is one of the most physically relevant couplings for the MAIEF data, but it should be budgeted carefully because it has four parameters.",
+        "allowed_variants": [
+          "-p0*((X0-(p1+p2*X1))/(p3+1e-9))**2"
+        ],
+        "deprioritize_variants": [
+          "fixed-width squared shift terms without a learned width",
+          "multiple center-shift variants in the same run"
+        ]
+      },
+      {
+        "template_id": "h_Cl_competitive_transport",
+        "status": "core_keep",
+        "mechanism": "chloride availability changes with film/rust transport path",
+        "canonical_formula_py": "p0 * np.log1p(p1 * X1) / (p2 + X0)",
+        "operator_variable": "h_Cl",
+        "param_count": 3,
+        "diagnostics": [],
+        "literature_evidence": [
+          {
+            "source": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf",
+            "pattern": "Rust layer thickness controls chloride and oxygen diffusion paths."
+          },
+          {
+            "source": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf",
+            "pattern": "Liquid film dynamics and Cl transport jointly affect corrosion."
+          }
+        ],
+        "why_keep": "Provides a compact transport-limited h-Cl coupling that is simpler than a moving optimum.",
+        "allowed_variants": [
+          "p0*X1/(p1+X0)"
+        ],
+        "deprioritize_variants": [
+          "high-order h-Cl products"
+        ]
+      },
+      {
+        "template_id": "T_h_diffusion_window",
+        "status": "explore_keep",
+        "mechanism": "temperature changes film/wetness response window",
+        "canonical_formula_py": "-p0 * ((X1 - (p1 + p2 * (X0 - 298.15))) / (p3 + 1e-9))**2",
+        "operator_variable": "T_h",
+        "param_count": 4,
+        "diagnostics": ["h_opt_depends_on_T"],
+        "literature_evidence": [
+          {
+            "source": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf",
+            "pattern": "Surface wetting depends on temperature/RH/DRH; wetness state is not separable from temperature."
+          },
+          {
+            "source": "graph.graphml",
+            "pattern": "Couplings connect T_core and delta_core."
+          }
+        ],
+        "why_keep": "Useful when the film-thickness optimum shifts with temperature, but should remain exploratory due to parameter count.",
+        "allowed_variants": [
+          "p0*X0/(p1+X1) for temperature sensitivity attenuated by film thickness"
+        ],
+        "deprioritize_variants": [
+          "fixed-scale T-h squared terms",
+          "multiple T-h center-shift variants in the same run"
+        ]
+      }
+    ]
+  },
+  "excluded_patterns": [
+    {
+      "pattern_id": "measurement_mass_loss_rate",
+      "examples": ["W/(D*A*t)", "Delta_m/(A*t)", "(d_n-d_{n-1})/(t_n-t_{n-1})"],
+      "decision": "drop_from_operator_templates",
+      "reason": "Defines measured corrosion rate or loss; does not describe environmental response."
+    },
+    {
+      "pattern_id": "electrochemical_proxy_definition",
+      "examples": ["1/Rp", "K*icorr", "K*(Z10mHz^-1)^n"],
+      "decision": "drop_from_operator_templates",
+      "reason": "Useful measurement/proxy relation, but not a T/Cl/h environmental operator."
+    },
+    {
+      "pattern_id": "time_only_kinetics",
+      "examples": ["A*t^n", "log(C)=log(A)+n*log(t)", "C0/t+alpha"],
+      "decision": "drop_for_current_T_Cl_h_search",
+      "reason": "Repeated and important in atmospheric corrosion, but the current MAIEF task does not model exposure time as a variable."
+    },
+    {
+      "pattern_id": "paper_specific_multilinear_regression",
+      "examples": ["a+b*Cl*t_lowT+c*Cl*t_highT+d*S*t_lowT", "beta0+beta1*T+beta2*RH+beta3*CDR+beta4*SO2"],
+      "decision": "distill_to_coupling_templates_only",
+      "reason": "Good evidence for interactions, but too paper-specific and variable-set-specific to enter GA directly."
+    },
+    {
+      "pattern_id": "chemical_reaction_equations",
+      "examples": ["Fe3+ + Cl- + OH- -> FeOCl + H+", "FeCl2 + 2OH -> Fe(OH)2 + 2Cl"],
+      "decision": "use_as_mechanism_evidence_only",
+      "reason": "Supports chloride mechanism qualitatively but is not a rate operator."
+    },
+    {
+      "pattern_id": "black_box_function_placeholders",
+      "examples": ["f(T,RH,Cl,S,t)", "RF_model(...)", "f(Cl) * step(Cl-threshold) without specified f"],
+      "decision": "drop_until_topology_is_specified",
+      "reason": "No executable mathematical topology for symbolic regression."
+    },
+    {
+      "pattern_id": "high_parameter_shifted_scaled_aliases",
+      "examples": ["multiple shifted Gaussian bells", "4-parameter Hill activation-inhibition", "offset rational variants"],
+      "decision": "limit_to_exploration_budget",
+      "reason": "Can fit small data but destabilizes template identity and parameter interpretation."
+    }
+  ],
+  "recommended_ga_entry_policy": {
+    "core_floor": [
+      "T_arrhenius_inverse",
+      "T_linear_lograte",
+      "Cl_power_law",
+      "Cl_linear_promotion",
+      "Cl_log_linear_optimum",
+      "Cl_langmuir_bell",
+      "h_standard_bell",
+      "h_power_bell",
+      "h_rational_optimum"
+    ],
+    "exploration_budget": {
+      "T": 1,
+      "Cl": 1,
+      "h": 1,
+      "coupling": 2
+    },
+    "max_total_templates_for_loop1": 25,
+    "max_templates_per_family": 4,
+    "notes": [
+      "Loop 1 should always include the core_floor, then add controlled variants from the literature-derived exploration set.",
+      "Loop 2/3 should refine within the selected families rather than regenerate unrelated formula styles.",
+      "Holdout/test metrics must not be used to choose templates in no_test_leakage mode."
+    ]
+  }
+}

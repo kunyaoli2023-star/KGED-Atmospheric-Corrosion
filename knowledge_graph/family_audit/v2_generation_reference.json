@@ -1,0 +1,58 @@
+{
+  "source": "D:\\0-Work\\04-论文\\07-腐蚀数据\\MAIEF_v2\\loop1_standalone_test\\runs\\stability_10x_20260523_112911\\summary.json",
+  "baseline": {
+    "variant": "baseline",
+    "rounds": 10,
+    "avg_raw_count": 67.5,
+    "avg_usable_count": 67.2,
+    "signature_jaccard": 0.2142,
+    "id_jaccard": 0.0626,
+    "canonical_rates": {
+      "T_arrhenius": 1.0,
+      "Cl_loglinear": 0.9,
+      "Cl_linear": 0.9,
+      "h_power_bell": 1.0,
+      "h_standard_bell": 0.0
+    },
+    "llm_failures": 0,
+    "variable_mix_mean": {
+      "Cl": 12.7,
+      "T": 22.2,
+      "T_Cl": 7.5,
+      "T_h": 5.2,
+      "h": 15.5,
+      "h_Cl": 4.1
+    },
+    "family_mix_mean": {
+      "unlabeled": 67.2
+    }
+  },
+  "canonical_floor": {
+    "variant": "canonical_floor",
+    "rounds": 10,
+    "avg_raw_count": 81.6,
+    "avg_usable_count": 80.4,
+    "signature_jaccard": 0.2832,
+    "id_jaccard": 0.1245,
+    "canonical_rates": {
+      "T_arrhenius": 1.0,
+      "Cl_loglinear": 1.0,
+      "Cl_linear": 1.0,
+      "h_power_bell": 1.0,
+      "h_standard_bell": 1.0
+    },
+    "llm_failures": 0,
+    "variable_mix_mean": {
+      "Cl": 13.7,
+      "T": 26.9,
+      "T_Cl": 6.4,
+      "T_h": 4.4,
+      "h": 25.5,
+      "h_Cl": 3.5
+    },
+    "family_mix_mean": {
+      "unlabeled": 80.4
+    }
+  },
+  "interpretation": "Canonical-floor recurrence is enforced by a fixed seed library. The Jaccard values assess generation overlap, not V4 response-family stability; all reported family_mix entries are unlabeled."
+}

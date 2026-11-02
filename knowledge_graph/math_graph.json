@@ -1,0 +1,3872 @@
+{
+  "version": "PROCESS_MULTITAG_KNOWLEDGE_GRAPH_2",
+  "nodes": {
+    "raw:T_C": {
+      "id": "raw:T_C",
+      "kind": "raw_quantity",
+      "meaning": "Temperature",
+      "unit": "degree_Celsius"
+    },
+    "raw:C_wt": {
+      "id": "raw:C_wt",
+      "kind": "raw_quantity",
+      "meaning": "NaCl concentration",
+      "unit": "wt_percent"
+    },
+    "raw:h_um": {
+      "id": "raw:h_um",
+      "kind": "raw_quantity",
+      "meaning": "Liquid electrolyte film thickness, not rust thickness",
+      "unit": "micrometre"
+    },
+    "symbol:tau": {
+      "id": "symbol:tau",
+      "kind": "coordinate",
+      "symbol": "tau",
+      "raw": "T_C",
+      "offset": 273.15,
+      "scale": 298.15,
+      "dimension": "dimensionless",
+      "assumption": "positive",
+      "domain": [
+        0.9161495891329867,
+        1.0838504108670133
+      ],
+      "reference": 1
+    },
+    "symbol:c": {
+      "id": "symbol:c",
+      "kind": "coordinate",
+      "symbol": "c",
+      "raw": "C_wt",
+      "offset": 0,
+      "scale": 1,
+      "dimension": "dimensionless",
+      "assumption": "nonnegative",
+      "domain": [
+        0,
+        26.5
+      ],
+      "reference": 3.5
+    },
+    "symbol:h": {
+      "id": "symbol:h",
+      "kind": "coordinate",
+      "symbol": "h",
+      "raw": "h_um",
+      "offset": 0,
+      "scale": 200,
+      "dimension": "dimensionless",
+      "assumption": "positive",
+      "domain": [
+        0.25,
+        5
+      ],
+      "reference": 1
+    },
+    "hypothesis:H1": {
+      "id": "hypothesis:H1",
+      "kind": "hypothesis",
+      "hypothesis_id": "H1",
+      "question": "How does temperature affect corrosion current at fixed NaCl concentration and liquid-film thickness?",
+      "primary_claim": "Activated interfacial kinetics can generate a predominantly increasing temperature response over the measured interval.",
+      "rivals": [
+        "Weak or absent temperature effect",
+        "A limited-temperature local approximation",
+        "A competing temperature-sensitive process can attenuate or reverse the response"
+      ],
+      "variables": [
+        "tau"
+      ],
+      "derivative_axis": "tau",
+      "falsification": "Replicated fixed-c,h measurements show a non-monotone or decreasing trend inconsistent with the admitted parameter conditions.",
+      "evidence_needed": "An activation law or explicit temperature-sensitive process, with the dependent quantity and material differences stated."
+    },
+    "hypothesis:H2": {
+      "id": "hypothesis:H2",
+      "kind": "hypothesis",
+      "hypothesis_id": "H2",
+      "question": "Does salt promotion remain monotone, saturate, or compete with an attenuating process?",
+      "primary_claim": "Salt can promote conductivity/depassivation while a competing process reduces the incremental benefit; plateau and actual decline are distinct alternatives.",
+      "rivals": [
+        "Strictly monotone promotion without attenuation",
+        "Only inhibition",
+        "Saturation without a maximum",
+        "Promotion followed by an interior maximum"
+      ],
+      "variables": [
+        "c"
+      ],
+      "derivative_axis": "c",
+      "falsification": "A broad fixed-tau,h concentration sweep fails to show the behavior predicted by a particular candidate.",
+      "evidence_needed": "Separate evidence for salt promotion and for any inhibition/oxygen/activity mechanism; no turning point inferred from the word chloride alone."
+    },
+    "hypothesis:H3": {
+      "id": "hypothesis:H3",
+      "kind": "hypothesis",
+      "hypothesis_id": "H3",
+      "question": "How does liquid electrolyte thickness balance electrolyte continuity with transport limitation?",
+      "primary_claim": "Competing thin-film availability and thick-film transport effects can produce an interior maximum; it must compete against monotone alternatives.",
+      "rivals": [
+        "Monotone transport limitation",
+        "Monotone availability-limited increase",
+        "No thickness sensitivity",
+        "An interior minimum requires a separately justified competition"
+      ],
+      "variables": [
+        "h"
+      ],
+      "derivative_axis": "h",
+      "falsification": "A dense fixed-tau,c thickness sweep spanning the predicted extremum is monotone or the extremum is not reproducible.",
+      "evidence_needed": "Liquid-electrolyte-film evidence or an explicitly qualified analogy; rust-film protective growth is not interchangeable with liquid-film thickness."
+    },
+    "hypothesis:H4": {
+      "id": "hypothesis:H4",
+      "kind": "hypothesis",
+      "hypothesis_id": "H4",
+      "question": "Does the liquid-film response change with salinity or temperature?",
+      "primary_claim": "Environment can modify transport or availability scales, changing film-response amplitude, characteristic thickness or peak location; neither a particular length law nor abrupt switching is imposed.",
+      "rivals": [
+        "Environment-invariant thickness response",
+        "Amplitude coupling without peak movement",
+        "Characteristic-length coupling with peak movement",
+        "A smooth regime crossover"
+      ],
+      "variables": [
+        "tau",
+        "c",
+        "h"
+      ],
+      "derivative_axis": "h",
+      "falsification": "Crossed environment-thickness measurements do not distinguish the coupled candidate from an invariant control.",
+      "evidence_needed": "Evidence connecting environment to liquid-film transport/wetting or an explicit proposed analogy; main-effect salt changes alone do not prove film coupling."
+    },
+    "parameter_type:POSITIVE": {
+      "id": "parameter_type:POSITIVE",
+      "kind": "parameter_type",
+      "domain": "strictly greater than zero",
+      "dimension": "dimensionless",
+      "naming": "p0,p1,... allocated per candidate",
+      "sharing": "No fitted values shared between candidates"
+    },
+    "parameter_type:REAL": {
+      "id": "parameter_type:REAL",
+      "kind": "parameter_type",
+      "domain": "finite real",
+      "dimension": "dimensionless",
+      "naming": "p0,p1,... allocated per candidate",
+      "sharing": "No fitted values shared between candidates"
+    },
+    "operator:log": {
+      "id": "operator:log",
+      "kind": "operator",
+      "input_domain": "strictly positive",
+      "output_domain": "real",
+      "definition": "log(x)"
+    },
+    "operator:log1p": {
+      "id": "operator:log1p",
+      "kind": "operator",
+      "input_domain": "greater than -1; nonnegative preferred for promotion",
+      "output_domain": "real",
+      "definition": "log(1+x)"
+    },
+    "operator:exp": {
+      "id": "operator:exp",
+      "kind": "operator",
+      "input_domain": "real; overflow checked numerically",
+      "output_domain": "positive",
+      "definition": "exp(x)"
+    },
+    "operator:sqrt": {
+      "id": "operator:sqrt",
+      "kind": "operator",
+      "input_domain": "nonnegative",
+      "output_domain": "nonnegative",
+      "definition": "sqrt(x)"
+    },
+    "operator:tanh": {
+      "id": "operator:tanh",
+      "kind": "operator",
+      "input_domain": "real",
+      "output_domain": "between -1 and 1",
+      "definition": "tanh(x)"
+    },
+    "operator:add": {
+      "id": "operator:add",
+      "kind": "arithmetic_operator",
+      "input_domain": "real + real",
+      "output_domain": "Depends on operands; type and numerical checks required"
+    },
+    "operator:subtract": {
+      "id": "operator:subtract",
+      "kind": "arithmetic_operator",
+      "input_domain": "real - real",
+      "output_domain": "Depends on operands; type and numerical checks required"
+    },
+    "operator:multiply": {
+      "id": "operator:multiply",
+      "kind": "arithmetic_operator",
+      "input_domain": "real * real",
+      "output_domain": "Depends on operands; type and numerical checks required"
+    },
+    "operator:divide": {
+      "id": "operator:divide",
+      "kind": "arithmetic_operator",
+      "input_domain": "nonzero denominator; full domain and reference must be checked",
+      "output_domain": "Depends on operands; type and numerical checks required"
+    },
+    "operator:power": {
+      "id": "operator:power",
+      "kind": "arithmetic_operator",
+      "input_domain": "real exponent needs positive base; zero base with positive exponent allowed with boundary checks",
+      "output_domain": "Depends on operands; type and numerical checks required"
+    },
+    "operator:safe_log_pos": {
+      "id": "operator:safe_log_pos",
+      "kind": "protected_operator",
+      "arity": 1,
+      "domain": "argument >= 0",
+      "expansion": "log(z + epsilon)",
+      "regularized": true,
+      "epsilon": 1e-08,
+      "policy": "Explicit opt-in only; expansion, derivatives and numerical execution must agree"
+    },
+    "operator:safe_div_pos": {
+      "id": "operator:safe_div_pos",
+      "kind": "protected_operator",
+      "arity": 2,
+      "domain": "denominator >= 0",
+      "expansion": "a / (b + epsilon)",
+      "regularized": true,
+      "epsilon": 1e-08,
+      "policy": "Explicit opt-in only; expansion, derivatives and numerical execution must agree"
+    },
+    "operator:positive_offset": {
+      "id": "operator:positive_offset",
+      "kind": "protected_operator",
+      "arity": 1,
+      "domain": "argument >= 0",
+      "expansion": "z + epsilon",
+      "regularized": true,
+      "epsilon": 1e-08,
+      "policy": "Explicit opt-in only; expansion, derivatives and numerical execution must agree"
+    },
+    "template:H1:activated": {
+      "id": "template:H1:activated",
+      "kind": "executable_template",
+      "hypothesis_id": "H1",
+      "formula_py": "p0*(1-1/tau)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "dimensionless activation strength"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:exponential_power",
+      "family_id": "T_ACTIVATED",
+      "process_family_ids": [
+        "process:T_ACTIVATED"
+      ],
+      "tags": {
+        "form": [
+          "rational_expression"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:tau"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H1:activated",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "757647a4adfc622dcf12654d06a51cb7d65e61113ceea43d546f235b3f62cbbc"
+      }
+    },
+    "template:H1:linear": {
+      "id": "template:H1:linear",
+      "kind": "executable_template",
+      "hypothesis_id": "H1",
+      "formula_py": "p0*(tau-1)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive temperature slope"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:polynomial",
+      "family_id": "T_LOCAL",
+      "process_family_ids": [
+        "process:T_LOCAL"
+      ],
+      "tags": {
+        "form": [
+          "polynomial"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:tau"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H1:linear",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "4f18019cce616e77154438fec794a8f96e8f7bbeb6f1087caf674183532e21af"
+      }
+    },
+    "template:H1:logarithmic": {
+      "id": "template:H1:logarithmic",
+      "kind": "executable_template",
+      "hypothesis_id": "H1",
+      "formula_py": "p0*log(tau)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive temperature elasticity"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:logarithmic",
+      "family_id": "T_LOCAL",
+      "process_family_ids": [
+        "process:T_LOCAL"
+      ],
+      "tags": {
+        "form": [
+          "logarithmic"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:tau"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H1:logarithmic",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "9667b9bf698e3b2139814c5933794977344a4ad557e25509d2a020e35df791f1"
+      }
+    },
+    "template:H1:null": {
+      "id": "template:H1:null",
+      "kind": "executable_template",
+      "hypothesis_id": "H1",
+      "formula_py": "0",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [],
+      "expected_shape": "CONSTANT",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:null",
+      "family_id": "NULL_CONTROL",
+      "process_family_ids": [],
+      "tags": {
+        "form": [
+          "constant"
+        ],
+        "shape": [
+          "CONSTANT"
+        ],
+        "variables": [
+          "none"
+        ],
+        "role": [
+          "null_control"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H1:null",
+        "errors": [],
+        "warnings": [
+          "No-effect control becomes zero after centering; retain as explicit module omission, not fitted coefficient"
+        ],
+        "numerical_error": null,
+        "dedup_key": "a541208ab456ece385a95a25575f00747fc02f5d0354a42eee4166ec73186a80"
+      }
+    },
+    "template:H2:saturation": {
+      "id": "template:H2:saturation",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "p0*c/(p1+c)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "promotion strength"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive saturation scale"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:rational",
+      "family_id": "C_MONOTONE",
+      "process_family_ids": [
+        "process:C_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "rational_expression"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:saturation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "5adb6cc0b8c022bd3a442d3b7ffb09b24781183eb071f520b6cfe746ae88299b"
+      }
+    },
+    "template:H2:logarithmic": {
+      "id": "template:H2:logarithmic",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "p0*log1p(c)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive chloride response strength"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:logarithmic",
+      "family_id": "C_MONOTONE",
+      "process_family_ids": [
+        "process:C_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "logarithmic"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:logarithmic",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "9759a6858cb7e9298022782b537969b528563d2f3ef32936c2ba03634f271340"
+      }
+    },
+    "template:H2:competition": {
+      "id": "template:H2:competition",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "p0*c/(p1+c)-p2*c",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "promotion strength"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive saturation scale"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "attenuation strength"
+        }
+      ],
+      "expected_shape": "UNCONSTRAINED",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:bell_decay",
+      "family_id": "C_COMPETING_PEAK",
+      "process_family_ids": [
+        "process:C_COMPETING_PEAK"
+      ],
+      "tags": {
+        "form": [
+          "rational_expression"
+        ],
+        "shape": [
+          "UNCONSTRAINED"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:competition",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "d8060189cb6a2570dbdad5e05e40864ff4739e2a00b4d73548d6649aedacb9bc"
+      }
+    },
+    "template:H2:null": {
+      "id": "template:H2:null",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "0",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [],
+      "expected_shape": "CONSTANT",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:null",
+      "family_id": "NULL_CONTROL",
+      "process_family_ids": [],
+      "tags": {
+        "form": [
+          "constant"
+        ],
+        "shape": [
+          "CONSTANT"
+        ],
+        "variables": [
+          "none"
+        ],
+        "role": [
+          "null_control"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:null",
+        "errors": [],
+        "warnings": [
+          "No-effect control becomes zero after centering; retain as explicit module omission, not fitted coefficient"
+        ],
+        "numerical_error": null,
+        "dedup_key": "2b33163e1ad5ae4f012c047629894a1966fcfde8674f7783016de1a05a48587d"
+      }
+    },
+    "template:H3:transport_peak": {
+      "id": "template:H3:transport_peak",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "log(h)-log(p0+h**2)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive squared film scale"
+        }
+      ],
+      "expected_shape": "INTERIOR_MAXIMUM",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:bell_decay",
+      "family_id": "H_COMPETING_PEAK",
+      "process_family_ids": [
+        "process:H_COMPETING_PEAK"
+      ],
+      "tags": {
+        "form": [
+          "logarithmic",
+          "power_expression"
+        ],
+        "shape": [
+          "INTERIOR_MAXIMUM"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:transport_peak",
+        "errors": [],
+        "warnings": [
+          "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+        ],
+        "numerical_error": null,
+        "dedup_key": "56477c3b19385a165d6f635dbe1f4bf02b90f1b82311293e3975e496181b3a75"
+      }
+    },
+    "template:H3:attenuation": {
+      "id": "template:H3:attenuation",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "-p0*h",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive attenuation strength"
+        }
+      ],
+      "expected_shape": "DECREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:polynomial",
+      "family_id": "H_MONOTONE",
+      "process_family_ids": [
+        "process:H_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "polynomial"
+        ],
+        "shape": [
+          "DECREASING"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:attenuation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "4588f19d4ecdbb7c3b1015a4a2c9607147f7632ed57f542b4937a5d65fa52f75"
+      }
+    },
+    "template:H3:saturation": {
+      "id": "template:H3:saturation",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "p0*h/(p1+h)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "film response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive film scale"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:rational",
+      "family_id": "H_MONOTONE",
+      "process_family_ids": [
+        "process:H_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "rational_expression"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:saturation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "45ef41d5e5c91abae729859de46a982a5e6a0bcef85cc8479c69429fde202b80"
+      }
+    },
+    "template:H3:null": {
+      "id": "template:H3:null",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "0",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [],
+      "expected_shape": "CONSTANT",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:null",
+      "family_id": "NULL_CONTROL",
+      "process_family_ids": [],
+      "tags": {
+        "form": [
+          "constant"
+        ],
+        "shape": [
+          "CONSTANT"
+        ],
+        "variables": [
+          "none"
+        ],
+        "role": [
+          "null_control"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:null",
+        "errors": [],
+        "warnings": [
+          "No-effect control becomes zero after centering; retain as explicit module omission, not fitted coefficient"
+        ],
+        "numerical_error": null,
+        "dedup_key": "75424866fd56a02cf3a8b1398a1e5a537825267b3edad0ff2b583c7ff79cf0d2"
+      }
+    },
+    "template:H4:salt_film": {
+      "id": "template:H4:salt_film",
+      "kind": "executable_template",
+      "hypothesis_id": "H4",
+      "formula_py": "p0*c*h/(1+p1*h)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "salt-film coupling strength"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive film attenuation"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:interaction",
+      "family_id": "CH_SLOPE",
+      "process_family_ids": [
+        "process:CH_SLOPE"
+      ],
+      "tags": {
+        "form": [
+          "rational_expression"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "multi:c,h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H4:salt_film",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "4805113cebbc5df062803ca1f8736953752dd0af1f08d1e185b8402cea73aabf"
+      }
+    },
+    "template:H4:salt_film_log": {
+      "id": "template:H4:salt_film_log",
+      "kind": "executable_template",
+      "hypothesis_id": "H4",
+      "formula_py": "log1p(p0*c*h)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive salt-film coupling"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:interaction",
+      "family_id": "CH_SLOPE",
+      "process_family_ids": [
+        "process:CH_SLOPE"
+      ],
+      "tags": {
+        "form": [
+          "logarithmic"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "multi:c,h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H4:salt_film_log",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "bb8a654dd4eda23c9837efb6692ee16e93dd3ea3ea63c611346e438ad2024c2c"
+      }
+    },
+    "template:H4:thermal_film": {
+      "id": "template:H4:thermal_film",
+      "kind": "executable_template",
+      "hypothesis_id": "H4",
+      "formula_py": "p0*(tau-1)*h/(1+p1*h)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "thermal-film coupling strength"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive film attenuation"
+        }
+      ],
+      "expected_shape": "UNCONSTRAINED",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:interaction",
+      "family_id": "TH_COUPLING",
+      "process_family_ids": [
+        "process:TH_COUPLING"
+      ],
+      "tags": {
+        "form": [
+          "rational_expression"
+        ],
+        "shape": [
+          "UNCONSTRAINED"
+        ],
+        "variables": [
+          "multi:h,tau"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H4:thermal_film",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "419db309b18189653652be09654472f888123076d22927387846127657bc9a70"
+      }
+    },
+    "template:H4:null": {
+      "id": "template:H4:null",
+      "kind": "executable_template",
+      "hypothesis_id": "H4",
+      "formula_py": "0",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [],
+      "expected_shape": "CONSTANT",
+      "boundary_notes": "",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:null",
+      "family_id": "NULL_CONTROL",
+      "process_family_ids": [],
+      "tags": {
+        "form": [
+          "constant"
+        ],
+        "shape": [
+          "CONSTANT"
+        ],
+        "variables": [
+          "none"
+        ],
+        "role": [
+          "null_control"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H4:null",
+        "errors": [],
+        "warnings": [
+          "No-effect control becomes zero after centering; retain as explicit module omission, not fitted coefficient"
+        ],
+        "numerical_error": null,
+        "dedup_key": "a3da7d95f4b391b1a5f481bd6f2aef57dba258338578bbcd3619a508f5ebf7b6"
+      }
+    },
+    "template:H1:exponential_saturation": {
+      "id": "template:H1:exponential_saturation",
+      "kind": "executable_template",
+      "hypothesis_id": "H1",
+      "formula_py": "p0*(1-exp(-p1*tau))",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite at zero; tends to p0 as the coordinate grows.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:special_saturation",
+      "family_id": "T_LOCAL",
+      "process_family_ids": [
+        "process:T_LOCAL"
+      ],
+      "tags": {
+        "form": [
+          "exponential"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:tau"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H1:exponential_saturation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "9549650d0f2fb02002d511aa7d935ec1bc465e6fcda93ab5cc240eb1f552de52"
+      }
+    },
+    "template:H1:tanh_saturation": {
+      "id": "template:H1:tanh_saturation",
+      "kind": "executable_template",
+      "hypothesis_id": "H1",
+      "formula_py": "p0*tanh(p1*tau)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite at zero; tends to p0.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:special_saturation",
+      "family_id": "T_LOCAL",
+      "process_family_ids": [
+        "process:T_LOCAL"
+      ],
+      "tags": {
+        "form": [
+          "hyperbolic"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:tau"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H1:tanh_saturation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "ad65cf169c15cba64db61a0854a3dee4f5f78c12f4ade45b778090f440dcdba5"
+      }
+    },
+    "template:H1:power_response": {
+      "id": "template:H1:power_response",
+      "kind": "executable_template",
+      "hypothesis_id": "H1",
+      "formula_py": "p0*tau**p1",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite response at zero; derivative may be singular for exponent below one. No smoothness guarantee at zero.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:exponential_power",
+      "family_id": "T_LOCAL",
+      "process_family_ids": [
+        "process:T_LOCAL"
+      ],
+      "tags": {
+        "form": [
+          "power_expression"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:tau"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H1:power_response",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "eeafe5903c0862d736960ec742598e0b3769640fcbdbe39caf5c1ca52e88c582"
+      }
+    },
+    "template:H2:exponential_saturation": {
+      "id": "template:H2:exponential_saturation",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "p0*(1-exp(-p1*c))",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite at zero; tends to p0 as the coordinate grows.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:special_saturation",
+      "family_id": "C_MONOTONE",
+      "process_family_ids": [
+        "process:C_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "exponential"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:exponential_saturation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "0b18d4bdf0ba64ef9abb0dcf6a9a8c46320d26dbdc047500b55481c3d43ff5be"
+      }
+    },
+    "template:H2:tanh_saturation": {
+      "id": "template:H2:tanh_saturation",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "p0*tanh(p1*c)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite at zero; tends to p0.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:special_saturation",
+      "family_id": "C_MONOTONE",
+      "process_family_ids": [
+        "process:C_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "hyperbolic"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:tanh_saturation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "fa9d61526911ec35a04516b759845b5586180d068f5c9dcf30e0cac12e87a59a"
+      }
+    },
+    "template:H2:power_response": {
+      "id": "template:H2:power_response",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "p0*c**p1",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite response at zero; derivative may be singular for exponent below one. No smoothness guarantee at zero.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:exponential_power",
+      "family_id": "C_MONOTONE",
+      "process_family_ids": [
+        "process:C_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "power_expression"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:power_response",
+        "errors": [],
+        "warnings": [
+          "Derivative singularity on probe grid; finite response does not imply smoothness"
+        ],
+        "numerical_error": null,
+        "dedup_key": "cdd88d89f13e18083682307662e89db2cf8898957c17026a42c315532e63c19c"
+      }
+    },
+    "template:H3:exponential_saturation": {
+      "id": "template:H3:exponential_saturation",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "p0*(1-exp(-p1*h))",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite at zero; tends to p0 as the coordinate grows.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:special_saturation",
+      "family_id": "H_MONOTONE",
+      "process_family_ids": [
+        "process:H_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "exponential"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:exponential_saturation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "a06de00502784aaf5c806b86cad049ed5e4151bf2a3a6f1ea8eabded95d4d2bc"
+      }
+    },
+    "template:H3:tanh_saturation": {
+      "id": "template:H3:tanh_saturation",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "p0*tanh(p1*h)",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite at zero; tends to p0.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:special_saturation",
+      "family_id": "H_MONOTONE",
+      "process_family_ids": [
+        "process:H_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "hyperbolic"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:tanh_saturation",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "612fb8f638add8ad0401359e34ce43a4545aff27af1d31a30f26e855f50aa309"
+      }
+    },
+    "template:H3:power_response": {
+      "id": "template:H3:power_response",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "p0*h**p1",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "response amplitude"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent"
+        }
+      ],
+      "expected_shape": "INCREASING",
+      "boundary_notes": "Finite response at zero; derivative may be singular for exponent below one. No smoothness guarantee at zero.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:exponential_power",
+      "family_id": "H_MONOTONE",
+      "process_family_ids": [
+        "process:H_MONOTONE"
+      ],
+      "tags": {
+        "form": [
+          "power_expression"
+        ],
+        "shape": [
+          "INCREASING"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:power_response",
+        "errors": [],
+        "warnings": [],
+        "numerical_error": null,
+        "dedup_key": "d789d04920251ef53ad26c72d95406186dbe15001ca724df993b07aa0af7f461"
+      }
+    },
+    "template:H2:gaussian_log_response": {
+      "id": "template:H2:gaussian_log_response",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "-(c-p0)**2/p1**2",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive peak coordinate"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive width"
+        }
+      ],
+      "expected_shape": "INTERIOR_MAXIMUM",
+      "boundary_notes": "Peak exists at p0 on the positive axis, not necessarily inside the measured interval.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:bell_decay",
+      "family_id": "C_COMPETING_PEAK",
+      "process_family_ids": [
+        "process:C_COMPETING_PEAK"
+      ],
+      "tags": {
+        "form": [
+          "power_expression",
+          "rational_expression"
+        ],
+        "shape": [
+          "INTERIOR_MAXIMUM"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:gaussian_log_response",
+        "errors": [],
+        "warnings": [
+          "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+        ],
+        "numerical_error": null,
+        "dedup_key": "b7182ee05a4b0a9b39d4c5d8182195e6652298e2b3579c1e30aa968659f4e060"
+      }
+    },
+    "template:H2:bell_log1p": {
+      "id": "template:H2:bell_log1p",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "log1p(p0*c*exp(-p1*c))",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive strength"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate"
+        }
+      ],
+      "expected_shape": "INTERIOR_MAXIMUM",
+      "boundary_notes": "Log-response closure with finite zero boundary; not an exact log of a zero-baseline rate.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:bell_decay",
+      "family_id": "C_COMPETING_PEAK",
+      "process_family_ids": [
+        "process:C_COMPETING_PEAK"
+      ],
+      "tags": {
+        "form": [
+          "exponential",
+          "logarithmic"
+        ],
+        "shape": [
+          "INTERIOR_MAXIMUM"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:bell_log1p",
+        "errors": [],
+        "warnings": [
+          "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+        ],
+        "numerical_error": null,
+        "dedup_key": "a465a6709e82393addcb935be7a7d58719fb70a5ce70a33af63ff41e9f989d69"
+      }
+    },
+    "template:H2:power_bell_log1p": {
+      "id": "template:H2:power_bell_log1p",
+      "kind": "executable_template",
+      "hypothesis_id": "H2",
+      "formula_py": "log1p(p0*c**p1*exp(-p2*c))",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive strength"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive growth exponent"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate"
+        }
+      ],
+      "expected_shape": "INTERIOR_MAXIMUM",
+      "boundary_notes": "Peak coordinate p1/p2; may lie outside the measured interval; zero derivative may be singular.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:bell_decay",
+      "family_id": "C_COMPETING_PEAK",
+      "process_family_ids": [
+        "process:C_COMPETING_PEAK"
+      ],
+      "tags": {
+        "form": [
+          "exponential",
+          "logarithmic",
+          "power_expression"
+        ],
+        "shape": [
+          "INTERIOR_MAXIMUM"
+        ],
+        "variables": [
+          "single:c"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H2:power_bell_log1p",
+        "errors": [],
+        "warnings": [
+          "Derivative singularity on probe grid; finite response does not imply smoothness",
+          "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+        ],
+        "numerical_error": null,
+        "dedup_key": "fbf81dbbe92c1e4fff492bfa25c5567422a162c9f43eaedf950a8ad0112e6dcb"
+      }
+    },
+    "template:H3:gaussian_log_response": {
+      "id": "template:H3:gaussian_log_response",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "-(h-p0)**2/p1**2",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive peak coordinate"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive width"
+        }
+      ],
+      "expected_shape": "INTERIOR_MAXIMUM",
+      "boundary_notes": "Peak exists at p0 on the positive axis, not necessarily inside the measured interval.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:bell_decay",
+      "family_id": "H_COMPETING_PEAK",
+      "process_family_ids": [
+        "process:H_COMPETING_PEAK"
+      ],
+      "tags": {
+        "form": [
+          "power_expression",
+          "rational_expression"
+        ],
+        "shape": [
+          "INTERIOR_MAXIMUM"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:gaussian_log_response",
+        "errors": [],
+        "warnings": [
+          "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+        ],
+        "numerical_error": null,
+        "dedup_key": "fa66fa0a4d7ea8b0c69cc4721bdf5125a18fdc3d9c398fd35c7c582ef5cf715c"
+      }
+    },
+    "template:H3:bell_log1p": {
+      "id": "template:H3:bell_log1p",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "log1p(p0*h*exp(-p1*h))",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive strength"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate"
+        }
+      ],
+      "expected_shape": "INTERIOR_MAXIMUM",
+      "boundary_notes": "Log-response closure with finite zero boundary; not an exact log of a zero-baseline rate.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:bell_decay",
+      "family_id": "H_COMPETING_PEAK",
+      "process_family_ids": [
+        "process:H_COMPETING_PEAK"
+      ],
+      "tags": {
+        "form": [
+          "exponential",
+          "logarithmic"
+        ],
+        "shape": [
+          "INTERIOR_MAXIMUM"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:bell_log1p",
+        "errors": [],
+        "warnings": [
+          "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+        ],
+        "numerical_error": null,
+        "dedup_key": "e7c3455022a2cf473990e21f017b8ba2b3be2d5b67e6b3f5e79713862a725ada"
+      }
+    },
+    "template:H3:power_bell_log1p": {
+      "id": "template:H3:power_bell_log1p",
+      "kind": "executable_template",
+      "hypothesis_id": "H3",
+      "formula_py": "log1p(p0*h**p1*exp(-p2*h))",
+      "formula_kind": "LOG_RESPONSE",
+      "parameters": [
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive strength"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive growth exponent"
+        },
+        {
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate"
+        }
+      ],
+      "expected_shape": "INTERIOR_MAXIMUM",
+      "boundary_notes": "Peak coordinate p1/p2; may lie outside the measured interval; zero derivative may be singular.",
+      "parameter_bounds_policy": "Positive domain only; numerical fit policy chooses transformed coordinates. Old dimensional bounds are not silently reused.",
+      "physical_status": "Requires proposal-specific scientific justification",
+      "origin": "Existing V6 construction or explicit mathematical family implementation; not a fitted winner",
+      "legacy_category": "family:bell_decay",
+      "family_id": "H_COMPETING_PEAK",
+      "process_family_ids": [
+        "process:H_COMPETING_PEAK"
+      ],
+      "tags": {
+        "form": [
+          "exponential",
+          "logarithmic",
+          "power_expression"
+        ],
+        "shape": [
+          "INTERIOR_MAXIMUM"
+        ],
+        "variables": [
+          "single:h"
+        ],
+        "role": [
+          "phenomenological_closure"
+        ]
+      },
+      "shape_claim_scope": "Declared conditional shape; peak need not be inside measured interval; numerical checks are not global proofs.",
+      "validation_state": "MATH_CHECKED",
+      "evidence_state": "NOT_EVALUATED",
+      "validation_summary": {
+        "template_id": "template:H3:power_bell_log1p",
+        "errors": [],
+        "warnings": [
+          "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+        ],
+        "numerical_error": null,
+        "dedup_key": "c686c9ffb2f9af827468c5e368432f6218625ad94562ba58983b0e8cbfe9bf1b"
+      }
+    },
+    "construction:SUM_LOG_RESPONSES": {
+      "id": "construction:SUM_LOG_RESPONSES",
+      "kind": "construction_rule",
+      "input": "Two template IDs compatible with the target hypothesis",
+      "output": "Log-response contribution; parameter names allocated independently",
+      "status": "Implemented composition; each resulting candidate must pass domain and identifiability checks"
+    },
+    "construction:DIFFERENCE_LOG_RESPONSES": {
+      "id": "construction:DIFFERENCE_LOG_RESPONSES",
+      "kind": "construction_rule",
+      "input": "Two template IDs compatible with the target hypothesis",
+      "output": "Log-response contribution; parameter names allocated independently",
+      "status": "Implemented composition; each resulting candidate must pass domain and identifiability checks"
+    },
+    "process:T_ACTIVATED": {
+      "id": "process:T_ACTIVATED",
+      "kind": "process_family",
+      "label": "温度激活",
+      "hypothesis_ids": [
+        "H1"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [
+        "template:H1:activated"
+      ],
+      "coverage_status": "INITIAL_TEMPLATES_AVAILABLE"
+    },
+    "process:T_LOCAL": {
+      "id": "process:T_LOCAL",
+      "kind": "process_family",
+      "label": "温度局部近似或竞争对照",
+      "hypothesis_ids": [
+        "H1"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [
+        "template:H1:linear",
+        "template:H1:logarithmic",
+        "template:H1:exponential_saturation",
+        "template:H1:tanh_saturation",
+        "template:H1:power_response"
+      ],
+      "coverage_status": "INITIAL_TEMPLATES_AVAILABLE"
+    },
+    "process:C_MONOTONE": {
+      "id": "process:C_MONOTONE",
+      "kind": "process_family",
+      "label": "盐单调响应",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [
+        "template:H2:saturation",
+        "template:H2:logarithmic",
+        "template:H2:exponential_saturation",
+        "template:H2:tanh_saturation",
+        "template:H2:power_response"
+      ],
+      "coverage_status": "INITIAL_TEMPLATES_AVAILABLE"
+    },
+    "process:C_COMPETING_PEAK": {
+      "id": "process:C_COMPETING_PEAK",
+      "kind": "process_family",
+      "label": "盐促进与抑制竞争",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [
+        "template:H2:competition",
+        "template:H2:gaussian_log_response",
+        "template:H2:bell_log1p",
+        "template:H2:power_bell_log1p"
+      ],
+      "coverage_status": "INITIAL_TEMPLATES_AVAILABLE"
+    },
+    "process:TC_PEAK_SHIFT": {
+      "id": "process:TC_PEAK_SHIFT",
+      "kind": "process_family",
+      "label": "温度改变盐峰位置",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "implementation_constraint": "Current H4 execution contract requires h; a tau-c-only template needs an explicit slot-contract extension.",
+      "template_ids": [],
+      "coverage_status": "TEMPLATE_GAP"
+    },
+    "process:H_MONOTONE": {
+      "id": "process:H_MONOTONE",
+      "kind": "process_family",
+      "label": "液膜单调响应",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [
+        "template:H3:attenuation",
+        "template:H3:saturation",
+        "template:H3:exponential_saturation",
+        "template:H3:tanh_saturation",
+        "template:H3:power_response"
+      ],
+      "coverage_status": "INITIAL_TEMPLATES_AVAILABLE"
+    },
+    "process:H_COMPETING_PEAK": {
+      "id": "process:H_COMPETING_PEAK",
+      "kind": "process_family",
+      "label": "液膜可用性与传输竞争峰",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [
+        "template:H3:transport_peak",
+        "template:H3:gaussian_log_response",
+        "template:H3:bell_log1p",
+        "template:H3:power_bell_log1p"
+      ],
+      "coverage_status": "INITIAL_TEMPLATES_AVAILABLE"
+    },
+    "process:CH_LENGTH": {
+      "id": "process:CH_LENGTH",
+      "kind": "process_family",
+      "label": "盐改变液膜特征长度",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [],
+      "coverage_status": "TEMPLATE_GAP"
+    },
+    "process:CH_SLOPE": {
+      "id": "process:CH_SLOPE",
+      "kind": "process_family",
+      "label": "盐改变液膜斜率或峰位",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [
+        "template:H4:salt_film",
+        "template:H4:salt_film_log"
+      ],
+      "coverage_status": "INITIAL_TEMPLATES_AVAILABLE"
+    },
+    "process:CH_PEAK_SHAPE": {
+      "id": "process:CH_PEAK_SHAPE",
+      "kind": "process_family",
+      "label": "盐改变液膜峰幅度或曲率",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [],
+      "coverage_status": "TEMPLATE_GAP"
+    },
+    "process:TH_COUPLING": {
+      "id": "process:TH_COUPLING",
+      "kind": "process_family",
+      "label": "温度改变液膜响应",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [
+        "template:H4:thermal_film"
+      ],
+      "coverage_status": "INITIAL_TEMPLATES_AVAILABLE"
+    },
+    "process:TCH_COUPLING": {
+      "id": "process:TCH_COUPLING",
+      "kind": "process_family",
+      "label": "温度与盐共同改变液膜响应",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "origin": "Historical V4 family audit taxonomy; categories only, not inherited fitted coefficients or scientific validation",
+      "scientific_status": "PROVISIONAL_PROCESS_OR_RIVAL",
+      "template_ids": [],
+      "coverage_status": "TEMPLATE_GAP"
+    },
+    "tag:form:rational_expression": {
+      "id": "tag:form:rational_expression",
+      "kind": "classification_tag",
+      "dimension": "form",
+      "value": "rational_expression"
+    },
+    "tag:shape:INCREASING": {
+      "id": "tag:shape:INCREASING",
+      "kind": "classification_tag",
+      "dimension": "shape",
+      "value": "INCREASING"
+    },
+    "tag:variables:single:tau": {
+      "id": "tag:variables:single:tau",
+      "kind": "classification_tag",
+      "dimension": "variables",
+      "value": "single:tau"
+    },
+    "tag:role:phenomenological_closure": {
+      "id": "tag:role:phenomenological_closure",
+      "kind": "classification_tag",
+      "dimension": "role",
+      "value": "phenomenological_closure"
+    },
+    "tag:form:polynomial": {
+      "id": "tag:form:polynomial",
+      "kind": "classification_tag",
+      "dimension": "form",
+      "value": "polynomial"
+    },
+    "tag:form:logarithmic": {
+      "id": "tag:form:logarithmic",
+      "kind": "classification_tag",
+      "dimension": "form",
+      "value": "logarithmic"
+    },
+    "tag:form:constant": {
+      "id": "tag:form:constant",
+      "kind": "classification_tag",
+      "dimension": "form",
+      "value": "constant"
+    },
+    "tag:shape:CONSTANT": {
+      "id": "tag:shape:CONSTANT",
+      "kind": "classification_tag",
+      "dimension": "shape",
+      "value": "CONSTANT"
+    },
+    "tag:variables:none": {
+      "id": "tag:variables:none",
+      "kind": "classification_tag",
+      "dimension": "variables",
+      "value": "none"
+    },
+    "tag:role:null_control": {
+      "id": "tag:role:null_control",
+      "kind": "classification_tag",
+      "dimension": "role",
+      "value": "null_control"
+    },
+    "tag:variables:single:c": {
+      "id": "tag:variables:single:c",
+      "kind": "classification_tag",
+      "dimension": "variables",
+      "value": "single:c"
+    },
+    "tag:shape:UNCONSTRAINED": {
+      "id": "tag:shape:UNCONSTRAINED",
+      "kind": "classification_tag",
+      "dimension": "shape",
+      "value": "UNCONSTRAINED"
+    },
+    "tag:form:power_expression": {
+      "id": "tag:form:power_expression",
+      "kind": "classification_tag",
+      "dimension": "form",
+      "value": "power_expression"
+    },
+    "tag:shape:INTERIOR_MAXIMUM": {
+      "id": "tag:shape:INTERIOR_MAXIMUM",
+      "kind": "classification_tag",
+      "dimension": "shape",
+      "value": "INTERIOR_MAXIMUM"
+    },
+    "tag:variables:single:h": {
+      "id": "tag:variables:single:h",
+      "kind": "classification_tag",
+      "dimension": "variables",
+      "value": "single:h"
+    },
+    "tag:shape:DECREASING": {
+      "id": "tag:shape:DECREASING",
+      "kind": "classification_tag",
+      "dimension": "shape",
+      "value": "DECREASING"
+    },
+    "tag:variables:multi:c,h": {
+      "id": "tag:variables:multi:c,h",
+      "kind": "classification_tag",
+      "dimension": "variables",
+      "value": "multi:c,h"
+    },
+    "tag:variables:multi:h,tau": {
+      "id": "tag:variables:multi:h,tau",
+      "kind": "classification_tag",
+      "dimension": "variables",
+      "value": "multi:h,tau"
+    },
+    "tag:form:exponential": {
+      "id": "tag:form:exponential",
+      "kind": "classification_tag",
+      "dimension": "form",
+      "value": "exponential"
+    },
+    "tag:form:hyperbolic": {
+      "id": "tag:form:hyperbolic",
+      "kind": "classification_tag",
+      "dimension": "form",
+      "value": "hyperbolic"
+    }
+  },
+  "edges": [
+    {
+      "source": "hypothesis:H1",
+      "relation": "allows_candidate",
+      "target": "template:H1:activated"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "allows_candidate",
+      "target": "template:H1:exponential_saturation"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "allows_candidate",
+      "target": "template:H1:linear"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "allows_candidate",
+      "target": "template:H1:logarithmic"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "allows_candidate",
+      "target": "template:H1:null"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "allows_candidate",
+      "target": "template:H1:power_response"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "allows_candidate",
+      "target": "template:H1:tanh_saturation"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "investigates_process",
+      "target": "process:T_ACTIVATED"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "investigates_process",
+      "target": "process:T_LOCAL"
+    },
+    {
+      "source": "hypothesis:H1",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:bell_log1p"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:competition"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:exponential_saturation"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:gaussian_log_response"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:logarithmic"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:null"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:power_bell_log1p"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:power_response"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:saturation"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "allows_candidate",
+      "target": "template:H2:tanh_saturation"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "investigates_process",
+      "target": "process:C_COMPETING_PEAK"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "investigates_process",
+      "target": "process:C_MONOTONE"
+    },
+    {
+      "source": "hypothesis:H2",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:attenuation"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:bell_log1p"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:exponential_saturation"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:gaussian_log_response"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:null"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:power_bell_log1p"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:power_response"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:saturation"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:tanh_saturation"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "allows_candidate",
+      "target": "template:H3:transport_peak"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "investigates_process",
+      "target": "process:H_COMPETING_PEAK"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "investigates_process",
+      "target": "process:H_MONOTONE"
+    },
+    {
+      "source": "hypothesis:H3",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "allows_candidate",
+      "target": "template:H4:null"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "allows_candidate",
+      "target": "template:H4:salt_film"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "allows_candidate",
+      "target": "template:H4:salt_film_log"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "allows_candidate",
+      "target": "template:H4:thermal_film"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "investigates_process",
+      "target": "process:CH_LENGTH"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "investigates_process",
+      "target": "process:CH_PEAK_SHAPE"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "investigates_process",
+      "target": "process:CH_SLOPE"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "investigates_process",
+      "target": "process:TCH_COUPLING"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "investigates_process",
+      "target": "process:TC_PEAK_SHIFT"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "investigates_process",
+      "target": "process:TH_COUPLING"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "hypothesis:H4",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "process:CH_SLOPE",
+      "relation": "has_candidate_template",
+      "target": "template:H4:salt_film"
+    },
+    {
+      "source": "process:CH_SLOPE",
+      "relation": "has_candidate_template",
+      "target": "template:H4:salt_film_log"
+    },
+    {
+      "source": "process:C_COMPETING_PEAK",
+      "relation": "has_candidate_template",
+      "target": "template:H2:bell_log1p"
+    },
+    {
+      "source": "process:C_COMPETING_PEAK",
+      "relation": "has_candidate_template",
+      "target": "template:H2:competition"
+    },
+    {
+      "source": "process:C_COMPETING_PEAK",
+      "relation": "has_candidate_template",
+      "target": "template:H2:gaussian_log_response"
+    },
+    {
+      "source": "process:C_COMPETING_PEAK",
+      "relation": "has_candidate_template",
+      "target": "template:H2:power_bell_log1p"
+    },
+    {
+      "source": "process:C_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H2:exponential_saturation"
+    },
+    {
+      "source": "process:C_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H2:logarithmic"
+    },
+    {
+      "source": "process:C_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H2:power_response"
+    },
+    {
+      "source": "process:C_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H2:saturation"
+    },
+    {
+      "source": "process:C_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H2:tanh_saturation"
+    },
+    {
+      "source": "process:H_COMPETING_PEAK",
+      "relation": "has_candidate_template",
+      "target": "template:H3:bell_log1p"
+    },
+    {
+      "source": "process:H_COMPETING_PEAK",
+      "relation": "has_candidate_template",
+      "target": "template:H3:gaussian_log_response"
+    },
+    {
+      "source": "process:H_COMPETING_PEAK",
+      "relation": "has_candidate_template",
+      "target": "template:H3:power_bell_log1p"
+    },
+    {
+      "source": "process:H_COMPETING_PEAK",
+      "relation": "has_candidate_template",
+      "target": "template:H3:transport_peak"
+    },
+    {
+      "source": "process:H_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H3:attenuation"
+    },
+    {
+      "source": "process:H_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H3:exponential_saturation"
+    },
+    {
+      "source": "process:H_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H3:power_response"
+    },
+    {
+      "source": "process:H_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H3:saturation"
+    },
+    {
+      "source": "process:H_MONOTONE",
+      "relation": "has_candidate_template",
+      "target": "template:H3:tanh_saturation"
+    },
+    {
+      "source": "process:TH_COUPLING",
+      "relation": "has_candidate_template",
+      "target": "template:H4:thermal_film"
+    },
+    {
+      "source": "process:T_ACTIVATED",
+      "relation": "has_candidate_template",
+      "target": "template:H1:activated"
+    },
+    {
+      "source": "process:T_LOCAL",
+      "relation": "has_candidate_template",
+      "target": "template:H1:exponential_saturation"
+    },
+    {
+      "source": "process:T_LOCAL",
+      "relation": "has_candidate_template",
+      "target": "template:H1:linear"
+    },
+    {
+      "source": "process:T_LOCAL",
+      "relation": "has_candidate_template",
+      "target": "template:H1:logarithmic"
+    },
+    {
+      "source": "process:T_LOCAL",
+      "relation": "has_candidate_template",
+      "target": "template:H1:power_response"
+    },
+    {
+      "source": "process:T_LOCAL",
+      "relation": "has_candidate_template",
+      "target": "template:H1:tanh_saturation"
+    },
+    {
+      "source": "raw:C_wt",
+      "relation": "normalizes_to",
+      "target": "symbol:c"
+    },
+    {
+      "source": "raw:T_C",
+      "relation": "normalizes_to",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "raw:h_um",
+      "relation": "normalizes_to",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "has_form_tag",
+      "target": "tag:form:rational_expression"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:tau"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "uses_operator",
+      "target": "operator:divide"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H1:activated",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "has_form_tag",
+      "target": "tag:form:exponential"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:tau"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:exp"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H1:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H1:linear",
+      "relation": "has_form_tag",
+      "target": "tag:form:polynomial"
+    },
+    {
+      "source": "template:H1:linear",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H1:linear",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H1:linear",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:tau"
+    },
+    {
+      "source": "template:H1:linear",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H1:linear",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "template:H1:linear",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H1:linear",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H1:logarithmic",
+      "relation": "has_form_tag",
+      "target": "tag:form:logarithmic"
+    },
+    {
+      "source": "template:H1:logarithmic",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H1:logarithmic",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H1:logarithmic",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:tau"
+    },
+    {
+      "source": "template:H1:logarithmic",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H1:logarithmic",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "template:H1:logarithmic",
+      "relation": "uses_operator",
+      "target": "operator:log"
+    },
+    {
+      "source": "template:H1:logarithmic",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H1:null",
+      "relation": "has_form_tag",
+      "target": "tag:form:constant"
+    },
+    {
+      "source": "template:H1:null",
+      "relation": "has_role_tag",
+      "target": "tag:role:null_control"
+    },
+    {
+      "source": "template:H1:null",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:CONSTANT"
+    },
+    {
+      "source": "template:H1:null",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:none"
+    },
+    {
+      "source": "template:H1:power_response",
+      "relation": "has_form_tag",
+      "target": "tag:form:power_expression"
+    },
+    {
+      "source": "template:H1:power_response",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H1:power_response",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H1:power_response",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:tau"
+    },
+    {
+      "source": "template:H1:power_response",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H1:power_response",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "template:H1:power_response",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H1:power_response",
+      "relation": "uses_operator",
+      "target": "operator:power"
+    },
+    {
+      "source": "template:H1:tanh_saturation",
+      "relation": "has_form_tag",
+      "target": "tag:form:hyperbolic"
+    },
+    {
+      "source": "template:H1:tanh_saturation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H1:tanh_saturation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H1:tanh_saturation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:tau"
+    },
+    {
+      "source": "template:H1:tanh_saturation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H1:tanh_saturation",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "template:H1:tanh_saturation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H1:tanh_saturation",
+      "relation": "uses_operator",
+      "target": "operator:tanh"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:exponential"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:logarithmic"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INTERIOR_MAXIMUM"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:exp"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:log1p"
+    },
+    {
+      "source": "template:H2:bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "has_form_tag",
+      "target": "tag:form:rational_expression"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:UNCONSTRAINED"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "uses_operator",
+      "target": "operator:add"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "uses_operator",
+      "target": "operator:divide"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H2:competition",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "has_form_tag",
+      "target": "tag:form:exponential"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:exp"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H2:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "has_form_tag",
+      "target": "tag:form:power_expression"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "has_form_tag",
+      "target": "tag:form:rational_expression"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INTERIOR_MAXIMUM"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "uses_operator",
+      "target": "operator:divide"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "uses_operator",
+      "target": "operator:power"
+    },
+    {
+      "source": "template:H2:gaussian_log_response",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H2:logarithmic",
+      "relation": "has_form_tag",
+      "target": "tag:form:logarithmic"
+    },
+    {
+      "source": "template:H2:logarithmic",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:logarithmic",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H2:logarithmic",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:logarithmic",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:logarithmic",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:logarithmic",
+      "relation": "uses_operator",
+      "target": "operator:log1p"
+    },
+    {
+      "source": "template:H2:logarithmic",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H2:null",
+      "relation": "has_form_tag",
+      "target": "tag:form:constant"
+    },
+    {
+      "source": "template:H2:null",
+      "relation": "has_role_tag",
+      "target": "tag:role:null_control"
+    },
+    {
+      "source": "template:H2:null",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:CONSTANT"
+    },
+    {
+      "source": "template:H2:null",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:none"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:exponential"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:logarithmic"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:power_expression"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INTERIOR_MAXIMUM"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:exp"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:log1p"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H2:power_bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:power"
+    },
+    {
+      "source": "template:H2:power_response",
+      "relation": "has_form_tag",
+      "target": "tag:form:power_expression"
+    },
+    {
+      "source": "template:H2:power_response",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:power_response",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H2:power_response",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:power_response",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:power_response",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:power_response",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H2:power_response",
+      "relation": "uses_operator",
+      "target": "operator:power"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "has_form_tag",
+      "target": "tag:form:rational_expression"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "uses_operator",
+      "target": "operator:add"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "uses_operator",
+      "target": "operator:divide"
+    },
+    {
+      "source": "template:H2:saturation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H2:tanh_saturation",
+      "relation": "has_form_tag",
+      "target": "tag:form:hyperbolic"
+    },
+    {
+      "source": "template:H2:tanh_saturation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H2:tanh_saturation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H2:tanh_saturation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:c"
+    },
+    {
+      "source": "template:H2:tanh_saturation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H2:tanh_saturation",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H2:tanh_saturation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H2:tanh_saturation",
+      "relation": "uses_operator",
+      "target": "operator:tanh"
+    },
+    {
+      "source": "template:H3:attenuation",
+      "relation": "has_form_tag",
+      "target": "tag:form:polynomial"
+    },
+    {
+      "source": "template:H3:attenuation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:attenuation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:DECREASING"
+    },
+    {
+      "source": "template:H3:attenuation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:attenuation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:attenuation",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:attenuation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:exponential"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:logarithmic"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INTERIOR_MAXIMUM"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:exp"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:log1p"
+    },
+    {
+      "source": "template:H3:bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "has_form_tag",
+      "target": "tag:form:exponential"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:exp"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H3:exponential_saturation",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "has_form_tag",
+      "target": "tag:form:power_expression"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "has_form_tag",
+      "target": "tag:form:rational_expression"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INTERIOR_MAXIMUM"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "uses_operator",
+      "target": "operator:divide"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "uses_operator",
+      "target": "operator:power"
+    },
+    {
+      "source": "template:H3:gaussian_log_response",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H3:null",
+      "relation": "has_form_tag",
+      "target": "tag:form:constant"
+    },
+    {
+      "source": "template:H3:null",
+      "relation": "has_role_tag",
+      "target": "tag:role:null_control"
+    },
+    {
+      "source": "template:H3:null",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:CONSTANT"
+    },
+    {
+      "source": "template:H3:null",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:none"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:exponential"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:logarithmic"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "has_form_tag",
+      "target": "tag:form:power_expression"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INTERIOR_MAXIMUM"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:exp"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:log1p"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H3:power_bell_log1p",
+      "relation": "uses_operator",
+      "target": "operator:power"
+    },
+    {
+      "source": "template:H3:power_response",
+      "relation": "has_form_tag",
+      "target": "tag:form:power_expression"
+    },
+    {
+      "source": "template:H3:power_response",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:power_response",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H3:power_response",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:power_response",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:power_response",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:power_response",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H3:power_response",
+      "relation": "uses_operator",
+      "target": "operator:power"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "has_form_tag",
+      "target": "tag:form:rational_expression"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "uses_operator",
+      "target": "operator:add"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "uses_operator",
+      "target": "operator:divide"
+    },
+    {
+      "source": "template:H3:saturation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H3:tanh_saturation",
+      "relation": "has_form_tag",
+      "target": "tag:form:hyperbolic"
+    },
+    {
+      "source": "template:H3:tanh_saturation",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:tanh_saturation",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H3:tanh_saturation",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:tanh_saturation",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:tanh_saturation",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:tanh_saturation",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H3:tanh_saturation",
+      "relation": "uses_operator",
+      "target": "operator:tanh"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "has_form_tag",
+      "target": "tag:form:logarithmic"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "has_form_tag",
+      "target": "tag:form:power_expression"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INTERIOR_MAXIMUM"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:single:h"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "uses_operator",
+      "target": "operator:add"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "uses_operator",
+      "target": "operator:log"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "uses_operator",
+      "target": "operator:power"
+    },
+    {
+      "source": "template:H3:transport_peak",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    },
+    {
+      "source": "template:H4:null",
+      "relation": "has_form_tag",
+      "target": "tag:form:constant"
+    },
+    {
+      "source": "template:H4:null",
+      "relation": "has_role_tag",
+      "target": "tag:role:null_control"
+    },
+    {
+      "source": "template:H4:null",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:CONSTANT"
+    },
+    {
+      "source": "template:H4:null",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:none"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "has_form_tag",
+      "target": "tag:form:rational_expression"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:multi:c,h"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "uses_operator",
+      "target": "operator:add"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "uses_operator",
+      "target": "operator:divide"
+    },
+    {
+      "source": "template:H4:salt_film",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "has_form_tag",
+      "target": "tag:form:logarithmic"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:INCREASING"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:multi:c,h"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "uses_coordinate",
+      "target": "symbol:c"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "uses_operator",
+      "target": "operator:log1p"
+    },
+    {
+      "source": "template:H4:salt_film_log",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "has_form_tag",
+      "target": "tag:form:rational_expression"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "has_role_tag",
+      "target": "tag:role:phenomenological_closure"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "has_shape_tag",
+      "target": "tag:shape:UNCONSTRAINED"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "has_variables_tag",
+      "target": "tag:variables:multi:h,tau"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "requires_parameter_type",
+      "target": "parameter_type:POSITIVE"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "uses_coordinate",
+      "target": "symbol:h"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "uses_coordinate",
+      "target": "symbol:tau"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "uses_operator",
+      "target": "operator:add"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "uses_operator",
+      "target": "operator:divide"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "uses_operator",
+      "target": "operator:multiply"
+    },
+    {
+      "source": "template:H4:thermal_film",
+      "relation": "uses_operator",
+      "target": "operator:subtract"
+    }
+  ],
+  "response_contract": "A dimensionless additive component f of log(i/i_ref). It is later centred as f(v)-f(reference). This convention is NOT a claim that a literature law for current, mass loss, oxygen or rust is already a log-current law.",
+  "validation_scope": "Finite probe checks and symbolic checks, not physical truth or complete identifiability proof",
+  "protection_policy": "No silent clipping. Registered explicit protection is permitted. Older symbol-registry blanket epsilon prohibition is not imported into this graph.",
+  "input_hashes": {
+    "symbol_registry.json": "5c758d99f50d8977d8127efeceef0c240b8ac22def0cac1ec01457dfa02afcb7",
+    "module_protocol.json": "2aa7208f9f0cb1043d1e1a784ca9ceb308eaf7a2518db4ac804f0d412de8f795",
+    "hypotheses.json": "57b86418d1c0eda077f333df43c4e9753acab7450736b53902a142fbb131dc46"
+  },
+  "extension_policy": "New templates require domain/parameter contracts, compilation and checks; graph revision is versioned. No automatic LLM repair.",
+  "revision": 0,
+  "parent_sha256": null,
+  "revision_events": [
+    {
+      "kind": "INITIAL_TAXONOMY",
+      "detail": "12 process entry points; independent form/shape/variable/role tags; 8 legacy categories retained only as provenance."
+    }
+  ],
+  "state_policy": {
+    "validation_state": [
+      "UNCHECKED",
+      "MATH_CHECKED",
+      "QUARANTINED"
+    ],
+    "evidence_state": [
+      "NOT_EVALUATED",
+      "EVALUATED_IN_SCOPE"
+    ],
+    "rule": "Mathematical checks never imply empirical support; evaluation records do not imply a universal physical law."
+  },
+  "sha256": "eafeab7cd060aec1f1b15bc5408755ee547a43e70c017d04021856e2b7b96c56"
+}

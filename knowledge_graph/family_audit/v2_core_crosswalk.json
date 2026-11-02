@@ -1,0 +1,37 @@
+[
+  {
+    "v2_operator": "oT_Arrhenius",
+    "v4_primary_family": "T_ACTIVATED",
+    "relation": "same reciprocal-temperature topology; different response and units"
+  },
+  {
+    "v2_operator": "oT_linear",
+    "v4_primary_family": "T_LOCAL",
+    "relation": "same local-linear topology; different response and units"
+  },
+  {
+    "v2_operator": "oCl_log_linear_v2",
+    "v4_primary_family": "C_COMPETING_PEAK",
+    "relation": "promotion/inhibition peak motif; V2 chloride mM and V4 NaCl wt% differ"
+  },
+  {
+    "v2_operator": "oCl_Bell_Standard",
+    "v4_primary_family": "C_COMPETING_PEAK",
+    "relation": "single-peaked salt motif only; expressions are not equivalent"
+  },
+  {
+    "v2_operator": "oh_StandardBell_v1",
+    "v4_primary_family": "H_COMPETING_PEAK",
+    "relation": "single-peaked film motif only; expressions and film domains differ"
+  },
+  {
+    "v2_operator": "oh_power_bell_cold",
+    "v4_primary_family": "H_COMPETING_PEAK",
+    "relation": "single-peaked film motif only; expressions and film domains differ"
+  },
+  {
+    "v2_operator": "oh_MM_Standard",
+    "v4_primary_family": "H_COMPETING_PEAK",
+    "relation": "rational film peak motif only; expressions and film domains differ"
+  }
+]

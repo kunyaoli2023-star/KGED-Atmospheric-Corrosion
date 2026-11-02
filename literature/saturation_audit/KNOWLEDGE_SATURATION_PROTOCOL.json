@@ -1,0 +1,17 @@
+{
+  "schema": "rhe_v3_multiresolution_knowledge_saturation_protocol_v1",
+  "status": "FROZEN_BEFORE_REANALYSIS",
+  "corpus": "llm方程/papers (50 papers; extracted formula evidence in extracted_formulas_vision_old)",
+  "resolutions": {
+    "coarse": "17 LLM kinetic signatures",
+    "medium": "9 kinetic/electrochemical meta-model clusters",
+    "fine": "semantic-symbolic signatures with algebraic skeletons"
+  },
+  "permutation_replicates": 10000,
+  "seed": 20261005,
+  "coverage_threshold": 0.95,
+  "next_five_mean_marginal_threshold": 0.25,
+  "minimum_estimated_completeness": 0.90,
+  "joint_rule": "Knowledge saturation may be claimed only if every resolution passes coverage, marginal-gain, and unseen-richness criteria.",
+  "claim_boundary": "Saturation of the available curated corpus and ontology, not saturation of the global corrosion literature."
+}

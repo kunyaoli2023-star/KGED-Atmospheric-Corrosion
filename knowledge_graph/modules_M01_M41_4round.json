@@ -1,0 +1,371 @@
+[
+  {
+    "module_id": "M01",
+    "module_label": "M01 (K01)",
+    "round": 1,
+    "hypothesis": "H1",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$p_{0} (1-\\frac{1}{τ})$",
+    "parameter_count": 1
+  },
+  {
+    "module_id": "M02",
+    "module_label": "M02 (K03)",
+    "round": 1,
+    "hypothesis": "H1",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$p_{0} (τ-1)$",
+    "parameter_count": 1
+  },
+  {
+    "module_id": "M03",
+    "module_label": "M03 (K05)",
+    "round": 1,
+    "hypothesis": "H1",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$0$",
+    "parameter_count": 0
+  },
+  {
+    "module_id": "M04",
+    "module_label": "M04 (K02)",
+    "round": 1,
+    "hypothesis": "H1",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$p_{0} (1-exp(-p_{1} τ))$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M05",
+    "module_label": "M05 (K12)",
+    "round": 1,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$p_{0} ln(1+c)$",
+    "parameter_count": 1
+  },
+  {
+    "module_id": "M06",
+    "module_label": "M06 (K15)",
+    "round": 1,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$p_{0} c^{p_{1}}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M07",
+    "module_label": "M07 (K16)",
+    "round": 1,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$\\frac{p_{0} c}{p_{1}+c}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M08",
+    "module_label": "M08 (K08)",
+    "round": 1,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$ln(1+p_{0} c exp(-p_{1} c))$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M09",
+    "module_label": "M09 (K13)",
+    "round": 1,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$0$",
+    "parameter_count": 0
+  },
+  {
+    "module_id": "M10",
+    "module_label": "M10 (K16 − K15)",
+    "round": 1,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$\\frac{p_{0} c}{p_{1}+c}-p_{2} c^{p_{3}}$",
+    "parameter_count": 4
+  },
+  {
+    "module_id": "M11",
+    "module_label": "M11 (K19)",
+    "round": 1,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$ln(1+p_{0} h exp(-p_{1} h))$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M12",
+    "module_label": "M12 (K25 + K18)",
+    "round": 1,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$\\frac{p_{0} h}{p_{1}+h}-p_{2} h$",
+    "parameter_count": 3
+  },
+  {
+    "module_id": "M13",
+    "module_label": "M13 (K25)",
+    "round": 1,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$\\frac{p_{0} h}{p_{1}+h}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M14",
+    "module_label": "M14 (K18)",
+    "round": 1,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$-p_{0} h$",
+    "parameter_count": 1
+  },
+  {
+    "module_id": "M15",
+    "module_label": "M15 (K22)",
+    "round": 1,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$0$",
+    "parameter_count": 0
+  },
+  {
+    "module_id": "M16",
+    "module_label": "M16 (K28)",
+    "round": 1,
+    "hypothesis": "H4",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$0$",
+    "parameter_count": 0
+  },
+  {
+    "module_id": "M17",
+    "module_label": "M17 (K29)",
+    "round": 1,
+    "hypothesis": "H4",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$\\frac{p_{0} c h}{1+p_{1} h}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M18",
+    "module_label": "M18 (K30)",
+    "round": 1,
+    "hypothesis": "H4",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$ln(1+p_{0} c h)$",
+    "parameter_count": 1
+  },
+  {
+    "module_id": "M19",
+    "module_label": "M19 (K31)",
+    "round": 1,
+    "hypothesis": "H4",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$\\frac{p_{0} (τ-1) h}{1+p_{1} h}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M20",
+    "module_label": "M20 (K29 + K31)",
+    "round": 1,
+    "hypothesis": "H4",
+    "discovery_stage": "Stage 1 (Round 1): Literature-direct baseline",
+    "uncentred_log_response_latex": "$\\frac{p_{0} c h}{1+p_{1} h}+\\frac{p_{2} (τ-1) h}{1+p_{3} h}$",
+    "parameter_count": 4
+  },
+  {
+    "module_id": "M21",
+    "module_label": "M21 (K04)",
+    "round": 2,
+    "hypothesis": "H1",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} ln(τ)$",
+    "parameter_count": 1
+  },
+  {
+    "module_id": "M22",
+    "module_label": "M22 (K06)",
+    "round": 2,
+    "hypothesis": "H1",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} τ^{p_{1}}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M23",
+    "module_label": "M23 (K07)",
+    "round": 2,
+    "hypothesis": "H1",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} tanh(p_{1} τ)$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M24",
+    "module_label": "M24 (K14)",
+    "round": 2,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$ln(1+p_{0} c^{p_{1}} exp(-p_{2} c))$",
+    "parameter_count": 3
+  },
+  {
+    "module_id": "M25",
+    "module_label": "M25 (K11)",
+    "round": 2,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$\\frac{-(c-p_{0})^{2}}{p_{1}^{2}}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M26",
+    "module_label": "M26 (K09)",
+    "round": 2,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$\\frac{p_{0} c}{p_{1}+c}-p_{2} c$",
+    "parameter_count": 3
+  },
+  {
+    "module_id": "M27",
+    "module_label": "M27 (K10)",
+    "round": 2,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} (1-exp(-p_{1} c))$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M28",
+    "module_label": "M28 (K17)",
+    "round": 2,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} tanh(p_{1} c)$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M29",
+    "module_label": "M29 (K12 − K15)",
+    "round": 2,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} ln(1+c)-p_{1} c^{p_{2}}$",
+    "parameter_count": 3
+  },
+  {
+    "module_id": "M30",
+    "module_label": "M30 (K23)",
+    "round": 2,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$ln(1+p_{0} h^{p_{1}} exp(-p_{2} h))$",
+    "parameter_count": 3
+  },
+  {
+    "module_id": "M31",
+    "module_label": "M31 (K21)",
+    "round": 2,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$\\frac{-(h-p_{0})^{2}}{p_{1}^{2}}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M32",
+    "module_label": "M32 (K20 + K18)",
+    "round": 2,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} (1-exp(-p_{1} h))-p_{2} h$",
+    "parameter_count": 3
+  },
+  {
+    "module_id": "M33",
+    "module_label": "M33 (K24)",
+    "round": 2,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} h^{p_{1}}$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M34",
+    "module_label": "M34 (K26)",
+    "round": 2,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} tanh(p_{1} h)$",
+    "parameter_count": 2
+  },
+  {
+    "module_id": "M35",
+    "module_label": "M35 (K27)",
+    "round": 2,
+    "hypothesis": "H3",
+    "discovery_stage": "Stage 2 (Round 2): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$ln(h)-ln(p_{0}+h^{2})$",
+    "parameter_count": 1
+  },
+  {
+    "module_id": "M36",
+    "module_label": "M36 (K11 + K12)",
+    "round": 3,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 3): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$\\frac{-(c-p_{0})^{2}}{p_{1}^{2}}+p_{2} ln(1+c)$",
+    "parameter_count": 3
+  },
+  {
+    "module_id": "M37",
+    "module_label": "M37 (K16 + K17)",
+    "round": 3,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 3): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$\\frac{p_{0} c}{p_{1}+c}+p_{2} tanh(p_{3} c)$",
+    "parameter_count": 4
+  },
+  {
+    "module_id": "M38",
+    "module_label": "M38 (K14 − K15)",
+    "round": 4,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 4): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$ln(1+p_{0} c^{p_{1}} exp(-p_{2} c))-p_{3} c^{p_{4}}$",
+    "parameter_count": 5
+  },
+  {
+    "module_id": "M39",
+    "module_label": "M39 (K09 − K16)",
+    "round": 4,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 4): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$\\frac{p_{0} c}{p_{1}+c}-p_{2} c-\\frac{p_{3} c}{p_{4}+c}$",
+    "parameter_count": 5
+  },
+  {
+    "module_id": "M40",
+    "module_label": "M40 (K15 − K12)",
+    "round": 4,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 4): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} c^{p_{1}}-p_{2} ln(1+c)$",
+    "parameter_count": 3
+  },
+  {
+    "module_id": "M41",
+    "module_label": "M41 (K15 + K17)",
+    "round": 4,
+    "hypothesis": "H2",
+    "discovery_stage": "Stage 2 (Round 4): Residual-driven LLM generation from 8-family library",
+    "uncentred_log_response_latex": "$p_{0} c^{p_{1}}+p_{2} tanh(p_{3} c)$",
+    "parameter_count": 4
+  }
+]

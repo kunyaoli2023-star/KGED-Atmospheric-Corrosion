@@ -1,0 +1,238 @@
+[
+  {
+    "audited_claim_id": "A22_EQ4",
+    "paper_id": "P22",
+    "pdf_page": 5,
+    "claim_type": "SOURCE_EQUATION",
+    "original_target": "temperature acceleration factor for atmospheric corrosion, not measured current",
+    "supports_form_for": [
+      "temperature acceleration factor"
+    ],
+    "supports_process_for": [
+      "H1"
+    ],
+    "linked_module_ids": [
+      "H1_Arrhenius_transfer",
+      "H1_local_linear",
+      "H1_positive_curvature_r2c"
+    ],
+    "linked_primary_families": [
+      "T_ACTIVATED",
+      "T_LOCAL"
+    ],
+    "does_not_establish": "Does not establish that the target experiment's corrosion current obeys the same factor at fixed NaCl and liquid-film thickness.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A22_EQ6",
+    "paper_id": "P22",
+    "pdf_page": 7,
+    "claim_type": "SOURCE_EQUATION",
+    "original_target": "acceleration factor indexed by atmospheric chloride deposition",
+    "supports_form_for": [
+      "chloride-deposition acceleration factor at positive deposition"
+    ],
+    "supports_process_for": [
+      "H2"
+    ],
+    "linked_module_ids": [
+      "H2_regularized_power",
+      "H2_plateau",
+      "H2_interior_peak",
+      "H2_quadratic_peak_r2",
+      "H2_saturating_promotion_peak_r2b",
+      "H2_log_promotion_quadratic_tail_r2c",
+      "H2_rational_promotion_quadratic_tail_r2c",
+      "H2_temperature_shifted_peak_r2c"
+    ],
+    "linked_primary_families": [
+      "C_COMPETING_PEAK",
+      "C_MONOTONE",
+      "TC_PEAK_SHIFT"
+    ],
+    "does_not_establish": "Does not establish response to NaCl wt%, a finite value at zero concentration, saturation, or inhibition.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A11_EQ3",
+    "paper_id": "P11",
+    "pdf_page": 6,
+    "claim_type": "SOURCE_EQUATION",
+    "original_target": "monthly steel mass loss, g/m^2, at Havana station",
+    "supports_form_for": [
+      "mass-loss regression against chloride deposition and rainfall in this dataset"
+    ],
+    "supports_process_for": [
+      "H2"
+    ],
+    "linked_module_ids": [
+      "H2_linear_local"
+    ],
+    "linked_primary_families": [
+      "C_MONOTONE"
+    ],
+    "does_not_establish": "Does not give a log-current law in solution NaCl concentration or prove global monotonicity.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A10_P3",
+    "paper_id": "P10",
+    "pdf_page": 3,
+    "claim_type": "SECONDARY_MECHANISM_REPORT",
+    "original_target": "reported corrosion rate under evaporating initial moisture layers",
+    "supports_form_for": [],
+    "supports_process_for": [
+      "H3",
+      "H4"
+    ],
+    "linked_module_ids": [
+      "H3_availability",
+      "H3_competing_peak",
+      "H4_salt_length_shift",
+      "H3_loglinear_peak_r2",
+      "H4_salt_transport_shift_r2",
+      "H4_salt_amplitude_joint_r2",
+      "H3_algebraic_tail_peak_r2b",
+      "H4_salt_wetting_order_r2b",
+      "H4_salt_curvature_r2b",
+      "H4_salt_saturating_transport_r2b",
+      "H3_log_symmetric_peak_r2c",
+      "H3_saturating_availability_peak_r2c",
+      "H4_salt_nonmonotone_slope_r2c",
+      "H4_salt_length_joint_r2c",
+      "H4_salt_temperature_wetting_joint_r2c"
+    ],
+    "linked_primary_families": [
+      "CH_LENGTH",
+      "CH_PEAK_SHAPE",
+      "CH_SLOPE",
+      "H_COMPETING_PEAK",
+      "H_MONOTONE",
+      "TCH_COUPLING"
+    ],
+    "does_not_establish": "No exact h-response function or salt-film coupling function is given on this page.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A33_P4",
+    "paper_id": "P33",
+    "pdf_page": 4,
+    "claim_type": "PROCESS_WITH_EQUATION",
+    "original_target": "local cathodic current density of Q235 steel in a model electrolyte film",
+    "supports_form_for": [
+      "its own cathodic current/overpotential expression"
+    ],
+    "supports_process_for": [
+      "H3",
+      "H4"
+    ],
+    "linked_module_ids": [
+      "H3_transport_limit",
+      "H3_competing_peak",
+      "H3_loglinear_peak_r2",
+      "H4_salt_transport_shift_r2",
+      "H3_algebraic_tail_peak_r2b",
+      "H4_salt_curvature_r2b",
+      "H4_salt_saturating_transport_r2b",
+      "H3_saturating_availability_peak_r2c",
+      "H4_salt_length_joint_r2c"
+    ],
+    "linked_primary_families": [
+      "CH_LENGTH",
+      "CH_PEAK_SHAPE",
+      "CH_SLOPE",
+      "H_COMPETING_PEAK",
+      "H_MONOTONE"
+    ],
+    "does_not_establish": "No published relationship i_lim(h), no whole-cell corrosion-current response to film thickness, and no NaCl-film interaction law are supplied here.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A22_P5_FILM",
+    "paper_id": "P22",
+    "pdf_page": 5,
+    "claim_type": "PROCESS_REPORT",
+    "original_target": "atmospheric corrosion under changing wetness",
+    "supports_form_for": [],
+    "supports_process_for": [
+      "H4"
+    ],
+    "linked_module_ids": [
+      "H4_temperature_amplitude",
+      "H4_temperature_peak_joint_r2",
+      "H4_temperature_wetting_order_r2b",
+      "H4_temperature_curvature_r2c",
+      "H4_salt_temperature_wetting_joint_r2c"
+    ],
+    "linked_primary_families": [
+      "TCH_COUPLING",
+      "TH_COUPLING"
+    ],
+    "does_not_establish": "This dynamic wetting argument does not by itself establish a temperature-by-thickness interaction when thickness is experimentally fixed.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A14_P2_FIXED_FILM",
+    "paper_id": "P14",
+    "pdf_page": 2,
+    "claim_type": "EXPERIMENT_CONTEXT",
+    "original_target": "electrochemical current and SCC in E690 steel under a thin electrolyte layer",
+    "supports_form_for": [],
+    "supports_process_for": [],
+    "linked_module_ids": [],
+    "linked_primary_families": [],
+    "does_not_establish": "Does not establish the function of corrosion current versus liquid-film thickness or salt-film coupling.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A14_P3_CURRENT",
+    "paper_id": "P14",
+    "pdf_page": 3,
+    "claim_type": "EXPERIMENT_CONTEXT",
+    "original_target": "E690 corrosion current from polarization under varied stress/strain and oxygen at approximately fixed film thickness",
+    "supports_form_for": [],
+    "supports_process_for": [],
+    "linked_module_ids": [],
+    "linked_primary_families": [],
+    "does_not_establish": "Cannot identify a thickness law while oxygen or stress/strain is varied.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A50_P10_DROPLETS",
+    "paper_id": "P50",
+    "pdf_page": 10,
+    "claim_type": "EXPERIMENT_CONTEXT",
+    "original_target": "corrosion-rate monitoring under evolving multi-droplet geometry",
+    "supports_form_for": [],
+    "supports_process_for": [],
+    "linked_module_ids": [],
+    "linked_primary_families": [],
+    "does_not_establish": "Droplet diameter, contact angle, and controlled uniform liquid-film thickness are not interchangeable variables.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  },
+  {
+    "audited_claim_id": "A42_P12_OIL_FILM",
+    "paper_id": "P42",
+    "pdf_page": 12,
+    "claim_type": "INAPPLICABLE_LOOKALIKE_CONTEXT",
+    "original_target": "thickness loss of steel beneath an anti-rust oil film contaminated by saline droplets",
+    "supports_form_for": [
+      "reported empirical oil-film thickness-loss regression"
+    ],
+    "supports_process_for": [],
+    "linked_module_ids": [],
+    "linked_primary_families": [],
+    "does_not_establish": "Its quadratic cross terms cannot be presented as a verified salt-by-liquid-film current law.",
+    "verification_status": "PAGE_VERIFIED",
+    "target_law_verified": false
+  }
+]

@@ -1,0 +1,528 @@
+{
+  "rounds": {
+    "1": {
+      "final_checked": 288,
+      "final_admissible": 29,
+      "scope": "Round-1 complete 23-fold enumeration"
+    },
+    "2": {
+      "final_checked": 99,
+      "final_admissible": 41,
+      "scope": "Round-2 selected 23-fold catalog; screen candidates excluded"
+    },
+    "3": {
+      "screen_catalog_size": 171,
+      "screen_completed": 149,
+      "final_checked": 26,
+      "final_admissible": 13,
+      "winner": {
+        "round": 3,
+        "structure_id": "H1_Arrhenius_transfer|H2_rational_promotion_quadratic_tail_r2c|H3_log_symmetric_peak_r2c|H4_null",
+        "module_ids": [
+          "H1_Arrhenius_transfer",
+          "H2_rational_promotion_quadratic_tail_r2c",
+          "H3_log_symmetric_peak_r2c",
+          "H4_null"
+        ],
+        "family_ids": [
+          "T_ACTIVATED",
+          "C_COMPETING_PEAK",
+          "H_COMPETING_PEAK",
+          "NULL"
+        ],
+        "cv_log_rmse": 0.5574091246093932,
+        "parameter_count": 7,
+        "film_peak_match_fraction": 0.16666666666666666,
+        "salt_film_contrast_absolute_residual": 2.2361705887623273
+      }
+    },
+    "4": {
+      "screen_catalog_size": 614,
+      "screen_completed": 584,
+      "final_checked": 32,
+      "final_admissible": 19,
+      "winner": {
+        "round": 4,
+        "structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p1|H3_log_symmetric_peak_r2c|H4_R4_saturating_peak_shift",
+        "module_ids": [
+          "H1_Arrhenius_transfer",
+          "H2_R4_fixed_scale_0p1",
+          "H3_log_symmetric_peak_r2c",
+          "H4_R4_saturating_peak_shift"
+        ],
+        "family_ids": [
+          "T_ACTIVATED",
+          "C_COMPETING_PEAK",
+          "H_COMPETING_PEAK",
+          "CH_SLOPE"
+        ],
+        "cv_log_rmse": 0.4880009178969158,
+        "parameter_count": 8,
+        "film_peak_match_fraction": 0.3333333333333333,
+        "salt_film_contrast_absolute_residual": 1.361024750390376
+      }
+    },
+    "5": {
+      "screen_catalog_size": 244,
+      "screen_completed": 237,
+      "final_checked": 28,
+      "final_admissible": 20,
+      "winner": {
+        "round": 5,
+        "structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p1|H3_null|H4_R4_zero_high_salt_curvature_limit",
+        "module_ids": [
+          "H1_Arrhenius_transfer",
+          "H2_R4_fixed_scale_0p1",
+          "H3_null",
+          "H4_R4_zero_high_salt_curvature_limit"
+        ],
+        "family_ids": [
+          "T_ACTIVATED",
+          "C_COMPETING_PEAK",
+          "NULL",
+          "CH_PEAK_SHAPE"
+        ],
+        "cv_log_rmse": 0.4713333800565892,
+        "parameter_count": 7,
+        "film_peak_match_fraction": 0.3333333333333333,
+        "salt_film_contrast_absolute_residual": 0.6234214250635102
+      }
+    },
+    "6": {
+      "screen_catalog_size": 574,
+      "screen_completed": 545,
+      "final_checked": 33,
+      "final_admissible": 22,
+      "winner": {
+        "round": 6,
+        "structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p05|H3_null|H4_R4_zero_high_salt_curvature_limit",
+        "module_ids": [
+          "H1_Arrhenius_transfer",
+          "H2_R4_fixed_scale_0p05",
+          "H3_null",
+          "H4_R4_zero_high_salt_curvature_limit"
+        ],
+        "family_ids": [
+          "T_ACTIVATED",
+          "C_COMPETING_PEAK",
+          "NULL",
+          "CH_PEAK_SHAPE"
+        ],
+        "cv_log_rmse": 0.4519430124115554,
+        "parameter_count": 7,
+        "film_peak_match_fraction": 0.3333333333333333,
+        "salt_film_contrast_absolute_residual": 0.6244426890387551
+      }
+    }
+  },
+  "adaptive_winners": [
+    {
+      "round": 3,
+      "structure_id": "H1_Arrhenius_transfer|H2_rational_promotion_quadratic_tail_r2c|H3_log_symmetric_peak_r2c|H4_null",
+      "module_ids": [
+        "H1_Arrhenius_transfer",
+        "H2_rational_promotion_quadratic_tail_r2c",
+        "H3_log_symmetric_peak_r2c",
+        "H4_null"
+      ],
+      "family_ids": [
+        "T_ACTIVATED",
+        "C_COMPETING_PEAK",
+        "H_COMPETING_PEAK",
+        "NULL"
+      ],
+      "cv_log_rmse": 0.5574091246093932,
+      "parameter_count": 7,
+      "film_peak_match_fraction": 0.16666666666666666,
+      "salt_film_contrast_absolute_residual": 2.2361705887623273
+    },
+    {
+      "round": 4,
+      "structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p1|H3_log_symmetric_peak_r2c|H4_R4_saturating_peak_shift",
+      "module_ids": [
+        "H1_Arrhenius_transfer",
+        "H2_R4_fixed_scale_0p1",
+        "H3_log_symmetric_peak_r2c",
+        "H4_R4_saturating_peak_shift"
+      ],
+      "family_ids": [
+        "T_ACTIVATED",
+        "C_COMPETING_PEAK",
+        "H_COMPETING_PEAK",
+        "CH_SLOPE"
+      ],
+      "cv_log_rmse": 0.4880009178969158,
+      "parameter_count": 8,
+      "film_peak_match_fraction": 0.3333333333333333,
+      "salt_film_contrast_absolute_residual": 1.361024750390376
+    },
+    {
+      "round": 5,
+      "structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p1|H3_null|H4_R4_zero_high_salt_curvature_limit",
+      "module_ids": [
+        "H1_Arrhenius_transfer",
+        "H2_R4_fixed_scale_0p1",
+        "H3_null",
+        "H4_R4_zero_high_salt_curvature_limit"
+      ],
+      "family_ids": [
+        "T_ACTIVATED",
+        "C_COMPETING_PEAK",
+        "NULL",
+        "CH_PEAK_SHAPE"
+      ],
+      "cv_log_rmse": 0.4713333800565892,
+      "parameter_count": 7,
+      "film_peak_match_fraction": 0.3333333333333333,
+      "salt_film_contrast_absolute_residual": 0.6234214250635102
+    },
+    {
+      "round": 6,
+      "structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p05|H3_null|H4_R4_zero_high_salt_curvature_limit",
+      "module_ids": [
+        "H1_Arrhenius_transfer",
+        "H2_R4_fixed_scale_0p05",
+        "H3_null",
+        "H4_R4_zero_high_salt_curvature_limit"
+      ],
+      "family_ids": [
+        "T_ACTIVATED",
+        "C_COMPETING_PEAK",
+        "NULL",
+        "CH_PEAK_SHAPE"
+      ],
+      "cv_log_rmse": 0.4519430124115554,
+      "parameter_count": 7,
+      "film_peak_match_fraction": 0.3333333333333333,
+      "salt_film_contrast_absolute_residual": 0.6244426890387551
+    }
+  ],
+  "unique_23fold_checked_structures": 461,
+  "families": [
+    {
+      "family": "T_ACTIVATED",
+      "process": "温度激活因子",
+      "unique_23fold_checked_structures": 155,
+      "numerically_admissible": 64,
+      "best_cv_log_rmse": 0.4519430124115554,
+      "median_checked_admissible_cv_log_rmse": 0.6291856990272595,
+      "best_parameter_count": 7,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p05|H3_null|H4_R4_zero_high_salt_curvature_limit",
+      "best_condition_number": 3.386616361443172,
+      "best_full_fit_feasible_start_fraction": 1.0,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 0.875,
+        "salt_sampled_peak_match_fraction": 0.5238095238095238,
+        "film_sampled_peak_match_fraction": 0.3333333333333333,
+        "salt_film_interaction_predicted": -1.6117278997235722,
+        "salt_film_interaction_absolute_residual": 0.6244426890387551,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "T_LOCAL",
+      "process": "温度局部近似或反证",
+      "unique_23fold_checked_structures": 221,
+      "numerically_admissible": 23,
+      "best_cv_log_rmse": 0.48274218302112326,
+      "median_checked_admissible_cv_log_rmse": 0.6601566183043638,
+      "best_parameter_count": 7,
+      "best_structure_id": "H1_local_linear|H2_R4_fixed_scale_0p1|H3_null|H4_R4_zero_high_salt_curvature_limit",
+      "best_condition_number": 3.3956967826577444,
+      "best_full_fit_feasible_start_fraction": 1.0,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 0.875,
+        "salt_sampled_peak_match_fraction": 0.5238095238095238,
+        "film_sampled_peak_match_fraction": 0.3333333333333333,
+        "salt_film_interaction_predicted": -1.6129003025681818,
+        "salt_film_interaction_absolute_residual": 0.6232702861941455,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "C_MONOTONE",
+      "process": "盐的单调促进、抑制或饱和",
+      "unique_23fold_checked_structures": 195,
+      "numerically_admissible": 0,
+      "best_cv_log_rmse": null,
+      "interpretation_limit": "No numerically admissible 23-fold checked example"
+    },
+    {
+      "family": "C_COMPETING_PEAK",
+      "process": "盐促进与高盐抑制竞争",
+      "unique_23fold_checked_structures": 205,
+      "numerically_admissible": 81,
+      "best_cv_log_rmse": 0.4519430124115554,
+      "median_checked_admissible_cv_log_rmse": 0.6401434684433733,
+      "best_parameter_count": 7,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p05|H3_null|H4_R4_zero_high_salt_curvature_limit",
+      "best_condition_number": 3.386616361443172,
+      "best_full_fit_feasible_start_fraction": 1.0,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 0.875,
+        "salt_sampled_peak_match_fraction": 0.5238095238095238,
+        "film_sampled_peak_match_fraction": 0.3333333333333333,
+        "salt_film_interaction_predicted": -1.6117278997235722,
+        "salt_film_interaction_absolute_residual": 0.6244426890387551,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "TC_PEAK_SHIFT",
+      "process": "温度改变盐峰位置",
+      "unique_23fold_checked_structures": 6,
+      "numerically_admissible": 2,
+      "best_cv_log_rmse": 0.5732125810690583,
+      "median_checked_admissible_cv_log_rmse": 0.8379824297080601,
+      "best_parameter_count": 9,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_temperature_shifted_peak_r2c|H3_transport_limit|H4_salt_length_shift",
+      "best_condition_number": 18.611476321796466,
+      "best_full_fit_feasible_start_fraction": 0.5,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 0.0,
+        "salt_sampled_peak_match_fraction": 0.38095238095238093,
+        "film_sampled_peak_match_fraction": 0.20833333333333334,
+        "salt_film_interaction_predicted": -0.5918374818099235,
+        "salt_film_interaction_absolute_residual": 1.6443331069524039,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "H_MONOTONE",
+      "process": "液膜可用性或传输单调项",
+      "unique_23fold_checked_structures": 163,
+      "numerically_admissible": 22,
+      "best_cv_log_rmse": 0.5659022631168797,
+      "median_checked_admissible_cv_log_rmse": 0.6631218362095681,
+      "best_parameter_count": 5,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p1|H3_transport_limit|H4_null",
+      "best_condition_number": 2.2804547598730256,
+      "best_full_fit_feasible_start_fraction": 1.0,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 0.0,
+        "salt_sampled_peak_match_fraction": 0.5714285714285714,
+        "film_sampled_peak_match_fraction": 0.20833333333333334,
+        "salt_film_interaction_predicted": 0.0,
+        "salt_film_interaction_absolute_residual": 2.2361705887623273,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "H_COMPETING_PEAK",
+      "process": "液膜可用性与传输竞争峰",
+      "unique_23fold_checked_structures": 157,
+      "numerically_admissible": 44,
+      "best_cv_log_rmse": 0.4880009178969158,
+      "median_checked_admissible_cv_log_rmse": 0.7357787529041018,
+      "best_parameter_count": 8,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p1|H3_log_symmetric_peak_r2c|H4_R4_saturating_peak_shift",
+      "best_condition_number": 5.149645909260491,
+      "best_full_fit_feasible_start_fraction": 1.0,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 1.0,
+        "salt_sampled_peak_match_fraction": 0.5714285714285714,
+        "film_sampled_peak_match_fraction": 0.3333333333333333,
+        "salt_film_interaction_predicted": -0.8751458383719513,
+        "salt_film_interaction_absolute_residual": 1.361024750390376,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "CH_LENGTH",
+      "process": "盐改变液膜特征长度",
+      "unique_23fold_checked_structures": 113,
+      "numerically_admissible": 1,
+      "best_cv_log_rmse": 0.5732125810690583,
+      "median_checked_admissible_cv_log_rmse": 0.5732125810690583,
+      "best_parameter_count": 9,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_temperature_shifted_peak_r2c|H3_transport_limit|H4_salt_length_shift",
+      "best_condition_number": 18.611476321796466,
+      "best_full_fit_feasible_start_fraction": 0.5,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 0.0,
+        "salt_sampled_peak_match_fraction": 0.38095238095238093,
+        "film_sampled_peak_match_fraction": 0.20833333333333334,
+        "salt_film_interaction_predicted": -0.5918374818099235,
+        "salt_film_interaction_absolute_residual": 1.6443331069524039,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "CH_SLOPE",
+      "process": "盐改变液膜斜率或峰位",
+      "unique_23fold_checked_structures": 38,
+      "numerically_admissible": 17,
+      "best_cv_log_rmse": 0.4880009178969158,
+      "median_checked_admissible_cv_log_rmse": 1.0147694039975634,
+      "best_parameter_count": 8,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p1|H3_log_symmetric_peak_r2c|H4_R4_saturating_peak_shift",
+      "best_condition_number": 5.149645909260491,
+      "best_full_fit_feasible_start_fraction": 1.0,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 1.0,
+        "salt_sampled_peak_match_fraction": 0.5714285714285714,
+        "film_sampled_peak_match_fraction": 0.3333333333333333,
+        "salt_film_interaction_predicted": -0.8751458383719513,
+        "salt_film_interaction_absolute_residual": 1.361024750390376,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "CH_PEAK_SHAPE",
+      "process": "盐改变液膜峰幅度或曲率",
+      "unique_23fold_checked_structures": 43,
+      "numerically_admissible": 11,
+      "best_cv_log_rmse": 0.4519430124115554,
+      "median_checked_admissible_cv_log_rmse": 0.5112314541398799,
+      "best_parameter_count": 7,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_R4_fixed_scale_0p05|H3_null|H4_R4_zero_high_salt_curvature_limit",
+      "best_condition_number": 3.386616361443172,
+      "best_full_fit_feasible_start_fraction": 1.0,
+      "best_fold_parameter_sign_consistency_fraction": 1.0,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 0.875,
+        "salt_sampled_peak_match_fraction": 0.5238095238095238,
+        "film_sampled_peak_match_fraction": 0.3333333333333333,
+        "salt_film_interaction_predicted": -1.6117278997235722,
+        "salt_film_interaction_absolute_residual": 0.6244426890387551,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "TH_COUPLING",
+      "process": "温度改变液膜响应",
+      "unique_23fold_checked_structures": 107,
+      "numerically_admissible": 14,
+      "best_cv_log_rmse": 0.5902764717998974,
+      "median_checked_admissible_cv_log_rmse": 1.0520041121687913,
+      "best_parameter_count": 11,
+      "best_structure_id": "H1_local_linear|H2_interior_peak|H3_competing_peak|H4_temperature_amplitude",
+      "best_condition_number": 299448.2941149172,
+      "best_full_fit_feasible_start_fraction": null,
+      "best_fold_parameter_sign_consistency_fraction": null,
+      "best_response_signature": null,
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    },
+    {
+      "family": "TCH_COUPLING",
+      "process": "温度和盐共同改变液膜响应",
+      "unique_23fold_checked_structures": 3,
+      "numerically_admissible": 1,
+      "best_cv_log_rmse": 1.135351134887509,
+      "median_checked_admissible_cv_log_rmse": 1.135351134887509,
+      "best_parameter_count": 8,
+      "best_structure_id": "H1_Arrhenius_transfer|H2_quadratic_peak_r2|H3_loglinear_peak_r2|H4_salt_temperature_wetting_joint_r2c",
+      "best_condition_number": 10.10403437737959,
+      "best_full_fit_feasible_start_fraction": 1.0,
+      "best_fold_parameter_sign_consistency_fraction": 0.7142857142857143,
+      "best_response_signature": {
+        "temperature_positive_fraction": 1.0,
+        "salt_interior_peak_fraction": 1.0,
+        "film_interior_peak_fraction": 1.0,
+        "salt_sampled_peak_match_fraction": 0.14285714285714285,
+        "film_sampled_peak_match_fraction": 0.3333333333333333,
+        "salt_film_interaction_predicted": -0.5044962526183063,
+        "salt_film_interaction_absolute_residual": 1.731674336144021,
+        "scope": "Full-data in-sample fitted shape descriptors, not complete curve clustering"
+      },
+      "interpretation_limit": "Overlapping family memberships; stage-1 complete but later 23-fold shortlists are selective; adaptive rounds and reused data; not independent stability"
+    }
+  ],
+  "coarse_response_families": [
+    {
+      "signature": "T_all|Cpeak_all|Hpeak_none|CH_zero",
+      "unique_admissible_structures": 23
+    },
+    {
+      "signature": "T_all|Cpeak_all|Hpeak_all|CH_zero",
+      "unique_admissible_structures": 18
+    },
+    {
+      "signature": "T_all|Cpeak_all|Hpeak_all|CH_negative",
+      "unique_admissible_structures": 15
+    },
+    {
+      "signature": "T_none|Cpeak_all|Hpeak_none|CH_zero",
+      "unique_admissible_structures": 8
+    },
+    {
+      "signature": "T_all|Cpeak_all|Hpeak_partial|CH_negative",
+      "unique_admissible_structures": 7
+    },
+    {
+      "signature": "T_all|Cpeak_none|Hpeak_none|CH_zero",
+      "unique_admissible_structures": 4
+    },
+    {
+      "signature": "T_none|Cpeak_none|Hpeak_none|CH_zero",
+      "unique_admissible_structures": 2
+    },
+    {
+      "signature": "T_none|Cpeak_none|Hpeak_partial|CH_negative",
+      "unique_admissible_structures": 2
+    },
+    {
+      "signature": "T_all|Cpeak_none|Hpeak_partial|CH_negative",
+      "unique_admissible_structures": 2
+    },
+    {
+      "signature": "T_all|Cpeak_all|Hpeak_all|CH_positive",
+      "unique_admissible_structures": 1
+    },
+    {
+      "signature": "T_all|Cpeak_all|Hpeak_none|CH_negative",
+      "unique_admissible_structures": 1
+    },
+    {
+      "signature": "T_none|Cpeak_none|Hpeak_all|CH_positive",
+      "unique_admissible_structures": 1
+    },
+    {
+      "signature": "T_none|Cpeak_all|Hpeak_all|CH_negative",
+      "unique_admissible_structures": 1
+    }
+  ],
+  "repeated_winner_families": {
+    "CH_PEAK_SHAPE": 2,
+    "CH_SLOPE": 1,
+    "C_COMPETING_PEAK": 4,
+    "H_COMPETING_PEAK": 2,
+    "T_ACTIVATED": 4
+  },
+  "response_signature_scope": "In-sample coarse descriptors from archived shape_checks; full fitted curves and derivatives are not archived for every candidate"
+}

@@ -1,0 +1,255 @@
+[
+  {
+    "id": "A22_EQ4",
+    "paper_id": "P22",
+    "pdf_sha256": "159b654ae562357ba844ed3a74f8d0a3ce4b8065fc3ad315cceb88b61df63435",
+    "pdf_page": 5,
+    "locator": "Section 3.2, Eq. (4)",
+    "claim_type": "SOURCE_EQUATION",
+    "source_equation": "AF(T) = exp[B * (1/T0 - 1/T)]",
+    "source_target": "temperature acceleration factor for atmospheric corrosion, not measured current",
+    "source_variables": {
+      "T": "ambient Kelvin",
+      "T0": "reference Kelvin",
+      "B": "Ea/K"
+    },
+    "context": "Review describes the form for laboratory conditions without environmental interactions; wet electrolyte availability is a condition.",
+    "supports_form_for": [
+      "temperature acceleration factor"
+    ],
+    "supports_process_for": [
+      "H1"
+    ],
+    "does_not_establish": "Does not establish that the target experiment's corrosion current obeys the same factor at fixed NaCl and liquid-film thickness.",
+    "preview": "audit_previews/P22_p05.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "22_Atmospheric corrosion prediction a review.pdf"
+  },
+  {
+    "id": "A22_EQ6",
+    "paper_id": "P22",
+    "pdf_sha256": "159b654ae562357ba844ed3a74f8d0a3ce4b8065fc3ad315cceb88b61df63435",
+    "pdf_page": 7,
+    "locator": "Section 3.3, Eq. (6)",
+    "claim_type": "SOURCE_EQUATION",
+    "source_equation": "AF(Cl) = (Cl/Cl0)^G",
+    "source_target": "acceleration factor indexed by atmospheric chloride deposition",
+    "source_variables": {
+      "Cl": "chloride deposition",
+      "Cl0": "reference deposition",
+      "G": "fitted exponent"
+    },
+    "context": "Review attributes this acceleration-factor model to earlier ISO CORRAG work; it is not a formula for NaCl concentration in a fixed liquid film.",
+    "supports_form_for": [
+      "chloride-deposition acceleration factor at positive deposition"
+    ],
+    "supports_process_for": [
+      "H2"
+    ],
+    "does_not_establish": "Does not establish response to NaCl wt%, a finite value at zero concentration, saturation, or inhibition.",
+    "preview": "audit_previews/P22_p07.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "22_Atmospheric corrosion prediction a review.pdf"
+  },
+  {
+    "id": "A11_EQ3",
+    "paper_id": "P11",
+    "pdf_sha256": "d631548e205e17465240756f4bc5583d0ac18ddcf2e58fad57d7438b5b57e293",
+    "pdf_page": 6,
+    "locator": "Eq. (3)",
+    "claim_type": "SOURCE_EQUATION",
+    "source_equation": "K = 61.12 + 0.19[Cl] - 0.41W",
+    "source_target": "monthly steel mass loss, g/m^2, at Havana station",
+    "source_variables": {
+      "[Cl]": "chloride deposition, mg/m^2/day",
+      "W": "rainfall, mm"
+    },
+    "context": "Empirical regression for a particular station, rain regime, and exposure measure.",
+    "supports_form_for": [
+      "mass-loss regression against chloride deposition and rainfall in this dataset"
+    ],
+    "supports_process_for": [
+      "H2"
+    ],
+    "does_not_establish": "Does not give a log-current law in solution NaCl concentration or prove global monotonicity.",
+    "preview": "audit_previews/P11_p06.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf"
+  },
+  {
+    "id": "A10_P3",
+    "paper_id": "P10",
+    "pdf_sha256": "f19d2fc395560dfaa5014a92ddf70e49d342db14ad2afdade60597ad20b89984",
+    "pdf_page": 3,
+    "locator": "Text immediately before Eq. (1)",
+    "claim_type": "SECONDARY_MECHANISM_REPORT",
+    "source_equation": null,
+    "source_target": "reported corrosion rate under evaporating initial moisture layers",
+    "source_variables": {
+      "layer": "initial moisture-layer thickness, not rust thickness"
+    },
+    "context": "Cole et al. report Kim's finding of a maximum at intermediate initial moisture-layer thickness. The primary Kim paper has not been audited here.",
+    "supports_form_for": [],
+    "supports_process_for": [
+      "H3",
+      "H4"
+    ],
+    "does_not_establish": "No exact h-response function or salt-film coupling function is given on this page.",
+    "preview": "audit_previews/P10_p03.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf"
+  },
+  {
+    "id": "A33_P4",
+    "paper_id": "P33",
+    "pdf_sha256": "18280d8ab6bd4e98a462fab503813a942142e5d977e163800571a083ad8116fd",
+    "pdf_page": 4,
+    "locator": "Section 2.1 text and Eq. (4)",
+    "claim_type": "PROCESS_WITH_EQUATION",
+    "source_equation": "Cathodic kinetic expression includes a limiting diffusion current i_lim; no explicit film-thickness law appears in Eq. (4).",
+    "source_target": "local cathodic current density of Q235 steel in a model electrolyte film",
+    "source_variables": {
+      "i_lim": "limiting oxygen diffusion current density",
+      "eta": "cathodic overpotential"
+    },
+    "context": "Text describes oxygen transfer through the electrolyte toward the electrode and coupling to cathodic reaction.",
+    "supports_form_for": [
+      "its own cathodic current/overpotential expression"
+    ],
+    "supports_process_for": [
+      "H3",
+      "H4"
+    ],
+    "does_not_establish": "No published relationship i_lim(h), no whole-cell corrosion-current response to film thickness, and no NaCl-film interaction law are supplied here.",
+    "preview": "audit_previews/P33_p04.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf"
+  },
+  {
+    "id": "A22_P5_FILM",
+    "paper_id": "P22",
+    "pdf_sha256": "159b654ae562357ba844ed3a74f8d0a3ce4b8065fc3ad315cceb88b61df63435",
+    "pdf_page": 5,
+    "locator": "Section 3.2 narrative following Eq. (4)",
+    "claim_type": "PROCESS_REPORT",
+    "source_equation": null,
+    "source_target": "atmospheric corrosion under changing wetness",
+    "source_variables": {
+      "T": "temperature",
+      "wetness": "condensation and evaporation of electrolyte film"
+    },
+    "context": "Review describes temperature changing film availability in outdoor cycles.",
+    "supports_form_for": [],
+    "supports_process_for": [
+      "H4"
+    ],
+    "does_not_establish": "This dynamic wetting argument does not by itself establish a temperature-by-thickness interaction when thickness is experimentally fixed.",
+    "preview": "audit_previews/P22_p05.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "22_Atmospheric corrosion prediction a review.pdf"
+  },
+  {
+    "id": "A14_P2_FIXED_FILM",
+    "paper_id": "P14",
+    "pdf_sha256": "baab1efa823c8ecc7ad37d849a993b18e05f3f0b66f4a364d6a65ba587b52747",
+    "pdf_page": 2,
+    "locator": "Experimental methods and Fig. 1",
+    "claim_type": "EXPERIMENT_CONTEXT",
+    "source_equation": null,
+    "source_target": "electrochemical current and SCC in E690 steel under a thin electrolyte layer",
+    "source_variables": {
+      "NaCl": "3.5 wt%",
+      "film_thickness": "approximately 90 micrometres, held at one setting",
+      "temperature": "30 +/- 2 C"
+    },
+    "context": "The apparatus measures electrochemistry under a thin layer, but the page gives one effective thickness, not a thickness sweep.",
+    "supports_form_for": [],
+    "supports_process_for": [],
+    "contextual_relevance_for": [
+      "H3",
+      "H4"
+    ],
+    "does_not_establish": "Does not establish the function of corrosion current versus liquid-film thickness or salt-film coupling.",
+    "preview": "audit_previews/P14_p02.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf"
+  },
+  {
+    "id": "A14_P3_CURRENT",
+    "paper_id": "P14",
+    "pdf_sha256": "baab1efa823c8ecc7ad37d849a993b18e05f3f0b66f4a364d6a65ba587b52747",
+    "pdf_page": 3,
+    "locator": "Fig. 2 and Section 3.1",
+    "claim_type": "EXPERIMENT_CONTEXT",
+    "source_equation": null,
+    "source_target": "E690 corrosion current from polarization under varied stress/strain and oxygen at approximately fixed film thickness",
+    "source_variables": {
+      "oxygen": "varied",
+      "stress_strain": "varied",
+      "film_thickness": "approximately 90 micrometres"
+    },
+    "context": "Current changes with mechanical and oxygen conditions; film thickness is not the manipulated axis.",
+    "supports_form_for": [],
+    "supports_process_for": [],
+    "contextual_relevance_for": [
+      "H3"
+    ],
+    "does_not_establish": "Cannot identify a thickness law while oxygen or stress/strain is varied.",
+    "preview": "audit_previews/P14_p03.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf"
+  },
+  {
+    "id": "A50_P10_DROPLETS",
+    "paper_id": "P50",
+    "pdf_sha256": "d8f84ad4f2f08f4e00d5f07fc7b5d1f4c13ceff51eb6f40bd7c296bd7ff46b1d",
+    "pdf_page": 10,
+    "locator": "Fig. 10 and discussion",
+    "claim_type": "EXPERIMENT_CONTEXT",
+    "source_equation": null,
+    "source_target": "corrosion-rate monitoring under evolving multi-droplet geometry",
+    "source_variables": {
+      "droplet_geometry": "changes with time",
+      "electrolyte_concentration": "can rise with evaporation"
+    },
+    "context": "Droplet size, contact angle and concentration co-evolve; the paper explicitly calls for further validation of their quantitative relation to corrosion.",
+    "supports_form_for": [],
+    "supports_process_for": [],
+    "contextual_relevance_for": [
+      "H3",
+      "H4"
+    ],
+    "does_not_establish": "Droplet diameter, contact angle, and controlled uniform liquid-film thickness are not interchangeable variables.",
+    "preview": "audit_previews/P50_p10.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf"
+  },
+  {
+    "id": "A42_P12_OIL_FILM",
+    "paper_id": "P42",
+    "pdf_sha256": "c328d71b505322076c79620f3ab2a77f00cc3cbe16e1144cd1336ae97a83aad3",
+    "pdf_page": 12,
+    "locator": "Fig. 16 and Eq. (8)",
+    "claim_type": "INAPPLICABLE_LOOKALIKE_CONTEXT",
+    "source_equation": "TL = a+b*T^2+c*RH^2+d*c_salt^2+e*T+f*RH+g*c_salt+h*T*RH+i*T*c_salt+j*RH*c_salt",
+    "source_target": "thickness loss of steel beneath an anti-rust oil film contaminated by saline droplets",
+    "source_variables": {
+      "T": "temperature",
+      "RH": "relative humidity",
+      "c_salt": "salt concentration in droplets"
+    },
+    "context": "The studied film is anti-rust oil and the response is steel thickness loss, not uniform liquid-electrolyte-film thickness or instantaneous corrosion current.",
+    "supports_form_for": [
+      "reported empirical oil-film thickness-loss regression"
+    ],
+    "supports_process_for": [],
+    "contextual_relevance_for": [
+      "H2",
+      "H4"
+    ],
+    "does_not_establish": "Its quadratic cross terms cannot be presented as a verified salt-by-liquid-film current law.",
+    "preview": "audit_previews/P42_p12.png",
+    "verification_status": "PAGE_VERIFIED",
+    "pdf_filename": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf"
+  }
+]

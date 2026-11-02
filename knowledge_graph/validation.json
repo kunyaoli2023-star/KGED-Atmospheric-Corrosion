@@ -1,0 +1,272 @@
+{
+  "graph_sha256": "eafeab7cd060aec1f1b15bc5408755ee547a43e70c017d04021856e2b7b96c56",
+  "node_counts": {
+    "raw_quantity": 3,
+    "coordinate": 3,
+    "hypothesis": 4,
+    "parameter_type": 2,
+    "operator": 5,
+    "arithmetic_operator": 5,
+    "protected_operator": 3,
+    "executable_template": 31,
+    "construction_rule": 2,
+    "process_family": 12,
+    "classification_tag": 20
+  },
+  "edges": 343,
+  "templates_checked": 31,
+  "passed": 31,
+  "checks": [
+    {
+      "template_id": "template:H1:activated",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "757647a4adfc622dcf12654d06a51cb7d65e61113ceea43d546f235b3f62cbbc"
+    },
+    {
+      "template_id": "template:H1:linear",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "4f18019cce616e77154438fec794a8f96e8f7bbeb6f1087caf674183532e21af"
+    },
+    {
+      "template_id": "template:H1:logarithmic",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "9667b9bf698e3b2139814c5933794977344a4ad557e25509d2a020e35df791f1"
+    },
+    {
+      "template_id": "template:H1:null",
+      "errors": [],
+      "warnings": [
+        "No-effect control becomes zero after centering; retain as explicit module omission, not fitted coefficient"
+      ],
+      "numerical_error": null,
+      "dedup_key": "a541208ab456ece385a95a25575f00747fc02f5d0354a42eee4166ec73186a80"
+    },
+    {
+      "template_id": "template:H2:saturation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "5adb6cc0b8c022bd3a442d3b7ffb09b24781183eb071f520b6cfe746ae88299b"
+    },
+    {
+      "template_id": "template:H2:logarithmic",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "9759a6858cb7e9298022782b537969b528563d2f3ef32936c2ba03634f271340"
+    },
+    {
+      "template_id": "template:H2:competition",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "d8060189cb6a2570dbdad5e05e40864ff4739e2a00b4d73548d6649aedacb9bc"
+    },
+    {
+      "template_id": "template:H2:null",
+      "errors": [],
+      "warnings": [
+        "No-effect control becomes zero after centering; retain as explicit module omission, not fitted coefficient"
+      ],
+      "numerical_error": null,
+      "dedup_key": "2b33163e1ad5ae4f012c047629894a1966fcfde8674f7783016de1a05a48587d"
+    },
+    {
+      "template_id": "template:H3:transport_peak",
+      "errors": [],
+      "warnings": [
+        "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+      ],
+      "numerical_error": null,
+      "dedup_key": "56477c3b19385a165d6f635dbe1f4bf02b90f1b82311293e3975e496181b3a75"
+    },
+    {
+      "template_id": "template:H3:attenuation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "4588f19d4ecdbb7c3b1015a4a2c9607147f7632ed57f542b4937a5d65fa52f75"
+    },
+    {
+      "template_id": "template:H3:saturation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "45ef41d5e5c91abae729859de46a982a5e6a0bcef85cc8479c69429fde202b80"
+    },
+    {
+      "template_id": "template:H3:null",
+      "errors": [],
+      "warnings": [
+        "No-effect control becomes zero after centering; retain as explicit module omission, not fitted coefficient"
+      ],
+      "numerical_error": null,
+      "dedup_key": "75424866fd56a02cf3a8b1398a1e5a537825267b3edad0ff2b583c7ff79cf0d2"
+    },
+    {
+      "template_id": "template:H4:salt_film",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "4805113cebbc5df062803ca1f8736953752dd0af1f08d1e185b8402cea73aabf"
+    },
+    {
+      "template_id": "template:H4:salt_film_log",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "bb8a654dd4eda23c9837efb6692ee16e93dd3ea3ea63c611346e438ad2024c2c"
+    },
+    {
+      "template_id": "template:H4:thermal_film",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "419db309b18189653652be09654472f888123076d22927387846127657bc9a70"
+    },
+    {
+      "template_id": "template:H4:null",
+      "errors": [],
+      "warnings": [
+        "No-effect control becomes zero after centering; retain as explicit module omission, not fitted coefficient"
+      ],
+      "numerical_error": null,
+      "dedup_key": "a3da7d95f4b391b1a5f481bd6f2aef57dba258338578bbcd3619a508f5ebf7b6"
+    },
+    {
+      "template_id": "template:H1:exponential_saturation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "9549650d0f2fb02002d511aa7d935ec1bc465e6fcda93ab5cc240eb1f552de52"
+    },
+    {
+      "template_id": "template:H1:tanh_saturation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "ad65cf169c15cba64db61a0854a3dee4f5f78c12f4ade45b778090f440dcdba5"
+    },
+    {
+      "template_id": "template:H1:power_response",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "eeafe5903c0862d736960ec742598e0b3769640fcbdbe39caf5c1ca52e88c582"
+    },
+    {
+      "template_id": "template:H2:exponential_saturation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "0b18d4bdf0ba64ef9abb0dcf6a9a8c46320d26dbdc047500b55481c3d43ff5be"
+    },
+    {
+      "template_id": "template:H2:tanh_saturation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "fa9d61526911ec35a04516b759845b5586180d068f5c9dcf30e0cac12e87a59a"
+    },
+    {
+      "template_id": "template:H2:power_response",
+      "errors": [],
+      "warnings": [
+        "Derivative singularity on probe grid; finite response does not imply smoothness"
+      ],
+      "numerical_error": null,
+      "dedup_key": "cdd88d89f13e18083682307662e89db2cf8898957c17026a42c315532e63c19c"
+    },
+    {
+      "template_id": "template:H3:exponential_saturation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "a06de00502784aaf5c806b86cad049ed5e4151bf2a3a6f1ea8eabded95d4d2bc"
+    },
+    {
+      "template_id": "template:H3:tanh_saturation",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "612fb8f638add8ad0401359e34ce43a4545aff27af1d31a30f26e855f50aa309"
+    },
+    {
+      "template_id": "template:H3:power_response",
+      "errors": [],
+      "warnings": [],
+      "numerical_error": null,
+      "dedup_key": "d789d04920251ef53ad26c72d95406186dbe15001ca724df993b07aa0af7f461"
+    },
+    {
+      "template_id": "template:H2:gaussian_log_response",
+      "errors": [],
+      "warnings": [
+        "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+      ],
+      "numerical_error": null,
+      "dedup_key": "b7182ee05a4b0a9b39d4c5d8182195e6652298e2b3579c1e30aa968659f4e060"
+    },
+    {
+      "template_id": "template:H2:bell_log1p",
+      "errors": [],
+      "warnings": [
+        "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+      ],
+      "numerical_error": null,
+      "dedup_key": "a465a6709e82393addcb935be7a7d58719fb70a5ce70a33af63ff41e9f989d69"
+    },
+    {
+      "template_id": "template:H2:power_bell_log1p",
+      "errors": [],
+      "warnings": [
+        "Derivative singularity on probe grid; finite response does not imply smoothness",
+        "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+      ],
+      "numerical_error": null,
+      "dedup_key": "fbf81dbbe92c1e4fff492bfa25c5567422a162c9f43eaedf950a8ad0112e6dcb"
+    },
+    {
+      "template_id": "template:H3:gaussian_log_response",
+      "errors": [],
+      "warnings": [
+        "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+      ],
+      "numerical_error": null,
+      "dedup_key": "fa66fa0a4d7ea8b0c69cc4721bdf5125a18fdc3d9c398fd35c7c582ef5cf715c"
+    },
+    {
+      "template_id": "template:H3:bell_log1p",
+      "errors": [],
+      "warnings": [
+        "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+      ],
+      "numerical_error": null,
+      "dedup_key": "e7c3455022a2cf473990e21f017b8ba2b3be2d5b67e6b3f5e79713862a725ada"
+    },
+    {
+      "template_id": "template:H3:power_bell_log1p",
+      "errors": [],
+      "warnings": [
+        "Interior-extremum existence/location requires candidate-specific analysis; trend label is not a proof"
+      ],
+      "numerical_error": null,
+      "dedup_key": "c686c9ffb2f9af827468c5e368432f6218625ad94562ba58983b0e8cbfe9bf1b"
+    }
+  ],
+  "combination_check": {
+    "expression": "p0 * c / (p1 + c) - p2 * log1p(c)",
+    "errors": []
+  },
+  "sum_combination_check": {
+    "expression": "p0 * c / (p1 + c) + p2 * log1p(c)",
+    "errors": []
+  },
+  "scope": "All templates checked locally at finite probes; numerical engine response/Jacobian checked at unit positive parameters. No LLM, parameter fitting or scientific validation."
+}
