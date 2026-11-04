@@ -1,0 +1,217 @@
+{
+  "proposals": [
+    {
+      "proposal_id": "d10a350de7b20d5c_1",
+      "hypothesis_id": "H3",
+      "family": "H3_PEAK_COMPETITION",
+      "scientific_argument": "This model proposes a symmetric bell-shaped response (Gaussian in log-response space) to film thickness. This tests the hypothesis that the competing processes of electrolyte availability and oxygen transport limitation result in a symmetric peak. The existence of a peak is supported by the secondary report in A10_P3. This symmetric form serves as a rival to asymmetric peak models like `bell_log1p`.",
+      "source_links": [
+        {
+          "evidence_id": "A10_P3",
+          "supports": "The qualitative observation of a peak corrosion rate at an intermediate film thickness.",
+          "source_to_module_mapping": "The evidence supports the general shape (interior maximum) but not the specific symmetric Gaussian functional form, which is a phenomenological closure."
+        }
+      ],
+      "evidence_gap": "No evidence in the corpus provides a specific functional form for the film thickness dependency, nor does it suggest the peak should be symmetric.",
+      "construction_family_id": "H3_PEAK_COMPETITION",
+      "mathematical_distinction": "A symmetric bell-shaped curve (parabolic in log-response), contrasted with asymmetric peak models like `bell_log1p`.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The log-corrosion current will show a symmetric, parabolic relationship with film thickness, peaking at an intermediate value."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:gaussian_log_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "d10a350de7b20d5c_2",
+      "hypothesis_id": "H3",
+      "family": "H3_PEAK_COMPETITION",
+      "scientific_argument": "This model generalizes the `bell_log1p` form by allowing the initial promotion of corrosion with thickness to follow a flexible power law (`h**p1`) rather than a fixed linear trend. This can better capture the physics of increasing electrolyte availability. The peak is still formed by competition with an exponential decay term, consistent with the processes described in A10_P3 and A33_P4.",
+      "source_links": [
+        {
+          "evidence_id": "A10_P3",
+          "supports": "The qualitative observation of a peak corrosion rate.",
+          "source_to_module_mapping": "Supports the general peak shape."
+        },
+        {
+          "evidence_id": "A33_P4",
+          "supports": "The concept of a transport-limited process that becomes dominant at higher thicknesses.",
+          "source_to_module_mapping": "Supports the attenuation part of the competing process. The power-law promotion is a phenomenological closure."
+        }
+      ],
+      "evidence_gap": "The evidence does not specify the functional form for either the initial promotion or the subsequent attenuation. The power-law and exponential forms are phenomenological closures.",
+      "construction_family_id": "H3_PEAK_COMPETITION",
+      "mathematical_distinction": "An asymmetric bell-shaped curve where the initial promotion follows a power law, allowing for flexible curvature (concave or convex) on the rising part of the peak. This is contrasted with the simpler `bell_log1p` form where the promotion is linear.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will first increase with film thickness, reach a maximum, and then decrease, with the initial increase following a flexible power-law trend."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:power_bell_log1p",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "d10a350de7b20d5c_3",
+      "hypothesis_id": "H3",
+      "family": "H3_PEAK_COMPETITION",
+      "scientific_argument": "This model, `log(h)-log(p0+h**2)`, provides a different phenomenological closure for the peak behavior. The `log(h)` term can be interpreted as representing an availability/conductivity effect that increases with thickness, while the `-log(p0+h**2)` term represents a transport limitation that grows faster at larger thicknesses, causing a downturn. This directly implements the competing processes (A10_P3, A33_P4) as a difference of two logarithmic terms.",
+      "source_links": [
+        {
+          "evidence_id": "A10_P3",
+          "supports": "The qualitative observation of a peak corrosion rate.",
+          "source_to_module_mapping": "Supports the general peak shape."
+        },
+        {
+          "evidence_id": "A33_P4",
+          "supports": "The concept of a transport-limited process.",
+          "source_to_module_mapping": "Supports the idea of an attenuating process. The specific functional form is a phenomenological closure."
+        }
+      ],
+      "evidence_gap": "The evidence does not provide a specific functional form for the competing processes. The logarithmic and quadratic-logarithmic forms are phenomenological closures.",
+      "construction_family_id": "H3_PEAK_COMPETITION",
+      "mathematical_distinction": "A peak shape derived from the difference of a logarithmic and a quadratic-logarithmic term, contrasted with exponential-based bell shapes.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a peak as a result of the competition between a logarithmic promotion and a stronger, quadratic-logarithmic attenuation."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:transport_peak",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "d10a350de7b20d5c_4",
+      "hypothesis_id": "H3",
+      "family": "H3_MONOTONE_RIVAL",
+      "scientific_argument": "This is a rival model proposing a strictly monotonic increase in corrosion rate with film thickness, following a power law. It tests the scenario where the experiment is conducted entirely in the thin-film, availability-limited regime, and oxygen transport limitation (A33_P4) has not yet become significant enough to cause a downturn.",
+      "source_links": [
+        {
+          "evidence_id": "A33_P4",
+          "supports": "The concept of oxygen transport limitation implies that at very low thickness, the process is not transport-limited, allowing for an initial increase.",
+          "source_to_module_mapping": "This form models only the initial increasing regime, as a rival to peak models. The power-law form itself is a phenomenological closure."
+        }
+      ],
+      "evidence_gap": "This model intentionally omits the transport-limitation effect at high thickness mentioned in A33_P4 and the peak reported in A10_P3 to serve as a rival control.",
+      "construction_family_id": "H3_PEAK_COMPETITION",
+      "mathematical_distinction": "A monotonic power-law increase, which can be concave or convex, contrasted with saturating or peak models.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The corrosion current will monotonically increase with film thickness, following a power law, without reaching a peak or plateau."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_MONOTONE",
+      "template_id": "template:H3:power_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "d10a350de7b20d5c_5",
+      "hypothesis_id": "H3",
+      "family": "H3_MONOTONE_RIVAL",
+      "scientific_argument": "This rival model proposes a monotonic increase that saturates, following an exponential approach to a plateau. It represents the availability-limited regime where the benefit of increasing film thickness diminishes and eventually levels off, but without a subsequent decrease due to transport limitation (A33_P4).",
+      "source_links": [
+        {
+          "evidence_id": "A33_P4",
+          "supports": "The concept of a limiting factor (e.g., oxygen diffusion) suggests that the initial increase due to better electrolyte availability might not continue indefinitely.",
+          "source_to_module_mapping": "This form models a saturating increase, which is a plausible alternative to a peak. The exponential form is a phenomenological closure."
+        }
+      ],
+      "evidence_gap": "This model intentionally omits the downturn effect at high thickness (A33_P4, A10_P3) to serve as a rival control to peak models.",
+      "construction_family_id": "H3_PEAK_COMPETITION",
+      "mathematical_distinction": "A strictly concave, saturating increase, contrasted with the rational-function saturation of `template:H3:saturation` and non-saturating or peak models.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The corrosion current will increase with film thickness and then level off, approaching a maximum value, without showing a decrease."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_MONOTONE",
+      "template_id": "template:H3:exponential_saturation",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "d10a350de7b20d5c_6",
+      "hypothesis_id": "H3",
+      "family": "H3_MONOTONE_RIVAL",
+      "scientific_argument": "Another rival model for a saturating monotonic increase. The hyperbolic tangent (`tanh`) function provides a sigmoidal (S-shaped) approach to saturation. This could be physically plausible if there's an initial cooperative effect before the process saturates. It competes with other monotonic and peak models.",
+      "source_links": [
+        {
+          "evidence_id": "A33_P4",
+          "supports": "The concept of a limiting factor suggests a saturating behavior is plausible.",
+          "source_to_module_mapping": "This form models a saturating increase with a different kinetic shape (sigmoidal) than other saturation models. It is a phenomenological closure."
+        }
+      ],
+      "evidence_gap": "No evidence supports a sigmoidal shape specifically. This model serves as a mathematically distinct rival to other monotonic and peak models.",
+      "construction_family_id": "H3_PEAK_COMPETITION",
+      "mathematical_distinction": "A sigmoidal (S-shaped) saturating increase, contrasted with purely concave saturation models and non-saturating or peak models.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The corrosion current will show an S-shaped increase with film thickness before leveling off at a maximum value."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_MONOTONE",
+      "template_id": "template:H3:tanh_saturation",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "d10a350de7b20d5c_7",
+      "hypothesis_id": "H3",
+      "family": "H3_PEAK_COMPETITION",
+      "scientific_argument": "This explicitly constructs a peak by combining a flexible increasing term with a simple decreasing term. The `power_response` (`p0*h**p1`) represents the increasing electrolyte availability with flexible curvature. The `attenuation` (`-p2*h`) represents a linear approximation of transport limitation (A33_P4). Their sum (product in linear space) creates a peak (A10_P3), providing a more interpretable composition than single-template bell shapes.",
+      "source_links": [
+        {
+          "evidence_id": "A10_P3",
+          "supports": "The qualitative observation of a peak corrosion rate, implying competing processes.",
+          "source_to_module_mapping": "Supports the construction of a peak from competing terms."
+        },
+        {
+          "evidence_id": "A33_P4",
+          "supports": "The concept of oxygen transport limitation through the film.",
+          "source_to_module_mapping": "Supports the inclusion of an attenuation term. The specific functional forms are phenomenological closures."
+        }
+      ],
+      "evidence_gap": "The evidence does not provide specific functional forms for the competing processes. This composition is a new phenomenological construction.",
+      "construction_family_id": "H3_PEAK_COMPETITION",
+      "mathematical_distinction": "A peak constructed from the sum of a power-law and a linear term, offering more flexibility on the rising part of the peak than the existing `saturation` + `attenuation` composition.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a peak resulting from the competition between a power-law availability effect and a linear transport limitation effect."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:power_response",
+      "right_template_id": "template:H3:attenuation",
+      "operation": "SUM_LOG_RESPONSES"
+    }
+  ],
+  "coverage_not_claimed": [],
+  "why_stop_adding_forms": "The proposals cover all unevaluated templates for H3, including both peak and monotone rival forms, and introduce a new, scientifically justified composition. This provides a diverse set of mathematical distinctions to test against the data without exhausting all possible combinations."
+}

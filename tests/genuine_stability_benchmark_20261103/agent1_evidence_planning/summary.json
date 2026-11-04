@@ -1,0 +1,174 @@
+{
+  "agent": "Agent 1: Evidence planning (EVIDENCE_BRIDGE_AND_CONSTRUCTION_PLANNER)",
+  "n_runs": 5,
+  "total_api_attempts": 6,
+  "first_try_valid_rate": 0.8,
+  "dynamic_schema_and_grounding_validity_rate": 1.0,
+  "unique_prompt_sha256_count": 1,
+  "unique_response_sha256_count": 3,
+  "overall_evidence_id_jaccard": {
+    "mean": 0.9,
+    "std": 0.0816,
+    "min": 0.8333,
+    "max": 1.0,
+    "pairs": [
+      1.0,
+      0.8333,
+      1.0,
+      0.8333,
+      0.8333,
+      1.0,
+      0.8333,
+      0.8333,
+      1.0,
+      0.8333
+    ]
+  },
+  "per_hypothesis_evidence_id_jaccard": {
+    "H1": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "pairs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "H2": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "pairs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "H3": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "pairs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "H4": {
+      "mean": 0.7,
+      "std": 0.2449,
+      "min": 0.5,
+      "max": 1.0,
+      "pairs": [
+        1.0,
+        0.5,
+        1.0,
+        0.5,
+        0.5,
+        1.0,
+        0.5,
+        0.5,
+        1.0,
+        0.5
+      ]
+    }
+  },
+  "construction_family_id_jaccard": {
+    "mean": 0.5345,
+    "std": 0.3289,
+    "min": 0.1818,
+    "max": 1.0,
+    "pairs": [
+      1.0,
+      0.5,
+      1.0,
+      0.1818,
+      0.5,
+      1.0,
+      0.1818,
+      0.5,
+      0.3,
+      0.1818
+    ]
+  },
+  "call_stats": [
+    {
+      "role": "EVIDENCE_BRIDGE_AND_CONSTRUCTION_PLANNER",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "66be9c2af2cf4fb40dab9ceffa7661a5f6f8d07e1d3f6249f2b3408584e0e84b",
+      "response_sha256": "579dc824618035c6d49c730108dd88957329dc6cef0e1c96dfa83478be77f56c",
+      "seconds": 71.52
+    },
+    {
+      "role": "EVIDENCE_BRIDGE_AND_CONSTRUCTION_PLANNER",
+      "attempt_count": 2,
+      "first_try_valid": false,
+      "schema_failures": [
+        {
+          "attempt": 1,
+          "error_class": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}",
+          "seconds": 5.2,
+          "schema_repair_requested": false,
+          "usage": null
+        }
+      ],
+      "prompt_sha256": "66be9c2af2cf4fb40dab9ceffa7661a5f6f8d07e1d3f6249f2b3408584e0e84b",
+      "response_sha256": "579dc824618035c6d49c730108dd88957329dc6cef0e1c96dfa83478be77f56c",
+      "seconds": 78.69
+    },
+    {
+      "role": "EVIDENCE_BRIDGE_AND_CONSTRUCTION_PLANNER",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "66be9c2af2cf4fb40dab9ceffa7661a5f6f8d07e1d3f6249f2b3408584e0e84b",
+      "response_sha256": "874199db44623c21b2961a3885b2116ee44863a5e0a4db4a887dcdc1638e60ef",
+      "seconds": 65.83
+    },
+    {
+      "role": "EVIDENCE_BRIDGE_AND_CONSTRUCTION_PLANNER",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "66be9c2af2cf4fb40dab9ceffa7661a5f6f8d07e1d3f6249f2b3408584e0e84b",
+      "response_sha256": "579dc824618035c6d49c730108dd88957329dc6cef0e1c96dfa83478be77f56c",
+      "seconds": 68.62
+    },
+    {
+      "role": "EVIDENCE_BRIDGE_AND_CONSTRUCTION_PLANNER",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "66be9c2af2cf4fb40dab9ceffa7661a5f6f8d07e1d3f6249f2b3408584e0e84b",
+      "response_sha256": "646d75abed5577308ba8a273d03fefb29ab01aa88395758aecd7833e714aeba6",
+      "seconds": 64.48
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "role": "EVIDENCE_CONDITIONED_H1_H4_REVISION",
+  "attempt_count": 1,
+  "first_try_valid": true,
+  "schema_failures": [],
+  "prompt_sha256": "a721a6370e9f90af57c57aff01f1364c479af9193767c8104f77968c05d5bec3",
+  "response_sha256": "e0baaffa5a27bb2974e12eb296e95d9d8024bfa2bfa0f124f2114a24413771e9",
+  "seconds": 75.81
+}

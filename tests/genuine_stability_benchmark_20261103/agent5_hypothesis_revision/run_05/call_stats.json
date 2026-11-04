@@ -1,0 +1,17 @@
+{
+  "role": "EVIDENCE_CONDITIONED_H1_H4_REVISION",
+  "attempt_count": 2,
+  "first_try_valid": false,
+  "schema_failures": [
+    {
+      "attempt": 1,
+      "error_class": "The read operation timed out",
+      "seconds": 300.56,
+      "schema_repair_requested": false,
+      "usage": null
+    }
+  ],
+  "prompt_sha256": "8065eae56e910df330d4128f11a3453fa355016e089466ee48ac9b8fb11c081f",
+  "response_sha256": "a76e17f98225046cb3589c78eb7a93497af13168ebde5df010b5843188c6a810",
+  "seconds": 355.94
+}

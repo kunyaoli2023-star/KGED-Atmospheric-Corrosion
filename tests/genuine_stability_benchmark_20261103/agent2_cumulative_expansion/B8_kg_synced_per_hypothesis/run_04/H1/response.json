@@ -1,0 +1,100 @@
+{
+  "proposals": [
+    {
+      "proposal_id": "cycle_1_H1_0::H1_LOCAL_LOGARITHMIC_1",
+      "hypothesis_id": "H1",
+      "family": "H1_LOCAL",
+      "scientific_argument": "This model proposes a logarithmic dependence of the log-corrosion current on temperature. This represents a local approximation where the effect of temperature has diminishing returns, contrasting with the exponential increase of the Arrhenius model and the constant-rate increase of the linear model. It serves as another simple rival to test the shape of the temperature dependence.",
+      "source_links": [],
+      "evidence_gap": "The corpus does not provide evidence for a specific logarithmic temperature dependence. This is a phenomenological rival to test for diminishing returns in the temperature effect.",
+      "construction_family_id": "H1_ARRHENIUS",
+      "mathematical_distinction": "A logarithmic dependence on temperature, log(tau), which is a strictly concave function (diminishing returns), contrasted with the convex Arrhenius form (exp(-1/tau)) and the linear form (tau).",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The log-corrosion current will increase with temperature, but the rate of increase will slow down at higher temperatures."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:logarithmic",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "cycle_1_H1_1::H1_LOCAL_POWER_2",
+      "hypothesis_id": "H1",
+      "family": "H1_LOCAL",
+      "scientific_argument": "This model proposes a power-law relationship between the log-corrosion current and temperature. This is a flexible local approximation that can represent either a concave (exponent < 1) or convex (exponent > 1) increasing relationship. It provides a more general rival to the fixed-shape Arrhenius, linear, and logarithmic models.",
+      "source_links": [],
+      "evidence_gap": "The corpus does not provide evidence for a specific power-law temperature dependence. This is a flexible phenomenological rival to test for different curvatures in the temperature response.",
+      "construction_family_id": "H1_ARRHENIUS",
+      "mathematical_distinction": "A power-law dependence on temperature, tau**p1, which can be either concave or convex depending on the fitted exponent p1. This is contrasted with the fixed shapes of Arrhenius (convex), linear, and logarithmic (concave) models.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The log-corrosion current will follow a power-law relationship with temperature, allowing for either accelerating or decelerating increase."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:power_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "cycle_1_H1_2::H1_LOCAL_TANH_SATURATION_3",
+      "hypothesis_id": "H1",
+      "family": "H1_LOCAL",
+      "scientific_argument": "This model proposes a saturating temperature response described by a hyperbolic tangent function. Similar to the exponential saturation model already evaluated, it represents a scenario where the corrosion rate is limited by some other factor at higher temperatures. The tanh function provides a different saturation shape (a symmetric S-curve) compared to the 1-exp(-x) form, offering a distinct mathematical alternative for a saturating process.",
+      "source_links": [],
+      "evidence_gap": "The corpus does not provide evidence for a specific saturation mechanism or functional form. This is a phenomenological rival to test for saturation with a different sigmoidal shape.",
+      "construction_family_id": "H1_ARRHENIUS",
+      "mathematical_distinction": "A saturating response with a hyperbolic tangent shape, which is sigmoidal, contrasted with the non-sigmoidal exponential saturation form and non-saturating models like Arrhenius and linear.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The effect of temperature on corrosion current will diminish at higher temperatures, approaching a maximum rate, following a sigmoidal curve."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:tanh_saturation",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "cycle_1_H1_3::H1_COMPETING_ACTIVATED_LINEAR_4",
+      "hypothesis_id": "H1",
+      "family": "H1_COMPETING",
+      "scientific_argument": "This model proposes a competing process for temperature dependence, directly addressing one of the H1 rival hypotheses. It combines the Arrhenius activation term (template:H1:activated), which is based on the general principle of activated kinetics (A22_EQ4), with a linear attenuation term (template:H1:linear). This represents a scenario where a primary activated process is increasingly counteracted by a separate, inhibiting process that scales linearly with temperature. This could phenomenologically account for effects like decreased oxygen solubility at higher temperatures, leading to a peak corrosion rate at an intermediate temperature.",
+      "source_links": [
+        {
+          "evidence_id": "A22_EQ4",
+          "supports": "The Arrhenius-like activation term is supported by analogy.",
+          "source_to_module_mapping": "The exp(-1/T) form in template:H1:activated is analogous to the temperature acceleration factor in A22_EQ4."
+        }
+      ],
+      "evidence_gap": "The linear attenuation term is a phenomenological assumption to represent a competing process; there is no direct evidence for this specific form or mechanism in the corpus.",
+      "construction_family_id": "H1_ARRHENIUS",
+      "mathematical_distinction": "A function with a potential interior maximum, created by the difference of a convex increasing function (Arrhenius) and a linear increasing function. This is contrasted with all monotonic models.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The corrosion current will first increase with temperature, potentially reach a maximum, and then decline at higher temperatures."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_ACTIVATED",
+      "template_id": "template:H1:activated",
+      "right_template_id": "template:H1:linear",
+      "operation": "DIFFERENCE_LOG_RESPONSES"
+    }
+  ],
+  "coverage_not_claimed": [],
+  "why_stop_adding_forms": "All available, unevaluated single-template forms for H1 in the mathematical graph have been proposed. One composition using existing templates has been proposed to explicitly test the key rival hypothesis of a competing process. Further compositions would be arbitrary without more specific evidence or hypotheses about the nature of competing temperature-dependent processes."
+}

@@ -1,0 +1,271 @@
+[
+  {
+    "model_code": "k5_1SE_M01_M08_M35",
+    "description": "Retained 5-param 1-SE law (M01 + M08 + M35)",
+    "parameter_count_k": 5,
+    "cv_log_rmse": 0.569626,
+    "train_log_rmse": 0.506694,
+    "train_log_r2": 0.808704,
+    "jacobian_rank": 5,
+    "boundary_count": 0,
+    "condition_number_kappa": 2.4735,
+    "intercept_beta0": -10.27392,
+    "expressions": "H1: p0 * (1 - 1 / tau) | H2: log1p(p0 * c * exp(-p1 * c)) | H3: log(h) - log(p0 + h ** 2)",
+    "fitted_parameters_json": "{\"H1\": {\"p0\": 8.685352}, \"H2\": {\"p0\": 5.346628, \"p1\": 0.249817}, \"H3\": {\"p0\": 0.70335}}",
+    "linhai_state_amplitudes_a0_a3": "[7.178407, 6.497282, 4.850749, 4.376451]",
+    "linhai_source_endpoint_err_pct": -15.3589,
+    "linhai_source_rmse_um": 22.8159,
+    "jinhai_endpoint_err_pct": -0.0654,
+    "jinhai_rmse_um": 14.0505,
+    "pool_endpoint_err_pct": -0.4813,
+    "pool_rmse_um": 32.3752,
+    "ksc_endpoint_err_pct": -2.9406,
+    "ksc_rmse_um": 4.979,
+    "three_target_mean_abs_endpoint_err_pct": 1.1624,
+    "three_target_mean_trajectory_rmse_um": 17.1349,
+    "site_details": {
+      "linhai": {
+        "observed_final_um": 272.147,
+        "predicted_final_um": 230.3481,
+        "endpoint_error_pct": -15.3589,
+        "trajectory_rmse_um": 22.8159
+      },
+      "jinhai": {
+        "observed_final_um": 223.495,
+        "predicted_final_um": 223.3489,
+        "endpoint_error_pct": -0.0654,
+        "trajectory_rmse_um": 14.0505
+      },
+      "pool": {
+        "observed_final_um": 419.6233,
+        "predicted_final_um": 417.6039,
+        "endpoint_error_pct": -0.4813,
+        "trajectory_rmse_um": 32.3752
+      },
+      "ksc": {
+        "observed_final_um": 103.1847,
+        "predicted_final_um": 100.1505,
+        "endpoint_error_pct": -2.9406,
+        "trajectory_rmse_um": 4.979
+      }
+    },
+    "fitted_parameters": {
+      "H1": {
+        "p0": 8.685352
+      },
+      "H2": {
+        "p0": 5.346628,
+        "p1": 0.249817
+      },
+      "H3": {
+        "p0": 0.70335
+      }
+    },
+    "linhai_conditioning_note": "Unconditioned raw source trajectory (matching scores.json); main-text Section 3.3.1 reports first-point D_obs(t1)-conditioned Linhai trajectory (24.17 um / -15.77% for 5-param, 24.33 um / -15.87% for 8-param)."
+  },
+  {
+    "model_code": "k8_MinCV_M23_M08_M30",
+    "description": "Retained 8-param min-CV law (M23 + M08 + M30)",
+    "parameter_count_k": 8,
+    "cv_log_rmse": 0.566704,
+    "train_log_rmse": 0.496381,
+    "train_log_r2": 0.816412,
+    "jacobian_rank": 8,
+    "boundary_count": 0,
+    "condition_number_kappa": 83.0961,
+    "intercept_beta0": -10.2403,
+    "expressions": "H1: p0 * tanh(p1 * tau) | H2: log1p(p0 * c * exp(-p1 * c)) | H3: log1p(p0 * h ** p1 * exp(-p2 * h))",
+    "fitted_parameters_json": "{\"H1\": {\"p0\": 315.453761, \"p1\": 3.066569}, \"H2\": {\"p0\": 5.302602, \"p1\": 0.247132}, \"H3\": {\"p0\": 9.690645, \"p1\": 1.73559, \"p2\": 1.883745}}",
+    "linhai_state_amplitudes_a0_a3": "[7.425614, 6.561975, 4.771376, 4.200225]",
+    "linhai_source_endpoint_err_pct": -15.6074,
+    "linhai_source_rmse_um": 22.9612,
+    "jinhai_endpoint_err_pct": 4.4477,
+    "jinhai_rmse_um": 18.388,
+    "pool_endpoint_err_pct": 18.6964,
+    "pool_rmse_um": 32.3633,
+    "ksc_endpoint_err_pct": 2.7322,
+    "ksc_rmse_um": 4.834,
+    "three_target_mean_abs_endpoint_err_pct": 8.6254,
+    "three_target_mean_trajectory_rmse_um": 18.5284,
+    "site_details": {
+      "linhai": {
+        "observed_final_um": 272.147,
+        "predicted_final_um": 229.6719,
+        "endpoint_error_pct": -15.6074,
+        "trajectory_rmse_um": 22.9612
+      },
+      "jinhai": {
+        "observed_final_um": 223.495,
+        "predicted_final_um": 233.4353,
+        "endpoint_error_pct": 4.4477,
+        "trajectory_rmse_um": 18.388
+      },
+      "pool": {
+        "observed_final_um": 419.6233,
+        "predicted_final_um": 498.078,
+        "endpoint_error_pct": 18.6964,
+        "trajectory_rmse_um": 32.3633
+      },
+      "ksc": {
+        "observed_final_um": 103.1847,
+        "predicted_final_um": 106.0039,
+        "endpoint_error_pct": 2.7322,
+        "trajectory_rmse_um": 4.834
+      }
+    },
+    "fitted_parameters": {
+      "H1": {
+        "p0": 315.453761,
+        "p1": 3.066569
+      },
+      "H2": {
+        "p0": 5.302602,
+        "p1": 0.247132
+      },
+      "H3": {
+        "p0": 9.690645,
+        "p1": 1.73559,
+        "p2": 1.883745
+      }
+    },
+    "linhai_conditioning_note": "Unconditioned raw source trajectory (matching scores.json); main-text Section 3.3.1 reports first-point D_obs(t1)-conditioned Linhai trajectory (24.17 um / -15.77% for 5-param, 24.33 um / -15.87% for 8-param)."
+  },
+  {
+    "model_code": "k7_GaussH2_M01_ExpSatGauss_M35",
+    "description": "Exploratory 7-param Gaussian H2 composite (M01 + [ExpSat+Gauss_H2] + M35)",
+    "parameter_count_k": 7,
+    "cv_log_rmse": 0.549823,
+    "train_log_rmse": 0.461073,
+    "train_log_r2": 0.841601,
+    "jacobian_rank": 7,
+    "boundary_count": 0,
+    "condition_number_kappa": 13.8716,
+    "intercept_beta0": -10.4848,
+    "expressions": "H1: p0 * (1 - 1 / tau) | H2: p0 * (1 - exp(-p1 * c)) + -(c - p2) ** 2 / p3 ** 2 | H3: log(h) - log(p0 + h ** 2)",
+    "fitted_parameters_json": "{\"H1\": {\"p0\": 8.681638}, \"H2\": {\"p0\": 1.940489, \"p1\": 2.723875, \"p2\": 0.527858, \"p3\": 18.231659}, \"H3\": {\"p0\": 0.70335}}",
+    "linhai_state_amplitudes_a0_a3": "[6.584227, 5.94635, 4.296635, 3.941209]",
+    "linhai_source_endpoint_err_pct": -15.4559,
+    "linhai_source_rmse_um": 22.8005,
+    "jinhai_endpoint_err_pct": -0.2452,
+    "jinhai_rmse_um": 13.9334,
+    "pool_endpoint_err_pct": -0.691,
+    "pool_rmse_um": 32.7387,
+    "ksc_endpoint_err_pct": -2.1452,
+    "ksc_rmse_um": 4.9037,
+    "three_target_mean_abs_endpoint_err_pct": 1.0271,
+    "three_target_mean_trajectory_rmse_um": 17.1919,
+    "site_details": {
+      "linhai": {
+        "observed_final_um": 272.147,
+        "predicted_final_um": 230.0842,
+        "endpoint_error_pct": -15.4559,
+        "trajectory_rmse_um": 22.8005
+      },
+      "jinhai": {
+        "observed_final_um": 223.495,
+        "predicted_final_um": 222.9471,
+        "endpoint_error_pct": -0.2452,
+        "trajectory_rmse_um": 13.9334
+      },
+      "pool": {
+        "observed_final_um": 419.6233,
+        "predicted_final_um": 416.7236,
+        "endpoint_error_pct": -0.691,
+        "trajectory_rmse_um": 32.7387
+      },
+      "ksc": {
+        "observed_final_um": 103.1847,
+        "predicted_final_um": 100.9712,
+        "endpoint_error_pct": -2.1452,
+        "trajectory_rmse_um": 4.9037
+      }
+    },
+    "fitted_parameters": {
+      "H1": {
+        "p0": 8.681638
+      },
+      "H2": {
+        "p0": 1.940489,
+        "p1": 2.723875,
+        "p2": 0.527858,
+        "p3": 18.231659
+      },
+      "H3": {
+        "p0": 0.70335
+      }
+    },
+    "linhai_conditioning_note": "Unconditioned raw source trajectory (matching scores.json); main-text Section 3.3.1 reports first-point D_obs(t1)-conditioned Linhai trajectory (24.17 um / -15.77% for 5-param, 24.33 um / -15.87% for 8-param)."
+  },
+  {
+    "model_code": "k11_GaussH2_M01_PowGauss_M30_H4",
+    "description": "Exploratory 11-param Power+Gaussian H2 + H4 composite (M01 + [Pow+Gauss_H2] + M30 + H4)",
+    "parameter_count_k": 11,
+    "cv_log_rmse": 0.495068,
+    "train_log_rmse": 0.453087,
+    "train_log_r2": 0.84704,
+    "jacobian_rank": 11,
+    "boundary_count": 0,
+    "condition_number_kappa": 34.4553,
+    "intercept_beta0": -10.551414,
+    "expressions": "H1: p0 * (1 - 1 / tau) | H2: p0 * c ** p1 + -(c - p2) ** 2 / p3 ** 2 | H3: log1p(p0 * h ** p1 * exp(-p2 * h)) | H4: p0 * (tau - 1) * h / (1 + p1 * h)",
+    "fitted_parameters_json": "{\"H1\": {\"p0\": 7.810668}, \"H2\": {\"p0\": 1.837375, \"p1\": 0.035084, \"p2\": 0.013669, \"p3\": 18.041183}, \"H3\": {\"p0\": 9.690645, \"p1\": 1.73559, \"p2\": 1.883745}, \"H4\": {\"p0\": 1.565122, \"p1\": 0.980019}}",
+    "linhai_state_amplitudes_a0_a3": "[2.188005, 2.620626, 0.756068, 1.251886]",
+    "linhai_source_endpoint_err_pct": -15.2824,
+    "linhai_source_rmse_um": 22.2498,
+    "jinhai_endpoint_err_pct": 4.2799,
+    "jinhai_rmse_um": 16.4928,
+    "pool_endpoint_err_pct": 18.3398,
+    "pool_rmse_um": 32.9508,
+    "ksc_endpoint_err_pct": -5.9548,
+    "ksc_rmse_um": 6.2211,
+    "three_target_mean_abs_endpoint_err_pct": 9.5248,
+    "three_target_mean_trajectory_rmse_um": 18.5549,
+    "site_details": {
+      "linhai": {
+        "observed_final_um": 272.147,
+        "predicted_final_um": 230.5565,
+        "endpoint_error_pct": -15.2824,
+        "trajectory_rmse_um": 22.2498
+      },
+      "jinhai": {
+        "observed_final_um": 223.495,
+        "predicted_final_um": 233.0605,
+        "endpoint_error_pct": 4.2799,
+        "trajectory_rmse_um": 16.4928
+      },
+      "pool": {
+        "observed_final_um": 419.6233,
+        "predicted_final_um": 496.5813,
+        "endpoint_error_pct": 18.3398,
+        "trajectory_rmse_um": 32.9508
+      },
+      "ksc": {
+        "observed_final_um": 103.1847,
+        "predicted_final_um": 97.0403,
+        "endpoint_error_pct": -5.9548,
+        "trajectory_rmse_um": 6.2211
+      }
+    },
+    "fitted_parameters": {
+      "H1": {
+        "p0": 7.810668
+      },
+      "H2": {
+        "p0": 1.837375,
+        "p1": 0.035084,
+        "p2": 0.013669,
+        "p3": 18.041183
+      },
+      "H3": {
+        "p0": 9.690645,
+        "p1": 1.73559,
+        "p2": 1.883745
+      },
+      "H4": {
+        "p0": 1.565122,
+        "p1": 0.980019
+      }
+    },
+    "linhai_conditioning_note": "Unconditioned raw source trajectory (matching scores.json); main-text Section 3.3.1 reports first-point D_obs(t1)-conditioned Linhai trajectory (24.17 um / -15.77% for 5-param, 24.33 um / -15.87% for 8-param)."
+  }
+]

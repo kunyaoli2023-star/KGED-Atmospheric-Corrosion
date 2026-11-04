@@ -1,0 +1,238 @@
+{
+  "agent": "Agent 5: Hypothesis revision (EVIDENCE_CONDITIONED_H1_H4_REVISION, fed by Agent 4 Run r, zero human focus)",
+  "n_runs": 5,
+  "total_api_attempts": 7,
+  "first_try_valid_rate": 0.6,
+  "schema_failure_count": 2,
+  "unique_prompt_sha256_count": 5,
+  "unique_response_sha256_count": 5,
+  "overall_evidence_id_jaccard": {
+    "mean": 0.8253,
+    "std": 0.0746,
+    "min": 0.7273,
+    "max": 0.9444,
+    "pairs": [
+      0.9444,
+      0.7391,
+      0.7895,
+      0.8947,
+      0.7727,
+      0.8333,
+      0.9444,
+      0.7273,
+      0.8182,
+      0.7895
+    ]
+  },
+  "per_hypothesis_evidence_id_jaccard": {
+    "H1": {
+      "mean": 0.7898,
+      "std": 0.1172,
+      "min": 0.6,
+      "max": 1.0,
+      "pairs": [
+        0.75,
+        0.6,
+        0.6667,
+        0.6667,
+        0.75,
+        0.8571,
+        0.8571,
+        0.875,
+        0.875,
+        1.0
+      ]
+    },
+    "H2": {
+      "mean": 0.7893,
+      "std": 0.112,
+      "min": 0.625,
+      "max": 1.0,
+      "pairs": [
+        0.8571,
+        0.75,
+        0.8571,
+        1.0,
+        0.625,
+        0.7143,
+        0.8571,
+        0.625,
+        0.75,
+        0.8571
+      ]
+    },
+    "H3": {
+      "mean": 0.5799,
+      "std": 0.1018,
+      "min": 0.4,
+      "max": 0.75,
+      "pairs": [
+        0.5556,
+        0.4545,
+        0.5556,
+        0.6667,
+        0.75,
+        0.5,
+        0.625,
+        0.4,
+        0.6667,
+        0.625
+      ]
+    },
+    "H4": {
+      "mean": 0.6267,
+      "std": 0.1437,
+      "min": 0.4286,
+      "max": 0.8333,
+      "pairs": [
+        0.8,
+        0.5714,
+        0.6667,
+        0.6667,
+        0.4286,
+        0.8,
+        0.5,
+        0.5714,
+        0.8333,
+        0.4286
+      ]
+    }
+  },
+  "per_hypothesis_directive_tfidf_cosine": {
+    "H1": {
+      "mean": 0.2994,
+      "std": 0.2683,
+      "min": 0.0,
+      "max": 0.6776,
+      "pairs": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.344,
+        0.6136,
+        0.6776,
+        0.3768,
+        0.3526,
+        0.629
+      ]
+    },
+    "H2": {
+      "mean": 0.11,
+      "std": 0.1472,
+      "min": 0.0091,
+      "max": 0.5072,
+      "pairs": [
+        0.0841,
+        0.016,
+        0.016,
+        0.0091,
+        0.0146,
+        0.0146,
+        0.5072,
+        0.1668,
+        0.1978,
+        0.0737
+      ]
+    },
+    "H3": {
+      "mean": 0.1472,
+      "std": 0.1861,
+      "min": 0.0,
+      "max": 0.4445,
+      "pairs": [
+        0.0,
+        0.0696,
+        0.0588,
+        0.0,
+        0.0,
+        0.4073,
+        0.4445,
+        0.0588,
+        0.0,
+        0.4333
+      ]
+    },
+    "H4": {
+      "mean": 0.1487,
+      "std": 0.0478,
+      "min": 0.0705,
+      "max": 0.236,
+      "pairs": [
+        0.1033,
+        0.123,
+        0.1899,
+        0.236,
+        0.0705,
+        0.1213,
+        0.1223,
+        0.1787,
+        0.1457,
+        0.1967
+      ]
+    }
+  },
+  "call_stats": [
+    {
+      "role": "EVIDENCE_CONDITIONED_H1_H4_REVISION",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "e355d94da93255805d466812c6d535c28f82e4f39cda531cfb77af07299286b9",
+      "response_sha256": "5ce323acf381f3ccf687b29b9d6eeaa4601948f31e472402dfdf9bbc7411bc6a",
+      "seconds": 103.36
+    },
+    {
+      "role": "EVIDENCE_CONDITIONED_H1_H4_REVISION",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "8280256faba7f3521ec75d8f58ac03d922244e26ae98557ebc94433a89d3257d",
+      "response_sha256": "0d4d1c8e4a0371a8b006988c8132e76859b33eadd4693de40ed391a88c953aa2",
+      "seconds": 95.66
+    },
+    {
+      "role": "EVIDENCE_CONDITIONED_H1_H4_REVISION",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "a721a6370e9f90af57c57aff01f1364c479af9193767c8104f77968c05d5bec3",
+      "response_sha256": "e0baaffa5a27bb2974e12eb296e95d9d8024bfa2bfa0f124f2114a24413771e9",
+      "seconds": 75.81
+    },
+    {
+      "role": "EVIDENCE_CONDITIONED_H1_H4_REVISION",
+      "attempt_count": 2,
+      "first_try_valid": false,
+      "schema_failures": [
+        {
+          "attempt": 1,
+          "error_class": "The read operation timed out",
+          "seconds": 300.52,
+          "schema_repair_requested": false,
+          "usage": null
+        }
+      ],
+      "prompt_sha256": "ebf873cc2ba01da1157ab16cf0143e67fa951438e906681a50766671f68620eb",
+      "response_sha256": "ff8d697e4e4c6f3aad100b06dff1a9c362b4ffb000327edd3380fead7991bcdb",
+      "seconds": 835.16
+    },
+    {
+      "role": "EVIDENCE_CONDITIONED_H1_H4_REVISION",
+      "attempt_count": 2,
+      "first_try_valid": false,
+      "schema_failures": [
+        {
+          "attempt": 1,
+          "error_class": "The read operation timed out",
+          "seconds": 300.56,
+          "schema_repair_requested": false,
+          "usage": null
+        }
+      ],
+      "prompt_sha256": "8065eae56e910df330d4128f11a3453fa355016e089466ee48ac9b8fb11c081f",
+      "response_sha256": "a76e17f98225046cb3589c78eb7a93497af13168ebde5df010b5843188c6a810",
+      "seconds": 355.94
+    }
+  ]
+}

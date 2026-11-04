@@ -1,0 +1,195 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "proposal_id": {
+            "type": "string"
+          },
+          "hypothesis_id": {
+            "type": "string",
+            "enum": [
+              "H1"
+            ]
+          },
+          "family": {
+            "type": "string"
+          },
+          "scientific_argument": {
+            "type": "string"
+          },
+          "source_links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "evidence_id": {
+                  "type": "string"
+                },
+                "supports": {
+                  "type": "string"
+                },
+                "source_to_module_mapping": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "evidence_id",
+                "supports",
+                "source_to_module_mapping"
+              ]
+            }
+          },
+          "evidence_gap": {
+            "type": "string"
+          },
+          "construction_family_id": {
+            "type": "string"
+          },
+          "mathematical_distinction": {
+            "type": "string"
+          },
+          "question_links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "hypothesis_id": {
+                  "type": "string",
+                  "enum": [
+                    "H1",
+                    "H2",
+                    "H3",
+                    "H4"
+                  ]
+                },
+                "relation": {
+                  "type": "string",
+                  "enum": [
+                    "IMPLEMENTATION",
+                    "RIVAL_CONTROL"
+                  ]
+                },
+                "observable_prediction": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "hypothesis_id",
+                "relation",
+                "observable_prediction"
+              ]
+            }
+          },
+          "contrast_links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "contrast_id": {
+                  "type": "string"
+                },
+                "relation": {
+                  "type": "string",
+                  "enum": [
+                    "IMPLEMENTATION",
+                    "RIVAL_CONTROL"
+                  ]
+                },
+                "observable_prediction": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "contrast_id",
+                "relation",
+                "observable_prediction"
+              ]
+            },
+            "maxItems": 0
+          },
+          "process_id": {
+            "type": "string",
+            "enum": [
+              "process:T_ACTIVATED",
+              "process:T_LOCAL",
+              "CONTROL"
+            ]
+          },
+          "template_id": {
+            "type": "string",
+            "enum": [
+              "template:H1:activated",
+              "template:H1:linear",
+              "template:H1:logarithmic",
+              "template:H1:null",
+              "template:H1:exponential_saturation",
+              "template:H1:tanh_saturation",
+              "template:H1:power_response"
+            ]
+          },
+          "right_template_id": {
+            "type": "string",
+            "enum": [
+              "",
+              "template:H1:activated",
+              "template:H1:linear",
+              "template:H1:logarithmic",
+              "template:H1:null",
+              "template:H1:exponential_saturation",
+              "template:H1:tanh_saturation",
+              "template:H1:power_response"
+            ]
+          },
+          "operation": {
+            "type": "string",
+            "enum": [
+              "SELECT",
+              "SUM_LOG_RESPONSES",
+              "DIFFERENCE_LOG_RESPONSES"
+            ]
+          }
+        },
+        "required": [
+          "proposal_id",
+          "hypothesis_id",
+          "family",
+          "scientific_argument",
+          "source_links",
+          "evidence_gap",
+          "construction_family_id",
+          "mathematical_distinction",
+          "question_links",
+          "contrast_links",
+          "process_id",
+          "template_id",
+          "right_template_id",
+          "operation"
+        ]
+      },
+      "maxItems": 8
+    },
+    "coverage_not_claimed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "why_stop_adding_forms": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "proposals",
+    "coverage_not_claimed",
+    "why_stop_adding_forms"
+  ]
+}

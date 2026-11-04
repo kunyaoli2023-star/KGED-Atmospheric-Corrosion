@@ -1,0 +1,142 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "bridges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "hypothesis_id": {
+            "type": "string",
+            "enum": [
+              "H1",
+              "H2",
+              "H3",
+              "H4"
+            ]
+          },
+          "evidence_links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "evidence_id": {
+                  "type": "string"
+                },
+                "supports": {
+                  "type": "string"
+                },
+                "does_not_support": {
+                  "type": "string"
+                },
+                "transfer_assumptions": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "evidence_id",
+                "supports",
+                "does_not_support",
+                "transfer_assumptions"
+              ]
+            }
+          },
+          "process_arguments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "distinct_alternatives_to_test": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_gaps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "excluded_misapplications": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "hypothesis_id",
+          "evidence_links",
+          "process_arguments",
+          "distinct_alternatives_to_test",
+          "evidence_gaps",
+          "excluded_misapplications"
+        ]
+      }
+    },
+    "overall_evidence_limits": {
+      "type": "string"
+    },
+    "construction_families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "construction_family_id": {
+            "type": "string"
+          },
+          "hypothesis_id": {
+            "type": "string",
+            "enum": [
+              "H1",
+              "H2",
+              "H3",
+              "H4"
+            ]
+          },
+          "process_or_closure_assumption": {
+            "type": "string"
+          },
+          "scientific_basis_and_limits": {
+            "type": "string"
+          },
+          "mathematical_distinction_to_test": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "construction_family_id",
+          "hypothesis_id",
+          "process_or_closure_assumption",
+          "scientific_basis_and_limits",
+          "mathematical_distinction_to_test",
+          "evidence_ids"
+        ]
+      }
+    },
+    "unjustified_routes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "bridges",
+    "overall_evidence_limits",
+    "construction_families",
+    "unjustified_routes"
+  ]
+}
