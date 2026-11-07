@@ -1,42 +1,42 @@
 ﻿module_id,module_label,round,hypothesis,discovery_stage,uncentred_log_response_latex,parameter_count
-M01,M01 (K01),1,H1,Stage 1 (Round 1): Literature-direct baseline,$p_{0} (1-\frac{1}{τ})$,1
-M02,M02 (K03),1,H1,Stage 1 (Round 1): Literature-direct baseline,$p_{0} (τ-1)$,1
-M03,M03 (K05),1,H1,Stage 1 (Round 1): Literature-direct baseline,$0$,0
-M04,M04 (K02),1,H1,Stage 1 (Round 1): Literature-direct baseline,$p_{0} (1-exp(-p_{1} τ))$,2
-M05,M05 (K12),1,H2,Stage 1 (Round 1): Literature-direct baseline,$p_{0} ln(1+c)$,1
-M06,M06 (K15),1,H2,Stage 1 (Round 1): Literature-direct baseline,$p_{0} c^{p_{1}}$,2
-M07,M07 (K16),1,H2,Stage 1 (Round 1): Literature-direct baseline,$\frac{p_{0} c}{p_{1}+c}$,2
-M08,M08 (K08),1,H2,Stage 1 (Round 1): Literature-direct baseline,$ln(1+p_{0} c exp(-p_{1} c))$,2
-M09,M09 (K13),1,H2,Stage 1 (Round 1): Literature-direct baseline,$0$,0
-M10,M10 (K16 − K15),1,H2,Stage 1 (Round 1): Literature-direct baseline,$\frac{p_{0} c}{p_{1}+c}-p_{2} c^{p_{3}}$,4
-M11,M11 (K19),1,H3,Stage 1 (Round 1): Literature-direct baseline,$ln(1+p_{0} h exp(-p_{1} h))$,2
-M12,M12 (K25 + K18),1,H3,Stage 1 (Round 1): Literature-direct baseline,$\frac{p_{0} h}{p_{1}+h}-p_{2} h$,3
-M13,M13 (K25),1,H3,Stage 1 (Round 1): Literature-direct baseline,$\frac{p_{0} h}{p_{1}+h}$,2
-M14,M14 (K18),1,H3,Stage 1 (Round 1): Literature-direct baseline,$-p_{0} h$,1
-M15,M15 (K22),1,H3,Stage 1 (Round 1): Literature-direct baseline,$0$,0
-M16,M16 (K28),1,H4,Stage 1 (Round 1): Literature-direct baseline,$0$,0
-M17,M17 (K29),1,H4,Stage 1 (Round 1): Literature-direct baseline,$\frac{p_{0} c h}{1+p_{1} h}$,2
-M18,M18 (K30),1,H4,Stage 1 (Round 1): Literature-direct baseline,$ln(1+p_{0} c h)$,1
-M19,M19 (K31),1,H4,Stage 1 (Round 1): Literature-direct baseline,$\frac{p_{0} (τ-1) h}{1+p_{1} h}$,2
-M20,M20 (K29 + K31),1,H4,Stage 1 (Round 1): Literature-direct baseline,$\frac{p_{0} c h}{1+p_{1} h}+\frac{p_{2} (τ-1) h}{1+p_{3} h}$,4
-M21,M21 (K04),2,H1,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} ln(τ)$,1
-M22,M22 (K06),2,H1,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} τ^{p_{1}}$,2
-M23,M23 (K07),2,H1,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} tanh(p_{1} τ)$,2
-M24,M24 (K14),2,H2,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$ln(1+p_{0} c^{p_{1}} exp(-p_{2} c))$,3
-M25,M25 (K11),2,H2,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$\frac{-(c-p_{0})^{2}}{p_{1}^{2}}$,2
-M26,M26 (K09),2,H2,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$\frac{p_{0} c}{p_{1}+c}-p_{2} c$,3
-M27,M27 (K10),2,H2,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} (1-exp(-p_{1} c))$,2
-M28,M28 (K17),2,H2,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} tanh(p_{1} c)$,2
-M29,M29 (K12 − K15),2,H2,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} ln(1+c)-p_{1} c^{p_{2}}$,3
-M30,M30 (K23),2,H3,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$ln(1+p_{0} h^{p_{1}} exp(-p_{2} h))$,3
-M31,M31 (K21),2,H3,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$\frac{-(h-p_{0})^{2}}{p_{1}^{2}}$,2
-M32,M32 (K20 + K18),2,H3,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} (1-exp(-p_{1} h))-p_{2} h$,3
-M33,M33 (K24),2,H3,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} h^{p_{1}}$,2
-M34,M34 (K26),2,H3,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} tanh(p_{1} h)$,2
-M35,M35 (K27),2,H3,Stage 2 (Round 2): Residual-driven LLM generation from 8-family library,$ln(h)-ln(p_{0}+h^{2})$,1
-M36,M36 (K11 + K12),3,H2,Stage 2 (Round 3): Residual-driven LLM generation from 8-family library,$\frac{-(c-p_{0})^{2}}{p_{1}^{2}}+p_{2} ln(1+c)$,3
-M37,M37 (K16 + K17),3,H2,Stage 2 (Round 3): Residual-driven LLM generation from 8-family library,$\frac{p_{0} c}{p_{1}+c}+p_{2} tanh(p_{3} c)$,4
-M38,M38 (K14 − K15),4,H2,Stage 2 (Round 4): Residual-driven LLM generation from 8-family library,$ln(1+p_{0} c^{p_{1}} exp(-p_{2} c))-p_{3} c^{p_{4}}$,5
-M39,M39 (K09 − K16),4,H2,Stage 2 (Round 4): Residual-driven LLM generation from 8-family library,$\frac{p_{0} c}{p_{1}+c}-p_{2} c-\frac{p_{3} c}{p_{4}+c}$,5
-M40,M40 (K15 − K12),4,H2,Stage 2 (Round 4): Residual-driven LLM generation from 8-family library,$p_{0} c^{p_{1}}-p_{2} ln(1+c)$,3
-M41,M41 (K15 + K17),4,H2,Stage 2 (Round 4): Residual-driven LLM generation from 8-family library,$p_{0} c^{p_{1}}+p_{2} tanh(p_{3} c)$,4
+M01,M01 (K01),1,H1,Stage 2a (Round 1): Literature-direct baseline,$p_{0} (1-\frac{1}{τ})$,1
+M02,M02 (K03),1,H1,Stage 2a (Round 1): Literature-direct baseline,$p_{0} (τ-1)$,1
+M03,M03 (K05),1,H1,Stage 2a (Round 1): Literature-direct baseline,$0$,0
+M04,M04 (K02),1,H1,Stage 2a (Round 1): Literature-direct baseline,$p_{0} (1-exp(-p_{1} τ))$,2
+M05,M05 (K12),1,H2,Stage 2a (Round 1): Literature-direct baseline,$p_{0} ln(1+c)$,1
+M06,M06 (K15),1,H2,Stage 2a (Round 1): Literature-direct baseline,$p_{0} c^{p_{1}}$,2
+M07,M07 (K16),1,H2,Stage 2a (Round 1): Literature-direct baseline,$\frac{p_{0} c}{p_{1}+c}$,2
+M08,M08 (K08),1,H2,Stage 2a (Round 1): Literature-direct baseline,$ln(1+p_{0} c exp(-p_{1} c))$,2
+M09,M09 (K13),1,H2,Stage 2a (Round 1): Literature-direct baseline,$0$,0
+M10,M10 (K16 − K15),1,H2,Stage 2a (Round 1): Literature-direct baseline,$\frac{p_{0} c}{p_{1}+c}-p_{2} c^{p_{3}}$,4
+M11,M11 (K19),1,H3,Stage 2a (Round 1): Literature-direct baseline,$ln(1+p_{0} h exp(-p_{1} h))$,2
+M12,M12 (K25 + K18),1,H3,Stage 2a (Round 1): Literature-direct baseline,$\frac{p_{0} h}{p_{1}+h}-p_{2} h$,3
+M13,M13 (K25),1,H3,Stage 2a (Round 1): Literature-direct baseline,$\frac{p_{0} h}{p_{1}+h}$,2
+M14,M14 (K18),1,H3,Stage 2a (Round 1): Literature-direct baseline,$-p_{0} h$,1
+M15,M15 (K22),1,H3,Stage 2a (Round 1): Literature-direct baseline,$0$,0
+M16,M16 (K28),1,H4,Stage 2a (Round 1): Literature-direct baseline,$0$,0
+M17,M17 (K29),1,H4,Stage 2a (Round 1): Literature-direct baseline,$\frac{p_{0} c h}{1+p_{1} h}$,2
+M18,M18 (K30),1,H4,Stage 2a (Round 1): Literature-direct baseline,$ln(1+p_{0} c h)$,1
+M19,M19 (K31),1,H4,Stage 2a (Round 1): Literature-direct baseline,$\frac{p_{0} (τ-1) h}{1+p_{1} h}$,2
+M20,M20 (K29 + K31),1,H4,Stage 2a (Round 1): Literature-direct baseline,$\frac{p_{0} c h}{1+p_{1} h}+\frac{p_{2} (τ-1) h}{1+p_{3} h}$,4
+M21,M21 (K04),2,H1,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} ln(τ)$,1
+M22,M22 (K06),2,H1,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} τ^{p_{1}}$,2
+M23,M23 (K07),2,H1,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} tanh(p_{1} τ)$,2
+M24,M24 (K14),2,H2,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$ln(1+p_{0} c^{p_{1}} exp(-p_{2} c))$,3
+M25,M25 (K11),2,H2,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$\frac{-(c-p_{0})^{2}}{p_{1}^{2}}$,2
+M26,M26 (K09),2,H2,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$\frac{p_{0} c}{p_{1}+c}-p_{2} c$,3
+M27,M27 (K10),2,H2,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} (1-exp(-p_{1} c))$,2
+M28,M28 (K17),2,H2,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} tanh(p_{1} c)$,2
+M29,M29 (K12 − K15),2,H2,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} ln(1+c)-p_{1} c^{p_{2}}$,3
+M30,M30 (K23),2,H3,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$ln(1+p_{0} h^{p_{1}} exp(-p_{2} h))$,3
+M31,M31 (K21),2,H3,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$\frac{-(h-p_{0})^{2}}{p_{1}^{2}}$,2
+M32,M32 (K20 + K18),2,H3,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} (1-exp(-p_{1} h))-p_{2} h$,3
+M33,M33 (K24),2,H3,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} h^{p_{1}}$,2
+M34,M34 (K26),2,H3,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$p_{0} tanh(p_{1} h)$,2
+M35,M35 (K27),2,H3,Stage 2b (Round 2): Residual-driven LLM generation from 8-family library,$ln(h)-ln(p_{0}+h^{2})$,1
+M36,M36 (K11 + K12),3,H2,Stage 2b (Round 3): Residual-driven LLM generation from 8-family library,$\frac{-(c-p_{0})^{2}}{p_{1}^{2}}+p_{2} ln(1+c)$,3
+M37,M37 (K16 + K17),3,H2,Stage 2b (Round 3): Residual-driven LLM generation from 8-family library,$\frac{p_{0} c}{p_{1}+c}+p_{2} tanh(p_{3} c)$,4
+M38,M38 (K14 − K15),4,H2,Stage 2b (Round 4): Residual-driven LLM generation from 8-family library,$ln(1+p_{0} c^{p_{1}} exp(-p_{2} c))-p_{3} c^{p_{4}}$,5
+M39,M39 (K09 − K16),4,H2,Stage 2b (Round 4): Residual-driven LLM generation from 8-family library,$\frac{p_{0} c}{p_{1}+c}-p_{2} c-\frac{p_{3} c}{p_{4}+c}$,5
+M40,M40 (K15 − K12),4,H2,Stage 2b (Round 4): Residual-driven LLM generation from 8-family library,$p_{0} c^{p_{1}}-p_{2} ln(1+c)$,3
+M41,M41 (K15 + K17),4,H2,Stage 2b (Round 4): Residual-driven LLM generation from 8-family library,$p_{0} c^{p_{1}}+p_{2} tanh(p_{3} c)$,4

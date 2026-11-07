@@ -15,24 +15,25 @@ This repository provides the 50-paper corrosion literature corpus, two-layer kno
 - `knowledge_graph/` — **Two-Layer Corrosion Knowledge Graph & Candidate Modules (Tables S3–S6, Table S12)**
   - `literature_graph/`: Raw 50-paper literature knowledge graph (`graph.graphml` and `report.json`: 50 paper nodes, 1,057 total nodes, 3,116 edges) together with operator and symbol stability summaries (`stability_table.csv`, `top_symbols.csv`, `icorr_meta_models.json`, `icorr_semantic_signatures.json`, `global_ontology_mapping.json`).
   - `math_graph.json`, `validation.json`, `index.html`: Executable two-layer knowledge graph encoding the 12 physical process categories (Table S3), 8 mathematical families and 31 dimensionless log-response kernels `K01`–`K31` (Table S4), 20 semantic tags (Table S5), and admissible additive/subtractive composition rules.
-  - `modules_M01_M41_4round.json` & `modules_M01_M41_4round.csv`: Complete inventory of all 41 candidate log-response modules (`M01`–`M41`, Table S12), partitioned into Stage 1 (Round 1: 20 literature-direct baseline modules `M01`–`M20`) and Stage 2 (Rounds 2–4: 21 residual-driven LLM-generated modules `M21`–`M41` from the 8-family mathematical library).
+  - `modules_M01_M41_4round.json` & `modules_M01_M41_4round.csv`: Complete inventory of all 41 candidate log-response modules (`M01`–`M41`, Table S12), partitioned into Stage 2a (Round 1: 20 literature-direct baseline modules `M01`–`M20`) and Stage 2b (Rounds 2–4: 21 residual-guided selected and composed modules `M21`–`M41` from the 8-family mathematical library).
   - `inputs/`: Working hypothesis specifications (`hypotheses.json`), dimensionless coordinate registry (`symbol_registry.json`), and module compilation protocol (`module_protocol.json`).
   - `family_audit/`: Mathematical family audit and cross-round module provenance records (`FAMILY_AUDIT.md`, `family_stability.json`, `evidence_family_bridges.json`, `module_families.jsonl`, `literature_inventory_provisional.jsonl`).
   - `build_math_knowledge.py` & `maief/`: Python implementation for constructing, querying, and validating the two-layer knowledge graph and compiling candidate modules.
-- `data/` — **Laboratory Thin-Film Electrochemical Dataset & Discovered Rate Laws (Tables 1, 4, 5)**
+- `data/` — **Laboratory Thin-Film Electrochemical Dataset & Discovered Rate Laws (Section 2.1, Tables 4–6, Fig. 10b)**
   - `data.json`: 168-condition thin-film electrochemical dataset on Q355B steel ($T \in [0, 50]\,^\circ\mathrm{C}$, $C \in [0, 26.5]\,\mathrm{wt\%\ NaCl}$, $H \in [50, 1000]\,\mu\mathrm{m}$).
   - `folds.json`: 23-fold grouped cross-validation split definitions (5 profile, 5 temperature, 7 film-thickness, and 6 salinity holdout folds).
-  - `Frozen_models.json`: Full-precision parameters and analytical expressions for the retained KGED equations and symbolic-regression baselines (Table 4).
-- `engineering/` — **Cross-Environment Corrosion-Growth Prediction Module (Tables 6–8, Fig. 9)**
+  - `parsimonious_equation.json`, `best_accuracy_equation.json`, & `Frozen_models.json`: Full-precision parameters, 23-fold cross-validation records, and analytical expressions for the retained KGED equations and symbolic-regression baselines (Tables 4–6).
+  - `Table_S7_rate_law_ablations.csv` & `MASTER_GENUINE_UNRIGGED_SUMMARY.json`: Component-wise rate-law ablation scores (Fig. 10b & Section M1.7.1) and complete benchmark summary records.
+- `engineering/` — **Cross-Environment Corrosion-Growth Prediction Module (Tables 1, 7, 8, Figs. 9–10)**
   - `engineering_integrator.py` & `engineering_state.py`: Reaction-clock-weighted cubic Bernstein state-evolution integrator and bounded linear least-squares source calibration solver.
-  - `run_engineering_v6.py`: Cross-environment calibration (Linhai source site) and target extrapolation pipeline (Jinhai, humid chlorinated indoor swimming pool, and NASA KSC).
-  - `verify_closed_forms.py`: Analytical verification of the frozen 5-parameter parsimonious and 8-parameter minimum-error KGED equations.
-  - `inputs/`: Environmental forcing histories (`*.npz`), observation records (`*_labels.json`), and microenvironmental mapping parameters (`mapping.json`).
-  - `PREDICTIONS_FROZEN.json`: Full-precision calibrated state amplitudes (Table 6) and predicted corrosion trajectories (Table 7 & Fig. 9).
+  - `run_engineering_v6.py`: Cross-environment calibration (Linhai source site, Table 7) and initial-depth-anchored target trajectory prediction pipeline (Jinhai, humid chlorinated indoor swimming pool, and NASA KSC, Eq. (16) and Table 8).
+  - `verify_closed_forms.py`: Analytical closed-form reconstruction and 16- versus 32-point Gauss–Legendre quadrature verification of the frozen 5-parameter parsimonious and 8-parameter minimum-error KGED equations.
+  - `inputs/`: Environmental forcing histories (`*.npz`), observation records (`*_labels.json`), microenvironmental mapping parameters (`mapping.json`), and input SHA-256 provenance (`IMPORT_PROVENANCE.json`).
+  - `PREDICTIONS_FROZEN.json`, `current_conditioned_forecast.json`, `source_state_amplitudes.json`, `scores.json`, & `Table_engineering_scores.csv`: Full-precision calibrated state amplitudes (Table 7), predicted corrosion trajectories (Fig. 9), and evaluation scores across all compared models (Table 8).
 - `tests/` — **Automated Verification Suite**
   - `test_knowledge_graph_assets.py`: Verifies the 50-paper literature corpus, 302 extracted relationships, 3-resolution saturation audit (Table S2 & Fig. S1), raw literature graph (1,057 nodes, 3,116 edges), executable two-layer knowledge graph (12 process categories, 31 kernels `K01`–`K31`, 20 tags), and 41 candidate modules (`M01`–`M41`, Table S12).
-  - `test_laboratory_equations.py`: Reproduces full-dataset training log-RMSE (`0.507` and `0.496`), 23-fold grouped CV log-RMSE (`0.570` and `0.567`), and analytical interior corrosion maxima ($C^* = 4.00\text{–}4.05\,\mathrm{wt\%}$, $H^* = 167.7\text{–}184.3\,\mu\mathrm{m}$, Table 5).
-  - `test_engineering_prediction.py`: Verifies the source-calibrated Bernstein state amplitudes (Table 6) and target trajectory RMSE and endpoint errors across Jinhai, swimming pool, and NASA KSC (`1.16%` mean absolute endpoint error for the 5-parameter KGED law, Table 7).
+  - `test_laboratory_equations.py`: Verifies closed-form reconstruction, 23-fold grouped CV partition integrity and nonlinear least-squares fold refits (`0.507` and `0.496` training log-RMSE; `0.570` and `0.567` 23-fold grouped CV log-RMSE), and analytical interior corrosion maxima ($C^* = 4.00\text{–}4.05\,\mathrm{wt\%}$, $H^* = 167.7\text{–}184.3\,\mu\mathrm{m}$, Tables 4–6).
+  - `test_engineering_prediction.py`: Recomputes and verifies the Linhai source-calibrated Bernstein state amplitudes (Table 7) and Eq. (16) target trajectory RMSEs (`14.05`, `32.38`, and `4.98 µm`) and endpoint errors (`1.16%` three-site mean absolute endpoint error for the 5-parameter KGED law, Table 8).
 
 ## Quick Start
 
@@ -46,17 +47,17 @@ Verify the 50-paper literature corpus, saturation audit, and two-layer knowledge
 python tests/test_knowledge_graph_assets.py
 ```
 
-Run the laboratory rate equation verification test:
+Run the laboratory rate equation and 23-fold CV refit verification test:
 ```bash
 python tests/test_laboratory_equations.py
 ```
 
-Run the cross-environment engineering prediction test:
+Run the cross-environment engineering prediction verification test:
 ```bash
 python tests/test_engineering_prediction.py
 ```
 
-Run the full closed-form and Gauss-Legendre integration verification in `engineering/`:
+Run the closed-form and Gauss–Legendre quadrature verification in `engineering/`:
 ```bash
 python engineering/verify_closed_forms.py
 ```

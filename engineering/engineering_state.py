@@ -86,5 +86,4 @@ def fit(model, c, y, months, n):
         normalized_design_condition=condition, singular_values=singular.tolist(),
         solver_trace=solver_log.getvalue(), source_prediction=prediction.tolist(),
         fitting_design=augmented.tolist(), fitting_response=response.tolist(),
-        state_hyperparameters_selected_from_grid={k: c[k] for k in ['driver', 'tau', 'degree', 'power'] if k in c},
-        residual_dof_does_not_account_for_state_hyperparameter_selection=True)
+        state_hyperparameters={k: c[k] for k in ['driver', 'tau', 'degree', 'power'] if k in c})

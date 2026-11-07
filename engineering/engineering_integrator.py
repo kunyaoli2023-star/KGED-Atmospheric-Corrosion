@@ -1,7 +1,8 @@
 """Frozen historical integration and metrics, now local to V6."""
 import numpy as np
 from . import engineering_state as state
-from .storage import fingerprint
+import json
+fingerprint = lambda c: json.dumps(c, sort_keys=True)
 
 CASES = ("linhai", "jinhai", "pool", "ksc")
 

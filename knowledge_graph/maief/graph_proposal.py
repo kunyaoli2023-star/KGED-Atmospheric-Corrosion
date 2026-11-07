@@ -6,7 +6,7 @@ from .process_taxonomy import seal
 from .storage import read
 from .storage import fingerprint
 
-GRAPH=read(ROOT/'knowledge/math_graph.json')
+GRAPH=read(ROOT/'math_graph.json' if (ROOT/'math_graph.json').exists() else ROOT/'knowledge/math_graph.json')
 if GRAPH!=seal(GRAPH):raise ValueError('GRAPH_HASH_MISMATCH')
 INSTRUCTIONS='''Use the provided saved mathematical knowledge graph as the authoritative
 construction library. For the assigned hypothesis propose several scientifically

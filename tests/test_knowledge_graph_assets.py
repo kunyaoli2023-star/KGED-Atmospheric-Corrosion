@@ -28,12 +28,18 @@ def test_literature_corpus_and_saturation():
     sat_res = json.loads((lit_dir / "saturation_audit/result.json").read_text(encoding="utf-8"))
     assert sat_res["paper_count"] == 50
     assert sat_res["formula_count"] == 302
+    assert sat_res["joint_knowledge_saturation"] is False
     summaries = sat_res["summaries"]
     assert summaries["coarse"]["observed_unique_units"] == 17
+    assert round(summaries["coarse"]["estimated_completeness"], 3) == 0.646
+    assert summaries["coarse"]["passes_saturation_rule"] is False
     assert summaries["medium"]["observed_unique_units"] == 9
+    assert round(summaries["medium"]["estimated_completeness"], 3) == 1.000
     assert summaries["medium"]["order_robust_saturation_paper_count"] == 42
     assert summaries["medium"]["passes_saturation_rule"] is True
     assert summaries["fine"]["observed_unique_units"] == 70
+    assert round(summaries["fine"]["estimated_completeness"], 3) == 0.061
+    assert summaries["fine"]["passes_saturation_rule"] is False
 
 
 def test_two_layer_knowledge_graph():
@@ -64,10 +70,10 @@ def test_two_layer_knowledge_graph():
     # 3. Verify 41 candidate modules (M01-M41, Table S12)
     mods = json.loads((kg_dir / "modules_M01_M41_4round.json").read_text(encoding="utf-8"))
     assert len(mods) == 41, f"Expected 41 modules (M01-M41, Table S12), got {len(mods)}"
-    r1_mods = [m for m in mods if m["round"] == 1]
-    r2_4_mods = [m for m in mods if m["round"] in (2, 3, 4)]
-    assert len(r1_mods) == 20, f"Expected 20 literature-direct baseline modules in Round 1 (M01-M20), got {len(r1_mods)}"
-    assert len(r2_4_mods) == 21, f"Expected 21 LLM-generated modules in Rounds 2-4 (M21-M41), got {len(r2_4_mods)}"
+    r1_mods = [m for m in mods if m["round"] == 1 and m["discovery_stage"].startswith("Stage 2a")]
+    r2_4_mods = [m for m in mods if m["round"] in (2, 3, 4) and m["discovery_stage"].startswith("Stage 2b")]
+    assert len(r1_mods) == 20, f"Expected 20 Stage 2a baseline modules in Round 1 (M01-M20), got {len(r1_mods)}"
+    assert len(r2_4_mods) == 21, f"Expected 21 Stage 2b LLM-generated modules in Rounds 2-4 (M21-M41), got {len(r2_4_mods)}"
 
 
 if __name__ == "__main__":

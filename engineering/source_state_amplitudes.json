@@ -1,5 +1,5 @@
 {
-  "source": "engineering/data/current_conditioned_forecast.json",
+  "source": "engineering/current_conditioned_forecast.json",
   "coefficient_role": "dimensionless cubic Bernstein state-factor amplitudes, j=0..3",
   "configurations": [
     {
