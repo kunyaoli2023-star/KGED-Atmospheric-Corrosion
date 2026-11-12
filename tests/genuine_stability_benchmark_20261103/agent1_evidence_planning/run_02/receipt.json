@@ -1,0 +1,36 @@
+{
+  "request_sha256": "35fa137287121cfb384ed67ca0e12b8ba44cc07eff2e4bd479348fc17098a6eb",
+  "prompt_sha256": "66be9c2af2cf4fb40dab9ceffa7661a5f6f8d07e1d3f6249f2b3408584e0e84b",
+  "schema_sha256": "62a314f6c9eb307b552c7795112608465c6e33540e6b158596bbf96d2c3fccba",
+  "model": "gemini-2.5-pro",
+  "temperature": 0.0,
+  "seed": 20261007,
+  "thinking_budget": 4096,
+  "attempts": [
+    {
+      "attempt": 1,
+      "error_class": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "seconds": 5.2,
+      "schema_repair_requested": false,
+      "usage": null
+    },
+    {
+      "attempt": 2,
+      "error_class": null,
+      "seconds": 70.28,
+      "schema_repair_requested": false,
+      "usage": {
+        "prompt_token_count": 8295,
+        "candidates_token_count": 3866,
+        "thoughts_token_count": 3690,
+        "total_token_count": 15851
+      }
+    }
+  ],
+  "seconds": 78.69,
+  "reported_model": "gemini-2.5-pro",
+  "response_id_sha256": "431b5b04df2759fb83132b36472d60fdaad2979e464625ef48e053c2c8c9cf48",
+  "status": "VALID_JSON_SCHEMA",
+  "deterministic_model_output_guaranteed": false,
+  "response_sha256": "579dc824618035c6d49c730108dd88957329dc6cef0e1c96dfa83478be77f56c"
+}

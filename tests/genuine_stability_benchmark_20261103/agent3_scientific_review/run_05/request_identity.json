@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "transport": "gemini_agent_platform",
+    "model": "gemini-2.5-pro",
+    "timeout_seconds": 300,
+    "attempts": 3,
+    "temperature": 0.0,
+    "seed": 20261007,
+    "thinking_budget": 4096,
+    "max_tokens": 16384,
+    "min_request_interval_seconds": 1.6,
+    "native_json_schema": true,
+    "provider": "vertex"
+  },
+  "role": "INDEPENDENT_SCIENTIFIC_CRITIC",
+  "prompt_sha256": "bfa86c7d25fa3d2dae1cb2e04dd38a196ecaf84d64bdaef2a34c08760adcf425",
+  "schema_sha256": "403f5088a0cab700250992ad9b5a3bb560135d9f69eb231ce39666fe258cf8ee",
+  "api_schema_sha256": "403f5088a0cab700250992ad9b5a3bb560135d9f69eb231ce39666fe258cf8ee"
+}

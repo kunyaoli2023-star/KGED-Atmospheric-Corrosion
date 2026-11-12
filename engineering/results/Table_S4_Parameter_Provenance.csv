@@ -1,0 +1,11 @@
+parameter,value,role
+RH0_pct,55.0,Wetting threshold (Eq. 11)
+alpha,0.3,Wetting exponent (Eq. 11)
+J0_mg_m2_day,20000.0,Chloride half-saturation flux (Eq. 11)
+Hmin_um,50.0,Minimum effective film thickness
+Hmax_um,1000.0,Maximum effective film thickness
+Cbg_wt_pct,0.11392,Background effective NaCl concentration
+Ccap_wt_pct,0.517065,Saturation cap effective NaCl concentration
+tau_u,0.25,Fixed characteristic dose scale
+lambda_a,0.03,Fixed Tikhonov smoothness weight
+Gamma_um_per_A_s_cm2,0.368658,Fe(II) Faraday conversion factor

@@ -1,0 +1,7 @@
+# Optional dependencies for re-training the 14-feature direct field ML and
+# transductive domain-adaptation comparators (engineering/comparators/reproduce_field_comparators.py).
+# Recorded runtime versions used for the archived baselines in Supplementary Section M1.7.2:
+numpy>=1.24.0
+scikit-learn==1.6.1
+xgboost==3.0.1
+torch>=2.2.0

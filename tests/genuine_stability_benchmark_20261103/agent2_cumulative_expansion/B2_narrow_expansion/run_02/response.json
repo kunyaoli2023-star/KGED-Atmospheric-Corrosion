@@ -1,0 +1,131 @@
+{
+  "H1": [
+    {
+      "proposal_id": "round_2_H1_0::H1_LOCAL_POWER_RESPONSE",
+      "hypothesis_id": "H1",
+      "family": "H1: Temperature Effect",
+      "scientific_argument": "This model proposes a power-law relationship between the log-current contribution and dimensionless temperature. It serves as a more flexible local approximation than a linear model, capable of capturing either concave or convex trends. This form tests for non-linear temperature effects that may not conform to a single activation energy model (Arrhenius) or a saturation model, which could be relevant if multiple processes with different temperature sensitivities are active over the experimental range.",
+      "source_links": [],
+      "evidence_gap": "This is a phenomenological closure used as a flexible rival model. It is not derived from a specific physical law for corrosion kinetics, but its flexibility allows it to approximate various underlying processes over a limited domain.",
+      "construction_family_id": "H1_LOCAL_POWER_RESPONSE",
+      "mathematical_distinction": "A power-law function of temperature `p0*tau**p1`. Unlike the linear model (`p0*(tau-1)`), it can capture non-linear acceleration or deceleration. Unlike the Arrhenius model (`p0*(1-1/tau)`), it is a function of `tau` rather than `1/tau` and has a different curvature. The exponent `p1` directly controls the shape (concave for p1<1, convex for p1>1).",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The logarithm of the corrosion current will follow a power-law trend with temperature, providing a more flexible fit than a simple linear model but without the specific theoretical basis of the Arrhenius law."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:power_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H2": [
+    {
+      "proposal_id": "round_2_H2_0::H2_GAUSSIAN_PEAK",
+      "hypothesis_id": "H2",
+      "family": "H2: Salt Concentration Effect",
+      "scientific_argument": "This model addresses the 'promotion-attenuation' aspect of H2 by proposing a symmetric, bell-shaped response to salt concentration. The peak shape is governed by a Gaussian function. This form is proposed to address the systematic bias observed in previous peak models, offering a mathematically distinct shape for the competition between salt's promotional effects (e.g., increased conductivity) and inhibitory effects (e.g., reduced oxygen solubility).",
+      "source_links": [],
+      "evidence_gap": "This is a phenomenological closure for a peak response. While the existence of a peak is supported, the specific symmetric Gaussian shape is a mathematical hypothesis to be tested against data, not derived from first-principles.",
+      "construction_family_id": "H2_GAUSSIAN_PEAK",
+      "mathematical_distinction": "A symmetric quadratic form in the log-response, `-(c-p0)**2/p1**2`, which creates a Gaussian peak. This is distinct from the asymmetric `log1p(p0*c*exp(-p1*c))` form used previously, which has different tail behaviors and skewness. This model tests if a symmetric peak provides a better description of the concentration dependence.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will exhibit a symmetric peak with respect to salt concentration, contrasting with potentially skewed peak shapes from other models."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:gaussian_log_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round_2_H2_1::H2_POWER_BELL_PEAK",
+      "hypothesis_id": "H2",
+      "family": "H2: Salt Concentration Effect",
+      "scientific_argument": "This model is a direct extension of the previously successful `bell_log1p` form. By introducing a power-law exponent `p1` on the initial rising portion (`c**p1`), it provides greater flexibility to adjust the shape of the peak, specifically its sharpness and skewness. This is proposed to directly address the systematic bias observed in the simpler bell-shaped model, allowing for a better fit to the competitive promotion-attenuation process of H2.",
+      "source_links": [],
+      "evidence_gap": "This is a more flexible phenomenological closure. The additional parameter `p1` is not directly tied to a single physical quantity but allows for a more adaptable shape to capture the net effect of competing mechanisms.",
+      "construction_family_id": "H2_POWER_BELL_PEAK",
+      "mathematical_distinction": "The form `log1p(p0*c**p1*exp(-p2*c))` adds a power `p1` to the growth term compared to the previous `bell_log1p` model (which has `p1=1`). This allows the initial rise to be faster or slower than linear, changing the peak location (`p1/p2`) and the overall skewness of the curve, providing a direct way to test for and model asymmetry.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will exhibit a peak with respect to salt concentration, where the shape of the peak (particularly its skewness) is more flexible than simpler bell-shaped models."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:power_bell_log1p",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H3": [
+    {
+      "proposal_id": "round_2_H3_0::H3_TRANSPORT_PEAK",
+      "hypothesis_id": "H3",
+      "family": "H3: Film Thickness Effect",
+      "scientific_argument": "This model provides an alternative functional form for the peak in corrosion rate versus film thickness, as described in H3 and supported by A10_P3 and A33_P4. It is constructed from terms that can be loosely interpreted as a logarithmic increase in availability (`log(h)`) competing with a transport limitation term (`-log(p0+h**2)`). This provides a more structured, albeit still phenomenological, alternative to the generic `bell_log1p` form.",
+      "source_links": [
+        {
+          "evidence_id": "A10_P3",
+          "supports": "The paper reports the existence of a peak corrosion rate at an intermediate film thickness, which this model aims to represent.",
+          "source_to_module_mapping": "The evidence supports the general peak shape (IMPLEMENTATION of H3), not this specific mathematical form."
+        },
+        {
+          "evidence_id": "A33_P4",
+          "supports": "The paper describes the competing mechanisms of electrolyte availability and oxygen transport limitation that give rise to the peak, which this model's structure loosely mimics.",
+          "source_to_module_mapping": "The evidence provides a conceptual basis for the competing terms in the model."
+        }
+      ],
+      "evidence_gap": "The model is a phenomenological closure inspired by physical concepts, not a rigorous derivation. The mapping of the mathematical terms to specific physical processes (availability, transport) is an assumption.",
+      "construction_family_id": "H3_TRANSPORT_PEAK",
+      "mathematical_distinction": "The form `log(h)-log(p0+h**2)` has a distinct shape and asymptotic behavior compared to `log1p(p0*h*exp(-p1*h))`. It has a logarithmic singularity at h=0 and decays as `-log(h)` for large h, whereas the `bell_log1p` form is zero at h=0 and decays exponentially. This tests a different shape for the competition between availability and transport limitation.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a peak with film thickness, with a specific shape characterized by a logarithmic rise and fall, contrasting with other bell-shaped models."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:transport_peak",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H4": [
+    {
+      "proposal_id": "round_2_H4_0::H4_COMPETING_COUPLINGS",
+      "hypothesis_id": "H4",
+      "family": "H4: Coupled Effects",
+      "scientific_argument": "This model tests for a competitive interaction between temperature and salinity on the film thickness response. It proposes that the coupling effects of temperature (`TH_COUPLING`) and salt (`CH_SLOPE`) on the film thickness response are not simply additive but may oppose each other. For example, an increase in temperature might enhance transport through the film while an increase in salt concentration might hinder it (or vice versa), leading to a complex, non-separable response. This is a novel composition to explore the failure of previous simpler coupling models.",
+      "source_links": [],
+      "evidence_gap": "This is a highly speculative phenomenological model. There is no direct evidence for this specific competitive interaction. It is proposed as a mathematically distinct alternative to explore the model space, given that simpler additive coupling models were insufficient.",
+      "construction_family_id": "H4_COMPETING_COUPLINGS",
+      "mathematical_distinction": "This model uses `DIFFERENCE_LOG_RESPONSES` to combine the thermal-film and salt-film interaction templates. This is mathematically distinct from the separable null model (no interaction) and the previously tested additive interaction model (`SUM_LOG_RESPONSES`). It allows for the possibility that temperature and salinity have opposing modulating effects on the film thickness response.",
+      "question_links": [
+        {
+          "hypothesis_id": "H4",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The way the film thickness response curve changes with temperature will be different at high vs. low salinity, and the effect will not be simply additive, possibly showing a reversal or cancellation of trends."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:TCH_COUPLING",
+      "template_id": "template:H4:thermal_film",
+      "right_template_id": "template:H4:salt_film",
+      "operation": "DIFFERENCE_LOG_RESPONSES"
+    }
+  ]
+}

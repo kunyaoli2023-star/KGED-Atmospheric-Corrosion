@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "transport": "gemini_agent_platform",
+    "model": "gemini-2.5-pro",
+    "timeout_seconds": 300,
+    "attempts": 3,
+    "temperature": 0.0,
+    "seed": 20261007,
+    "thinking_budget": 4096,
+    "max_tokens": 16384,
+    "min_request_interval_seconds": 1.6,
+    "native_json_schema": true,
+    "provider": "vertex"
+  },
+  "role": "EVIDENCE_CONDITIONED_H1_H4_REVISION",
+  "prompt_sha256": "8280256faba7f3521ec75d8f58ac03d922244e26ae98557ebc94433a89d3257d",
+  "schema_sha256": "aac01c2e449ce9e0319ad19d2e5f3f5a84768de558efd4c7b59e228b14f627ae",
+  "api_schema_sha256": "aac01c2e449ce9e0319ad19d2e5f3f5a84768de558efd4c7b59e228b14f627ae"
+}

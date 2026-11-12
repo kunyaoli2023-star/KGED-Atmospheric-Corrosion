@@ -1,0 +1,9 @@
+{
+  "role": "MATHEMATICAL_PROPOSER_H3",
+  "attempt_count": 1,
+  "first_try_valid": true,
+  "schema_failures": [],
+  "prompt_sha256": "1a822e0363e3f1ba68e61426867e5dd047a10a5d392d0c3eacc0cdf427929708",
+  "response_sha256": "058eb3f7c8a4b4bd6faa1ba112ee83df95b598dd7e16c00968c2de3e948103b8",
+  "seconds": 86.2
+}

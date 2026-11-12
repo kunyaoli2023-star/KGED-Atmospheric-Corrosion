@@ -1,0 +1,119 @@
+{
+  "protocol": "Evidence-conditioned hypothesis-to-module construction",
+  "scope": "Scientific construction and laboratory-only multiobjective search; frozen field evaluation follows separately.",
+  "count_policy": "A qualitative process may admit several inequivalent macroscopic closures. Preserve different tails, curvatures, saturation laws, peak symmetries and coupling modes when each has an explicit modelling argument. Same trend does not mean same mathematical family. Count is an output, never a target.",
+  "coordinates": {
+    "tau": "(T_C + 273.15)/298.15",
+    "c": "NaCl concentration / (1 wt%)",
+    "h": "liquid electrolyte film thickness / (200 micrometres)"
+  },
+  "domains": {
+    "tau": [
+      0.9161495891329867,
+      1.0838504108670133
+    ],
+    "c": [
+      0,
+      26.5
+    ],
+    "h": [
+      0.25,
+      5
+    ]
+  },
+  "reference": {
+    "tau": 1,
+    "c": 3.5,
+    "h": 1
+  },
+  "response": "A dimensionless additive component f of log(i/i_ref). It is later centred as f(v)-f(reference). This convention is NOT a claim that a literature law for current, mass loss, oxygen or rust is already a log-current law.",
+  "grammar": {
+    "binary": [
+      "+",
+      "-",
+      "*",
+      "/",
+      "**"
+    ],
+    "unary": [
+      "log",
+      "log1p",
+      "exp",
+      "sqrt",
+      "tanh"
+    ],
+    "node_safety_limit": 240
+  },
+  "parameter_policy": "Count follows each expression; no coefficient quota. Every parameter is dimensionless here, typed positive or real, and has a stated physical/statistical meaning. Additional inequalities are explicit admissibility conditions, not silently guaranteed by typing.",
+  "construction_basis_policy": "Separate source-log transformations, reduced process balances, local approximations, phenomenological closures and rival controls. For source/process-derived forms, provide an independently motivated positive rate expression and derive the log response from it; merely setting rate=exp(chosen f) is circular, not a process derivation. A phenomenological closure remains admissible as exploration when labelled and falsifiable, not as a mechanism proof.",
+  "process_vocabulary": "Permitted scientific construction operations include explicitly stated rate/flux balances, series or parallel limitations, finite availability, activated kinetics, controlled local approximations and environment-dependent process scales. These are modelling routes, not a prewritten function library. Each route needs its own source-scope statement and new assumptions.",
+  "machine_field_contract": "claimed_derivative is the executable right-hand expression only, without df/dx=. Each condition expression is an arithmetic residual compared with zero by the separate relation field; no >,< or = inside the expression.",
+  "scientific_roles": {
+    "THEORY_REEXPRESSION": "A coordinate/log-scale reexpression of an identified extracted source equation, with explicit variable mapping and assumptions. The source remains extraction-level until page verification.",
+    "MECHANISM_EXTENSION": "A proposed macroscopic response derived from a declared competition, balance or analogy. State which evidence supports the process and where new modelling assumptions begin.",
+    "RIVAL_CONTROL": "An interpretable null, simpler response or alternative process that can challenge the hypothesis; it need not share the primary hypothesis's trend."
+  },
+  "admission_policy": "Safe executable expression + source identity check + construction trace + dimensional declaration + independently computed symbolic derivative checks + numerical counterexample probes + separate scientific critic. Acceptance means eligible for later fitting, not experimentally verified or a proven mechanism.",
+  "evidence_policy": "Read all available local extraction files; retrieve by measured-variable/process terms, preserve scores and omitted IDs. No new PDF page audit or knowledge-saturation estimate is claimed. Do not transfer rust-layer equations to liquid-film thickness without explicitly labelled analogy.",
+  "generation_stop_policy": {
+    "minimum_condition": "No missing declared qualitative alternatives, no unexplored justified construction families, and repeated attempts fail to add admitted structural content.",
+    "no_novelty_patience": 2,
+    "maximum_expansion_batches": 3,
+    "maximum_repair_passes_per_batch": 1,
+    "budget_meaning": "Safety limits bound calls, not the number of candidates. Reaching a limit is explicitly NOT convergence or mathematical saturation."
+  },
+  "reproducibility": "Archive input/code hashes, prompts, structured responses, secret-free model receipts, rejected proposals, aliases and mathematical checks. Offline replay must reproduce the normalized pool; a new AI run need not give identical proposals.",
+  "diversity_extension": {
+    "protocol": "Evidence-conditioned, construction-diverse module generation",
+    "scope": "Hypothesis-to-module generation and review only; no full equation, laboratory response, fitting or predictive selection.",
+    "candidate_count_target": null,
+    "coefficient_quota": null,
+    "construction_policy": "A qualitative process may admit several inequivalent macroscopic closures. Preserve different tails, curvatures, saturation laws, peak symmetries and coupling modes when each has an explicit modelling argument. Same trend does not mean same mathematical family.",
+    "evidence_policy": "An extracted source can support a process without proving the new closure. Separate exact source reexpression, conditional process reduction, local approximation, phenomenological closure and rival. No invented derivation or page verification.",
+    "repair_policy": "Keep original proposals immutable. Incorrect evidence/derivation labels are repairable with a newly identified, re-reviewed proposal; lack of a published exact formula alone is not a rejection reason. False mathematics remains quarantined until corrected.",
+    "opportunity_dimensions": {
+      "H1": [
+        "activation coordinate and justified temperature dependence of a kinetic factor",
+        "local approximations versus globally different curvature",
+        "bounded versus unbounded continuation with explicit validity scope",
+        "competing temperature-sensitive effects and null rivals"
+      ],
+      "H2": [
+        "finite availability versus unbounded promotion",
+        "promotion plus attenuation versus promotion alone",
+        "algebraic versus exponential attenuation under stated assumptions",
+        "low-concentration order and high-concentration limits"
+      ],
+      "H3": [
+        "electrolyte availability and transport as separate processes",
+        "series or parallel limitations if independently specified",
+        "different thin-film orders, thick-film tails and peak asymmetries",
+        "multiplicative-scale heterogeneity as an explicitly proposed closure",
+        "monotone and null rivals"
+      ],
+      "H4": [
+        "environment-dependent amplitude",
+        "environment-dependent positive characteristic length",
+        "environment-dependent response order or shape",
+        "smooth competition between regimes",
+        "temperature versus salt coupling",
+        "uncoupled rivals"
+      ]
+    },
+    "diversity_policy": "Report hypothesis alternatives, planned construction-family coverage, exact centred-expression identities, structural fingerprints and reviewer-identified testable distinctions separately. None is a proof of exhaustive function-space coverage.",
+    "stopping_policy": {
+      "minimum_condition": "No missing declared qualitative alternatives, no unexplored justified construction families, and repeated attempts fail to add admitted structural content.",
+      "no_novelty_patience": 2,
+      "maximum_expansion_batches": 3,
+      "maximum_repair_passes_per_batch": 1,
+      "budget_meaning": "Safety limits bound calls, not the number of candidates. Reaching a limit is explicitly NOT convergence or mathematical saturation."
+    },
+    "numerical_policy": "Unfitted reference parameter probes and symbolic identities only. Probe values are not learned coefficients. Finite grids, nominal limits and AI judgments do not prove all physical boundaries or a true mechanism.",
+    "historical_data_policy": "No archived candidate pool, baseline equation, winner or fitted scores are supplied. Previously agreed hypothesis contracts and current literature extraction files are declared inputs."
+  },
+  "unified_search_policy": {
+    "joint_closures_allowed": "H4 may propose an explicit joint salt-film rate closure and shared environmental scales when scientifically argued. The later H2 slot can be omitted to avoid double counting.",
+    "parsimony": "Compare identifiable parameter sharing, one versus separate process scales, and genuinely distinct attenuation tails; no required number of forms or coefficients.",
+    "boundary_scope": "Distinguish restricted laboratory approximations from globally different continuations; provide testable limits rather than asserting all physical boundaries are proved."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "transport": "gemini_agent_platform",
+    "model": "gemini-2.5-pro",
+    "timeout_seconds": 300,
+    "attempts": 3,
+    "temperature": 0.0,
+    "seed": 20261007,
+    "thinking_budget": 4096,
+    "max_tokens": 16384,
+    "min_request_interval_seconds": 1.6,
+    "native_json_schema": true,
+    "provider": "vertex"
+  },
+  "role": "MATHEMATICAL_PROPOSER_H2",
+  "prompt_sha256": "c005553ee6cce4c382bbdf41cde754a306fcf42cf537e1c6657c4239065884c3",
+  "schema_sha256": "3e109f6da807203152809f7a2bef3ee67e4a5c0cd92f8d4f5d856f05cd6cc543",
+  "api_schema_sha256": "370493bc8ae51bfbad297e3ba3df1521791f419ceb9e194ea23cf6831c950eea"
+}

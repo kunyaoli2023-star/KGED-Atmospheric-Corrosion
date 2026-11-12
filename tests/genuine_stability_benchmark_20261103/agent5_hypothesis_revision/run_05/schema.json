@@ -1,0 +1,444 @@
+{
+  "type": "object",
+  "properties": {
+    "H1": {
+      "type": "object",
+      "properties": {
+        "retain_good": {
+          "type": "string"
+        },
+        "unsuccessful_attempts": {
+          "type": "string"
+        },
+        "remaining_bias": {
+          "type": "string"
+        },
+        "primary_claim": {
+          "type": "string"
+        },
+        "competing_explanation": {
+          "type": "string"
+        },
+        "testable_prediction": {
+          "type": "string"
+        },
+        "falsification": {
+          "type": "string"
+        },
+        "math_generation_instruction": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "AXIS_C_wt",
+              "AXIS_T_C",
+              "AXIS_h_um",
+              "AXIS_shape_group",
+              "COMPLETED_COMPARISONS",
+              "DATA_COVERAGE",
+              "FIT_0",
+              "FIT_1",
+              "FIT_10",
+              "FIT_11",
+              "FIT_2",
+              "FIT_3",
+              "FIT_4",
+              "FIT_5",
+              "FIT_6",
+              "FIT_7",
+              "FIT_8",
+              "FIT_9",
+              "H4_COVERAGE",
+              "MATH_0_0",
+              "MATH_0_1",
+              "MATH_0_2",
+              "MATH_10_0",
+              "MATH_1_0",
+              "MATH_1_1",
+              "MATH_1_2",
+              "MATH_2_0",
+              "MATH_2_1",
+              "MATH_2_2",
+              "MATH_3_0",
+              "MATH_3_1",
+              "MATH_3_2",
+              "MATH_4_0",
+              "MATH_4_1",
+              "MATH_5_0",
+              "MATH_5_1",
+              "MATH_6_0",
+              "MATH_7_0",
+              "MATH_7_1",
+              "MATH_8_0",
+              "MATH_8_1",
+              "MATH_9_0",
+              "RESIDUAL_0",
+              "RESIDUAL_1",
+              "RESIDUAL_10",
+              "RESIDUAL_11",
+              "RESIDUAL_2",
+              "RESIDUAL_3",
+              "RESIDUAL_4",
+              "RESIDUAL_5",
+              "RESIDUAL_6",
+              "RESIDUAL_7",
+              "RESIDUAL_8",
+              "RESIDUAL_9",
+              "SELECTION",
+              "SPACE",
+              "STRUCTURE_COMPARISONS",
+              "TESTED_MODULES"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "retain_good",
+        "unsuccessful_attempts",
+        "remaining_bias",
+        "primary_claim",
+        "competing_explanation",
+        "testable_prediction",
+        "falsification",
+        "math_generation_instruction",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "H2": {
+      "type": "object",
+      "properties": {
+        "retain_good": {
+          "type": "string"
+        },
+        "unsuccessful_attempts": {
+          "type": "string"
+        },
+        "remaining_bias": {
+          "type": "string"
+        },
+        "primary_claim": {
+          "type": "string"
+        },
+        "competing_explanation": {
+          "type": "string"
+        },
+        "testable_prediction": {
+          "type": "string"
+        },
+        "falsification": {
+          "type": "string"
+        },
+        "math_generation_instruction": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "AXIS_C_wt",
+              "AXIS_T_C",
+              "AXIS_h_um",
+              "AXIS_shape_group",
+              "COMPLETED_COMPARISONS",
+              "DATA_COVERAGE",
+              "FIT_0",
+              "FIT_1",
+              "FIT_10",
+              "FIT_11",
+              "FIT_2",
+              "FIT_3",
+              "FIT_4",
+              "FIT_5",
+              "FIT_6",
+              "FIT_7",
+              "FIT_8",
+              "FIT_9",
+              "H4_COVERAGE",
+              "MATH_0_0",
+              "MATH_0_1",
+              "MATH_0_2",
+              "MATH_10_0",
+              "MATH_1_0",
+              "MATH_1_1",
+              "MATH_1_2",
+              "MATH_2_0",
+              "MATH_2_1",
+              "MATH_2_2",
+              "MATH_3_0",
+              "MATH_3_1",
+              "MATH_3_2",
+              "MATH_4_0",
+              "MATH_4_1",
+              "MATH_5_0",
+              "MATH_5_1",
+              "MATH_6_0",
+              "MATH_7_0",
+              "MATH_7_1",
+              "MATH_8_0",
+              "MATH_8_1",
+              "MATH_9_0",
+              "RESIDUAL_0",
+              "RESIDUAL_1",
+              "RESIDUAL_10",
+              "RESIDUAL_11",
+              "RESIDUAL_2",
+              "RESIDUAL_3",
+              "RESIDUAL_4",
+              "RESIDUAL_5",
+              "RESIDUAL_6",
+              "RESIDUAL_7",
+              "RESIDUAL_8",
+              "RESIDUAL_9",
+              "SELECTION",
+              "SPACE",
+              "STRUCTURE_COMPARISONS",
+              "TESTED_MODULES"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "retain_good",
+        "unsuccessful_attempts",
+        "remaining_bias",
+        "primary_claim",
+        "competing_explanation",
+        "testable_prediction",
+        "falsification",
+        "math_generation_instruction",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "H3": {
+      "type": "object",
+      "properties": {
+        "retain_good": {
+          "type": "string"
+        },
+        "unsuccessful_attempts": {
+          "type": "string"
+        },
+        "remaining_bias": {
+          "type": "string"
+        },
+        "primary_claim": {
+          "type": "string"
+        },
+        "competing_explanation": {
+          "type": "string"
+        },
+        "testable_prediction": {
+          "type": "string"
+        },
+        "falsification": {
+          "type": "string"
+        },
+        "math_generation_instruction": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "AXIS_C_wt",
+              "AXIS_T_C",
+              "AXIS_h_um",
+              "AXIS_shape_group",
+              "COMPLETED_COMPARISONS",
+              "DATA_COVERAGE",
+              "FIT_0",
+              "FIT_1",
+              "FIT_10",
+              "FIT_11",
+              "FIT_2",
+              "FIT_3",
+              "FIT_4",
+              "FIT_5",
+              "FIT_6",
+              "FIT_7",
+              "FIT_8",
+              "FIT_9",
+              "H4_COVERAGE",
+              "MATH_0_0",
+              "MATH_0_1",
+              "MATH_0_2",
+              "MATH_10_0",
+              "MATH_1_0",
+              "MATH_1_1",
+              "MATH_1_2",
+              "MATH_2_0",
+              "MATH_2_1",
+              "MATH_2_2",
+              "MATH_3_0",
+              "MATH_3_1",
+              "MATH_3_2",
+              "MATH_4_0",
+              "MATH_4_1",
+              "MATH_5_0",
+              "MATH_5_1",
+              "MATH_6_0",
+              "MATH_7_0",
+              "MATH_7_1",
+              "MATH_8_0",
+              "MATH_8_1",
+              "MATH_9_0",
+              "RESIDUAL_0",
+              "RESIDUAL_1",
+              "RESIDUAL_10",
+              "RESIDUAL_11",
+              "RESIDUAL_2",
+              "RESIDUAL_3",
+              "RESIDUAL_4",
+              "RESIDUAL_5",
+              "RESIDUAL_6",
+              "RESIDUAL_7",
+              "RESIDUAL_8",
+              "RESIDUAL_9",
+              "SELECTION",
+              "SPACE",
+              "STRUCTURE_COMPARISONS",
+              "TESTED_MODULES"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "retain_good",
+        "unsuccessful_attempts",
+        "remaining_bias",
+        "primary_claim",
+        "competing_explanation",
+        "testable_prediction",
+        "falsification",
+        "math_generation_instruction",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "H4": {
+      "type": "object",
+      "properties": {
+        "retain_good": {
+          "type": "string"
+        },
+        "unsuccessful_attempts": {
+          "type": "string"
+        },
+        "remaining_bias": {
+          "type": "string"
+        },
+        "primary_claim": {
+          "type": "string"
+        },
+        "competing_explanation": {
+          "type": "string"
+        },
+        "testable_prediction": {
+          "type": "string"
+        },
+        "falsification": {
+          "type": "string"
+        },
+        "math_generation_instruction": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "AXIS_C_wt",
+              "AXIS_T_C",
+              "AXIS_h_um",
+              "AXIS_shape_group",
+              "COMPLETED_COMPARISONS",
+              "DATA_COVERAGE",
+              "FIT_0",
+              "FIT_1",
+              "FIT_10",
+              "FIT_11",
+              "FIT_2",
+              "FIT_3",
+              "FIT_4",
+              "FIT_5",
+              "FIT_6",
+              "FIT_7",
+              "FIT_8",
+              "FIT_9",
+              "H4_COVERAGE",
+              "MATH_0_0",
+              "MATH_0_1",
+              "MATH_0_2",
+              "MATH_10_0",
+              "MATH_1_0",
+              "MATH_1_1",
+              "MATH_1_2",
+              "MATH_2_0",
+              "MATH_2_1",
+              "MATH_2_2",
+              "MATH_3_0",
+              "MATH_3_1",
+              "MATH_3_2",
+              "MATH_4_0",
+              "MATH_4_1",
+              "MATH_5_0",
+              "MATH_5_1",
+              "MATH_6_0",
+              "MATH_7_0",
+              "MATH_7_1",
+              "MATH_8_0",
+              "MATH_8_1",
+              "MATH_9_0",
+              "RESIDUAL_0",
+              "RESIDUAL_1",
+              "RESIDUAL_10",
+              "RESIDUAL_11",
+              "RESIDUAL_2",
+              "RESIDUAL_3",
+              "RESIDUAL_4",
+              "RESIDUAL_5",
+              "RESIDUAL_6",
+              "RESIDUAL_7",
+              "RESIDUAL_8",
+              "RESIDUAL_9",
+              "SELECTION",
+              "SPACE",
+              "STRUCTURE_COMPARISONS",
+              "TESTED_MODULES"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "retain_good",
+        "unsuccessful_attempts",
+        "remaining_bias",
+        "primary_claim",
+        "competing_explanation",
+        "testable_prediction",
+        "falsification",
+        "math_generation_instruction",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "additionalProperties": false
+}

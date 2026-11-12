@@ -1,0 +1,151 @@
+ontology,core_factor,symbol,paper_freq,operator_diversity,weighted_degree,betweenness
+environment_Cl,Cl_core,Cl-,20,2,49,0.4515691704165226
+environment_Cl,Cl_core,Cl,10,4,23,0.17454136379370025
+environment_Cl,Cl_core,NaCl,9,1,34,0.2744029075804777
+environment_Cl,Cl_core,salinity,7,0,33,0.17457020883812155
+environment_Cl,Cl_core,Cl¯,3,1,7,0.07528556593977155
+environment_Cl,Cl_core,chloride ions,3,0,14,0.15835929387331257
+environment_Cl,Cl_core,chloride concentration,3,0,12,0.0007499711549555786
+environment_Cl,Cl_core,Salinity,3,0,11,0.0006057459328487366
+environment_Cl,Cl_core,chloride,3,0,5,0.0
+environment_Cl,Cl_core,[Cl],2,4,8,0.07528556593977155
+environment_Cl,Cl_core,FeCl2,2,1,22,0.009691934925579786
+environment_Cl,Cl_core,FeCl3,2,1,22,0.009691934925579786
+environment_Cl,Cl_core,Cl⁻,2,1,5,0.06092073381793008
+environment_Cl,Cl_core,chlorine,2,0,10,0.0012114918656974732
+environment_Cl,Cl_core,MgCl2,2,0,10,0.0002307603553709473
+environment_Cl,Cl_core,[Cl-],2,0,8,0.0
+environment_Cl,Cl_core,Cl concentration,2,0,7,0.0
+environment_Cl,Cl_core,airborne salts,2,0,6,0.0
+environment_Cl,Cl_core,chlorides,2,0,5,0.0006922810661128419
+environment_Cl,Cl_core,Cl deposition rate,2,0,5,0.0
+environment_Cl,Cl_core,chloride ion content,2,0,3,0.0
+environment_Cl,Cl_core,c,1,4,5,0.0
+environment_Cl,Cl_core,CDR,1,2,1,0.0
+environment_Cl,Cl_core,3Fe(OH)2.FeCl2,1,1,14,0.0
+environment_Cl,Cl_core,FeCl2.4H2O,1,1,14,0.0
+environment_Cl,Cl_core,FeCl3.5/2H2O,1,1,14,0.0
+environment_Cl,Cl_core,FeCl3.6H2O,1,1,14,0.0
+environment_Cl,Cl_core,nFeOOH.FeCl3,1,1,14,0.0
+environment_Cl,Cl_core,HCl(g),1,1,8,0.0
+environment_Cl,Cl_core,NaCl(s),1,1,8,0.0
+environment_Cl,Cl_core,A(d),1,1,5,0.0
+environment_Cl,Cl_core,A_i,1,1,5,0.0
+environment_Cl,Cl_core,Clo,1,1,5,0.0
+environment_Cl,Cl_core,J,1,1,5,0.0
+environment_Cl,Cl_core,[Cl-]calc,1,1,5,0.0
+environment_Cl,Cl_core,[Cl-]calc_k,1,1,5,0.0
+environment_Cl,Cl_core,R,1,1,4,0.0
+environment_Cl,Cl_core,[Cl¯],1,1,4,0.0
+environment_Cl,Cl_core,[Cl⁻],1,1,4,0.0
+environment_Cl,Cl_core,[OH¯],1,1,4,0.0
+environment_Cl,Cl_core,r',1,1,4,0.0
+environment_Cl,Cl_core,S,1,1,1,0.0
+environment_Cl,Cl_core,s,1,1,1,0.0
+environment_Cl,Cl_core,CHLORIDE,1,1,0,0.0
+environment_Cl,Cl_core,Csalt,1,1,0,0.0
+environment_Cl,Cl_core,Cl pollution,1,0,14,0.0
+environment_Cl,Cl_core,chloride concentrations,1,0,14,0.0
+environment_Cl,Cl_core,chloride content,1,0,14,0.0
+environment_Cl,Cl_core,chloride particles,1,0,14,0.0
+environment_Cl,Cl_core,chloride solution,1,0,14,0.0
+kinetics_T,T_core,T,22,7,39,0.6747030048916841
+kinetics_T,T_core,temperature,12,0,14,0.3382250174703005
+kinetics_T,T_core,Average temperature,3,0,5,0.06429070580013976
+kinetics_T,T_core,Temperature,3,0,4,0.09433962264150943
+kinetics_T,T_core,To,2,4,12,0.006289308176100628
+kinetics_T,T_core,K,2,1,13,0.008385744234800839
+kinetics_T,T_core,τ25-35,2,1,4,0.0
+kinetics_T,T_core,τ5-25,2,1,4,0.0
+kinetics_T,T_core,25 °C,2,0,4,0.0006988120195667365
+kinetics_T,T_core,40 °C,2,0,3,0.03284416491963662
+kinetics_T,T_core,30 °C,2,0,3,0.0
+kinetics_T,T_core,temp.,2,0,0,0.0
+kinetics_T,T_core,B,1,5,8,0.0
+kinetics_T,T_core,f(T),1,4,8,0.0
+kinetics_T,T_core,F,1,3,2,0.0
+kinetics_T,T_core,R,1,3,2,0.0
+kinetics_T,T_core,RT,1,3,1,0.0
+kinetics_T,T_core,Ea,1,2,8,0.0
+kinetics_T,T_core,k,1,2,1,0.0
+kinetics_T,T_core,H(0),1,1,5,0.0
+kinetics_T,T_core,H(T),1,1,5,0.0
+kinetics_T,T_core,V,1,1,5,0.0
+kinetics_T,T_core,kB,1,1,5,0.0
+kinetics_T,T_core,R(T),1,1,4,0.0
+kinetics_T,T_core,R(To),1,1,4,0.0
+kinetics_T,T_core,R_t,1,1,4,0.0
+kinetics_T,T_core,R_{init},1,1,4,0.0
+kinetics_T,T_core,\Delta T,1,1,4,0.0
+kinetics_T,T_core,\alpha,1,1,4,0.0
+kinetics_T,T_core,α,1,1,4,0.0
+kinetics_T,T_core,T_AVE,1,1,2,0.0
+kinetics_T,T_core,T_MAX,1,1,2,0.0
+kinetics_T,T_core,T25-35,1,0,8,0.0
+kinetics_T,T_core,T5-25,1,0,8,0.0
+kinetics_T,T_core,β,1,0,8,0.0
+kinetics_T,T_core,Air temperature,1,0,3,0.0
+kinetics_T,T_core,Average Temperature,1,0,3,0.0
+kinetics_T,T_core,Average maximum temp.,1,0,3,0.0
+kinetics_T,T_core,Average minimum temp.,1,0,3,0.0
+kinetics_T,T_core,Maximum temperature,1,0,3,0.0
+kinetics_T,T_core,Minimum temperature,1,0,3,0.0
+kinetics_T,T_core,Seawater temperature,1,0,3,0.0
+kinetics_T,T_core,activation energy,1,0,3,0.0
+kinetics_T,T_core,16.6 °C,1,0,2,0.0
+kinetics_T,T_core,25 °C ± 1 °C,1,0,2,0.0
+kinetics_T,T_core,Average temperature of the coldest month,1,0,2,0.0
+kinetics_T,T_core,Average temperature of the hottest month,1,0,2,0.0
+kinetics_T,T_core,T_MIN,1,0,2,0.0
+kinetics_T,T_core,ambient temperature,1,0,2,0.0
+kinetics_T,T_core,salt spray temperature,1,0,2,0.0
+transport_H,delta_core,RH,30,5,176,0.6318120476015214
+transport_H,delta_core,TOW,8,3,42,0.029022512575144162
+transport_H,delta_core,H2O,7,1,56,0.07588792786161211
+transport_H,delta_core,O2,6,1,40,0.025955404244877932
+transport_H,delta_core,humidity,6,0,27,0.08757207704576124
+transport_H,delta_core,A,4,4,52,0.018233959023432722
+transport_H,delta_core,N,4,2,37,0.01392467181940865
+transport_H,delta_core,t,4,2,29,0.025407158630842842
+transport_H,delta_core,n,4,2,20,0.004497147589252852
+transport_H,delta_core,rust layer thickness,4,0,31,0.017714084161452582
+transport_H,delta_core,rust layer,4,0,22,0.004624432584958902
+transport_H,delta_core,C,3,4,18,0.0007936142804563858
+transport_H,delta_core,W,3,3,31,0.003726536621273463
+transport_H,delta_core,DRH,3,1,18,0.0004140596245859403
+transport_H,delta_core,wetness,3,0,26,0.057870966752545716
+transport_H,delta_core,moisture,3,0,22,0.005585204269414795
+transport_H,delta_core,electrolyte,3,0,17,0.02832091154459571
+transport_H,delta_core,Relative humidity,3,0,15,0.014732854864433823
+transport_H,delta_core,AW,2,2,14,4.6006624953993374e-05
+transport_H,delta_core,L,2,1,25,0.0010121457489878543
+transport_H,delta_core,ρ,2,1,25,0.0010121457489878543
+transport_H,delta_core,θ,2,1,25,0.000368052999631947
+transport_H,delta_core,mm,2,1,10,9.201324990798676e-06
+transport_H,delta_core,train,2,1,10,9.201324990798676e-06
+transport_H,delta_core,τ25-35,2,1,10,9.201324990798676e-06
+transport_H,delta_core,τ5-25,2,1,10,9.201324990798676e-06
+transport_H,delta_core,rainfall,2,0,19,0.002208317997791682
+transport_H,delta_core,diffusion,2,0,17,0.006046804073119863
+transport_H,delta_core,pores,2,0,16,0.004026346460556985
+transport_H,delta_core,wet-dry cycle,2,0,14,0.002438351122561649
+transport_H,delta_core,film thickness,2,0,14,0.0024383511225616484
+transport_H,delta_core,wet-dry cycles,2,0,14,0.0006210894368789106
+transport_H,delta_core,Time of wetness,2,0,12,0.0017252484357747515
+transport_H,delta_core,high humidity,2,0,12,0.0016562384983437614
+transport_H,delta_core,ERH,2,0,11,3.0671083302662245e-05
+transport_H,delta_core,relative humidity,2,0,11,0.0
+transport_H,delta_core,60% RH,2,0,9,2.3003312476996687e-05
+transport_H,delta_core,thin liquid film,2,0,9,0.0
+transport_H,delta_core,d,1,4,9,0.0
+transport_H,delta_core,w,1,3,7,0.0
+transport_H,delta_core,ilim,1,3,4,0.0
+transport_H,delta_core,H,1,2,20,0.0
+transport_H,delta_core,RHo,1,2,9,0.0
+transport_H,delta_core,R_s^{-1},1,2,8,0.0
+transport_H,delta_core,D,1,2,7,0.0
+transport_H,delta_core,W/D,1,2,7,0.0
+transport_H,delta_core,K,1,2,4,0.0
+transport_H,delta_core,δ_SC,1,2,4,0.0
+transport_H,delta_core,#(Φ),1,1,20,0.0
+transport_H,delta_core,NA,1,1,20,0.0

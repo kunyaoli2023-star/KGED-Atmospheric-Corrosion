@@ -1,0 +1,169 @@
+{
+  "agent": "Agent 3: Scientific review (INDEPENDENT_SCIENTIFIC_CRITIC, exact original prompt, blind negative controls with errors=[])",
+  "n_runs": 5,
+  "n_valid_proposals": 8,
+  "n_blind_negative_controls": 4,
+  "total_api_attempts": 5,
+  "first_try_valid_rate": 1.0,
+  "unique_response_sha256_count": 4,
+  "admitted_set_jaccard": {
+    "mean": 0.95,
+    "std": 0.0612,
+    "min": 0.875,
+    "max": 1.0,
+    "pairs": [
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "quarantined_set_jaccard": {
+    "mean": 0.92,
+    "std": 0.098,
+    "min": 0.8,
+    "max": 1.0,
+    "pairs": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "mean_valid_admission_rate": 0.975,
+  "mean_blind_nc_quarantine_rate": 1.0,
+  "mean_item_agreement_rate": 0.9833,
+  "per_proposal_results": {
+    "initial_0_H1_0::H1_ARRHENIUS_ACTIVATED_1": {
+      "is_negative_control": false,
+      "quarantined_runs": 0,
+      "admitted_runs": 5,
+      "agreement_rate": 1.0
+    },
+    "initial_0_H1_1::H1_LOCAL_LINEAR_2": {
+      "is_negative_control": false,
+      "quarantined_runs": 0,
+      "admitted_runs": 5,
+      "agreement_rate": 1.0
+    },
+    "revised_hypotheses_0_H2_0::prop_H2_01_power_bell": {
+      "is_negative_control": false,
+      "quarantined_runs": 1,
+      "admitted_runs": 4,
+      "agreement_rate": 0.8
+    },
+    "revised_hypotheses_0_H2_1::prop_H2_02_gaussian_peak": {
+      "is_negative_control": false,
+      "quarantined_runs": 0,
+      "admitted_runs": 5,
+      "agreement_rate": 1.0
+    },
+    "revised_hypotheses_0_H2_2::prop_H2_03_explicit_competition": {
+      "is_negative_control": false,
+      "quarantined_runs": 0,
+      "admitted_runs": 5,
+      "agreement_rate": 1.0
+    },
+    "revised_hypotheses_0_H3_0::d10a350de7b20d5c_H3_0": {
+      "is_negative_control": false,
+      "quarantined_runs": 0,
+      "admitted_runs": 5,
+      "agreement_rate": 1.0
+    },
+    "revised_hypotheses_0_H3_1::d10a350de7b20d5c_H3_1": {
+      "is_negative_control": false,
+      "quarantined_runs": 0,
+      "admitted_runs": 5,
+      "agreement_rate": 1.0
+    },
+    "revised_hypotheses_0_H3_2::d10a350de7b20d5c_H3_2": {
+      "is_negative_control": false,
+      "quarantined_runs": 0,
+      "admitted_runs": 5,
+      "agreement_rate": 1.0
+    },
+    "blind_nc_01::H1_inverted_thermal_activation": {
+      "is_negative_control": true,
+      "quarantined_runs": 5,
+      "admitted_runs": 0,
+      "agreement_rate": 1.0
+    },
+    "blind_nc_02::H2_cross_axis_film_leakage": {
+      "is_negative_control": true,
+      "quarantined_runs": 5,
+      "admitted_runs": 0,
+      "agreement_rate": 1.0
+    },
+    "blind_nc_03::H3_monotone_sum_claimed_as_peak": {
+      "is_negative_control": true,
+      "quarantined_runs": 5,
+      "admitted_runs": 0,
+      "agreement_rate": 1.0
+    },
+    "blind_nc_04::H2_false_source_equation_claim": {
+      "is_negative_control": true,
+      "quarantined_runs": 5,
+      "admitted_runs": 0,
+      "agreement_rate": 1.0
+    }
+  },
+  "call_stats": [
+    {
+      "role": "INDEPENDENT_SCIENTIFIC_CRITIC",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "bfa86c7d25fa3d2dae1cb2e04dd38a196ecaf84d64bdaef2a34c08760adcf425",
+      "response_sha256": "e4f1d534ae48adb556f3511d2cb403df8c00b40dcf6228fc6621fd6df777c517",
+      "seconds": 58.72
+    },
+    {
+      "role": "INDEPENDENT_SCIENTIFIC_CRITIC",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "bfa86c7d25fa3d2dae1cb2e04dd38a196ecaf84d64bdaef2a34c08760adcf425",
+      "response_sha256": "06661d2b1ca9a498321e83873ca69aee58edd5169cb66987681ee1b4e792a004",
+      "seconds": 57.36
+    },
+    {
+      "role": "INDEPENDENT_SCIENTIFIC_CRITIC",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "bfa86c7d25fa3d2dae1cb2e04dd38a196ecaf84d64bdaef2a34c08760adcf425",
+      "response_sha256": "967be71bfb896f79e1776fd4f1865c6481b9412bbc08fe9a3342e4b63163ecf0",
+      "seconds": 58.67
+    },
+    {
+      "role": "INDEPENDENT_SCIENTIFIC_CRITIC",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "bfa86c7d25fa3d2dae1cb2e04dd38a196ecaf84d64bdaef2a34c08760adcf425",
+      "response_sha256": "40dec4e0ea3c4a469fc4d6e01ab985de5032390f43a44194a16230eb00818331",
+      "seconds": 57.86
+    },
+    {
+      "role": "INDEPENDENT_SCIENTIFIC_CRITIC",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "bfa86c7d25fa3d2dae1cb2e04dd38a196ecaf84d64bdaef2a34c08760adcf425",
+      "response_sha256": "967be71bfb896f79e1776fd4f1865c6481b9412bbc08fe9a3342e4b63163ecf0",
+      "seconds": 57.58
+    }
+  ]
+}

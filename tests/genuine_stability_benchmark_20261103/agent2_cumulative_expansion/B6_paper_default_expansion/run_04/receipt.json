@@ -1,0 +1,29 @@
+{
+  "request_sha256": "c3f11f4a5a31326b1bef387ad43d66b6d72a99a44b90228489c02904eb9248c8",
+  "prompt_sha256": "64b4b946f17ee2dfc90a47b6bd0b1fc1c2f7284a7e177692b9992d50e4f1fd6a",
+  "schema_sha256": "0be8c78854962fe025aa0e497010af08375df4913cb1b89964ccb2b994b16fc1",
+  "model": "gemini-2.5-pro",
+  "temperature": 0.0,
+  "seed": 20261007,
+  "thinking_budget": 4096,
+  "attempts": [
+    {
+      "attempt": 1,
+      "error_class": null,
+      "seconds": 78.27,
+      "schema_repair_requested": false,
+      "usage": {
+        "prompt_token_count": 27085,
+        "candidates_token_count": 4656,
+        "thoughts_token_count": 3567,
+        "total_token_count": 35308
+      }
+    }
+  ],
+  "seconds": 78.27,
+  "reported_model": "gemini-2.5-pro",
+  "response_id_sha256": "7fe34d89dd3eadfb4b9a4445a1053b5d31bcbd9ace1eba930a0b41d052d00122",
+  "status": "VALID_JSON_SCHEMA",
+  "deterministic_model_output_guaranteed": false,
+  "response_sha256": "b36b8dd9e79ba59e0c0f4caa8aeefc64bf20f7964609fc6afaae17b3f4dfe654"
+}

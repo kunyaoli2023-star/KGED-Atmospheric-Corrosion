@@ -1,0 +1,100 @@
+{
+  "modules": [
+    "M_8a9e89f01450597f0dce71de",
+    "M_30288b5dd6f10c69a6fadefa",
+    "M_8088c25d24f28b8d3d3c46d3"
+  ],
+  "score": {
+    "cv_log_rmse": 0.5667032393919123,
+    "axis_rmse": {
+      "shape_group": 0.5309671258568326,
+      "T_C": 0.5352430233097352,
+      "h_um": 0.5067506611645609,
+      "C_wt": 0.69385214723652
+    },
+    "parameter_count": 8,
+    "ast_nodes": 64,
+    "validation_folds": 23,
+    "fidelity": "final",
+    "independent_test_claimed": false,
+    "train_log_rmse": 0.49638094844505193,
+    "train_log_r2": 0.8164121340156364,
+    "response_jacobian_rank": 8,
+    "boundary_count": 0,
+    "scaled_condition_number": 83.0963788518629,
+    "canonical_ast_nodes": 32,
+    "AST_counting_policy": "Module-canonical mathematical trees + intercept + one assembly sum when nonempty; reference offsets absorbed by intercept. Raw Python AST separately archived."
+  },
+  "admissible": true,
+  "intercept": -10.240299503803964,
+  "physical_modules": [
+    {
+      "module_id": "M_8a9e89f01450597f0dce71de",
+      "hypothesis": "H1",
+      "expression": "p0 * tanh(p1 * tau)",
+      "parameters": {
+        "p0": 315.4630161672312,
+        "p1": 3.066586819343438
+      }
+    },
+    {
+      "module_id": "M_30288b5dd6f10c69a6fadefa",
+      "hypothesis": "H2",
+      "expression": "log1p(p0 * c * exp(-p1 * c))",
+      "parameters": {
+        "p1": 0.24713237021697596,
+        "p0": 5.302601311638338
+      }
+    },
+    {
+      "module_id": "M_8088c25d24f28b8d3d3c46d3",
+      "hypothesis": "H3",
+      "expression": "log1p(p0 * h ** p1 * exp(-p2 * h))",
+      "parameters": {
+        "p2": 1.8837445165817837,
+        "p0": 9.690645213077435,
+        "p1": 1.7355904031690048
+      }
+    }
+  ],
+  "full_optimizer_diagnostics": [
+    {
+      "success": true,
+      "nfev": 43,
+      "feasible": true,
+      "sse": 41.39419976142906
+    },
+    {
+      "success": true,
+      "nfev": 35,
+      "feasible": true,
+      "sse": 41.3941997312951
+    },
+    {
+      "success": true,
+      "nfev": 52,
+      "feasible": true,
+      "sse": 41.39420001726341
+    },
+    {
+      "success": true,
+      "nfev": 47,
+      "feasible": true,
+      "sse": 41.394199725610214
+    },
+    {
+      "success": true,
+      "nfev": 32,
+      "feasible": true,
+      "sse": 41.39419972450716
+    },
+    {
+      "success": true,
+      "nfev": 34,
+      "feasible": true,
+      "sse": 41.39419975798996
+    }
+  ],
+  "elapsed_seconds": 3.2319857999973465,
+  "equation_key": "4c761eeb9391136436a18efaa671956694979cb6b374b07c19639edc9d13e46e"
+}

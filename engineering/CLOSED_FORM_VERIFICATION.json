@@ -1,0 +1,36 @@
+{
+  "parsimonious": {
+    "independent_closed_form_max_log_difference": 0.0,
+    "i_at_lab_reference_A_cm2": 3.4521848848307586e-05,
+    "clock_reference_Istar_A_cm2": 1.911119346867307e-06,
+    "gauss_legendre_16_vs_32_max_basis_diff_um": {
+      "linhai": 7.105427357601002e-15,
+      "jinhai": 7.105427357601002e-15,
+      "pool": 3.552713678800501e-15,
+      "ksc": 8.881784197001252e-16
+    },
+    "gauss_legendre_16_vs_32_max_relative_diff": {
+      "linhai": 1.807523278090588e-16,
+      "jinhai": 1.8811613674746934e-16,
+      "pool": 4.218682529083711e-17,
+      "ksc": 1.0385321501679642e-16
+    }
+  },
+  "best_accuracy": {
+    "independent_closed_form_max_log_difference": 1.7763568394002505e-14,
+    "i_at_lab_reference_A_cm2": 3.570215510892371e-05,
+    "clock_reference_Istar_A_cm2": 1.8564796283080696e-06,
+    "gauss_legendre_16_vs_32_max_basis_diff_um": {
+      "linhai": 1.7763568394002505e-15,
+      "jinhai": 8.881784197001252e-16,
+      "pool": 3.552713678800501e-15,
+      "ksc": 8.881784197001252e-16
+    },
+    "gauss_legendre_16_vs_32_max_relative_diff": {
+      "linhai": 4.316918467456516e-17,
+      "jinhai": 2.110499640617553e-17,
+      "pool": 3.268508991862209e-17,
+      "ksc": 8.373346902197133e-17
+    }
+  }
+}

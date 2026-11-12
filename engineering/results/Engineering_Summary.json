@@ -1,0 +1,72 @@
+{
+  "status": "SUCCESS",
+  "output_directory": "engineering/results",
+  "manuscript_table8_rows_verified": "18/18",
+  "divergence_rule": {
+    "rmse_um_max": 200.0,
+    "abs_endpoint_pct_max": 100.0
+  },
+  "computation_modes": {
+    "live_from_scratch": [
+      "gp",
+      "kged5",
+      "kged8",
+      "physo",
+      "power_time",
+      "pysr",
+      "sparse"
+    ],
+    "archived_frozen_prediction": [
+      "CORAL_Ridge",
+      "DANN_MLP",
+      "DomainInvariant_RF",
+      "DomainInvariant_XGBoost",
+      "Source_RF",
+      "Source_Ridge_poly2",
+      "Source_XGBoost",
+      "TCA_Ridge",
+      "bp",
+      "rf",
+      "xgb"
+    ]
+  },
+  "kged_5param_target_mean_abs_endpoint_error_pct": 1.1624,
+  "kged_8param_target_mean_abs_endpoint_error_pct": 8.6254,
+  "empirical_power_law_fit_linhai": {
+    "A": 4.928782,
+    "n": 0.995578
+  },
+  "table7_amplitudes": [
+    {
+      "Equation": "Five-parameter KGED",
+      "a0": 7.178381,
+      "a1": 6.497258,
+      "a2": 4.850725,
+      "a3": 4.376431,
+      "unanchored_source_rmse_um": 22.8159
+    },
+    {
+      "Equation": "Eight-parameter KGED",
+      "a0": 7.425615,
+      "a1": 6.561974,
+      "a2": 4.771373,
+      "a3": 4.200224,
+      "unanchored_source_rmse_um": 22.9612
+    }
+  ],
+  "software_versions": {
+    "python": "3.9",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1"
+  },
+  "generated_files": [
+    "Diverged_Models_Raw_Metrics.csv",
+    "Engineering_Summary.json",
+    "Predicted_Trajectories_All_Methods.csv",
+    "Rate_Law_Ablations_12Rows.csv",
+    "Table_7_Source_State_Amplitudes.csv",
+    "Table_8_Engineering_Comparison.csv",
+    "Table_8_Engineering_Comparison.md",
+    "Table_S4_Parameter_Provenance.csv"
+  ]
+}

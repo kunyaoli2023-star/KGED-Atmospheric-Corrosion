@@ -1,0 +1,5 @@
+method_code,method,jinhai_raw_rmse_um,jinhai_raw_ep_pct,jinhai_neg_pts,pool_raw_rmse_um,pool_raw_ep_pct,pool_neg_pts,ksc_raw_rmse_um,ksc_raw_ep_pct,ksc_neg_pts,raw_mean_abs_ep_pct
+Source_Ridge_poly2,Quadratic Ridge,625.79,326.55,2,1131.5,283.8,0,63866925.97,-33986016.37,1,11328875.57
+TCA_Ridge,TCA-Ridge,93.03,-58.52,4,177.61,-67.37,2,283.94,511.82,0,212.57
+CORAL_Ridge,CORAL-Ridge,1654.11,954.57,0,1074.92,18.08,1,52326.08,21664.31,8,7545.66
+DANN_MLP,DANN-MLP,310.8,-207.47,8,195.16,-82.38,0,4916.43,-2347.76,1,879.2

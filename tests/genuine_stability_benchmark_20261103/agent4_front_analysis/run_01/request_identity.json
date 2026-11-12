@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "transport": "gemini_agent_platform",
+    "model": "gemini-2.5-pro",
+    "timeout_seconds": 300,
+    "attempts": 3,
+    "temperature": 0.0,
+    "seed": 20261007,
+    "thinking_budget": 4096,
+    "max_tokens": 16384,
+    "min_request_interval_seconds": 1.6,
+    "native_json_schema": true,
+    "provider": "vertex"
+  },
+  "role": "WHOLE_PARETO_FRONTIER_ANALYST",
+  "prompt_sha256": "79e1fe51cc04a80ca1312aec613f89eda54528df3f28a4601d091327fb1ff88e",
+  "schema_sha256": "e62eb7beb720c47f5ff054b62b72c6b9a72e5902850df957e6817ab03ff68e4e",
+  "api_schema_sha256": "e62eb7beb720c47f5ff054b62b72c6b9a72e5902850df957e6817ab03ff68e4e"
+}

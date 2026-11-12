@@ -1,0 +1,97 @@
+{
+  "modules": [
+    "M_21895f6307781255d4ddec1f",
+    "M_30288b5dd6f10c69a6fadefa",
+    "M_0b784e416a82f8ab8e374f34"
+  ],
+  "score": {
+    "cv_log_rmse": 0.5696228917127226,
+    "axis_rmse": {
+      "shape_group": 0.5271995722036606,
+      "T_C": 0.5384685734047808,
+      "h_um": 0.5233701769062296,
+      "C_wt": 0.6894532443362196
+    },
+    "parameter_count": 5,
+    "ast_nodes": 56,
+    "validation_folds": 23,
+    "fidelity": "final",
+    "independent_test_claimed": false,
+    "train_log_rmse": 0.5066941179351085,
+    "train_log_r2": 0.8087041757423663,
+    "response_jacobian_rank": 5,
+    "boundary_count": 0,
+    "scaled_condition_number": 2.4735554187807636,
+    "canonical_ast_nodes": 30,
+    "AST_counting_policy": "Module-canonical mathematical trees + intercept + one assembly sum when nonempty; reference offsets absorbed by intercept. Raw Python AST separately archived."
+  },
+  "admissible": true,
+  "intercept": -10.273918134425804,
+  "physical_modules": [
+    {
+      "module_id": "M_21895f6307781255d4ddec1f",
+      "hypothesis": "H1",
+      "expression": "p0 * (1 - 1 / tau)",
+      "parameters": {
+        "p0": 8.685351105733526
+      }
+    },
+    {
+      "module_id": "M_30288b5dd6f10c69a6fadefa",
+      "hypothesis": "H2",
+      "expression": "log1p(p0 * c * exp(-p1 * c))",
+      "parameters": {
+        "p1": 0.24981872343585312,
+        "p0": 5.3466455418438334
+      }
+    },
+    {
+      "module_id": "M_0b784e416a82f8ab8e374f34",
+      "hypothesis": "H3",
+      "expression": "log(h) - log(p0 + h ** 2)",
+      "parameters": {
+        "p0": 0.7033499759515386
+      }
+    }
+  ],
+  "full_optimizer_diagnostics": [
+    {
+      "success": true,
+      "nfev": 9,
+      "feasible": true,
+      "sse": 43.132140100292595
+    },
+    {
+      "success": true,
+      "nfev": 9,
+      "feasible": true,
+      "sse": 43.132140149838776
+    },
+    {
+      "success": true,
+      "nfev": 6,
+      "feasible": true,
+      "sse": 43.13214009907807
+    },
+    {
+      "success": true,
+      "nfev": 6,
+      "feasible": true,
+      "sse": 43.13214010062515
+    },
+    {
+      "success": true,
+      "nfev": 9,
+      "feasible": true,
+      "sse": 43.13214009720633
+    },
+    {
+      "success": true,
+      "nfev": 10,
+      "feasible": true,
+      "sse": 43.13214010098754
+    }
+  ],
+  "elapsed_seconds": 0.7442478999873856,
+  "equation_key": "098a8f40178a2c4452ab82923403f07336209f5b5f12415c499e544bfedebfe9"
+}
