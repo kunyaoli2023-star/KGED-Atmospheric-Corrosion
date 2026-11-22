@@ -1,0 +1,11 @@
+{
+  "schema": "kged_corrosion_model_category_saturation_protocol_v1",
+  "status": "FROZEN",
+  "corpus": "literature/extracted_formulas_302.json (50 papers, C01-C50; 302 extracted relationships, 122 quantitative corrosion-rate and electrochemical equations)",
+  "category_source": "knowledge_graph/literature_graph/icorr_meta_models.json (9 canonical corrosion-model categories)",
+  "permutation_replicates": 10000,
+  "seed": 20261005,
+  "coverage_threshold": 0.95,
+  "next_five_mean_marginal_threshold": 0.25,
+  "claim_boundary": "Saturation of the 9 canonical corrosion-model categories across the 50-paper literature corpus (Supplementary Section M1.1.2 & Fig. S1)."
+}

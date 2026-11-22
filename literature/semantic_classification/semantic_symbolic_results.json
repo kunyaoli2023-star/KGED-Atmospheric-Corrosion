@@ -1,0 +1,4415 @@
+[
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "H₂O → H⁺ + OH⁻",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes water ionization, not a corrosion rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "NaCl → Na⁺ + Cl⁻",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes salt ionization, not a corrosion rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe → Fe²⁺ + 2e⁻",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes an anodic corrosion reaction, not an overall rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe²⁺ + 2Cl⁻ → FeCl₂",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes product formation, not a corrosion rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe³⁺ + 3Cl⁻ → FeCl₃",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes product formation, not a corrosion rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "FeCl₂ + 3/2H₂O + 1/4O₂ → FeOOH + 2HCl",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical conversion in the corrosion process, not an overall rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq7",
+    "is_icorr_model": false,
+    "standardized_formula": "SO₂ + O₂ + 2e⁻ → SO₄²⁻",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a reaction involving a pollutant, not a corrosion rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq8",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe + SO₂ + O₂ → FeSO₄",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes product formation involving a pollutant, not a corrosion rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq9",
+    "is_icorr_model": false,
+    "standardized_formula": "4FeSO₄ + 6H₂O + O₂ → 4FeOOH + 4H₂SO₄",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical cycle in the corrosion process, not an overall rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq10",
+    "is_icorr_model": false,
+    "standardized_formula": "2Fe + 2H₂O + O₂ → 2Fe(OH)₂",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a rust formation reaction, not an overall rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq11",
+    "is_icorr_model": false,
+    "standardized_formula": "2Fe(OH)₂ + 1/2O₂ → 2FeOOH + H₂O",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a rust transformation reaction, not an overall rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq12",
+    "is_icorr_model": false,
+    "standardized_formula": "2Na⁺ + SO₄²⁻ → Na₂SO₄",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes product formation, not a corrosion rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq13",
+    "is_icorr_model": false,
+    "standardized_formula": "8FeOOH + Fe²⁺ + 2e⁻ → 3Fe₃O₄ + 4H₂O",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a long-term rust transformation reaction, not an overall rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq14",
+    "is_icorr_model": false,
+    "standardized_formula": "3Fe₃O₄ + 3/4O₂ + 9/2H₂O → 9FeOOH",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a rust transformation reaction, not an overall rate model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq15",
+    "is_icorr_model": false,
+    "standardized_formula": "3Fe₃O₄ + 1/4O₂ → Fe₂O₃",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a rust transformation reaction during drying, not an overall rate model."
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "C = a + b*Cl_dep*TOW_5_25 + c*Cl_dep*TOW_25_35 + d*SO2_dep*TOW_5_25 + e*SO2_dep*TOW_25_35 + f*Cl_dep*t_rain + g*SO2_dep*t_rain + h*rain_amount",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, Cl, TOW_low), MULT(CONST, Cl, TOW_high), MULT(CONST, S, TOW_low), MULT(CONST, S, TOW_high), MULT(CONST, Cl, t_rain), MULT(CONST, S, t_rain), MULT(CONST, VAR))",
+    "reason": "General atmospheric corrosion model with linear and multiplicative dependencies on environmental factors and time of wetness bins."
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST + (CONST*Cl_dep + CONST*SO2_dep)*TOW_5_25 - CONST*Cl_dep*TOW_25_35",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(ADD(MULT(CONST, Cl), MULT(CONST, S)), TOW_low), MULT(CONST, Cl, TOW_high))",
+    "reason": "Specific regression model for outdoor corrosion rate with linear and multiplicative dependencies on environmental factors and time of wetness bins."
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST + (CONST*Cl_dep + CONST*SO2_dep)*TOW_5_25 - CONST*Cl_dep*TOW_25_35",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(ADD(MULT(CONST, Cl), MULT(CONST, S)), TOW_low), MULT(CONST, Cl, TOW_high))",
+    "reason": "Specific regression model for indoor corrosion rate with linear and multiplicative dependencies on environmental factors and time of wetness bins."
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST + (CONST*t_rain + CONST*TOW_5_25 - CONST*TOW_25_35)*Cl_dep + CONST*SO2_dep*TOW_25_35",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(ADD(MULT(CONST, t_rain), MULT(CONST, TOW_low), MULT(CONST, TOW_high)), Cl), MULT(CONST, S, TOW_high))",
+    "reason": "Combined regression model for outdoor and indoor corrosion rate with linear and multiplicative dependencies on environmental factors, rainfall time, and time of wetness bins."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq1",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, Cl, t), MULT(CONST, Cl, t), MULT(CONST, S, t), MULT(CONST, S, t), MULT(CONST, Cl, R), MULT(CONST, S, R), MULT(CONST, R))",
+    "reason": "General empirical model for atmospheric corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq2",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, Cl, R), MULT(CONST, S, t), MULT(CONST, R))",
+    "reason": "Empirical model for outdoor copper corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq3",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, Cl, t), MULT(CONST, S, t))",
+    "reason": "Empirical model for indoor copper corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq4",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(MULT(ADD(MULT(CONST, Cl), MULT(CONST, S)), t), MULT(CONST, Cl, R), MULT(CONST, R))",
+    "reason": "Empirical model for combined copper corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq5",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, Cl, R))",
+    "reason": "Empirical model for outdoor zinc corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq6",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(MULT(ADD(MULT(CONST, Cl), MULT(CONST, S)), t), MULT(CONST, Cl, t))",
+    "reason": "Empirical model for indoor zinc corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq7",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(ADD(MULT(CONST, t), MULT(CONST, t), MULT(CONST, R)), Cl), MULT(CONST, R))",
+    "reason": "Empirical model for combined zinc corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq8",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, Cl, R))",
+    "reason": "Empirical model for outdoor aluminium corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq9",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, Cl, t), MULT(CONST, S, t))",
+    "reason": "Empirical model for indoor aluminium corrosion rate."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq10",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(ADD(MULT(CONST, Cl), MULT(CONST, S)), t), MULT(ADD(MULT(CONST, R), MULT(CONST, t)), Cl), MULT(CONST, R))",
+    "reason": "Empirical model for combined aluminium corrosion rate."
+  },
+  {
+    "id": "23_XRD and SEM studies of the layer of corrosion products for carbon steel in various different environments in the province of Las Palmas (The Canary Is.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "r' = [Cl⁻]/[OH⁻]",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "LINEAR",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Formula defines a ratio of concentrations used to predict corrosion product type, not a corrosion rate or loss model."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "TOW = TCD + rain_period",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines Total Time of Wetness (TOW) by summing other time periods, not a corrosion rate model."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "TCON = Va - Vs",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines the Tendency to Condensation (TCON) from vapor concentrations, not a corrosion rate model."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "Vs = (RH/100) * exp(22.565 - 2377.1*Ts^-1 - 33623*Ts^-1.5)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "LINEAR",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula calculates saturation vapor concentration at the surface, which is an environmental parameter, not a corrosion rate model."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "Va = (Vas * RH) / 100",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "LINEAR",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula calculates the vapor pressure of the air, which is an environmental parameter, not a corrosion rate model."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "Vas = exp(22.565 - 2377.1*Ta^-1 - 33623*Ta^-1.5)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula calculates the saturation vapor pressure of the adjacent air, which is an environmental parameter, not a corrosion rate model."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "K_Cl = CONST + CONST * K_noCl",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Relates mass loss under salt spray to mass loss under natural conditions, acting as a conversion/correlation rather than a direct environmental corrosion model."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "K_Cl = CONST + CONST * K_noCl",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Relates mass loss under salt spray to mass loss under natural conditions for copper, acting as a conversion/correlation."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "K = CONST + CONST * Cl - CONST * Rain",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "LINEAR",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, Cl), MULT(CONST, Rain))",
+    "reason": "Models monthly steel mass loss as a linear function of chloride deposition and rainfall."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "K = CONST + CONST * Cl - CONST * Rain",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "LINEAR",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, Cl), MULT(CONST, Rain))",
+    "reason": "Models three-monthly copper mass loss as a linear function of chloride deposition and rainfall."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "K = a * t^b",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "General empirical model relating mass loss to exposure time."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq6",
+    "is_icorr_model": true,
+    "standardized_formula": "K = a * t^b * Cl^c * (W/D)^d",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST), POW(Cl, CONST), POW(DIV(Rain, VAR), CONST))",
+    "reason": "Extends the bi-logarithm model with power-law dependencies on chloride and rain washing effect."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "K = CONST * t^CONST * Cl^CONST * (w/D)^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST), POW(Cl, CONST), POW(DIV(Rain, VAR), CONST))",
+    "reason": "Specific regression model for steel mass loss, following the structure of Eq6."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq8",
+    "is_icorr_model": false,
+    "standardized_formula": "û_t = ρ̂û_{t-1} + ε_t",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This is a statistical model for correcting auto-correlation in residuals, not a corrosion rate/loss model."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "K = CONST * t^CONST * Cl^CONST * (w/D)^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST), POW(Cl, CONST), POW(DIV(Rain, VAR), CONST))",
+    "reason": "Specific regression model for copper mass loss, following the structure of Eq6."
+  },
+  {
+    "id": "24_Corrosion monitoring of nickel-containing steels in marine atmospheric environment.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "icorr = k / Rp",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This is the Stern-Geary equation, a fundamental electrochemical relationship used to convert polarization resistance (Rp) into instantaneous corrosion current density (icorr). It is a measurement conversion, not a model predicting corrosion rate based on environmental factors."
+  },
+  {
+    "id": "24_Corrosion monitoring of nickel-containing steels in marine atmospheric environment.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "d = (Q * M * 10^4) / (n * F * rho)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula calculates corrosion thickness loss (d) from the total charge passed (Q) using Faraday's law. It converts an electrochemical measurement (Q) into a physical loss, making it a measurement conversion. Time is implicit as Q is integrated current over time."
+  },
+  {
+    "id": "4_Kinetics of atmospheric corrosion of mild steel, zinc, galvanized iron and aluminium at 10 exposure stations in India.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "C = K * t^n",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "This is an empirical power law model describing corrosion loss (C) as a function of time (t)."
+  },
+  {
+    "id": "4_Kinetics of atmospheric corrosion of mild steel, zinc, galvanized iron and aluminium at 10 exposure stations in India.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "log(C) = log(K) + n * log(t)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LOG",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, LOG(t)))",
+    "reason": "This is the logarithmic transformation of Eq1, used for linear regression analysis to determine the constants of the underlying empirical corrosion loss model."
+  },
+  {
+    "id": "19_Weatherability of 09CuPCrNi steel in a tropical marine environment.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "Vn = (d_n - d_{n-1}) / (t_n - t_{n-1})",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines the average corrosion rate over a specific time interval based on measured thickness loss and exposure time, rather than modeling corrosion rate as a function of environmental factors or time itself. It is a direct calculation from experimental data."
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "d = (wt / (rho * A)) * CONST",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula converts weight loss to thickness loss, serving as a measurement conversion rather than a corrosion rate/loss model based on environmental factors."
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "This is an empirical model describing corrosion loss (thickness) as a power function of exposure time."
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST * VAR^(CONST - CONST) * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "PIECEWISE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(VAR, CONST), POW(t, CONST))",
+    "reason": "This is an empirical model describing corrosion loss (thickness) as a power function of time, specifically for a segment of a piecewise behavior (t >= t_1)."
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "D = CONST * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Empirical power law model for corrosion thickness loss."
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "D = Wt * CONST / (p * A)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Converts weight loss to thickness loss, a measurement conversion."
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "log D = log CONST + CONST * log t",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LOG",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, LOG(t)))",
+    "reason": "Logarithmic transformation of an empirical corrosion loss model for linear fitting."
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "Va = (Dm - Dm-1) / (tm - tm-1)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines average corrosion velocity from measured thickness loss over a time interval."
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "Vi = CONST * CONST * t^(CONST-1)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, CONST, POW(t, CONST))",
+    "reason": "Instantaneous corrosion rate derived from an empirical power law corrosion loss model."
+  },
+  {
+    "id": "20_Atmospheric corrosion of mild steel.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Power law model for total corrosion loss (C) as a function of exposure time (t), with empirical constants A and B."
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = A * N^n",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, LOG(t)))",
+    "reason": "Describes corrosion weight gain (AW) as a power function of CCT cycles (N, a proxy for time), indicating empirical corrosion kinetics."
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = 10^(-3.19) * N^(0.95)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, LOG(t)))",
+    "reason": "Specific empirical model for corrosion weight gain in the first stage, following a power law with respect to CCT cycles (time)."
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = 10^(-2.66) * N^(0.56)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, LOG(t)))",
+    "reason": "Specific empirical model for corrosion weight gain in the second stage, following a power law with respect to CCT cycles (time)."
+  },
+  {
+    "id": "6_Long-term monitoring of atmospheric corrosion at weathering steel bridges by an electrochemical impedance method.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "Icorr_Av = 1.7e-5 * (Z10mHz_Av)^0.16",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(VAR, CONST))",
+    "reason": "This formula correlates average corrosion current density (Icorr) with average impedance, functioning as a measurement conversion from an electrochemical measurement to a corrosion rate."
+  },
+  {
+    "id": "6_Long-term monitoring of atmospheric corrosion at weathering steel bridges by an electrochemical impedance method.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "y = 0.4354 * Xrust - 5.7118",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, VAR), CONST)",
+    "reason": "This linear regression equation relates corrosion thickness loss (y) to the thickness of the rust layer (Xrust), serving as a measurement conversion between two physical quantities."
+  },
+  {
+    "id": "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "A = log(1/τ) = a * c * d",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines the Lambert-Beer law, which is a spectroscopic measurement conversion, not a corrosion rate model."
+  },
+  {
+    "id": "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "Corrosion rate = W / (D * A * t)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "DIV(VAR, MULT(VAR, VAR, t))",
+    "reason": "This formula calculates corrosion rate from weight loss over time, serving as a measurement conversion for corrosion rate without explicit environmental factors."
+  },
+  {
+    "id": "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "Rp = (ΔE / Δi) | E=Ecorr",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines linear polarization resistance (Rp) from electrochemical measurements, which is a parameter related to corrosion rate but not a direct corrosion rate model itself."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "C = C₁ * τⁿ",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Power law model for corrosion loss."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "log C = log C₁ + n log τ",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LOG",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Logarithmic transformation of a corrosion loss model for data analysis."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "C = C₀ + α * τ",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, t))",
+    "reason": "Linear model for corrosion loss in the stationary stage."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "σ = C₀/τ + α",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(DIV(CONST, t), CONST)",
+    "reason": "Model for instantaneous corrosion rate with inverse time dependence."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "σᵢ,ᵢ₊₁ = (Cᵢ₊₁ - Cᵢ)/(τᵢ₊₁ - τᵢ)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Definition of average corrosion rate from discrete measurements."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "α = (C₈ - C₆)/2",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Definition/approximation of a parameter (alpha) from specific corrosion loss values."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq7",
+    "is_icorr_model": false,
+    "standardized_formula": "n = A(B * C₁ - G)² + D",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Model for a coefficient 'n', not for corrosion loss or rate itself."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "σins = dC/dτ = C₁ * n * τⁿ⁻¹",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, CONST, POW(t, CONST))",
+    "reason": "Instantaneous corrosion rate derived from a power-law corrosion loss model."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "C = C₆ + α * (τ - 6)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, ADD(t, CONST)))",
+    "reason": "Linear model for corrosion loss in the stationary phase, starting after a specific time."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq10",
+    "is_icorr_model": true,
+    "standardized_formula": "D = r_corr * tᵇ",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Power law model for corrosion loss."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq11",
+    "is_icorr_model": true,
+    "standardized_formula": "dD/dt = b * r_corr * tᵇ⁻¹",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, CONST, POW(t, CONST))",
+    "reason": "Corrosion rate derived from a power-law corrosion loss model."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq12",
+    "is_icorr_model": true,
+    "standardized_formula": "D(t > 20) = r_corr * [20ᵇ + b * (20ᵇ⁻¹) * (t - 20)]",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, ADD(CONST, MULT(CONST, ADD(t, CONST))))",
+    "reason": "Piecewise linear model for corrosion loss for long exposure times."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq13",
+    "is_icorr_model": true,
+    "standardized_formula": "D = r_av + (t - 10) * r_lin",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(ADD(t, CONST), CONST))",
+    "reason": "Bi-linear model for corrosion loss, noted as dimensionally inconsistent."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq1",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Empirical model for thickness reduction (corrosion loss) over time."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq2",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Empirical power function for mean pit depth (corrosion loss) over time."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq3",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This is a probability density function for a statistical distribution, not a direct corrosion rate/loss model."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq4",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This equation converts statistical parameters (mean and variance of pit depth) to the mean of a lognormal distribution."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq5",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This equation converts statistical parameters (mean and variance of pit depth) to the standard deviation of a lognormal distribution."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq6",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This is a probability density function for a statistical distribution (Gumbel), not a direct corrosion rate/loss model."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq7",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This is a definition for calculating average corrosion velocity from discrete measurements, not a predictive model."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq8",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, CONST, POW(t, CONST))",
+    "reason": "This is an instantaneous corrosion velocity (rate) model derived from an empirical power law for pit depth."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq9",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(ADD(CONST, DIV(t, CONST)), CONST))",
+    "reason": "This is an empirical interpolation model for pit propagation rate (corrosion rate)."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq10",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(DIV(MULT(CONST, CONST), CONST), ADD(POW(ADD(CONST, DIV(t, CONST)), CONST), CONST))",
+    "reason": "This is an integral of an empirical model to calculate maximum pit depth (corrosion loss) over time."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "(1 - δs/δ0) * 100",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates an SCC susceptibility factor based on reduction in elongation, which is a measurement conversion/definition, not a corrosion rate model."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "(1 - ψs/ψ0) * 100",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates an SCC susceptibility factor based on reduction in area, which is a measurement conversion/definition, not a corrosion rate model."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "0.771 - 0.0591*pH - 0.0591*log(aFe2+/aFe3+)",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates an electrochemical potential for a specific redox reaction, which is a thermodynamic calculation, not a corrosion rate model. The temperature dependence is embedded in the constant 0.0591, not an explicit variable."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "0.771 - 0.0591*pH - 0.0591*log(KspFe(OH)2/KspFe(OH)3)",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates an electrochemical potential for a specific redox reaction, which is a thermodynamic calculation, not a corrosion rate model. The temperature dependence is embedded in the constant 0.0591, not an explicit variable."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "(ΔP*Vm/(z*F)) + (R*T/(z*F)) * ln((ν*α*εp/N0) + 1)",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates a potential change due to elastic and plastic deformations, which is a mechanistic model for electrochemical potential under stress, not a direct corrosion rate model."
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines a statistical metric (R²), not a corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines a statistical metric (MAE), not a corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "Corrosion rate = C1*T_MAX + C2*T_AVE + C3*RH_MIN + C4*PRECIPIT + C5*SOLAR + C6*CHLORIDE + C7*SO2 + C8*TIME + C9*ELEMENTS + C10",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "LINEAR",
+      "rh_form": "LINEAR",
+      "cl_form": "LINEAR",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, T), MULT(CONST, T), MULT(CONST, RH), MULT(CONST, VAR), MULT(CONST, VAR), MULT(CONST, Cl), MULT(CONST, S), MULT(CONST, t), MULT(CONST, VAR), CONST)",
+    "reason": "This is a Multiple Linear Regression model explicitly predicting 'Corrosion rate' based on environmental and material factors."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "AF_RH = (RH / RH0)^A",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "POWER",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines an acceleration factor, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "AF_RH = ([RH * (1 - RH0)] / [RH0 * (1 - RH)])^A",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "POWER",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines an acceleration factor, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "AF_RH = exp(A * (RH - RH0))",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "EXP",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines an acceleration factor, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "AF_T = e^(B * (1/T0 - 1/T))",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "ARRHENIUS",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines an acceleration factor, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "AF_S = (S / S0)^E",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines an acceleration factor, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "AF_Cl = (Cl / Cl0)^G",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "POWER",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines an acceleration factor, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "C = C1*t^n",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Direct corrosion loss model with power law time dependence."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "log C = { n1*log(t), if t <= t1; n1*log(t1) + n2*log(t/t1), if t > t1 }",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "PIECEWISE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "PIECEWISE(MULT(CONST, LOG(t)), ADD(MULT(CONST, LOG(CONST)), MULT(CONST, LOG(DIV(t, CONST)))))",
+    "reason": "Direct corrosion loss model with piecewise log-linear time dependence."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "C = { rav*t, if t <= 10; rav*10 + rlin*(t-10), if t > 10 }",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "PIECEWISE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "PIECEWISE(MULT(CONST, t), ADD(MULT(CONST, CONST), MULT(CONST, ADD(t, CONST))))",
+    "reason": "Direct corrosion loss model with piecewise linear time dependence."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq10",
+    "is_icorr_model": true,
+    "standardized_formula": "C = { C1*t^n, if t <= ts; Cts + alpha*(t-ts), if t > ts }",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "PIECEWISE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "PIECEWISE(MULT(CONST, POW(t, CONST)), ADD(VAR, MULT(VAR, ADD(t, CONST))))",
+    "reason": "Direct corrosion loss model with piecewise power-linear time dependence."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq11",
+    "is_icorr_model": false,
+    "standardized_formula": "alpha = (C8 - C6) / 2",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a parameter (stationary corrosion rate) based on specific corrosion loss values at given times, not a predictive model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq12",
+    "is_icorr_model": false,
+    "standardized_formula": "alpha = dC/dt | t=ts = C1 * n * ts^(n-1)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a parameter (stationary corrosion rate) based on parameters from another model, not a predictive model itself."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq13",
+    "is_icorr_model": true,
+    "standardized_formula": "C = a + b*SO2 + c*Cl + d*TOW",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "LINEAR",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, S), MULT(CONST, Cl), MULT(CONST, TOW))",
+    "reason": "Direct corrosion loss model with linear dependence on environmental factors."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq14",
+    "is_icorr_model": true,
+    "standardized_formula": "ln(C) = a + b*ln(SO2) + c*ln(Cl) + d*ln(TOW)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "LOG",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, LOG(S)), MULT(CONST, LOG(Cl)), MULT(CONST, LOG(TOW)))",
+    "reason": "Direct corrosion loss model with log-linear dependence on environmental factors."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq15",
+    "is_icorr_model": true,
+    "standardized_formula": "C = a + (b*T5_25 + c*T25_35 + d*train)*Cl + (e*T5_25 + f*T25_35 + g*train)*SO2 + h*R/train",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(ADD(MULT(CONST, VAR), MULT(CONST, VAR), MULT(CONST, VAR)), Cl), MULT(ADD(MULT(CONST, VAR), MULT(CONST, VAR), MULT(CONST, VAR)), S), MULT(CONST, DIV(R, VAR)))",
+    "reason": "Direct corrosion loss model with complex empirical dependence on environmental factors and implicit time/temperature."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq16",
+    "is_icorr_model": true,
+    "standardized_formula": "C = a1 + a2*tw + a3*RH + a4*D + a5*T + a6*Cl + a7*SO2",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "LINEAR",
+      "rh_form": "LINEAR",
+      "cl_form": "LINEAR",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, VAR), MULT(CONST, RH), MULT(CONST, VAR), MULT(CONST, T), MULT(CONST, Cl), MULT(CONST, S))",
+    "reason": "Direct corrosion loss model with linear dependence on environmental factors."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq17",
+    "is_icorr_model": true,
+    "standardized_formula": "C = fdry(T, RH, SO2, O3) * t^k + fwet(R, H+) * t^m",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(MULT(VAR, POW(t, CONST)), MULT(VAR, POW(t, CONST)))",
+    "reason": "Direct corrosion loss model with separate dry/wet terms and power law time dependence."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq18",
+    "is_icorr_model": true,
+    "standardized_formula": "C = 1.82 + (0.041*R + 1.37*N)*t + (1.71 + 0.471*SO2^0.22 * e^(0.018*R) * e^(f(T)))*t",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(ADD(MULT(CONST, R), MULT(CONST, N)), t), MULT(ADD(CONST, MULT(CONST, POW(S, CONST), EXP(MULT(CONST, R)), EXP(VAR))), t))",
+    "reason": "Direct corrosion loss model with linear time dependence and complex environmental factor interactions."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq19",
+    "is_icorr_model": false,
+    "standardized_formula": "f(T) = { 0.062*(T-10), if T < 10; -0.021*(T-10), if T > 10 }",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "PIECEWISE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a temperature function used within a larger model, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq20",
+    "is_icorr_model": true,
+    "standardized_formula": "C = fdry(SO2) + fdry(Cl) + fwet(H+)",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(VAR, VAR, VAR)",
+    "reason": "Direct corrosion loss model summing effects of different deposition types."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq21",
+    "is_icorr_model": false,
+    "standardized_formula": "fdry(SO2) = A * SO2^B * e^(C1*RH + g1*T)",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "EXP",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a component function for dry SO2 deposition, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq22",
+    "is_icorr_model": false,
+    "standardized_formula": "fdry(Cl) = D * Cl^E * e^(m1*RH + k1*T)",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "EXP",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a component function for dry Cl deposition, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq23",
+    "is_icorr_model": false,
+    "standardized_formula": "n = A*(B*C1 - G)^2 + D",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a parameter 'n' based on another parameter 'C1', not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq24",
+    "is_icorr_model": true,
+    "standardized_formula": "K = A * t^B * (TOW/C)^D * (1 + SO2/E)^F * (1 + Cl/G)^H * (t + T0)",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "OTHER",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST), POW(DIV(TOW, CONST), CONST), POW(ADD(CONST, DIV(S, CONST)), CONST), POW(ADD(CONST, DIV(Cl, CONST)), CONST), ADD(t, CONST))",
+    "reason": "Predicts a corrosion parameter K, which is a direct output of a corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq25",
+    "is_icorr_model": false,
+    "standardized_formula": "K = f(T) * f(DO) * f(S) * f(pH) * f(V)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "IMPLICIT",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates a correction factor, not a direct corrosion model."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq26",
+    "is_icorr_model": true,
+    "standardized_formula": "xi = a * exp(-Ea/(k*T)) * exp(gamma*RH) * exp(eta*SO2) * exp(lambda*Cl)",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "ARRHENIUS",
+      "rh_form": "EXP",
+      "cl_form": "EXP",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, ARRHENIUS(T), EXP(MULT(CONST, RH)), EXP(MULT(CONST, S)), EXP(MULT(CONST, Cl)))",
+    "reason": "Direct model for corrosion behavior (likely rate) with Arrhenius temperature and exponential environmental factors."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq27",
+    "is_icorr_model": true,
+    "standardized_formula": "xi = a * exp(beta*T + gamma*RH + eta*SO2 + lambda*Cl)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "EXP",
+      "cl_form": "EXP",
+      "inter_form": "EXPONENT_COUPLED"
+    },
+    "symbolic_skeleton": "MULT(CONST, EXP(ADD(MULT(CONST, T), MULT(CONST, RH), MULT(CONST, S), MULT(CONST, Cl))))",
+    "reason": "Direct model for corrosion behavior (likely rate) with exponential dependence on linear combinations of environmental factors."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq28",
+    "is_icorr_model": true,
+    "standardized_formula": "y = beta0 + sum(betai*xi) + sum(sum(betaij*xi*xj)) + sum(betaii*xi^2) + epsilon",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "UNCERTAIN",
+      "temp_form": "UNCERTAIN",
+      "rh_form": "UNCERTAIN",
+      "cl_form": "UNCERTAIN",
+      "inter_form": "OTHER"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, VAR), MULT(CONST, MULT(VAR, VAR)), MULT(CONST, POW(VAR, CONST)), VAR)",
+    "reason": "General quadratic response surface model, which can be used to predict corrosion."
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq1",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, t), CONST)",
+    "reason": "Models corrosion weight gain (y) as a linear function of CCT cycles (x, representing time)."
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq2",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, t), CONST)",
+    "reason": "Models corrosion weight gain (y) as a linear function of CCT cycles (x, representing time) for a different corrosion stage."
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq3",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, t), CONST)",
+    "reason": "Models corrosion weight gain (y) for weathering steel as a linear function of CCT cycles (x, representing time)."
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq4",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, t), CONST)",
+    "reason": "Models corrosion weight gain (y) for weathering steel as a linear function of CCT cycles (x, representing time) for a different corrosion stage."
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq5",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines total polarization resistance (Rp) as the sum of two other resistances (Rr and Rt), rather than modeling corrosion rate or loss based on environmental factors or time."
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "ZQ = Y0 * (j*omega)^-alpha",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Electrochemical impedance model component (Constant Phase Element)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe -> Fe^2+ + 2e^-",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (anodic dissolution)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "O2 + 2H2O + 4e^- -> 4OH^-",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (cathodic oxygen reduction)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe^2+ + 2OH^- -> Fe(OH)2",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (corrosion product formation)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe(OH)3 -> FeOOH + H2O",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (corrosion product transformation)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe^2+ -> Fe^3+ + e^-",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (ion oxidation)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq7",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe^3+ + Cl^- + OH^- -> FeOCl + H",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (intermediate corrosion product formation with chloride)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq8",
+    "is_icorr_model": false,
+    "standardized_formula": "FeOCl + OH^- -> beta-FeOOH + Cl^-",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (corrosion product formation with chloride regeneration)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq9",
+    "is_icorr_model": false,
+    "standardized_formula": "2gamma-FeOOH + Fe^2+ -> Fe3O4 + 2H^+",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (corrosion product transformation to magnetite)"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq10",
+    "is_icorr_model": false,
+    "standardized_formula": "2beta-FeOOH + Fe^2+ -> Fe3O4 + 2H^+",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction equation (corrosion product transformation to magnetite)"
+  },
+  {
+    "id": "46_Structure of the rust layer of weathering steel in A high chloride environment A detailed characterization via HRTEM, STEM-EDS, and FIB-SEM.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = CONST * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "This is an empirical power law model relating weight gain (AW) to CCT number (N, a time proxy). No explicit environmental factors other than time are present."
+  },
+  {
+    "id": "46_Structure of the rust layer of weathering steel in A high chloride environment A detailed characterization via HRTEM, STEM-EDS, and FIB-SEM.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "log AW = log CONST + CONST * log t",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(LOG(CONST), MULT(CONST, LOG(t)))",
+    "reason": "This is the logarithmic transformation of Eq1, expressing log(AW) as a linear function of log(N, a time proxy). It's still an empirical corrosion loss model."
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "Zo = Yo * (j*w)^(-α)",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines the impedance of a Constant Phase Element (CPE), which is a component in an equivalent circuit model used in EIS, not a direct corrosion rate or loss model."
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "Iψ = (1 - ψs / ψo) × 100%",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula quantifies the percentage loss in reduction of area, serving as a measure of SCC sensitivity, which is a measurement conversion/definition, not a corrosion rate model."
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "Is = (1 - δs / δo) × 100%",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula quantifies the percentage loss in elongation, serving as a measure of SCC sensitivity, which is a measurement conversion/definition, not a corrosion rate model."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "CR = CONST * (a * icorr) / (n * D)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Converts corrosion current density (icorr) to corrosion rate (CR) using material constants, not a model of icorr itself."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq7",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq8",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq9",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq10",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction sequence, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq11",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction sequence, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq12",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq13",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq14",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq15",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq16",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction, not a quantitative corrosion rate model or measurement conversion."
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "K_t = CONST + MULT(CONST, DIV(d, r))",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates stress concentration factor from pit geometry, not a corrosion rate/loss model."
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "logN = ADD(MULT(CONST, σ_max), CONST)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Models fatigue life (S-N curve), not corrosion rate/loss. '0d pre-corrosion' is a condition, not a variable."
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "logN = ADD(MULT(CONST, σ_max), CONST)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Models fatigue life (S-N curve) after pre-corrosion, not corrosion rate/loss. '10 days pre-corrosion' is a condition, not a variable."
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "logN = ADD(MULT(CONST, σ_max), CONST)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Models fatigue life (S-N curve) after pre-corrosion, not corrosion rate/loss. '25 days pre-corrosion' is a condition, not a variable."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "CS = (mass_fraction_a_FeOOH + mass_fraction_Fe3O4) / (mass_fraction_g_FeOOH + mass_fraction_b_FeOOH)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a corrosion stability metric based on mass fractions of corrosion products, not a corrosion rate model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe -> Fe2+ + 2e-",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Represents an anodic half-reaction, a fundamental step in the corrosion mechanism, not a corrosion rate model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "O2 + 2H2O + 4e- -> 4OH-",
+    "semantic_slots": {
+      "mechanism_guess": "DIFFUSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Represents a cathodic half-reaction (oxygen reduction), often diffusion-controlled, not a corrosion rate model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "2H+ + 2e- -> H2",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Represents a cathodic half-reaction (hydrogen evolution), not a corrosion rate model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "Eeq_O2 = CONST - CONST * pH",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates an equilibrium potential (Nernst equation) as a function of pH, not a corrosion rate model. Temperature is implicitly fixed in constants."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "Eeq_H2 = CONST - CONST * pH",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates an equilibrium potential (Nernst equation) as a function of pH, not a corrosion rate model. Temperature is implicitly fixed in constants."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq7",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe2+ + 2Cl- + 4H2O -> FeCl2 * 4H2O",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Represents a chemical reaction for intermediate corrosion product formation, not a corrosion rate model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq8",
+    "is_icorr_model": false,
+    "standardized_formula": "FeCl2 * 4H2O -> Fe(OH)2(s) + 2Cl- + 2H+ + 4H2O",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Represents a chemical reaction for corrosion product formation and localized acidification, not a corrosion rate model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq9",
+    "is_icorr_model": false,
+    "standardized_formula": "Eeq_Fe3O4 = CONST - CONST * pH",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates an equilibrium potential (Nernst equation) as a function of pH, not a corrosion rate model. Temperature is implicitly fixed in constants."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq10",
+    "is_icorr_model": false,
+    "standardized_formula": "4Fe(OH)2 + O2 -> 4FeOOH + 2H2O",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Represents a chemical reaction for corrosion product formation, not a corrosion rate model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq11",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe2+ + 8FeOOH + 2e- -> 3Fe3O4 + 4H2O",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Represents a chemical reaction for corrosion product formation, not a corrosion rate model."
+  },
+  {
+    "id": "49_Corrosion behaviors and mechanical properties of Q235 steel pipes collapsing due to corrosion after 25-year service in urban industrial atmospheric en.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "(m_initial - m_final) / m_initial",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula calculates the fractional mass loss from initial and final mass measurements, serving as a direct quantification of corrosion extent rather than a predictive model of corrosion rate based on environmental factors."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq1",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines electrical resistance based on resistivity and geometry, a fundamental measurement principle."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq2",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Simplified definition of electrical resistance for uniform geometry, a fundamental measurement principle."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq3",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates corrosion depth (loss) from electrical resistance sensor measurements, compensating for temperature effects."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq4",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Statistical formula for Pearson correlation coefficient, not a corrosion model or measurement conversion."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq5",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Approximates droplet contact angle from optical measurements, a physical parameter conversion."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq6",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Approximates droplet contact angle from optical measurements, a physical parameter conversion."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq7",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Empirical calibration formula for initial sensor track thickness from initial resistance and width."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq8",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes the linear temperature dependence of electrical resistance, used for measurement correction."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq9",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Power-law formula describing droplet size distribution, not a corrosion model or measurement conversion."
+  },
+  {
+    "id": "26_New insights into the effect of chloride ions on structure and composition of rust layers.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "CR = (CONST * Δm) / (ρ * S * t)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "The formula calculates corrosion rate from measured mass change, density, surface area, and test duration, serving as a definition or conversion rather than a predictive model based on environmental variables."
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "Ke = CONST * WL * S^-1 * t^-1 * p^-1",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, VAR, POW(S, CONST), POW(t, CONST), POW(VAR, CONST))",
+    "reason": "Calculates corrosion rate from gravimetric mass loss, surface area, time, and density."
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "Wt = A * t^n",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "General empirical power model for corrosion loss as a function of time."
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "Wt = 10.558 * t^0.6827",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Fitted empirical power model for weight loss as a function of time."
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "rcorr = Am / (A * t)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines average corrosion rate from mass loss, area, and time, acting as a measurement conversion rather than a predictive model based on environmental parameters."
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "D = a * t^b",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "This is an empirical power law model for total corrosion attack (mass loss) as a function of exposure time."
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "D = a * t + c",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, t), CONST)",
+    "reason": "This is an empirical linear model for total corrosion attack (mass loss) as a function of exposure time, correcting the typo in the original formula."
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "rcorr = β₀ + β₁*T + β₂*RH + β₃*CDR + β₄*[SO₂]",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "LINEAR",
+      "cl_form": "LINEAR",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, T), MULT(CONST, RH), MULT(CONST, Cl), MULT(CONST, S))",
+    "reason": "This is an empirical multiple linear regression model predicting corrosion rate based on temperature, relative humidity, chloride deposition rate, and sulfur dioxide concentration."
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "rcorr = 2.12 * CDR - 36.8",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "LINEAR",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, Cl), CONST)",
+    "reason": "This is a simplified empirical linear regression model predicting corrosion rate based solely on chloride deposition rate."
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "CDR = 345.9 * s^(-0.42)",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula models the chloride deposition rate (an environmental factor) as a function of distance from the shore, not the corrosion rate itself."
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "rcorr = 733.3 * s^(-0.42) - 36.8",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(MULT(CONST, POW(VAR, CONST)), CONST)",
+    "reason": "This is a semi-empirical model predicting corrosion rate as a function of distance from the shore, implicitly incorporating chloride deposition rate."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "LINEAR",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Predicts chloride deposition rate, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Models chloride concentration decrease with distance, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates effective wind power for chloride transport, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Models salt production, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Models total salt production, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Models total salt production, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq7",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines wind power, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq8",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Models total mass of sea aerosols, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq9",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates chloride deposition rate, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq10",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Estimates chloride deposition rate, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq11",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates a component of wind power efficiency, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq12",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates a component of wind power efficiency, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq13",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates a component of wind power efficiency, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq14",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates a component of wind power efficiency, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq15",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates a net difference in wind power efficiency, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq16",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes chloride deposition rate, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq17",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates chloride deposition rate, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq18",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates chloride deposition rate, not corrosion rate/loss."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq19",
+    "is_icorr_model": true,
+    "standardized_formula": "K1 = CONST * (SO2^CONST + CONST * Cl^CONST) * exp(CONST * RH + CONST * (T - CONST) + CONST * Prec)",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "EXP",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, ADD(POW(VAR_SO2, CONST), MULT(CONST, POW(Cl, CONST))), EXP(ADD(MULT(CONST, RH), MULT(CONST, ADD(T, CONST)), MULT(CONST, VAR_Prec))))",
+    "reason": "Dose-response function for first-year corrosion loss of carbon steel."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq20",
+    "is_icorr_model": true,
+    "standardized_formula": "K1 = CONST * (SO2^CONST + CONST * Cl^CONST) * exp(CONST * RH + CONST * (T - CONST) + CONST * Prec)",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "EXP",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, ADD(POW(VAR_SO2, CONST), MULT(CONST, POW(Cl, CONST))), EXP(ADD(MULT(CONST, RH), MULT(CONST, ADD(T, CONST)), MULT(CONST, VAR_Prec))))",
+    "reason": "Dose-response function for first-year corrosion loss of zinc."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq21",
+    "is_icorr_model": true,
+    "standardized_formula": "K1 = CONST * (SO2^CONST + CONST * Cl^CONST) * exp(CONST * RH + CONST * (T - CONST) + CONST * Prec)",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "EXP",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, ADD(POW(VAR_SO2, CONST), MULT(CONST, POW(Cl, CONST))), EXP(ADD(MULT(CONST, RH), MULT(CONST, ADD(T, CONST)), MULT(CONST, VAR_Prec))))",
+    "reason": "Dose-response function for first-year corrosion loss of copper."
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq22",
+    "is_icorr_model": true,
+    "standardized_formula": "K1 = CONST * (SO2^CONST + CONST * Cl^CONST) * exp(CONST * RH + CONST * (T - CONST) - CONST * Prec)",
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "EXP",
+      "cl_form": "POWER",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, ADD(POW(VAR_SO2, CONST), MULT(CONST, POW(Cl, CONST))), EXP(ADD(MULT(CONST, RH), MULT(CONST, ADD(T, CONST)), MULT(CONST, VAR_Prec))))",
+    "reason": "Dose-response function for first-year corrosion loss of aluminum."
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "General empirical power law for corrosion loss over time."
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Specific empirical power law for corrosion loss over time for weathering steel."
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "C = CONST * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Specific empirical power law for corrosion loss over time for carbon steel."
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a fundamental anodic electrochemical reaction, not a quantitative corrosion model."
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a fundamental cathodic electrochemical reaction and product formation, not a quantitative corrosion model."
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a qualitative reaction pathway for corrosion product formation, not a quantitative corrosion model."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq1",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Power law model for corrosion loss over time."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq2",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction definition."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq3",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction definition."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq4",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction definition."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq5",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Chemical reaction definition."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq6",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, EXP(MULT(CONST, T)))",
+    "reason": "Empirical model for initial corrosion rate as a function of temperature."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq7",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, EXP(MULT(CONST, T))))",
+    "reason": "Empirical model for corrosion loss at transition phase as a function of temperature."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq8",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, T))",
+    "reason": "Empirical model for corrosion loss at start of Mode 2 as a function of temperature."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq9",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Empirical model for a time parameter (ta) within a bimodal corrosion model, not a direct corrosion rate/loss."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq10",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a relationship between two corrosion rates."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq11",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "EXP_LINEAR_IN_T",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, EXP(MULT(CONST, T)))",
+    "reason": "Empirical model for long-term corrosion rate in Mode 2 as a function of temperature."
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "iloc_cat = CONST * (CONST - iloc_cat / CONST) * exp(CONST / T)",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "ARRHENIUS",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, ADD(CONST, MULT(CONST, VAR_target)), ARRHENIUS(T))",
+    "reason": "Electrode kinetic equation for cathodic current density, combining activation and diffusion control, with implicit dependence on the target variable (iloc.cat)."
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "iloc_an = CONST * (exp(CONST / T) - exp(-CONST / T))",
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "ARRHENIUS",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(CONST, ADD(ARRHENIUS(T), EXP(MULT(CONST, DIV(CONST, T)))))",
+    "reason": "Butler-Volmer equation for anodic current density, representing activation-controlled kinetics with temperature dependence."
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "delta_W = CONST * t^CONST",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Empirical power law model for corrosion weight loss as a function of exposure time."
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "R = (w0 - w1) * CONST / (S * rho * t)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Formula for calculating corrosion rate from measured weight loss, area, density, and exposure time, serving as a measurement conversion."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = A * N^n",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Empirical power law relating weight gain (corrosion loss) to test cycles (time)."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "log AW = log A + n * log N",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(LOG(CONST), MULT(CONST, LOG(t)))",
+    "reason": "Logarithmic form of an empirical power law for corrosion loss."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "Rp = Rfilm + Rct",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Definition of polarization resistance as a sum of two other resistances."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "Al → Al³⁺ + 3e⁻",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes an anodic half-reaction, not a quantitative corrosion model."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe → Fe²⁺ + 2e⁻",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes an anodic half-reaction, not a quantitative corrosion model."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "O₂ + 2H₂O + 4e⁻ → 4OH⁻",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a cathodic half-reaction, not a quantitative corrosion model."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq7",
+    "is_icorr_model": false,
+    "standardized_formula": "4Al + 3O₂ → 2Al₂O₃",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction for product formation, not a quantitative corrosion model."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq8",
+    "is_icorr_model": false,
+    "standardized_formula": "2Fe + O₂ + 2H₂O → 2Fe(OH)₂",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction for product formation, not a quantitative corrosion model."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq9",
+    "is_icorr_model": false,
+    "standardized_formula": "Fe(OH)₂ + Al₂O₃ → FeAl₂O₄ + H₂O",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction for product transformation, not a quantitative corrosion model."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq10",
+    "is_icorr_model": false,
+    "standardized_formula": "4Fe(OH)₂ + O₂ → 4γ-FeOOH + 2H₂O",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction for product transformation, not a quantitative corrosion model."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq11",
+    "is_icorr_model": false,
+    "standardized_formula": "γ-FeOOH → α-FeOOH",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction for phase transformation, not a quantitative corrosion model."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "ΔW = A * N^n",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "This is a power law model describing weight gain (corrosion loss) as a function of cyclic corrosion test cycles, which is a proxy for time."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "1/C_sc^2 = (2 / (q * ε * ε_0 * N_D * A^2)) * (E - E_fb - (k * T / q))",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This Mott-Schottky equation is used to characterize semiconductor properties (donor density, flat band potential) of the rust layer, not to model corrosion rate or loss directly."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "1/C_sc^2 = (2 / (q * ε * ε_0 * N_A * A^2)) * (E - E_fb - (k * T / q))",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Similar to Eq2, this Mott-Schottky equation characterizes p-type semiconductor properties (acceptor density, flat band potential) of the rust layer, not corrosion rate or loss."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "δ_sc = sqrt((2 * ε * ε_0 / (q * N_D)) * (E - E_fb - (k * T / q)))",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula calculates the thickness of the space charge layer, which is a physical property of the rust layer, not a direct model of corrosion rate or loss."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "δ_sc = (ε * ε_0) / C_sc",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula provides a simplified definition for the thickness of the space charge layer based on capacitance, not a model of corrosion rate or loss."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq1",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula converts weight loss to thickness loss, which is a measurement conversion, not a corrosion rate model."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq2",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula converts thickness loss over time into an annualized corrosion rate, which is a measurement conversion, not a corrosion rate model."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq3",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula converts a voltage signal to current density, which is a measurement conversion, not a corrosion rate model."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq4",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "This is a classical empirical power law model for atmospheric corrosion thickness loss over time."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq5",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "ARRHENIUS",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, EXP(DIV(VAR, T)))",
+    "reason": "This is a form of the Butler-Volmer equation, modeling current density (corrosion rate) with explicit temperature dependence, characteristic of activation control."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq6",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "ACTIVATION",
+      "time_form": "NONE",
+      "temp_form": "ARRHENIUS",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, EXP(DIV(VAR, T)))",
+    "reason": "This is a form of the Butler-Volmer equation, modeling current density (corrosion rate) with explicit temperature dependence, characteristic of activation control."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq7",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, VAR)",
+    "reason": "This formula converts a corrosion current density into an equivalent number of dissolved atomic layers over a fixed time, representing corrosion loss."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq8",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula calculates a material property (number of moles), not a corrosion rate or loss."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq9",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "DIV(ADD(CONST, POW(VAR, VAR)), VAR)",
+    "reason": "This formula is part of a dissolution blocking model, calculating theoretical corrosion loss in terms of dissolved atomic layers."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq10",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(VAR, DIV(MULT(POW(VAR, VAR), ADD(CONST, POW(VAR, VAR))), VAR))",
+    "reason": "This formula extends the dissolution blocking model for multiple elements, calculating theoretical corrosion loss."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq11",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(VAR, DIV(MULT(MULT(POW(VAR, VAR), POW(VAR, VAR)), ADD(CONST, POW(VAR, VAR))), VAR))",
+    "reason": "This formula further extends the dissolution blocking model for multiple elements, calculating theoretical corrosion loss."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq12",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(VAR, DIV(MULT(MULT(POW(VAR, VAR), VAR), ADD(CONST, POW(VAR, VAR))), VAR))",
+    "reason": "This is the general formula for the dissolution blocking model, calculating theoretical corrosion loss for multiple elements."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq13",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(VAR, VAR)",
+    "reason": "This formula calculates a partial current density for an alloy element, contributing to the overall corrosion rate."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq14",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(DIV(VAR, VAR), DIV(VAR, VAR), VAR)",
+    "reason": "This formula calculates a partial current density for an alloy element, contributing to the overall corrosion rate."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq15",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(DIV(VAR, VAR), ADD(VAR, CONST), CONST, VAR)",
+    "reason": "This formula calculates a partial current density for an alloy element, contributing to the overall corrosion rate."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq16",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "MULT(DIV(VAR, VAR), ADD(VAR, CONST), CONST, VAR)",
+    "reason": "This general formula calculates a partial current density for an alloy element, contributing to the overall corrosion rate."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq17",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(VAR, VAR)",
+    "reason": "This formula calculates a current density based on dissolved layers and dissolution current, representing a corrosion rate."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq18",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "SEMI_EMPIRICAL",
+      "time_form": "IMPLICIT",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "IMPLICIT",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(MULT(DIV(VAR, VAR), VAR, CONST), VAR)",
+    "reason": "This formula calculates an adjusted current density, representing a corrosion rate."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq19",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "DIFFUSION",
+      "time_form": "LINEAR",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(MULT(DIV(VAR, MULT(CONST, VAR)), EXP(DIV(VAR, MULT(VAR, t))), POW(DIV(CONST, MULT(VAR, t)), CONST)), DIV(VAR, VAR))",
+    "reason": "This formula models cation concentration, a key factor in precipitation and passivation, directly influencing corrosion resistance, based on diffusion and time."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq20",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "IMPLICIT",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "DIV(VAR, POW(VAR, CONST))",
+    "reason": "This formula calculates the critical solubility for precipitate formation, a condition directly impacting corrosion resistance."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq21",
+    "is_icorr_model": true,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "ARRHENIUS",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "EXP(DIV(VAR, T))",
+    "reason": "This formula calculates the solubility product, a chemical property that directly influences precipitation and thus corrosion resistance, with explicit temperature dependence."
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "C = C1 * t^n",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "POWER",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "MULT(CONST, POW(t, CONST))",
+    "reason": "Classical power function model for corrosion loss over time."
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "log(C) = log(C1) + n * log(t)",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "LOG",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, LOG(t)))",
+    "reason": "Logarithmic transformation of an empirical power function model for linearization and fitting."
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "H(T) = H(0) * (1 - kB * T / (2 * K * V))",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Formula for calculating hyperfine magnetic field and estimating particle size from Mössbauer data, not a corrosion model."
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "Goethite_nanosized = G_8K - G_298K",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Formula quantifies nanosized goethite fraction based on Mössbauer spectroscopy results at different temperatures, not a corrosion model."
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "V = CONST * (W_initial - W_final) / (S * t)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates corrosion rate from measured mass loss, area, and time."
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq2",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction (anodic oxidation), not a quantitative corrosion rate model."
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq3",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction (cathodic reduction), not a quantitative corrosion rate model."
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq4",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction (corrosion product formation), not a quantitative corrosion rate model."
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq5",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction (cathodic oxygen reduction), not a quantitative corrosion rate model."
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq6",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes a chemical reaction (oxidation of magnetite), not a quantitative corrosion rate model."
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq7",
+    "is_icorr_model": false,
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Describes an overall chemical corrosion process, not a quantitative corrosion rate model."
+  },
+  {
+    "id": "41_Effect of Drying on the Corrosion of Carbon Steel, Zinc, Aluminium and AZ31B Magnesium Alloy During Cyclic Accelerated Corrosion Tests.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "R = CONST * VAR_l / (VAR_w * VAR_t)",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula defines electrical resistance based on material resistivity and geometric parameters, serving as a fundamental measurement definition."
+  },
+  {
+    "id": "41_Effect of Drying on the Corrosion of Carbon Steel, Zinc, Aluminium and AZ31B Magnesium Alloy During Cyclic Accelerated Corrosion Tests.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "CD = t_init * ( (R_ref_init / R_sens_init) * (R_ref / R_sens) )",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "NONE",
+      "temp_form": "IMPLICIT",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "This formula converts electrical resistance measurements into corrosion depth, implicitly compensating for temperature effects through resistance ratios. It is a post-processing step for sensor data, not a predictive corrosion model."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "DeltaH(t) = H_0 * (1 - (R_ref(t_0) / R_ref(t)) * (R_sen(t) / R_sen(t_0)))",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates thickness loss from electrical resistance measurements, a measurement conversion."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "CR(t) = dH(t) / dt",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines instantaneous corrosion rate as the derivative of thickness loss, a definition/measurement conversion."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "deltaG_ij^IGM = Integral(g_ij(r)dr) = Integral([g(r) - g_ij(r)] dr)",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Quantifies atomic interactions in a theoretical chemistry model, not a corrosion model."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "g_ij(r) = |grad(rho_i(r)) + grad(rho_j(r))|",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a density gradient term in a theoretical chemistry model, not a corrosion model."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "g(r) = |grad(rho_i(r))| + |grad(rho_j(r))|",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Defines a total density gradient term in a theoretical chemistry model, not a corrosion model."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "IE = (|Z|_ARO,0.01Hz,t - |Z'|_white_oil,0.01Hz,t) / |Z|_ARO,0.01Hz,t * 100",
+    "semantic_slots": {
+      "mechanism_guess": "MEASUREMENT_CONVERSION",
+      "time_form": "LINEAR",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Calculates inhibition efficiency from impedance measurements, a measurement conversion."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq7",
+    "is_icorr_model": false,
+    "standardized_formula": "E_Total = E_bond + E_angles + E_torsion + E_cross + E_VDW + E_elec",
+    "semantic_slots": {
+      "mechanism_guess": "OTHER",
+      "time_form": "NONE",
+      "temp_form": "NONE",
+      "rh_form": "NONE",
+      "cl_form": "NONE",
+      "inter_form": "NONE"
+    },
+    "symbolic_skeleton": null,
+    "reason": "Represents total energy in a molecular mechanics force field, not a corrosion model."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "TL = a + b*T^2 + c*RH^2 + d*C_salt^2 + e*T + f*RH + g*C_salt + h*T*RH + i*T*C_salt + j*RH*C_salt",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "LINEAR",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, POW(T, CONST)), MULT(CONST, POW(RH, CONST)), MULT(CONST, POW(Cl, CONST)), MULT(CONST, T), MULT(CONST, RH), MULT(CONST, Cl), MULT(CONST, T, RH), MULT(CONST, T, Cl), MULT(CONST, RH, Cl))",
+    "reason": "General form of an empirical regression model for thickness loss based on environmental factors."
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "TL = 366937.34 + 0.001*T^2 - 3.34E-6*RH^2 - 0.01*C_salt^2 - 14677.52*T - 4077.08*RH - 3.32*C_salt + 163.08*T*RH + 0.05*T*C_salt + 0.04*RH*C_salt",
+    "semantic_slots": {
+      "mechanism_guess": "EMPIRICAL",
+      "time_form": "NONE",
+      "temp_form": "LINEAR",
+      "rh_form": "LINEAR",
+      "cl_form": "LINEAR",
+      "inter_form": "MULTIPLICATIVE"
+    },
+    "symbolic_skeleton": "ADD(CONST, MULT(CONST, POW(T, CONST)), MULT(CONST, POW(RH, CONST)), MULT(CONST, POW(Cl, CONST)), MULT(CONST, T), MULT(CONST, RH), MULT(CONST, Cl), MULT(CONST, T, RH), MULT(CONST, T, Cl), MULT(CONST, RH, Cl))",
+    "reason": "Specific empirical regression model for thickness loss based on environmental factors."
+  }
+]

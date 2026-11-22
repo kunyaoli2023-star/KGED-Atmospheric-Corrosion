@@ -1,0 +1,17 @@
+{
+  "role": "MATHEMATICAL_PROPOSER_H2",
+  "attempt_count": 2,
+  "first_try_valid": false,
+  "schema_failures": [
+    {
+      "attempt": 1,
+      "error_class": "The read operation timed out",
+      "seconds": 300.77,
+      "schema_repair_requested": false,
+      "usage": null
+    }
+  ],
+  "prompt_sha256": "8359ea1dc92a6914c836cf9a1e5c4ca1dfd5e9387d0302d6105f9ef9367cad75",
+  "response_sha256": "9e8084977c352ed92ce0aaa26cf5fdfec8b75149b905697763647aac1da2503c",
+  "seconds": 366.75
+}

@@ -1,0 +1,9 @@
+{
+  "role": "EVIDENCE_BRIDGE_AND_CONSTRUCTION_PLANNER",
+  "attempt_count": 1,
+  "first_try_valid": true,
+  "schema_failures": [],
+  "prompt_sha256": "66be9c2af2cf4fb40dab9ceffa7661a5f6f8d07e1d3f6249f2b3408584e0e84b",
+  "response_sha256": "646d75abed5577308ba8a273d03fefb29ab01aa88395758aecd7833e714aeba6",
+  "seconds": 64.48
+}

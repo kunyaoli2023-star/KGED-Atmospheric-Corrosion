@@ -1,0 +1,19 @@
+group,method_code,method,computation_mode,jinhai_rmse_um,jinhai_endpoint_error_pct,pool_rmse_um,pool_endpoint_error_pct,ksc_rmse_um,ksc_endpoint_error_pct,mean_abs_endpoint_error_pct,negative_points_total,decreasing_steps_total,status
+Time-integrated laboratory baselines,bp,BP,archived_frozen_prediction,22.6534,9.6818,70.2972,40.5811,5.3445,-2.9669,17.7432,0,0,Valid
+Time-integrated laboratory baselines,rf,RF,archived_frozen_prediction,18.2984,8.094,45.448,-7.9073,9.7996,-15.7217,10.5744,0,0,Valid
+Time-integrated laboratory baselines,xgb,XGBoost,archived_frozen_prediction,20.9112,10.484,54.7879,-13.3893,6.6958,-9.8631,11.2455,0,0,Valid
+Time-integrated laboratory baselines,sparse,Sparse regression,live_from_scratch,14.4378,0.5012,32.4031,-0.1358,5.5282,-5.0629,1.9,0,0,Valid
+Time-integrated laboratory baselines,gp,gplearn,live_from_scratch,22.9484,9.379,43.4608,25.9234,7.6935,-3.9091,13.0705,0,0,Valid
+Time-integrated laboratory baselines,pysr,PySR,live_from_scratch,22.6926,11.4632,32.9755,-0.4433,5.9379,-6.0557,5.9874,0,0,Valid
+Time-integrated laboratory baselines,physo,PhySO,live_from_scratch,24.4505,9.9426,29.3858,0.6516,7.7541,-1.1387,3.911,0,0,Valid
+Empirical power-law and direct field machine-learning models,power_time,Empirical power-law model,live_from_scratch,12.5453,3.063,114.6158,-43.2961,23.3692,-37.8858,28.0817,0,0,Valid
+Empirical power-law and direct field machine-learning models,Source_Ridge_poly2,Quadratic Ridge,archived_frozen_prediction,625.7851,326.5514,1131.5006,283.8015,63866925.9687,-33986016.3665,11328875.5731,3,8,Diverged
+Empirical power-law and direct field machine-learning models,Source_RF,Source RF,archived_frozen_prediction,35.9183,-36.1224,193.5475,-79.1208,42.1316,-62.8799,59.3744,0,1,Valid
+Empirical power-law and direct field machine-learning models,Source_XGBoost,Source XGBoost,archived_frozen_prediction,13.6812,3.3205,132.7149,-43.159,38.6761,-62.5621,36.3472,0,0,Valid
+Unsupervised domain-adaptation models,TCA_Ridge,TCA–Ridge,archived_frozen_prediction,93.0304,-58.5169,177.6102,-67.3733,283.9373,511.815,212.5684,6,6,Diverged
+Unsupervised domain-adaptation models,CORAL_Ridge,CORAL–Ridge,archived_frozen_prediction,1654.1081,954.5718,1074.9225,18.0849,52326.077,21664.3135,7545.6567,9,10,Diverged
+Unsupervised domain-adaptation models,DomainInvariant_RF,Domain-standardised RF,archived_frozen_prediction,25.3722,-19.6168,162.9049,-66.1508,55.9108,-20.704,35.4905,3,8,Valid
+Unsupervised domain-adaptation models,DomainInvariant_XGBoost,Domain-standardised XGBoost,archived_frozen_prediction,13.6812,3.3205,132.7149,-43.159,16.2379,21.474,22.6512,0,0,Valid
+Unsupervised domain-adaptation models,DANN_MLP,DANN–MLP,archived_frozen_prediction,310.7995,-207.4688,195.1594,-82.3799,4916.4272,-2347.7584,879.2024,9,10,Diverged
+KGED + integration,kged5,Five-parameter KGED,live_from_scratch,14.026,-0.1007,32.384,-0.4886,4.9585,-3.2811,1.2902,0,0,Valid
+KGED + integration,kged8,Eight-parameter KGED,live_from_scratch,18.3565,4.4109,32.3519,18.6876,4.8742,2.3202,8.4729,0,0,Valid

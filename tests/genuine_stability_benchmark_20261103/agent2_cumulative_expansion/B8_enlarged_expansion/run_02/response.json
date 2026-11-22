@@ -1,0 +1,297 @@
+{
+  "H1": [
+    {
+      "proposal_id": "round2_B8_H1_0",
+      "hypothesis_id": "H1",
+      "family": "T_LOCAL_LOGARITHMIC",
+      "scientific_argument": "This model proposes that the log-current has a logarithmic dependence on temperature. This represents a form of diminishing returns, where the effect of temperature increases is less pronounced at higher temperatures. It serves as a phenomenological rival to both linear and exponential (Arrhenius) models, testing for a concave response curve.",
+      "source_links": [],
+      "evidence_gap": "The physical basis for a purely logarithmic dependence of reaction rate on temperature is not as direct as the Arrhenius law, which is based on activation energy barriers. This is a phenomenological form.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A logarithmic curve `log(tau)`, which is concave down. This is mathematically distinct from the linear `tau-1` form, the convex-like `1-1/tau` Arrhenius form, and saturating forms. It specifically tests for a decelerating monotonic increase.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The logarithm of the corrosion current will increase with temperature, but the rate of increase will slow down at higher temperatures, following a logarithmic curve."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:logarithmic",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round2_B8_H1_1",
+      "hypothesis_id": "H1",
+      "family": "T_LOCAL_POWER",
+      "scientific_argument": "This model proposes a general power-law relationship between corrosion current and temperature. This form is flexible, capable of representing both accelerating (exponent > 1) and decelerating (exponent < 1) increases in corrosion rate with temperature. It provides a more general local approximation than a simple linear model and can serve as a rival to the specific curvature of the Arrhenius law.",
+      "source_links": [],
+      "evidence_gap": "While power laws are common in empirical modeling, a specific physical justification for a power-law dependence on absolute temperature for this corrosion process is lacking.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A power law `tau**p1` offers more flexibility than linear or logarithmic forms. Depending on the fitted exponent `p1`, it can be concave or convex, allowing it to approximate a wider range of monotonic behaviors and test whether the data prefers a non-linear, non-Arrhenius shape.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The relationship between log-current and temperature will follow a power law, which may be either accelerating or decelerating."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:power_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round2_B8_H1_2",
+      "hypothesis_id": "H1",
+      "family": "T_LOCAL_TANH_SATURATION",
+      "scientific_argument": "Similar to the exponential saturation model, this proposes that the temperature effect plateaus, for instance due to a transport-limited reactant. The use of a hyperbolic tangent function provides a different functional form for this saturation behavior. It is symmetric around its inflection point, which may better represent some limiting physical processes.",
+      "source_links": [],
+      "evidence_gap": "There is no specific evidence favoring a tanh-shaped saturation over other saturation forms like exponential or rational functions.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "The `tanh(p1*tau)` function is an S-shaped curve. It differs from the `1-exp(-p1*tau)` form in its curvature, particularly in how it approaches the saturation plateau. This provides an alternative saturation shape to test against the data.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The effect of temperature on corrosion current will diminish at higher temperatures, approaching a maximum rate, with the transition following a symmetric S-curve."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:tanh_saturation",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H2": [
+    {
+      "proposal_id": "round2_B8_H2_0",
+      "hypothesis_id": "H2",
+      "family": "C_COMPETING_PEAK_COMPETITION",
+      "scientific_argument": "This model explicitly implements the promotion-attenuation competition. A saturating term (`p0*c/(p1+c)`) represents a promotional effect like increased conductivity, while a linear subtraction (`-p2*c`) represents an attenuating effect, such as reduced oxygen solubility. This form is proposed to address the systematic bias observed on the concentration axis with the previous best model, as suggested by the round 1 feedback.",
+      "source_links": [],
+      "evidence_gap": "The assumption of a linear attenuation term is a simplification; the actual dependence of oxygen solubility on salinity is more complex.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "This is a rational function with a linear subtraction, creating a peak. It is structurally different from the `log1p(p0*c*exp(-p1*c))` form (`bell_log1p`), offering a different peak shape (potentially asymmetric in a different way) and a more direct interpretation of promotion and attenuation parameters.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will exhibit a peak with respect to salt concentration, with a shape determined by the competition between a saturating promotion and a linear attenuation."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:competition",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round2_B8_H2_1",
+      "hypothesis_id": "H2",
+      "family": "C_COMPETING_PEAK_GAUSSIAN",
+      "scientific_argument": "This model proposes that the log-response to salt concentration follows a symmetric, Gaussian (parabolic) shape, peaking at an optimal concentration. This provides another phenomenological representation of the competing promotion and inhibition effects, testing the specific hypothesis that the response is symmetric around the peak.",
+      "source_links": [],
+      "evidence_gap": "There is no physical theory that predicts a perfectly symmetric Gaussian response for this system; it is a phenomenological choice to test for symmetry.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A quadratic function of `c`, `-(c-p0)**2/p1**2`, which is symmetric around its peak `p0`. This contrasts with the asymmetric shapes of the `bell_log1p` and `competition` templates, providing a clear test for the symmetry of the observed peak.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a symmetric, bell-shaped peak as a function of salt concentration."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:gaussian_log_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round2_B8_H2_2",
+      "hypothesis_id": "H2",
+      "family": "C_COMPETING_PEAK_POWER_BELL",
+      "scientific_argument": "This model is a more flexible version of the `bell_log1p` model that performed well previously. By introducing a power-law exponent `p1` on the concentration `c` in the growth term (`c**p1`), it allows for a sharper or broader rise to the peak. This added flexibility might capture the shape of the concentration dependence more accurately and address the remaining systematic bias noted in the feedback.",
+      "source_links": [],
+      "evidence_gap": "The physical meaning of the additional exponent `p1` is not directly specified, making it a phenomenological fitting parameter to improve the shape of the curve.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "The form `log1p(p0*c**p1*exp(-p2*c))` generalizes `bell_log1p` by allowing the initial growth term to be non-linear in `c`. This changes the peak location (to `p1/p2`) and alters the steepness of the initial rise, making the peak shape more flexible than the previous best model.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a peak with respect to concentration, with a potentially sharper or broader initial rise than a simple linear-exponential model."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:power_bell_log1p",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round2_B8_H2_3",
+      "hypothesis_id": "H2",
+      "family": "C_MONOTONE_EXP_SATURATION",
+      "scientific_argument": "This model tests a monotonic, saturating response of corrosion to salt concentration, but with a different functional form (`1-exp(-p1*c)`) than the previously tested Michaelis-Menten-like saturation. It represents the case where the promotional effect of salt levels off, but without a subsequent decline, serving as a rival to the peak models which are currently favored.",
+      "source_links": [],
+      "evidence_gap": "This model does not account for the attenuating effect at high concentrations (e.g., from reduced oxygen solubility) that is believed to cause a peak.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "An exponential approach to a plateau, `p0*(1-exp(-p1*c))`. This is distinct from the rational function saturation (`template:H2:saturation`) and logarithmic forms, offering a different curvature for a monotonic increase.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The corrosion current will increase with NaCl concentration and then level off, approaching a constant maximum value, without showing a peak."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_MONOTONE",
+      "template_id": "template:H2:exponential_saturation",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H3": [
+    {
+      "proposal_id": "round2_B8_H3_0",
+      "hypothesis_id": "H3",
+      "family": "H_COMPETING_PEAK_TRANSPORT",
+      "scientific_argument": "This model provides an alternative functional form for the peak behavior in film thickness, derived from considering competing logarithmic growth and quadratic decay terms. It represents the competition between electrolyte availability and transport limitation (A33_P4) with a different mathematical structure than the successful `bell_log1p` form, serving as a test of the robustness of the peak shape.",
+      "source_links": [
+        {
+          "evidence_id": "A33_P4",
+          "supports": "PARTIAL",
+          "source_to_module_mapping": "The source describes the competing mechanisms of electrolyte availability and oxygen transport limitation, which this phenomenological peak model aims to capture."
+        }
+      ],
+      "evidence_gap": "The derivation of this specific `log(h)-log(p0+h**2)` form from first principles of transport and electrochemistry is not provided; it is a phenomenological closure.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "The form `log(h)-log(p0+h**2)` has a different asymptotic behavior and peak shape compared to the exponential decay in `bell_log1p`. It tests a different balance between the rising and falling parts of the curve.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will exhibit a peak with film thickness, with a shape defined by this specific logarithmic/rational form."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:transport_peak",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round2_B8_H3_1",
+      "hypothesis_id": "H3",
+      "family": "H_COMPETING_PEAK_GAUSSIAN",
+      "scientific_argument": "This model proposes a symmetric, Gaussian-like peak for the effect of film thickness. This serves as a rival to the potentially asymmetric peak shape of the successful `bell_log1p` model. It tests whether the underlying competing processes (availability vs. transport limitation) result in a symmetric response around the optimal thickness.",
+      "source_links": [],
+      "evidence_gap": "There is no physical theory that predicts a perfectly symmetric Gaussian response for this system; it is a phenomenological choice to test for symmetry against the successful asymmetric model.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A quadratic function of `h`, `-(h-p0)**2/p1**2`, which is symmetric around its peak `p0`. This provides a strong contrast to the asymmetric `bell_log1p` model that was successful in round 1.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a symmetric, bell-shaped peak as a function of film thickness."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:gaussian_log_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round2_B8_H3_2",
+      "hypothesis_id": "H3",
+      "family": "H_COMPETING_PEAK_POWER_BELL",
+      "scientific_argument": "This model adds flexibility to the successful `bell_log1p` form by including a power-law exponent on the thickness `h`. This allows the initial rise in corrosion rate (availability-dominated regime) to be modeled with more flexibility (e.g., faster or slower than linear). While the current model is good, this provides a test for a more nuanced shape.",
+      "source_links": [],
+      "evidence_gap": "The physical meaning of the additional exponent `p1` is not directly specified, making it a phenomenological fitting parameter to test for a better curve shape.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "The form `log1p(p0*h**p1*exp(-p2*h))` generalizes the successful `bell_log1p` by allowing the initial growth term to be non-linear in `h`. This can change the peak location and the overall shape of the curve.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a peak with respect to thickness, with a potentially sharper or broader initial rise than the current best model."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:power_bell_log1p",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H4": [
+    {
+      "proposal_id": "round2_B8_H4_0",
+      "hypothesis_id": "H4",
+      "family": "CH_SLOPE_LOG",
+      "scientific_argument": "This model proposes an alternative form for the interaction between salinity `c` and film thickness `h`. The `log1p(p0*c*h)` form implies that the combined effect of increasing salinity and thickness has diminishing returns. This is physically plausible as multiple limiting factors may come into play. It represents a different phenomenological closure for the coupling mechanism where electrolyte properties change with salinity, as suggested by A33_P4.",
+      "source_links": [
+        {
+          "evidence_id": "A33_P4",
+          "supports": "PARTIAL",
+          "source_to_module_mapping": "The source suggests that electrolyte properties, which depend on salinity, affect the transport processes that are also dependent on film thickness, motivating a search for coupling terms."
+        }
+      ],
+      "evidence_gap": "Round 1 results failed to find evidence for any H4 coupling. This proposal tests an alternative functional form, but there is no new evidence to suggest it will be more successful.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A non-separable function where `c` and `h` are coupled inside a logarithm, `log(1+p0*c*h)`. This contrasts with the multiplicative scaling of `template:H4:salt_film` (where `c` scales the amplitude of an `h`-response) and implies a different, more symmetric saturation behavior for the combined `c` and `h` effect.",
+      "question_links": [
+        {
+          "hypothesis_id": "H4",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The combined effect of salinity and film thickness on log-current will show diminishing returns, following a logarithmic trend."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:CH_SLOPE",
+      "template_id": "template:H4:salt_film_log",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "round2_B8_H4_1",
+      "hypothesis_id": "H4",
+      "family": "ADDITIVE_COUPLINGS",
+      "scientific_argument": "This model proposes that both salinity and temperature interact with the film thickness response, and that these two coupling effects are additive in the log-current domain. It combines a salt-film coupling term (`template:H4:salt_film`) and a thermal-film coupling term (`template:H4:thermal_film`). This represents a more complex interaction than single-coupling models, but stops short of a full three-way interaction. It is a re-test of a complex form from round 1 in light of potential changes to other hypotheses.",
+      "source_links": [
+        {
+          "evidence_id": "A22_P5_FILM",
+          "supports": "ANALOGY",
+          "source_to_module_mapping": "Source suggests dynamic temperature-film interactions, which are used here as motivation for a static thermal-film coupling term."
+        },
+        {
+          "evidence_id": "A33_P4",
+          "supports": "PARTIAL",
+          "source_to_module_mapping": "Source motivates both salt-film and thermal-film interactions via changes in electrolyte properties and diffusivity."
+        }
+      ],
+      "evidence_gap": "This model is more complex and has more parameters than single-coupling models. Given the lack of evidence for any coupling in round 1, this model may be difficult to identify. There are also template gaps for other coupling processes like `TCH_COUPLING`.",
+      "construction_family_id": "construction:SUM_LOG_RESPONSES",
+      "mathematical_distinction": "A non-separable model that is the sum of two two-way interaction terms: `f(c,h) + g(tau,h)`. This is distinct from the separable null, single-interaction models, and a hypothetical fully non-additive three-way interaction `f(tau,c,h)`. It assumes the two coupling effects are independent of each other.",
+      "question_links": [
+        {
+          "hypothesis_id": "H4",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The film thickness response curve will change shape/amplitude with both temperature and salinity, with the effects of each being additive."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:TCH_COUPLING",
+      "template_id": "template:H4:salt_film",
+      "right_template_id": "template:H4:thermal_film",
+      "operation": "SUM_LOG_RESPONSES"
+    }
+  ]
+}

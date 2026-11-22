@@ -1,0 +1,4 @@
+*.bat  text eol=crlf
+*.png  binary
+*.npz  binary
+*.gz   binary

@@ -1,0 +1,17 @@
+{
+  "role": "EVIDENCE_BRIDGE_AND_CONSTRUCTION_PLANNER",
+  "attempt_count": 2,
+  "first_try_valid": false,
+  "schema_failures": [
+    {
+      "attempt": 1,
+      "error_class": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "seconds": 5.2,
+      "schema_repair_requested": false,
+      "usage": null
+    }
+  ],
+  "prompt_sha256": "66be9c2af2cf4fb40dab9ceffa7661a5f6f8d07e1d3f6249f2b3408584e0e84b",
+  "response_sha256": "579dc824618035c6d49c730108dd88957329dc6cef0e1c96dfa83478be77f56c",
+  "seconds": 78.69
+}

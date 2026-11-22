@@ -1,0 +1,7 @@
+ablation_code,ablation,a0,a1,a2,a3,jinhai_rmse_um,jinhai_endpoint_error_pct,pool_rmse_um,pool_endpoint_error_pct,ksc_rmse_um,ksc_endpoint_error_pct,mean_abs_endpoint_error_pct
+elapsed_time,Elapsed-time + g(u),0.119502,0.959317,1.579616,0.786541,14.7264,0.6401,113.413,-44.5866,17.9554,-30.2793,25.1687
+const_icorr,Constant i_corr = 3.82 uA cm^-2,1.990175,3.149577,3.812094,2.441381,22.6205,11.0144,29.6076,2.266,5.9963,-6.4119,6.5641
+no_rust_decay,"No rust-layer attenuation (phi_rust = 1, g = a0)",7.175907,7.175907,7.175907,7.175907,67.2474,53.7724,105.5667,58.6027,18.6867,32.034,48.1364
+no_field_scaling,"No laboratory-to-field scaling (a0 = 1, g = phi_rust)",1.0,0.90517,0.675755,0.609562,86.2656,-83.1511,196.2814,-83.0143,43.639,-69.5213,78.5623
+no_wetness,No surface-wetness weighting (q_wet = 1),2.434197,2.826358,2.916931,1.915027,10.353,-4.5059,131.8487,-52.6839,23.3384,-37.8947,31.6948
+binary_iso9223,"Binary ISO 9223 wetness (RH > 80%, T > 0 C)",16.448583,14.980252,14.342387,15.005386,97.6521,80.4652,451.101,225.3474,23.9326,53.7794,119.864

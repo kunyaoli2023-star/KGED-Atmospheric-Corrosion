@@ -1,0 +1,174 @@
+{
+  "status": "SUCCESS",
+  "output_directory": "engineering/results",
+  "manuscript_fig10ab_benchmarks_verified": "18/18",
+  "manuscript_fig10cde_single_factor_ablations_verified": "6/6",
+  "divergence_rule": {
+    "rmse_um_max": 200.0,
+    "abs_endpoint_pct_max": 100.0
+  },
+  "computation_modes": {
+    "live_from_scratch": [
+      "gp",
+      "kged5",
+      "kged8",
+      "physo",
+      "power_time",
+      "pysr",
+      "sparse"
+    ],
+    "archived_frozen_prediction": [
+      "CORAL_Ridge",
+      "DANN_MLP",
+      "DomainInvariant_RF",
+      "DomainInvariant_XGBoost",
+      "Source_RF",
+      "Source_Ridge_poly2",
+      "Source_XGBoost",
+      "TCA_Ridge",
+      "bp",
+      "rf",
+      "xgb"
+    ]
+  },
+  "kged_5param_target_mean_abs_endpoint_error_pct": 1.2902,
+  "kged_8param_target_mean_abs_endpoint_error_pct": 8.4729,
+  "empirical_power_law_fit_linhai": {
+    "A": 4.928782,
+    "nu": 0.995578
+  },
+  "table7_amplitudes": [
+    {
+      "Equation": "Five-parameter KGED",
+      "a0": 7.175907,
+      "a1": 6.495417,
+      "a2": 4.849154,
+      "a3": 4.374162,
+      "a3_over_a0": 0.609562,
+      "unanchored_source_rmse_um": 22.8161
+    },
+    {
+      "Equation": "Eight-parameter KGED",
+      "a0": 7.423217,
+      "a1": 6.560196,
+      "a2": 4.769858,
+      "a3": 4.198068,
+      "a3_over_a0": 0.565532,
+      "unanchored_source_rmse_um": 22.9614
+    }
+  ],
+  "single_factor_ablations": [
+    {
+      "ablation_code": "elapsed_time",
+      "ablation": "Elapsed-time + g(u)",
+      "a0": 0.119502,
+      "a1": 0.959317,
+      "a2": 1.579616,
+      "a3": 0.786541,
+      "jinhai_rmse_um": 14.7264,
+      "jinhai_endpoint_error_pct": 0.6401,
+      "pool_rmse_um": 113.413,
+      "pool_endpoint_error_pct": -44.5866,
+      "ksc_rmse_um": 17.9554,
+      "ksc_endpoint_error_pct": -30.2793,
+      "mean_abs_endpoint_error_pct": 25.1687
+    },
+    {
+      "ablation_code": "const_icorr",
+      "ablation": "Constant i_corr = 3.82 uA cm^-2",
+      "a0": 1.990175,
+      "a1": 3.149577,
+      "a2": 3.812094,
+      "a3": 2.441381,
+      "jinhai_rmse_um": 22.6205,
+      "jinhai_endpoint_error_pct": 11.0144,
+      "pool_rmse_um": 29.6076,
+      "pool_endpoint_error_pct": 2.266,
+      "ksc_rmse_um": 5.9963,
+      "ksc_endpoint_error_pct": -6.4119,
+      "mean_abs_endpoint_error_pct": 6.5641
+    },
+    {
+      "ablation_code": "no_rust_decay",
+      "ablation": "No rust-layer attenuation (phi_rust = 1, g = a0)",
+      "a0": 7.175907,
+      "a1": 7.175907,
+      "a2": 7.175907,
+      "a3": 7.175907,
+      "jinhai_rmse_um": 67.2474,
+      "jinhai_endpoint_error_pct": 53.7724,
+      "pool_rmse_um": 105.5667,
+      "pool_endpoint_error_pct": 58.6027,
+      "ksc_rmse_um": 18.6867,
+      "ksc_endpoint_error_pct": 32.034,
+      "mean_abs_endpoint_error_pct": 48.1364
+    },
+    {
+      "ablation_code": "no_field_scaling",
+      "ablation": "No laboratory-to-field scaling (a0 = 1, g = phi_rust)",
+      "a0": 1.0,
+      "a1": 0.90517,
+      "a2": 0.675755,
+      "a3": 0.609562,
+      "jinhai_rmse_um": 86.2656,
+      "jinhai_endpoint_error_pct": -83.1511,
+      "pool_rmse_um": 196.2814,
+      "pool_endpoint_error_pct": -83.0143,
+      "ksc_rmse_um": 43.639,
+      "ksc_endpoint_error_pct": -69.5213,
+      "mean_abs_endpoint_error_pct": 78.5623
+    },
+    {
+      "ablation_code": "no_wetness",
+      "ablation": "No surface-wetness weighting (q_wet = 1)",
+      "a0": 2.434197,
+      "a1": 2.826358,
+      "a2": 2.916931,
+      "a3": 1.915027,
+      "jinhai_rmse_um": 10.353,
+      "jinhai_endpoint_error_pct": -4.5059,
+      "pool_rmse_um": 131.8487,
+      "pool_endpoint_error_pct": -52.6839,
+      "ksc_rmse_um": 23.3384,
+      "ksc_endpoint_error_pct": -37.8947,
+      "mean_abs_endpoint_error_pct": 31.6948
+    },
+    {
+      "ablation_code": "binary_iso9223",
+      "ablation": "Binary ISO 9223 wetness (RH > 80%, T > 0 C)",
+      "a0": 16.448583,
+      "a1": 14.980252,
+      "a2": 14.342387,
+      "a3": 15.005386,
+      "jinhai_rmse_um": 97.6521,
+      "jinhai_endpoint_error_pct": 80.4652,
+      "pool_rmse_um": 451.101,
+      "pool_endpoint_error_pct": 225.3474,
+      "ksc_rmse_um": 23.9326,
+      "ksc_endpoint_error_pct": 53.7794,
+      "mean_abs_endpoint_error_pct": 119.864
+    }
+  ],
+  "software_versions": {
+    "python": "3.9",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1"
+  },
+  "generated_files": [
+    "Diverged_Models_Raw_Metrics.csv",
+    "Engineering_Summary.json",
+    "Fig_10_Baselines_and_Ablations.png",
+    "Fig_10ab_Engineering_Comparison.csv",
+    "Fig_10ab_Engineering_Comparison.md",
+    "Fig_10cde_Single_Factor_Ablations.csv",
+    "Fig_11_ThickFilm_and_Ablation.png",
+    "Fig_9_Engineering_Trajectories.png",
+    "Fig_S3_Laboratory_Baselines_Trajectories.png",
+    "Fig_S4_Direct_DataDriven_Trajectories.png",
+    "Fig_S5_Domain_Adaptation_Trajectories.png",
+    "Parameter_Provenance.csv",
+    "Predicted_Trajectories_All_Methods.csv",
+    "Rate_Law_Ablations_12Rows.csv",
+    "Table_7_Source_State_Amplitudes.csv"
+  ]
+}

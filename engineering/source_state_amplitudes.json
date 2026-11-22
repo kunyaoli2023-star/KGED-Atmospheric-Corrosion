@@ -1,0 +1,50 @@
+{
+  "source": "engineering/current_conditioned_forecast.json",
+  "coefficient_role": "Bernstein conversion coefficients a0..a3 (where a0 is the initial laboratory-to-field scaling factor) and stabilised rust-attenuation ratio a3/a0 calibrated at the Weihai shoreline source site (Main Table 7 & Eq. 14)",
+  "configurations": [
+    {
+      "configuration": "parsimonious",
+      "laboratory_parameter_count": 5,
+      "balanced_development_cv_log_rmse": 0.5696228917127226,
+      "equation_key": "098a8f40178a2c4452ab82923403f07336209f5b5f12415c499e544bfedebfe9",
+      "amplitude_order": [
+        "a0",
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "amplitudes": [
+        7.175906533668496,
+        6.495416697388147,
+        4.849153645971508,
+        4.374162478515373
+      ],
+      "source_observations": 9,
+      "source_field": "models.parsimonious.source_fit.coefficients",
+      "a0_lab_to_field_scaling": 7.175906533668496,
+      "a3_over_a0_stabilised_ratio": 0.6095623539677287
+    },
+    {
+      "configuration": "best_accuracy",
+      "laboratory_parameter_count": 8,
+      "balanced_development_cv_log_rmse": 0.5667032393919123,
+      "equation_key": "4c761eeb9391136436a18efaa671956694979cb6b374b07c19639edc9d13e46e",
+      "amplitude_order": [
+        "a0",
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "amplitudes": [
+        7.42321698968033,
+        6.560196402157809,
+        4.769858151163008,
+        4.198068188951597
+      ],
+      "source_observations": 9,
+      "source_field": "models.best_accuracy.source_fit.coefficients",
+      "a0_lab_to_field_scaling": 7.42321698968033,
+      "a3_over_a0_stabilised_ratio": 0.5655321937628528
+    }
+  ]
+}

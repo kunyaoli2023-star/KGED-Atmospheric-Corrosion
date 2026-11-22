@@ -1,0 +1,198 @@
+{
+  "H1": [
+    {
+      "proposal_id": "R2B2_H1_0",
+      "hypothesis_id": "H1",
+      "family": "H1_LOCAL_LOGARITHMIC",
+      "scientific_argument": "This model tests if the temperature dependence can be described by a logarithmic function. This represents a local approximation where the effect of temperature has diminishing returns, contrasting with the exponential acceleration of the Arrhenius model. While the Arrhenius model is the current best candidate, this alternative local form is proposed to ensure that simpler phenomenological shapes are not being overlooked.",
+      "source_links": [],
+      "evidence_gap": "There is no specific physical theory that predicts a purely logarithmic dependence of log-current on temperature. This is a phenomenological form used for model comparison.",
+      "construction_family_id": "H1_LOCAL_LOGARITHMIC_1",
+      "mathematical_distinction": "A logarithmic dependence on temperature `log(tau)`, which is concave and increases without bound, but more slowly than linear or exponential forms. It is distinct from the convex Arrhenius form `1-1/tau` and the linear form `tau-1`.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The log-corrosion current will increase with temperature, but with diminishing returns, following a logarithmic curve."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:logarithmic",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "R2B2_H1_1",
+      "hypothesis_id": "H1",
+      "family": "H1_LOCAL_POWER",
+      "scientific_argument": "This model proposes a power-law relationship between log-current and temperature. This is another form of local approximation, more flexible than linear as the exponent can be varied. It serves as a rival to the physically-motivated Arrhenius model to test if a simple empirical power law can sufficiently describe the data.",
+      "source_links": [],
+      "evidence_gap": "A power-law dependence is a common empirical model but lacks a specific mechanistic justification for this system, unlike the Arrhenius law.",
+      "construction_family_id": "H1_LOCAL_POWER_1",
+      "mathematical_distinction": "A power-law dependence `tau**p1` which can be concave or convex depending on the exponent `p1`. This provides more shape flexibility than the fixed-concavity logarithmic model or the fixed-convexity Arrhenius model.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The log-corrosion current will follow a power-law relationship with temperature."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:power_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H2": [
+    {
+      "proposal_id": "R2B2_H2_0",
+      "hypothesis_id": "H2",
+      "family": "H2_COMPOSITE_PEAK_FLEX",
+      "scientific_argument": "This model explicitly constructs a peak response to chloride concentration by subtracting a power-law attenuation term from a saturating promotion term. This directly addresses the feedback to test a challenger module to better capture the complex concentration dependence. The promotion term represents effects like increased conductivity, while the attenuation term phenomenologically represents an inhibiting process like reduced oxygen solubility. This compositional form allows more flexibility in the shape of the peak compared to single-expression bell functions.",
+      "source_links": [
+        {
+          "evidence_id": "A11_EQ3",
+          "supports": "Suggests a promotional effect of chloride.",
+          "source_to_module_mapping": "The saturation term `p0*c/(p1+c)` represents a monotonic promotion."
+        },
+        {
+          "evidence_id": "A22_EQ6",
+          "supports": "Mentions a power-law acceleration factor for chloride.",
+          "source_to_module_mapping": "The power-law term `p2*c**p3` is used here for attenuation, representing a competing process that also follows a power law."
+        }
+      ],
+      "evidence_gap": "The specific functional forms for promotion (saturation) and attenuation (power-law) are phenomenological assumptions. There is no direct evidence for this specific combination.",
+      "construction_family_id": "H2_COMPOSITE_PEAK_FLEX_1",
+      "mathematical_distinction": "A composite peak model formed by the difference of two functions with independent parameters. This allows for asymmetric peaks and more flexible shapes compared to the more constrained, often symmetric, single-template peak models like `bell_log1p` or `gaussian_log_response`.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will exhibit a peak with respect to concentration, where the shape of the peak is determined by the competition between a saturating promotion and a power-law attenuation."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:saturation",
+      "right_template_id": "template:H2:power_response",
+      "operation": "DIFFERENCE_LOG_RESPONSES"
+    },
+    {
+      "proposal_id": "R2B2_H2_1",
+      "hypothesis_id": "H2",
+      "family": "H2_FLEXIBLE_BELL_PEAK",
+      "scientific_argument": "This model tests a more flexible bell-shaped function to capture the peak in corrosion rate versus concentration. The `power_bell_log1p` template includes a power exponent on the initial growth term, which allows it to model a wider variety of peak shapes than the previous best model (`bell_log1p`). This is proposed to address the feedback that the current peak model still has the largest validation error and cannot fully capture the complexity of the concentration dependence.",
+      "source_links": [
+        {
+          "evidence_id": "H2_revised_hypothesis_state",
+          "supports": "Notes that the validation error on the concentration axis is the largest, suggesting the current peak model is insufficient.",
+          "source_to_module_mapping": "This more flexible peak model is proposed to reduce this error."
+        }
+      ],
+      "evidence_gap": "While a peak is expected, the specific `power_bell_log1p` form is a phenomenological closure, not derived from first principles. The physical meaning of the additional exponent is not directly specified.",
+      "construction_family_id": "H2_FLEXIBLE_BELL_PEAK_1",
+      "mathematical_distinction": "This model includes a power exponent `p1` on the growth term (`c**p1`), making the initial rise before the peak either faster or slower than linear. This provides more flexibility in the peak's asymmetry and location compared to `template:H2:bell_log1p` where the growth is fixed to be linear.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will exhibit a peak with respect to concentration, with a potentially non-linear initial rise, providing a better fit than simpler bell-shaped models."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:power_bell_log1p",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H3": [
+    {
+      "proposal_id": "R2B2_H3_0",
+      "hypothesis_id": "H3",
+      "family": "H3_TRANSPORT_PEAK",
+      "scientific_argument": "This model tests an alternative functional form for the film thickness peak, motivated by a simple model of competing processes: `log(h)` for increasing availability and `-log(p0+h**2)` for transport limitation through a growing film area/volume. The feedback for H3 noted a systematic under-prediction at low film thickness by the current best model. The `log(h)` term in this template has a singularity at h=0, leading to a very sharp initial rise that might correct this specific model bias.",
+      "source_links": [
+        {
+          "evidence_id": "A10_P3",
+          "supports": "Reports the existence of a peak corrosion rate at an intermediate film thickness.",
+          "source_to_module_mapping": "This template provides a mathematical form for such a peak."
+        },
+        {
+          "evidence_id": "A33_P4",
+          "supports": "Describes the competition between electrolyte availability and oxygen transport limitation.",
+          "source_to_module_mapping": "The template's structure `log(h)-log(p0+h**2)` is a phenomenological representation of this competition."
+        }
+      ],
+      "evidence_gap": "This form is a phenomenological closure inspired by transport phenomena, not a rigorous derivation. The physical interpretation of the parameters is indirect.",
+      "construction_family_id": "H3_TRANSPORT_PEAK_1",
+      "mathematical_distinction": "This model has a logarithmic singularity at h=0, causing a very steep initial increase. This is fundamentally different from the `bell_log1p` model which starts at 0 with a finite slope, and may better capture behavior at very low film thicknesses.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a peak with film thickness, characterized by a very sharp rise at low thicknesses."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:transport_peak",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "R2B2_H3_1",
+      "hypothesis_id": "H3",
+      "family": "H3_FLEXIBLE_BELL_PEAK",
+      "scientific_argument": "This model proposes a more flexible bell-shaped function for the film thickness peak to address the observed under-prediction at low film thicknesses. By introducing a power exponent `p1` on the initial growth term (`h**p1`), the model can accommodate a wider range of shapes for the initial rise. This flexibility may allow the model to better capture the transition from the availability-dominated to the transport-limited regime.",
+      "source_links": [
+        {
+          "evidence_id": "H3_revised_hypothesis_state",
+          "supports": "Notes a systematic under-prediction at low film thickness (50um), suggesting the shape of the current peak model needs improvement.",
+          "source_to_module_mapping": "The additional flexibility of this template is intended to correct this bias."
+        }
+      ],
+      "evidence_gap": "The physical meaning of the additional exponent `p1` is not directly specified by a physical theory; it is an empirical parameter to improve the fit.",
+      "construction_family_id": "H3_FLEXIBLE_BELL_PEAK_1",
+      "mathematical_distinction": "This model includes a power exponent `p1` on the growth term (`h**p1`), allowing the initial rise to be non-linear (e.g., `h^0.5` or `h^2`). This contrasts with the `template:H3:bell_log1p` model where the initial rise is constrained to be linear in `h`.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current peak versus film thickness will be better described by a model allowing a non-linear initial rise, improving the fit at low thicknesses."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:H_COMPETING_PEAK",
+      "template_id": "template:H3:power_bell_log1p",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H4": [
+    {
+      "proposal_id": "R2B2_H4_0",
+      "hypothesis_id": "H4",
+      "family": "H4_SALT_FILM_CONTROL",
+      "scientific_argument": "This model is proposed as a control to re-verify the absence of interaction effects. The feedback for H4 indicates that a separable model (H1+H2+H3) is currently superior and no coupling is evident. However, since the main effect models for H2 and H3 are being improved, it is prudent to re-test for a simple interaction. This model proposes that salinity `c` modulates the amplitude of the film thickness `h` response. Its failure to improve the model would strengthen the conclusion that interaction effects are negligible.",
+      "source_links": [],
+      "evidence_gap": "The primary evidence gap is the lack of any data supporting an interaction. The feedback states that H4 is not currently supported, making this proposal a confirmatory control rather than a primary candidate.",
+      "construction_family_id": "H4_SALT_FILM_CONTROL_1",
+      "mathematical_distinction": "A non-separable function of `c` and `h`, contrasting with the separable (additive) null hypothesis for H4. It tests for a specific form of interaction where `c` linearly scales the amplitude of a saturating `h` response.",
+      "question_links": [
+        {
+          "hypothesis_id": "H4",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The shape of the corrosion response to film thickness will not significantly change with salinity, confirming that a separable model is sufficient."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:CH_SLOPE",
+      "template_id": "template:H4:salt_film",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ]
+}

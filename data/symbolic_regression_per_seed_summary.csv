@@ -1,0 +1,11 @@
+regime,method_code,method,seed,is_published_median_seed,train_log_rmse,train_log_r2,balanced_23fold_cv_log_rmse,cv_status,expression_complexity,full_data_expression
+standard_benchmark,sparse,Sparse regression (Lasso-BIC),0,True,0.766226,0.562551,1.089218,FINITE,5,-8.70090958951834 + (8.633653796611851)*theta + (0.6505553004514903)*z + (-0.1029282080692102)*z^2 + (-0.025333504417577844)*u^2 + (-0.01132940439751234)*z*u
+standard_benchmark,gp,gplearn,1729,False,0.93215,0.352581,1.178787,FINITE,15,"mul(div(div(log(theta_T),0.1934861324236481),neg(sqrt(z_C))),log(log(add(abs(0.5057314996340825),0.8698990569373857))))"
+standard_benchmark,gp,gplearn,2718,True,0.913295,0.378508,1.098224,FINITE,18,"log(inv(div(mul(sqrt(z_C),log(mul(theta_T,0.6229490192977711))),add(neg(-0.853617397433095),mul(log(theta_T),inv(0.2361454210346554))))))"
+standard_benchmark,gp,gplearn,31415,False,0.968634,0.300909,1.065917,FINITE,7,"div(mul(div(-0.11570110345151474,z_C),0.6985299436564478),-0.46833254518624057)"
+standard_benchmark,pysr,PySR,1729,False,1.064539,0.155622,1.135495,FINITE,5,square(square(theta_T)) - 1.0039548764237969
+standard_benchmark,pysr,PySR,2718,False,1.066401,0.152666,1.15266,FINITE,5,square(square(theta_T)) + -1.089787701506494
+standard_benchmark,pysr,PySR,31415,True,0.899884,0.396626,1.147362,FINITE,18,(2.379962492898294 / (((-1.4647022956172997 - square(z_C)) / ((2.3037025134368534 / (z_C + 1.3202349807865026)) + -1.7355089125357204)) / 2.9720278143708603)) - theta_T
+standard_benchmark,physo,PhySO,1729,False,1.10909,0.083468,1.160649,FINITE,8,theta_T*(c0 + theta_T**2)/u_h
+standard_benchmark,physo,PhySO,2718,True,1.088073,0.117875,1.200761,FINITE,12,c0*(theta_T + theta_T - (c0 - u_h + z_C**2))
+standard_benchmark,physo,PhySO,31415,False,1.103902,0.092023,1.284788,FINITE,11,theta_T**2 - (c0**0.5 + c0*theta_T + theta_T)

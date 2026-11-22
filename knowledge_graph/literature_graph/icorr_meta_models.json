@@ -1,0 +1,180 @@
+{
+  "clusters": [
+    {
+      "cluster_name": "Empirical Time Power-Law Kinetics",
+      "abstract_math_structure": "y = A * t^n",
+      "formula_ids_included": [
+        "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq5",
+        "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq1",
+        "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq2",
+        "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq8",
+        "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq2",
+        "20_Atmospheric corrosion of mild steel.pdf_Eq1",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq1",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq2",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq8",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq10",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq11",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq7",
+        "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq2",
+        "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq3",
+        "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq2",
+        "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq1",
+        "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq3",
+        "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq5",
+        "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq1",
+        "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq2",
+        "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq3",
+        "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq1",
+        "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq3",
+        "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq1",
+        "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq2",
+        "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq1",
+        "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq4",
+        "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq1",
+        "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq2",
+        "4_Kinetics of atmospheric corrosion of mild steel, zinc, galvanized iron and aluminium at 10 exposure stations in India.pdf_Eq1",
+        "4_Kinetics of atmospheric corrosion of mild steel, zinc, galvanized iron and aluminium at 10 exposure stations in India.pdf_Eq2",
+        "46_Structure of the rust layer of weathering steel in A high chloride environment A detailed characterization via HRTEM, STEM-EDS, and FIB-SEM.pdf_Eq1",
+        "46_Structure of the rust layer of weathering steel in A high chloride environment A detailed characterization via HRTEM, STEM-EDS, and FIB-SEM.pdf_Eq2",
+        "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq1",
+        "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq2",
+        "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq3"
+      ]
+    },
+    {
+      "cluster_name": "Empirical Environmental Parameter Models",
+      "abstract_math_structure": "CR = f(T, RH, [Cl-], [SO2])",
+      "formula_ids_included": [
+        "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq6",
+        "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq7",
+        "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq9",
+        "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq1",
+        "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq2",
+        "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq3",
+        "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq4",
+        "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq3",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq13",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq14",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq15",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq16",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq17",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq18",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq20",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq21",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq22",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq24",
+        "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq4",
+        "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq5",
+        "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq7",
+        "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq19",
+        "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq20",
+        "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq21",
+        "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq22",
+        "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq8",
+        "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq9",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq1",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq2",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq3",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq4",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq5",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq6",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq7",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq8",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq9",
+        "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq10"
+      ]
+    },
+    {
+      "cluster_name": "Gravimetric & Volumetric Corrosion Rate Definitions",
+      "abstract_math_structure": "CR = Δm / (A * t)",
+      "formula_ids_included": [
+        "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq7",
+        "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq2",
+        "19_Weatherability of 09CuPCrNi steel in a tropical marine environment.pdf_Eq1",
+        "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq1",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq5",
+        "26_New insights into the effect of chloride ions on structure and composition of rust layers.pdf_Eq1",
+        "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq1",
+        "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq1",
+        "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq2",
+        "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq4",
+        "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq1",
+        "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq2",
+        "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq1",
+        "49_Corrosion behaviors and mechanical properties of Q235 steel pipes collapsing due to corrosion after 25-year service in urban industrial atmospheric en.pdf_Eq1"
+      ]
+    },
+    {
+      "cluster_name": "Linear & Piecewise Time-Dependent Models",
+      "abstract_math_structure": "y = A + B*t (piecewise)",
+      "formula_ids_included": [
+        "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq3",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq3",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq9",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq12",
+        "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq13",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq8",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq9",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq10",
+        "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq1",
+        "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq2",
+        "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq3",
+        "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq4"
+      ]
+    },
+    {
+      "cluster_name": "Stern-Geary & Faraday's Law Conversions",
+      "abstract_math_structure": "i_corr = B / R_p",
+      "formula_ids_included": [
+        "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq3",
+        "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq1",
+        "24_Corrosion monitoring of nickel-containing steels in marine atmospheric environment.pdf_Eq1",
+        "24_Corrosion monitoring of nickel-containing steels in marine atmospheric environment.pdf_Eq2",
+        "6_Long-term monitoring of atmospheric corrosion at weathering steel bridges by an electrochemical impedance method.pdf_Eq1"
+      ]
+    },
+    {
+      "cluster_name": "Arrhenius & Thermal Activation Models",
+      "abstract_math_structure": "Rate = A * exp(-Ea / RT)",
+      "formula_ids_included": [
+        "22_Atmospheric corrosion prediction a review.pdf_Eq4",
+        "22_Atmospheric corrosion prediction a review.pdf_Eq26",
+        "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq6",
+        "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq7",
+        "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq9",
+        "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq11"
+      ]
+    },
+    {
+      "cluster_name": "Electrical Resistance Sensor Models",
+      "abstract_math_structure": "ΔH = f(R_sens, R_ref)",
+      "formula_ids_included": [
+        "31_Mechanism of Carbon Steel Corrosion in Accelerated Corrosion Tests.pdf_Eq3",
+        "41_Effect of Drying on the Corrosion of Carbon Steel, Zinc, Aluminium and AZ31B Magnesium Alloy During Cyclic Accelerated Corrosion Tests.pdf_Eq2",
+        "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq1",
+        "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq3"
+      ]
+    },
+    {
+      "cluster_name": "Butler-Volmer & Tafel Kinetics",
+      "abstract_math_structure": "i = i_0 * exp(αnFη / RT)",
+      "formula_ids_included": [
+        "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq1",
+        "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq2",
+        "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq5",
+        "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq6"
+      ]
+    },
+    {
+      "cluster_name": "Equivalent Circuit Impedance Models",
+      "abstract_math_structure": "Z_total = f(R_ct, CPE)",
+      "formula_ids_included": [
+        "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq3",
+        "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq5",
+        "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq1",
+        "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq1"
+      ]
+    }
+  ]
+}

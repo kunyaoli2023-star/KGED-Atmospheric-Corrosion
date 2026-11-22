@@ -1,0 +1,36 @@
+{
+  "request_sha256": "8632716a0cee4d1c9d9d4e12a0a19f560b0c0a58abe38fdd790636a4ac42bb55",
+  "prompt_sha256": "8065eae56e910df330d4128f11a3453fa355016e089466ee48ac9b8fb11c081f",
+  "schema_sha256": "aac01c2e449ce9e0319ad19d2e5f3f5a84768de558efd4c7b59e228b14f627ae",
+  "model": "gemini-2.5-pro",
+  "temperature": 0.0,
+  "seed": 20261007,
+  "thinking_budget": 4096,
+  "attempts": [
+    {
+      "attempt": 1,
+      "error_class": "The read operation timed out",
+      "seconds": 300.56,
+      "schema_repair_requested": false,
+      "usage": null
+    },
+    {
+      "attempt": 2,
+      "error_class": null,
+      "seconds": 55.38,
+      "schema_repair_requested": false,
+      "usage": {
+        "prompt_token_count": 119292,
+        "candidates_token_count": 2991,
+        "thoughts_token_count": 2397,
+        "total_token_count": 124680
+      }
+    }
+  ],
+  "seconds": 355.94,
+  "reported_model": "gemini-2.5-pro",
+  "response_id_sha256": "0f04dca95cfa4d58f17bd03431974080c502e57243323645a59a3a9a3faeb194",
+  "status": "VALID_JSON_SCHEMA",
+  "deterministic_model_output_guaranteed": false,
+  "response_sha256": "a76e17f98225046cb3589c78eb7a93497af13168ebde5df010b5843188c6a810"
+}

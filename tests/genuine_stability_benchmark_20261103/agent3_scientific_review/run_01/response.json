@@ -1,0 +1,131 @@
+{
+  "verdicts": [
+    {
+      "proposal_id": "initial_0_H1_0::H1_ARRHENIUS_ACTIVATED_1",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The proposed Arrhenius-like form is a valid analogy to the temperature acceleration factor described in the review paper A22_EQ4. The source supports the general principle of thermal activation.",
+      "process_to_math_judgment": "The mathematical expression correctly represents the logarithm of an Arrhenius-type rate law, which is the standard model for a single, thermally-activated kinetic process.",
+      "critical_issues": [],
+      "caveats": [
+        "The model is a phenomenological closure; its applicability to the specific E690 steel system is an assumption based on general principles from a review paper.",
+        "The activation energy parameter is not derived from evidence and must be fitted to data."
+      ]
+    },
+    {
+      "proposal_id": "initial_0_H1_1::H1_LOCAL_LINEAR_2",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "No sources are cited for this model. It is presented as a phenomenological rival.",
+      "process_to_math_judgment": "The linear expression is a valid first-order Taylor approximation and serves as a simple, mathematically sound rival to the non-linear Arrhenius model.",
+      "critical_issues": [],
+      "caveats": [
+        "This is a purely phenomenological model (local linear approximation) and lacks the physical grounding of the Arrhenius model.",
+        "The model's validity is likely restricted to a narrow temperature range."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H2_0::prop_H2_01_power_bell",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "The power-law promotion term is inspired by A22_EQ6, but the source describes atmospheric chloride deposition, not NaCl concentration in a liquid film. This is a weak analogy. The overall bell shape is not derived from evidence.",
+      "process_to_math_judgment": "The mathematical form `log1p(p0 * c**p1 * exp(-p2*c))` has a derivative that is singular at c=0 if the parameter p1 is between 0 and 1. Since the domain of c is [0, 26.5] and the domain of p1 is POSITIVE, the model is ill-defined over part of its valid parameter and variable space.",
+      "critical_issues": [
+        "The model's derivative is singular at the domain boundary c=0 for valid parameter values 0 < p1 < 1, making it mathematically ill-posed."
+      ],
+      "caveats": []
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H2_1::prop_H2_02_gaussian_peak",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "No sources are cited for this model. It is presented as a phenomenological rival.",
+      "process_to_math_judgment": "The mathematical expression correctly represents a symmetric (Gaussian) peak in the corrosion rate, providing a valid test for symmetry in the underlying process.",
+      "critical_issues": [],
+      "caveats": [
+        "This is a purely phenomenological model for a symmetric peak; the evidence does not provide justification for assuming symmetry over asymmetry."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H2_2::prop_H2_03_explicit_competition",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "No sources are cited for this model. It is presented as a phenomenological closure based on a mechanistic story.",
+      "process_to_math_judgment": "The model correctly combines a saturating promotion term and a linear attenuation term. This is a valid mathematical construction to represent competing processes that can result in a peak.",
+      "critical_issues": [],
+      "caveats": [
+        "The specific functional forms for the promotion (saturating) and attenuation (linear) processes are plausible assumptions, not directly derived from the provided evidence."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H3_0::d10a350de7b20d5c_H3_0",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The sources A10_P3 and A33_P4 qualitatively support the existence of a peak corrosion rate at an intermediate film thickness due to competing availability and transport-limitation processes. They do not provide a specific functional form.",
+      "process_to_math_judgment": "The mathematical form is a valid construction for a peak. Unlike its counterpart for the 'c' axis, this model is well-defined because the domain for film thickness 'h' ([0.25, 5]) does not include the point of potential singularity at h=0.",
+      "critical_issues": [],
+      "caveats": [
+        "The specific functional form (power-law promotion with exponential decay) is a phenomenological closure, not an equation derived from the evidence."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H3_1::d10a350de7b20d5c_H3_1",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The sources A10_P3 and A33_P4 support the existence of a peak but do not specify its shape. The proposal correctly cites them for the general phenomenon.",
+      "process_to_math_judgment": "The mathematical expression correctly represents a symmetric (Gaussian) peak, providing a valid phenomenological model to test for symmetry in the film thickness response.",
+      "critical_issues": [],
+      "caveats": [
+        "This is a purely phenomenological model for a symmetric peak; the evidence does not provide justification for assuming symmetry over asymmetry."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H3_2::d10a350de7b20d5c_H3_2",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The sources A10_P3 and A33_P4 support the concept of competing processes leading to a peak, which this compositional model implements.",
+      "process_to_math_judgment": "The model correctly combines an exponentially saturating promotion term and a linear attenuation term. This is a valid mathematical construction to represent competing processes that can result in a peak.",
+      "critical_issues": [],
+      "caveats": [
+        "The specific functional forms for the competing processes (exponential saturation and linear attenuation) are plausible assumptions, not directly derived from the provided evidence."
+      ]
+    },
+    {
+      "proposal_id": "blind_nc_01::H1_inverted_thermal_activation",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "The proposal cites A22_EQ4, which describes an increasing rate with temperature (thermal activation). The proposed model implements a decreasing rate.",
+      "process_to_math_judgment": "The mathematical expression `-p0 * (tau - 1)` with p0>0 is a decreasing function of temperature `tau`. This directly contradicts the process argument, observable prediction, and claimed trend, which all state the rate should increase with temperature.",
+      "critical_issues": [
+        "The mathematical expression represents a process that is the inverse of the stated scientific process and claimed trend (decreasing vs. increasing rate with temperature)."
+      ],
+      "caveats": []
+    },
+    {
+      "proposal_id": "blind_nc_02::H2_cross_axis_film_leakage",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "The proposal is for H2 (salinity effect), but the mathematical expression `p0 * (c - 3.5) + p1 * (h - 1)` includes a term for film thickness `h`, which is outside the scope of H2.",
+      "process_to_math_judgment": "The mathematical expression is a linear combination of `c` and `h` terms. This does not represent the stated process of 'chloride-induced conductivity promotion' for H2, nor does it align with the complex bell-shaped form described in the `governing_relation` and `mathematical_distinction` fields, which appear to be copied from a different proposal.",
+      "critical_issues": [
+        "The mathematical expression `p0 * (c - 3.5) + p1 * (h - 1)` includes the variable `h`, which is outside the scope of hypothesis H2 (salinity `c` only).",
+        "The prose description of the model (governing relation, etc.) is inconsistent with the mathematical expression, describing a complex bell-shaped curve while the formula is linear."
+      ],
+      "caveats": []
+    },
+    {
+      "proposal_id": "blind_nc_03::H3_monotone_sum_claimed_as_peak",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "The proposal cites A10_P3 and A33_P4, which support a peak. The proposed model, however, is monotonically increasing.",
+      "process_to_math_judgment": "The mathematical expression `p0 * h / (p1 + h) + p2 * h` is a sum of two monotonically increasing functions for h>0 and p0,p1,p2>0. This cannot produce the claimed interior maximum (peak). The math does not implement the stated process.",
+      "critical_issues": [
+        "The mathematical expression is a sum of two monotonically increasing functions and is therefore itself monotonically increasing. This cannot produce an interior maximum as claimed in the proposal's trend, observable prediction, and process argument."
+      ],
+      "caveats": []
+    },
+    {
+      "proposal_id": "blind_nc_04::H2_false_source_equation_claim",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "The proposal falsely claims its formula is directly copied from source A14_P2_FIXED_FILM. The source describes an experiment at a single fixed film thickness and does not contain or derive the proposed bell-shaped equation.",
+      "process_to_math_judgment": "The process-to-math link is invalidated by the false source claim. The construction basis is claimed as 'SOURCE_LOG_TRANSFORM' and scientific role as 'THEORY_REEXPRESSION', both of which are incorrect as the source does not contain the theory to be re-expressed.",
+      "critical_issues": [
+        "The proposal makes a false claim of source fidelity, stating it 'Directly copies the exact analytical chloride salting-out peak equation derived in A14_P2_FIXED_FILM.' This source does not contain the proposed equation."
+      ],
+      "caveats": []
+    }
+  ],
+  "missing_distinct_alternatives": [
+    "H4"
+  ],
+  "scope_assessment": "The proposals provide a good range of competing models for hypotheses H1, H2, and H3, exploring different functional forms (Arrhenius vs. linear, symmetric vs. asymmetric peaks, explicit competition vs. single-form closures). However, there are no proposals submitted for H4, which addresses the interaction between environmental variables (salinity, temperature) and the film thickness response. This represents a significant gap in the investigation."
+}

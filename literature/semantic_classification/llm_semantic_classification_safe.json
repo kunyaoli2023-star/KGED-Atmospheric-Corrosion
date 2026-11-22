@@ -1,0 +1,1719 @@
+[
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "Calculates Time of Wetness (TOW), a meteorological parameter, not a corrosion rate or extent."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "Defines the tendency to condensation, a physical condition, not a corrosion kinetic model."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "Calculates saturation vapor concentration, a physical property, not a corrosion rate."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Calculates the vapor pressure of air, a meteorological parameter, not a corrosion rate."
+  },
+  {
+    "id": "10_A Study of the Wetting of Metal Surfaces in Order to Understand the Processes Controlling Atmospheric Corrosion.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "Calculates the saturation vapor pressure of air, a meteorological parameter, not a corrosion rate."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Models mass loss (K), a direct measure of corrosion extent, using an empirical regression.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "Models mass loss (K), a direct measure of corrosion extent, using an empirical regression.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "Models monthly mass loss (K) as a function of environmental factors, including chloride deposition.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "Models three-monthly mass loss (K) as a function of environmental factors, including chloride deposition.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq5",
+    "is_kinetic_model": true,
+    "reason": "Represents the classic bi-logarithmic or power-law model for atmospheric corrosion kinetics (mass loss vs. time).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq6",
+    "is_kinetic_model": true,
+    "reason": "Extends the power-law kinetic model to include the influence of chloride deposition and rain.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:Power-Law"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq7",
+    "is_kinetic_model": true,
+    "reason": "A specific power-law regression model quantifying steel mass loss as a function of time and environmental factors.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:Power-Law"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "This is an ARIMA statistical model used for correcting auto-correlation in residuals, not a corrosion model."
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq9",
+    "is_kinetic_model": true,
+    "reason": "A specific power-law regression model quantifying copper mass loss as a function of time and environmental factors.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:Power-Law"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "A power-law model describing thickness reduction (D) over time, a measure of corrosion kinetics.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "A power-law function modeling the evolution of mean pit depth (d) over time, a key kinetic parameter for localized corrosion.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This is a probability density function for a lognormal distribution, a statistical tool, not a kinetic model."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Calculates a statistical parameter (mean of a lognormal distribution), not a corrosion rate."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "Calculates a statistical parameter (standard deviation of a lognormal distribution), not a corrosion rate."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This is a probability density function for an extreme-value distribution, a statistical tool, not a kinetic model."
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq7",
+    "is_kinetic_model": true,
+    "reason": "Defines the average corrosion velocity (rate) based on the change in corrosion depth over a time interval.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq8",
+    "is_kinetic_model": true,
+    "reason": "Calculates the instantaneous corrosion velocity (rate) as the derivative of the power-law model for pit depth.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq9",
+    "is_kinetic_model": true,
+    "reason": "An empirical interpolation equation (IE model) that describes the pit propagation rate over time.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq10",
+    "is_kinetic_model": true,
+    "reason": "Models the maximum pit depth over time by integrating the pit propagation rate (IE model).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "Calculates an SCC susceptibility factor based on mechanical properties (elongation), not a corrosion rate."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "Calculates an SCC susceptibility factor based on mechanical properties (reduction in area), not a corrosion rate."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "Calculates an electrochemical potential, which is a thermodynamic property, not a kinetic rate."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Calculates an electrochemical potential, which is a thermodynamic property, not a kinetic rate."
+  },
+  {
+    "id": "14_Fundamental investigation of stress corrosion cracking of E690 steel in simulated marine thin electrolyte layer.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "Calculates the change in electrochemical potential due to mechanical deformation, not a corrosion rate."
+  },
+  {
+    "id": "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This is the Lambert-Beer law for spectroscopic analysis, not a corrosion kinetic model."
+  },
+  {
+    "id": "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "Defines the average corrosion rate based on mass loss over a specific area and time.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "Defines polarization resistance (Rp), a fundamental electrochemical parameter inversely proportional to the corrosion rate.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Calculates corrosion rate (mm/y) from corrosion current density (icorr), a core electrochemical kinetic parameter.",
+    "signature": "Micro-Electrochemical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of the anodic half-reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of the cathodic half-reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of the overall corrosion reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of an autocatalytic chemical reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of a hydrolysis reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of a rust transformation reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of a rust reduction reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq9",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of a rust reoxidation reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq10",
+    "is_kinetic_model": false,
+    "reason": "Describes a qualitative reaction pathway for rust transformation, not a quantitative kinetic model."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq11",
+    "is_kinetic_model": false,
+    "reason": "Describes a qualitative reaction pathway for rust transformation, not a quantitative kinetic model."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq12",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of a rust transformation reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq13",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of a rust transformation reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq14",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of a direct oxidation reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq15",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of an anodic dissolution reaction, not a kinetic rate law."
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq16",
+    "is_kinetic_model": false,
+    "reason": "Describes the stoichiometry of an anodic dissolution reaction, not a kinetic rate law."
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Represents a general empirical model for corrosion amount (C) based on environmental factors like pollutants, temperature, and rain.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "A specific empirical regression model quantifying corrosion rate (C) based on measured environmental parameters.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is a regression model that predicts the corrosion loss (C) based on environmental parameters like chloride deposition and time of wetness.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "This is a regression model that predicts the corrosion loss (C) based on environmental parameters like chloride deposition, SO2, and time of wetness.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This formula defines the coefficient of determination (R²), a statistical metric used to evaluate model performance, not to model the corrosion process itself."
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This formula defines the Mean Absolute Error (MAE), a statistical metric used to evaluate model performance, not to model the corrosion process itself."
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is a Multiple Linear Regression model that predicts the corrosion rate based on time, temperature, and chloride concentration, among other factors.",
+    "signature": "Macro-Empirical | t:Linear | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "19_Weatherability of 09CuPCrNi steel in a tropical marine environment.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This formula is a definitional equation for calculating an average corrosion rate between two discrete time points, not a predictive model of the corrosion kinetics."
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This is a conversion formula to calculate depth loss from weight loss, density, and area. It does not model the rate or progression of corrosion."
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is the classic empirical power-law model relating corrosion loss (C) to exposure time (t), describing the kinetics of atmospheric corrosion.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is a modified power-law model describing a two-stage corrosion kinetic process, relating corrosion loss (C) to exposure time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "20_Atmospheric corrosion of mild steel.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is the classic empirical power-law model relating corrosion loss (C) to exposure time (t), describing the kinetics of atmospheric corrosion.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is an empirical power-law model relating corrosion loss (C) to exposure time (τ), describing the kinetics of atmospheric corrosion.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This is the logarithmic transformation of the power-law model, typically used for linear regression fitting of parameters, not a kinetic model in its own right."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is an empirical linear model describing corrosion loss (C) as a function of time (τ) during the stationary phase of corrosion.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "This equation models the instantaneous corrosion rate (σ) as a function of time (τ), describing the kinetic behavior of the corrosion process.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This formula is a definitional equation for calculating an average corrosion rate between two discrete time points, not a predictive model of the corrosion kinetics."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This is a formula for estimating a model parameter (α) from specific data points (corrosion at 6 and 8 years). It does not model the corrosion process itself."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "This is a stochastic relationship used to determine a model parameter (n) based on first-year corrosion loss (C₁). It does not model the corrosion process itself."
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq8",
+    "is_kinetic_model": true,
+    "reason": "This equation models the instantaneous corrosion rate (σins) as a function of time (τ), derived from the power-law model.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq9",
+    "is_kinetic_model": true,
+    "reason": "This is an empirical linear model describing corrosion loss (C) as a function of time (τ) for the stationary phase starting after 6 years.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq10",
+    "is_kinetic_model": true,
+    "reason": "This is an empirical power-law model relating corrosion loss (D) to exposure time (t), describing the kinetics of atmospheric corrosion.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq11",
+    "is_kinetic_model": true,
+    "reason": "This equation models the corrosion rate (dD/dt) as a function of time (t), derived by differentiating the power-law model.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq12",
+    "is_kinetic_model": true,
+    "reason": "This is an empirical linear model used to extrapolate corrosion loss (D) for long exposure times (t > 20 years).",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq13",
+    "is_kinetic_model": true,
+    "reason": "This is a bi-linear model describing the total corrosion loss (D) as a function of time (t).",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This formula models a component of the corrosion process, specifically the acceleration factor (AF) due to relative humidity, which modifies the overall corrosion rate.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This formula models a component of the corrosion process, specifically the acceleration factor (AF) due to relative humidity, which modifies the overall corrosion rate.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This formula models a component of the corrosion process, specifically the acceleration factor (AF) due to relative humidity, which modifies the overall corrosion rate.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "This formula models the acceleration factor (AF) due to temperature based on the Arrhenius equation, a fundamental electrochemical relationship.",
+    "signature": "Micro-Electrochemical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq5",
+    "is_kinetic_model": true,
+    "reason": "This formula models a component of the corrosion process, specifically the acceleration factor (AF) due to sulfur dioxide, which modifies the overall corrosion rate.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq6",
+    "is_kinetic_model": true,
+    "reason": "This formula models a component of the corrosion process, specifically the acceleration factor (AF) due to chloride, which modifies the overall corrosion rate.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Power-Law"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq7",
+    "is_kinetic_model": true,
+    "reason": "This is the classic empirical power-law model relating corrosion loss (C) to exposure time (t), describing the kinetics of atmospheric corrosion.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq8",
+    "is_kinetic_model": true,
+    "reason": "This is a two-stage, piecewise power-law model describing the long-term corrosion kinetics by relating corrosion loss (C) to time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq9",
+    "is_kinetic_model": true,
+    "reason": "This is a bi-linear model describing the long-term corrosion kinetics by relating corrosion loss (C) to time (t) with a transition point.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq10",
+    "is_kinetic_model": true,
+    "reason": "This is a combined power-linear model describing the corrosion kinetics by relating corrosion loss (C) to time (t) across different stages.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq11",
+    "is_kinetic_model": false,
+    "reason": "This is a formula for estimating a model parameter (α) from specific data points (corrosion at 6 and 8 years). It does not model the corrosion process itself."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq12",
+    "is_kinetic_model": false,
+    "reason": "This formula defines the parameter α as the instantaneous rate at a transition time ts. It is a parameter definition, not a model for corrosion loss over time."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq13",
+    "is_kinetic_model": true,
+    "reason": "This is a linear dose-response model that predicts corrosion loss (C) based on environmental factors like SO2 and chloride.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq14",
+    "is_kinetic_model": true,
+    "reason": "This is a log-linear dose-response model that predicts corrosion loss (C) based on environmental factors, implying a power-law relationship.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Power-Law"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq15",
+    "is_kinetic_model": true,
+    "reason": "This is a complex dose-response model predicting corrosion loss (C) based on interactions between time-of-wetness categories and pollutant deposition (Cl, SO2).",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq16",
+    "is_kinetic_model": true,
+    "reason": "This is a linear dose-response model that predicts corrosion loss (C) based on multiple environmental factors including temperature and chloride.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq17",
+    "is_kinetic_model": true,
+    "reason": "This is a dose-response model that predicts corrosion loss (C) over time (t) by separating the effects of dry and wet deposition.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq18",
+    "is_kinetic_model": true,
+    "reason": "This is a complex empirical model predicting zinc corrosion loss (C) as a linear function of time, with a rate dependent on temperature and pollutants.",
+    "signature": "Macro-Empirical | t:Linear | T:Linear | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq19",
+    "is_kinetic_model": false,
+    "reason": "This formula defines a piecewise linear function for the temperature effect, f(T), which is a component of another kinetic model (Eq18), not a model itself."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq20",
+    "is_kinetic_model": true,
+    "reason": "This is an additive dose-response model that predicts total corrosion loss (C) by summing the effects of different pollutants.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Power-Law"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq21",
+    "is_kinetic_model": true,
+    "reason": "This formula models a component of the overall corrosion process, specifically the contribution from dry deposition of SO2, as a function of T and RH.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq22",
+    "is_kinetic_model": true,
+    "reason": "This formula models a component of the overall corrosion process, specifically the contribution from dry deposition of chloride, as a function of T and RH.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Power-Law"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq23",
+    "is_kinetic_model": false,
+    "reason": "This is a stochastic relationship used to determine a model parameter (n) based on first-year corrosion loss (C1). It does not model the corrosion process itself."
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq24",
+    "is_kinetic_model": true,
+    "reason": "This is a multi-factor empirical model that predicts a corrosion parameter (K) based on time, time-of-wetness, and pollutant concentrations (SO2, Cl).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:Power-Law"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq25",
+    "is_kinetic_model": true,
+    "reason": "This model calculates a correction factor (K) for marine corrosion rate by combining the effects of multiple environmental variables.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq26",
+    "is_kinetic_model": true,
+    "reason": "This is a generalized Eyring model that describes corrosion behavior (ξ) based on fundamental temperature dependence (Arrhenius) and other environmental factors.",
+    "signature": "Micro-Electrochemical | t:None | T:Arrhenius | Cl:Linear/Log"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq27",
+    "is_kinetic_model": true,
+    "reason": "This is a generalized log-linear empirical model that predicts corrosion behavior (ξ) based on an exponential combination of environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq28",
+    "is_kinetic_model": true,
+    "reason": "This is a general response surface model used to empirically predict a corrosion-related outcome (y) based on various influential factors (xi).",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "23_XRD and SEM studies of the layer of corrosion products for carbon steel in various different environments in the province of Las Palmas (The Canary Is.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This is a chemical ratio used to predict the type of corrosion product formed, not a kinetic parameter like rate or mass loss.",
+    "signature": null
+  },
+  {
+    "id": "24_Corrosion monitoring of nickel-containing steels in marine atmospheric environment.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is the Stern-Geary equation, a fundamental electrochemical model that calculates the instantaneous corrosion current density (icorr), a direct measure of corrosion rate.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "24_Corrosion monitoring of nickel-containing steels in marine atmospheric environment.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This formula calculates corrosion thickness loss (d) from the total charge passed, which is a direct application of Faraday's law to quantify corrosion.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "26_New insights into the effect of chloride ions on structure and composition of rust layers.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This formula calculates the average corrosion rate (CR) from mass gain (Δm) over time (t), a standard gravimetric method for determining corrosion kinetics.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This formula calculates the average corrosion rate (Ke) from mass loss (WL) over a specific time period (t), a standard gravimetric method.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is a widely used empirical power law model that directly relates corrosion loss (Wt) to exposure time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is a specific, fitted instance of the power law model, predicting weight loss (Wt) as a function of time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This formula calculates the average corrosion rate (rcorr) from mass loss (Am) over time (t), a standard gravimetric calculation.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This formula models the total corrosion attack (D) as a power function of exposure time (t), representing a common empirical kinetic law.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This formula models the total corrosion attack (D) as a linear function of exposure time (t), after correcting a typo in the source.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "This is a multiple linear regression model that empirically predicts the corrosion rate (rcorr) from key environmental parameters.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq5",
+    "is_kinetic_model": true,
+    "reason": "This is a simplified linear regression model predicting the corrosion rate (rcorr) based on the chloride deposition rate (CDR).",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This formula models the chloride deposition rate (CDR) as a function of distance, which is an environmental input parameter, not the corrosion process itself.",
+    "signature": null
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq7",
+    "is_kinetic_model": true,
+    "reason": "This formula calculates the corrosion rate (rcorr) as a function of distance from the shore, derived by combining environmental and corrosion models.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This is a regression model for chloride deposition rate, an environmental parameter, not a model for material corrosion.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This formula describes the spatial distribution of chloride concentration with distance, an environmental factor, not a corrosion kinetic model.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This formula calculates the effective wind power for transporting chlorides, a meteorological calculation, not a corrosion model.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "This formula relates salt production to wind speed, an atmospheric science model, not a corrosion model.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This formula calculates total salt production based on specific production and wind frequency, a meteorological/environmental calculation.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This is an alternative method for calculating total salt production, an environmental parameter.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "This formula defines wind power, a meteorological concept, not a corrosion process.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "This formula represents the total mass of transported sea aerosols, an atmospheric transport model, not a corrosion model.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq9",
+    "is_kinetic_model": false,
+    "reason": "This formula calculates the chloride deposition rate, an environmental input, not the corrosion rate of a material.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq10",
+    "is_kinetic_model": false,
+    "reason": "This formula estimates the chloride deposition rate at a distance from the coast, an environmental modeling equation.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq11",
+    "is_kinetic_model": false,
+    "reason": "This is a mathematical calculation related to wind efficiency, not a corrosion model.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq12",
+    "is_kinetic_model": false,
+    "reason": "This is a specific calculation of wind power efficiency, a meteorological parameter.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq13",
+    "is_kinetic_model": false,
+    "reason": "This is a specific calculation of a component of wind power efficiency.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq14",
+    "is_kinetic_model": false,
+    "reason": "This is a specific calculation of a component of wind power efficiency.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq15",
+    "is_kinetic_model": false,
+    "reason": "This formula calculates the net difference in wind efficiency, not a corrosion parameter.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq16",
+    "is_kinetic_model": false,
+    "reason": "This formula models the decay of chloride deposition with distance, an environmental model.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq17",
+    "is_kinetic_model": false,
+    "reason": "This formula calculates the chloride deposition rate based on wind power, an environmental model.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq18",
+    "is_kinetic_model": false,
+    "reason": "This is a simplified empirical model for chloride deposition, not material corrosion.",
+    "signature": null
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq19",
+    "is_kinetic_model": true,
+    "reason": "This is a dose-response function that explicitly predicts the first-year corrosion loss (K₁) of carbon steel based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:Arrhenius | Cl:Power-Law"
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq20",
+    "is_kinetic_model": true,
+    "reason": "This is a dose-response function that explicitly predicts the first-year corrosion loss (K₁) of zinc based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:Arrhenius | Cl:Power-Law"
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq21",
+    "is_kinetic_model": true,
+    "reason": "This is a dose-response function that explicitly predicts the first-year corrosion loss (K₁) of copper based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:Arrhenius | Cl:Power-Law"
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq22",
+    "is_kinetic_model": true,
+    "reason": "This is a dose-response function that explicitly predicts the first-year corrosion loss (K₁) of aluminum based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:Arrhenius | Cl:Power-Law"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is the standard empirical power law model relating corrosion thickness loss (D) to exposure time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This formula calculates corrosion thickness loss (D) from weight loss (Wt), a direct measure of corrosion extent.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is the logarithmic form of the power law model, used for fitting kinetic data (D vs. t) and represents the same underlying corrosion process.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "This formula calculates the average corrosion rate (Va) between two time points, a direct kinetic parameter.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq5",
+    "is_kinetic_model": true,
+    "reason": "This formula calculates the instantaneous corrosion rate (Vi) by differentiating the power law model for corrosion loss.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is the general power model (bilogarithmic law) used to describe corrosion loss (C) over time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is a specific, fitted power law model for calculating corrosion loss (C) of weathering steel over time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is a specific, fitted power law model for calculating corrosion loss (C) of carbon steel over time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "This describes a half-cell electrochemical reaction (anodic dissolution), not a quantitative model for corrosion rate or loss.",
+    "signature": null
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This describes a half-cell electrochemical reaction (cathodic reduction), not a quantitative model for corrosion rate or loss.",
+    "signature": null
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This illustrates a qualitative reaction pathway for the formation of a specific corrosion product, not a quantitative kinetic model.",
+    "signature": null
+  },
+  {
+    "id": "31_Mechanism of Carbon Steel Corrosion in Accelerated Corrosion Tests.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This is the formula for electrical resistance based on material resistivity and geometry, a physical property calculation, not a corrosion kinetic model.",
+    "signature": null
+  },
+  {
+    "id": "31_Mechanism of Carbon Steel Corrosion in Accelerated Corrosion Tests.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This formula describes the change in electrical resistance with temperature, a material property relationship, not a model of corrosion kinetics.",
+    "signature": null
+  },
+  {
+    "id": "31_Mechanism of Carbon Steel Corrosion in Accelerated Corrosion Tests.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "Calculates corrosion depth (CD), a direct measure of corrosion kinetics, from macroscopic resistance measurements.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is a classic power-law model that describes the corrosion loss, c(t), as a function of time.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This is a stoichiometric half-reaction for the anodic dissolution of iron, not a kinetic rate law."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This is a stoichiometric half-reaction for the cathodic reduction of oxygen, not a kinetic rate law."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "This is an overall stoichiometric chemical reaction for aerobic corrosion, not a kinetic rate law."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This is a stoichiometric half-reaction for hydrogen evolution, not a kinetic rate law."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq6",
+    "is_kinetic_model": true,
+    "reason": "Calculates the initial corrosion rate (ro) as an empirical function of temperature.",
+    "signature": "Macro-Empirical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq7",
+    "is_kinetic_model": true,
+    "reason": "Calculates corrosion loss (Ca) at a specific phase as an empirical function of temperature.",
+    "signature": "Macro-Empirical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq8",
+    "is_kinetic_model": true,
+    "reason": "Calculates corrosion loss (Cs) at a specific phase as an empirical linear function of temperature.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq9",
+    "is_kinetic_model": true,
+    "reason": "Calculates a transition time (ta), a kinetic parameter, as an empirical function of temperature.",
+    "signature": "Macro-Empirical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq10",
+    "is_kinetic_model": false,
+    "reason": "This is a definitional relationship between two corrosion rates, not a model for calculating a rate from environmental variables."
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq11",
+    "is_kinetic_model": true,
+    "reason": "Calculates the long-term corrosion rate (rs) as an empirical function of temperature.",
+    "signature": "Macro-Empirical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is a modified Tafel equation, a fundamental micro-electrochemical model for calculating cathodic current density.",
+    "signature": "Micro-Electrochemical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is the Butler-Volmer equation, a fundamental micro-electrochemical model for calculating anodic current density.",
+    "signature": "Micro-Electrochemical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is a classic power-law model that describes corrosion weight loss (ΔW) as a function of time.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "Calculates the average corrosion rate (R) from experimental weight loss data over a period of time.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is an empirical power-law model relating weight gain (AW) to the number of corrosion cycles (N), a proxy for time.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is the logarithmic form of the power-law kinetic model, used for data fitting and analysis.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This is a definitional equation showing the components of polarization resistance (Rp), not a model to calculate it from first principles or environmental variables."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "This is a stoichiometric half-reaction for the anodic dissolution of aluminum."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This is a stoichiometric half-reaction for the anodic dissolution of iron."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This is a stoichiometric half-reaction for the cathodic reduction of oxygen."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "This is an overall stoichiometric chemical reaction for the formation of aluminum oxide."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "This is an overall stoichiometric chemical reaction for the formation of ferrous hydroxide."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq9",
+    "is_kinetic_model": false,
+    "reason": "This is an overall stoichiometric chemical reaction for the formation of iron aluminate."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq10",
+    "is_kinetic_model": false,
+    "reason": "This is an overall stoichiometric chemical reaction for the oxidation of ferrous hydroxide."
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq11",
+    "is_kinetic_model": false,
+    "reason": "This describes a phase transformation of a corrosion product, not a kinetic rate law for metal loss."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is a power-law model describing corrosion weight gain (ΔW) as a function of exposure cycles (N).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This is the Mott-Schottky equation, used to determine semiconductor properties of a film, not to directly calculate a corrosion rate."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This is the Mott-Schottky equation for p-type semiconductors, used for film characterization, not corrosion rate calculation."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "This formula calculates the thickness of the space charge layer, a property of the rust film, not a corrosion rate."
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This is a simplified definitional relationship for the space charge layer thickness, not a corrosion rate model."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Calculates thickness loss (Dt), a direct measure of corrosion damage, from weight loss data.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "Calculates the corrosion rate (CR) from thickness loss over a specific time period.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "Calculates local current density (i), a key kinetic parameter, from experimental SVET measurements.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "This is a classic power-law model used to fit thickness loss (D) data over time.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq5",
+    "is_kinetic_model": true,
+    "reason": "This is a form of the Tafel equation, a fundamental micro-electrochemical model for elemental dissolution current density.",
+    "signature": "Micro-Electrochemical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq6",
+    "is_kinetic_model": true,
+    "reason": "This is a form of the Tafel equation describing the oxygen reduction current density, a fundamental kinetic process.",
+    "signature": "Micro-Electrochemical | t:None | T:Arrhenius | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq7",
+    "is_kinetic_model": true,
+    "reason": "Converts a kinetic parameter (current density, iE) into another measure of corrosion extent (dissolved atomic layers, LE).",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "Calculates a material property (number of moles of an element in a layer), not a rate or extent of corrosion over time."
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq9",
+    "is_kinetic_model": true,
+    "reason": "This is part of a micro-electrochemical dissolution blocking model that calculates the equivalent number of dissolved atomic layers, a measure of corrosion extent.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq10",
+    "is_kinetic_model": true,
+    "reason": "Extends the micro-electrochemical dissolution blocking model to a two-element system to calculate corrosion extent.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq11",
+    "is_kinetic_model": true,
+    "reason": "Extends the micro-electrochemical dissolution blocking model to a three-element system to calculate corrosion extent.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq12",
+    "is_kinetic_model": true,
+    "reason": "This is the general form of the micro-electrochemical dissolution blocking model for calculating corrosion extent in a multi-element system.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq13",
+    "is_kinetic_model": true,
+    "reason": "Calculates the partial current density of an alloy element, a key kinetic parameter in a micro-electrochemical model.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq14",
+    "is_kinetic_model": true,
+    "reason": "Calculates the partial current density of a second alloy element within the micro-electrochemical dissolution blocking model.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq15",
+    "is_kinetic_model": true,
+    "reason": "Calculates the partial current density of a third alloy element within the micro-electrochemical dissolution blocking model.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq16",
+    "is_kinetic_model": true,
+    "reason": "This is the general form for calculating the partial current density of an element within the micro-electrochemical dissolution blocking model.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq17",
+    "is_kinetic_model": true,
+    "reason": "Calculates the total current density of an element based on the number of dissolved layers, a kinetic parameter.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq18",
+    "is_kinetic_model": true,
+    "reason": "Calculates an adjusted current density for an element within the micro-electrochemical dissolution model.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq19",
+    "is_kinetic_model": true,
+    "reason": "Models cation concentration based on diffusion (Fick's law) and current (Faraday's law), which governs the rate of protective layer formation.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq20",
+    "is_kinetic_model": false,
+    "reason": "Represents a thermodynamic equilibrium condition (solubility limit), not a rate or kinetic process.",
+    "signature": null
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq21",
+    "is_kinetic_model": false,
+    "reason": "Calculates a thermodynamic property (solubility product) from Gibbs free energy, not a kinetic rate.",
+    "signature": null
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is the classical power law model describing corrosion mass loss (C) as a function of time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is the logarithmic form of the power law kinetic model, used for linear fitting of corrosion data over time.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "Calculates a physical property (hyperfine magnetic field) for material characterization, not a corrosion rate.",
+    "signature": null
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Quantifies a material phase fraction from experimental data, not a kinetic process.",
+    "signature": null
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Represents an empirical linear model for corrosion weight gain (y) as a function of time/cycles (x).",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "Represents an empirical linear model for corrosion weight gain (y) as a function of time/cycles (x) for a specific corrosion stage.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "Represents an empirical linear model for corrosion weight gain (y) as a function of time/cycles (x).",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "Represents an empirical linear model for corrosion weight gain (y) as a function of time/cycles (x) for a specific corrosion stage.",
+    "signature": "Macro-Empirical | t:Linear | T:None | Cl:None"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq5",
+    "is_kinetic_model": true,
+    "reason": "Defines the total polarization resistance (Rp), a key electrochemical parameter inversely proportional to the corrosion rate.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Calculates the average corrosion rate (V) based on mass loss over a specific time period.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric half-reaction for anodic dissolution, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric half-reaction for the reduction of a rust component, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric chemical reaction for rust transformation, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "Represents the stoichiometric cathodic half-reaction for oxygen reduction, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric chemical reaction for rust transformation, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "Represents an overall stoichiometric reaction for the corrosion process, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "41_Effect of Drying on the Corrosion of Carbon Steel, Zinc, Aluminium and AZ31B Magnesium Alloy During Cyclic Accelerated Corrosion Tests.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This is Pouillet's law for electrical resistance, a fundamental physics formula, not a corrosion kinetic model.",
+    "signature": null
+  },
+  {
+    "id": "41_Effect of Drying on the Corrosion of Carbon Steel, Zinc, Aluminium and AZ31B Magnesium Alloy During Cyclic Accelerated Corrosion Tests.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "Calculates corrosion depth (CD), a direct measure of corrosion progress, from electrical resistance measurements over time.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Calculates thickness loss (ΔH) as an explicit function of time-dependent resistance measurements.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "Defines the instantaneous corrosion rate (CR) as the time derivative of thickness loss, a fundamental kinetic concept.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This is a formula from computational chemistry (independent gradient model) to analyze intermolecular interactions, not corrosion kinetics.",
+    "signature": null
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Defines a term used in the independent gradient model for computational chemistry, not corrosion kinetics.",
+    "signature": null
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "Defines a term used in the independent gradient model for computational chemistry, not corrosion kinetics.",
+    "signature": null
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq6",
+    "is_kinetic_model": true,
+    "reason": "Calculates inhibition efficiency based on impedance (Z), which is a measure of corrosion resistance and thus directly related to kinetics.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "Represents the total potential energy in a molecular mechanics force field, used for simulation, not a corrosion kinetic model.",
+    "signature": null
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq8",
+    "is_kinetic_model": true,
+    "reason": "This is a general empirical regression model to predict thickness loss (TL) based on environmental variables.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq9",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical regression model predicting thickness loss (TL) based on temperature, humidity, and salt concentration.",
+    "signature": "Macro-Empirical | t:None | T:Linear | Cl:Linear/Log"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Defines the impedance of a Constant Phase Element (CPE), a component used in equivalent circuits to model electrochemical kinetics from EIS data.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric half-reaction for anodic dissolution, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "Represents the stoichiometric cathodic half-reaction for oxygen reduction, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric chemical reaction for precipitate formation, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric chemical reaction for rust transformation, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric half-reaction for ion oxidation, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric chemical reaction involving chloride, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric chemical reaction for rust transformation, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq9",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric chemical reaction for rust transformation, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "44_Comparative study on corrosion behaviour of rusted X100 steel in drywet cycle and immersion environments.pdf_Eq10",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric chemical reaction for rust transformation, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "Calculates a stress concentration factor from fracture mechanics, not a corrosion rate.",
+    "signature": null
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This is an empirical S-N curve for fatigue life prediction, a mechanical property model, not a corrosion kinetic model.",
+    "signature": null
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This is an empirical S-N curve for fatigue life prediction, a mechanical property model, not a corrosion kinetic model.",
+    "signature": null
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "This is an empirical S-N curve for fatigue life prediction, a mechanical property model, not a corrosion kinetic model.",
+    "signature": null
+  },
+  {
+    "id": "46_Structure of the rust layer of weathering steel in A high chloride environment A detailed characterization via HRTEM, STEM-EDS, and FIB-SEM.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is an empirical power law model describing corrosion weight gain (AW) as a function of time/cycles (N).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "46_Structure of the rust layer of weathering steel in A high chloride environment A detailed characterization via HRTEM, STEM-EDS, and FIB-SEM.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is the logarithmic form of the power law kinetic model, used for linear fitting of corrosion data over time/cycles.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "Defines a static 'corrosion stability' index based on the ratio of rust phases, not a model for calculating a rate.",
+    "signature": null
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "Represents a stoichiometric half-reaction for anodic dissolution, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "Represents the stoichiometric cathodic half-reaction for oxygen reduction, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "Represents the stoichiometric cathodic half-reaction for hydrogen evolution, not a kinetic rate law.",
+    "signature": null
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This is a Nernst-type equation that calculates a thermodynamic equilibrium potential, not a kinetic corrosion rate."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This is a Nernst-type equation that calculates a thermodynamic equilibrium potential, not a kinetic corrosion rate."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of a corrosion product, not a kinetic model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the hydrolysis of a corrosion intermediate, not a kinetic model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq9",
+    "is_kinetic_model": false,
+    "reason": "This is a Nernst-type equation that calculates a thermodynamic equilibrium potential, not a kinetic corrosion rate."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq10",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the oxidation of a corrosion product, not a kinetic model."
+  },
+  {
+    "id": "47_Insights into the characteristics of corrosion products formed on the contact and exposed regions of C1045 steel bolt and nut fasteners exposed to aqu.pdf_Eq11",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of magnetite, not a kinetic model."
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Defines the impedance of a Constant Phase Element (CPE), a core component of electrochemical models used to determine kinetic parameters from EIS data.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This formula calculates a percentage loss of a mechanical property (reduction of area) as a measure of damage, not a kinetic rate."
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This formula calculates a percentage loss of a mechanical property (elongation) as a measure of damage, not a kinetic rate."
+  },
+  {
+    "id": "49_Corrosion behaviors and mechanical properties of Q235 steel pipes collapsing due to corrosion after 25-year service in urban industrial atmospheric en.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "Defines mass loss rate, a direct macroscopic measure of corrosion kinetics.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "4_Kinetics of atmospheric corrosion of mild steel, zinc, galvanized iron and aluminium at 10 exposure stations in India.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "It is a classic empirical power law that models corrosion loss (C) as a function of time (t).",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "4_Kinetics of atmospheric corrosion of mild steel, zinc, galvanized iron and aluminium at 10 exposure stations in India.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "It is the logarithmic form of the power law for corrosion loss, used for kinetic analysis of empirical data.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This formula defines electrical resistance based on geometry and resistivity, which is a physical property, not a kinetic model."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This is a simplified formula for electrical resistance, a physical property, not a kinetic model."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "Calculates corrosion depth over time by relating it to the change in electrical resistance, a method for monitoring corrosion kinetics.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "This is the standard statistical formula for the Pearson correlation coefficient."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This formula approximates a physical property (droplet contact angle), not a corrosion rate."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This formula approximates a physical property (droplet contact angle), not a corrosion rate."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "This is an empirical calibration formula relating initial thickness to resistance, not a model of corrosion over time."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "This formula models the effect of temperature on electrical resistance, not the kinetics of corrosion."
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq9",
+    "is_kinetic_model": false,
+    "reason": "This formula describes a physical distribution of droplets, not a corrosion process."
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is a general multi-variable empirical model for corrosion rate (C) based on environmental factors like chloride.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the corrosion rate of copper based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the indoor corrosion rate of copper based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq4",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the combined corrosion rate of copper based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq5",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the outdoor corrosion rate of zinc based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq6",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the indoor corrosion rate of zinc based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq7",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the combined corrosion rate of zinc based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq8",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the outdoor corrosion rate of aluminium based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq9",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the indoor corrosion rate of aluminium based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq10",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical model for the combined corrosion rate of aluminium based on environmental factors.",
+    "signature": "Macro-Empirical | t:None | T:None | Cl:Linear/Log"
+  },
+  {
+    "id": "6_Long-term monitoring of atmospheric corrosion at weathering steel bridges by an electrochemical impedance method.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "It provides an empirical relationship to calculate corrosion current density (Icorr), a key kinetic parameter, from impedance (Z) measurements.",
+    "signature": "Micro-Electrochemical | t:None | T:None | Cl:None"
+  },
+  {
+    "id": "6_Long-term monitoring of atmospheric corrosion at weathering steel bridges by an electrochemical impedance method.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This is a linear regression relating two physical measurements (corrosion loss vs. rust thickness), not a model of rate over time."
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq1",
+    "is_kinetic_model": true,
+    "reason": "This is a general empirical power law model for corrosion weight gain as a function of exposure cycles (N), which represents time.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq2",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical power law model for corrosion weight gain in the initial stage of exposure.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq3",
+    "is_kinetic_model": true,
+    "reason": "This is a specific empirical power law model for corrosion weight gain in the later stage of exposure.",
+    "signature": "Macro-Empirical | t:Power-Law | T:None | Cl:None"
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq1",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction (water formation/dissociation), not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq2",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction (salt dissociation), not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq3",
+    "is_kinetic_model": false,
+    "reason": "This represents an electrochemical half-reaction, a statement of a process, not a quantitative kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq4",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of a corrosion intermediate, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq5",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of a corrosion intermediate, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq6",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of rust, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq7",
+    "is_kinetic_model": false,
+    "reason": "This represents an electrochemical half-reaction, a statement of a process, not a quantitative kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq8",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of a corrosion intermediate, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq9",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of rust and acid regeneration, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq10",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of rust, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq11",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of rust, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq12",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of a salt, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq13",
+    "is_kinetic_model": false,
+    "reason": "This formula represents a stoichiometric chemical reaction for the formation of magnetite, not a kinetic model."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq14",
+    "is_kinetic_model": false,
+    "reason": "This is a stoichiometric chemical reaction equation describing the oxidation of magnetite to iron oxyhydroxide. It represents a chemical transformation, not a mathematical model for calculating a corrosion rate or extent."
+  },
+  {
+    "id": "9_INITIAL-STAGES OF ATMOSPHERIC CORROSION OF STEEL IN THE ARABIAN GULF.pdf_Eq15",
+    "is_kinetic_model": false,
+    "reason": "This is a stoichiometric chemical reaction equation for the transformation of magnetite to hematite. It lacks any kinetic parameters (e.g., time, temperature) and is therefore not a kinetic model."
+  }
+]

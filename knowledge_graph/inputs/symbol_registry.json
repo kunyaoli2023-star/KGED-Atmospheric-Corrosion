@@ -1,0 +1,30 @@
+{
+  "version": "V5_SYMBOL_REGISTRY_2",
+  "raw_quantities": {
+    "T_C": {"meaning": "Temperature", "unit": "degree_Celsius"},
+    "C_wt": {"meaning": "NaCl concentration", "unit": "wt_percent"},
+    "h_um": {"meaning": "Liquid electrolyte film thickness, not rust thickness", "unit": "micrometre"}
+  },
+  "variables": {
+    "tau": {"raw": "T_C", "offset": 273.15, "scale": 298.15, "dimension": "dimensionless", "assumption": "positive", "domain": [0.9161495891329867, 1.0838504108670133], "reference": 1},
+    "c": {"raw": "C_wt", "offset": 0, "scale": 1, "dimension": "dimensionless", "assumption": "nonnegative", "domain": [0, 26.5], "reference": 3.5},
+    "h": {"raw": "h_um", "offset": 0, "scale": 200, "dimension": "dimensionless", "assumption": "positive", "domain": [0.25, 5], "reference": 1}
+  },
+  "functions": ["log", "log1p", "exp", "sqrt", "tanh"],
+  "parameter_contract": {
+    "name_pattern": "[A-Za-z][A-Za-z0-9_]*",
+    "dimension": "dimensionless",
+    "domains": ["POSITIVE", "REAL"],
+    "scope": "Module-local declared names; numerical assembly uses separate parameter slices per module.",
+    "reserved_names": ["T_C", "C_wt", "h_um", "tau", "c", "h", "log", "log1p", "exp", "sqrt", "tanh"]
+  },
+  "rules": [
+    "source_symbols declares source notation, units and mapping notes; it never implicitly declares fitted parameters.",
+    "symbol_definitions declares acyclic executable aliases; expand them into registered variables, functions, declared fitted parameters and constants before checking rate, derivative, construction steps and global conditions. Final expression uses final symbols only.",
+    "Explicitly derive source-to-dimensionless mappings; never guess aliases or constants. Source relations without executable mappings belong in prose.",
+    "The full domain includes c=0. log(c) and 1/c are not finite there. No clipping, arbitrary epsilon or silent exclusion of observations.",
+    "Any alternative closure or change of mathematical form requires explicit scientific justification and new checking.",
+    "Parameter names do not prove physical identity. Each declaration includes meaning, dimension and constraints.",
+    "conditions are global feasibility requirements; local derivative signs and peak locations belong in trend_scope. Reference-condition failure is distinct from nonfinite response."
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "bridges": [
+    {
+      "hypothesis_id": "H1",
+      "evidence_links": [
+        {
+          "evidence_id": "A22_EQ4",
+          "supports": "Supports using an Arrhenius-like exponential form for the temperature dependence of corrosion, representing a thermally activated process.",
+          "does_not_support": "Does not establish that the target experiment's corrosion current obeys the same factor at fixed NaCl and liquid-film thickness.",
+          "transfer_assumptions": "The general principle of thermally activated kinetics described in the review is assumed to apply to the electrochemical current in the specific experimental system, even if the activation energy and pre-factors differ."
+        }
+      ],
+      "process_arguments": [
+        "Electrochemical reaction rates, including those driving corrosion, are fundamentally governed by thermal activation. An increase in temperature provides more energy to overcome activation barriers for charge transfer and other surface reactions, leading to a higher corrosion current."
+      ],
+      "distinct_alternatives_to_test": [
+        "A simple Arrhenius/Eyring law form: exp(B * (1 - 1/tau)).",
+        "A local polynomial approximation (e.g., linear or quadratic in temperature) over the experimental range.",
+        "A model including a competing temperature-sensitive process (e.g., decreased oxygen solubility) that could cause attenuation at higher temperatures.",
+        "A null hypothesis of no significant temperature dependence."
+      ],
+      "evidence_gaps": [
+        "No direct experimental data is provided showing the corrosion current of E690 steel as a function of temperature at fixed liquid-film thickness and salt concentration.",
+        "The activation energy for the specific corrosion process is unknown."
+      ],
+      "excluded_misapplications": [
+        "Directly applying the parameters or the exact form of the acceleration factor from A22_EQ4, which is for atmospheric corrosion, without fitting or justification.",
+        "Confusing the direct kinetic effect of temperature at a fixed film thickness with the indirect effects of temperature on film wetness and evaporation cycles seen in atmospheric exposure (A22_P5_FILM)."
+      ]
+    },
+    {
+      "hypothesis_id": "H2",
+      "evidence_links": [
+        {
+          "evidence_id": "A22_EQ6",
+          "supports": "Supports a non-linear, monotonically increasing effect of chloride on corrosion rate, represented by a power-law acceleration factor.",
+          "does_not_support": "Does not establish response to NaCl wt%, a finite value at zero concentration, saturation, or inhibition.",
+          "transfer_assumptions": "The concept of an acceleration factor based on atmospheric chloride deposition is assumed to be adaptable to model the effect of NaCl concentration within a fixed liquid film."
+        },
+        {
+          "evidence_id": "A11_EQ3",
+          "supports": "Supports a promoting effect of chloride on corrosion, shown as a positive linear term in a mass-loss regression.",
+          "does_not_support": "Does not give a log-current law in solution NaCl concentration or prove global monotonicity.",
+          "transfer_assumptions": "The qualitative trend of increased corrosion with chloride deposition is assumed to hold for increased concentration in a liquid film, and mass loss is a proxy for corrosion current."
+        }
+      ],
+      "process_arguments": [
+        "Increasing NaCl concentration increases the electrolyte's conductivity, reducing ohmic drop and facilitating electrochemical reactions. Chlorides also play a role in breaking down passive surface films, which further promotes corrosion. At very high concentrations, effects like reduced oxygen solubility or changes in ionic activity could limit or even reverse this trend."
+      ],
+      "distinct_alternatives_to_test": [
+        "A strictly monotone and unbounded model (e.g., logarithmic or power-law).",
+        "A monotone model that exhibits saturation at high concentrations (e.g., using a Michaelis-Menten or tanh form).",
+        "A non-monotone model with an interior maximum, where a competing process (like reduced oxygen solubility) becomes dominant at high concentrations.",
+        "A simple linear promotion model as a local approximation."
+      ],
+      "evidence_gaps": [
+        "No experimental data is provided showing corrosion current over a wide range of NaCl concentrations at fixed temperature and film thickness.",
+        "The physical mechanism and concentration threshold for saturation or inhibition are not directly evidenced."
+      ],
+      "excluded_misapplications": [
+        "Applying equations derived for atmospheric deposition (A22_EQ6, A11_EQ3) as direct, unmodified laws for concentration in a liquid film.",
+        "Assuming the existence of a peak and decline in corrosion rate based solely on the presence of chloride, without evidence for a specific attenuating mechanism."
+      ]
+    },
+    {
+      "hypothesis_id": "H3",
+      "evidence_links": [
+        {
+          "evidence_id": "A10_P3",
+          "supports": "Directly supports the hypothesis of a corrosion rate maximum at an intermediate film thickness by citing a relevant finding.",
+          "does_not_support": "No exact h-response function or salt-film coupling function is given on this page.",
+          "transfer_assumptions": "The phenomenon reported for evaporating initial moisture layers is assumed to be qualitatively representative of the behavior in a steady-state thin electrolyte film of controlled thickness."
+        },
+        {
+          "evidence_id": "A33_P4",
+          "supports": "Supports the mechanism for the decline in corrosion at high thickness by describing the role of a limiting current (i_lim) due to oxygen diffusion through the electrolyte.",
+          "does_not_support": "No published relationship i_lim(h), no whole-cell corrosion-current response to film thickness, and no NaCl-film interaction law are supplied here.",
+          "transfer_assumptions": "The principle of oxygen diffusion limitation being the rate-determining step in thick films is applicable to the target E690 steel system."
+        }
+      ],
+      "process_arguments": [
+        "A competition exists between two regimes. In very thin films (h -> 0), the corrosion rate is limited by the availability of a continuous electrolyte path (high ohmic resistance). In very thick films (h -> inf), the rate is limited by the slow diffusion of oxygen through the electrolyte to the cathode on the metal surface. This competition can result in a maximum corrosion rate at an intermediate thickness."
+      ],
+      "distinct_alternatives_to_test": [
+        "A model with an interior maximum, resulting from the product of an increasing availability term and a decreasing transport term.",
+        "A strictly monotone decreasing model, representing a system always limited by transport (e.g., 1/h).",
+        "A strictly monotone increasing model that saturates, representing a system always limited by electrolyte availability."
+      ],
+      "evidence_gaps": [
+        "No direct experimental data is provided showing corrosion current as a function of liquid-film thickness for the target system.",
+        "The specific mathematical forms for the availability-limited and transport-limited regimes are not provided by the evidence."
+      ],
+      "excluded_misapplications": [
+        "Using models for rust-layer growth to describe the effect of liquid-film thickness.",
+        "Directly applying quantitative relationships from experiments with evolving droplets (A50_P10_DROPLETS) to a uniform, controlled film thickness."
+      ]
+    },
+    {
+      "hypothesis_id": "H4",
+      "evidence_links": [
+        {
+          "evidence_id": "A33_P4",
+          "supports": "Supports coupling by identifying that the cathodic limiting current (i_lim) depends on oxygen diffusion. The diffusion coefficient and oxygen solubility are known to be functions of both temperature and salt concentration, implying the film-thickness response will also depend on them.",
+          "does_not_support": "No explicit functional form for the coupling between film thickness and environmental variables is provided.",
+          "transfer_assumptions": "The fundamental physical dependence of oxygen diffusivity and solubility on temperature and salinity is assumed to create a coupled effect in the target experiment."
+        },
+        {
+          "evidence_id": "A22_P5_FILM",
+          "supports": "Supports the general concept of interaction between temperature and film properties in atmospheric corrosion.",
+          "does_not_support": "This dynamic wetting argument does not by itself establish a temperature-by-thickness interaction when thickness is experimentally fixed.",
+          "transfer_assumptions": "The general principle that temperature influences film-related processes can be modeled as a parametric dependence of the h-response on temperature, even if the specific mechanism is diffusion rather than evaporation."
+        }
+      ],
+      "process_arguments": [
+        "The physical properties of the electrolyte film, such as conductivity, oxygen solubility, and the diffusion coefficient of oxygen, are functions of both temperature (tau) and salt concentration (c). Since the film-thickness response (H3) is governed by these properties, its parameters (e.g., the peak height and location) must also be functions of tau and c. For example, changes in oxygen diffusivity with temperature would shift the thickness at which transport limitation becomes dominant."
+      ],
+      "distinct_alternatives_to_test": [
+        "An uncoupled, additive model: f(h) + g(c, tau).",
+        "Amplitude coupling: The shape of the h-response is invariant, but its magnitude is scaled by environment, e.g., g(c, tau) * f(h).",
+        "Scale coupling: The characteristic thickness of the h-response (e.g., peak location) shifts with environment, e.g., f(h / h_scale(c, tau)).",
+        "A general interaction model where both the amplitude and characteristic scale of the h-response depend on the environment."
+      ],
+      "evidence_gaps": [
+        "No experimental data is provided with crossed variations of film thickness and environmental variables (temperature, concentration) to observe or quantify interaction effects.",
+        "The explicit functions describing how physical properties (diffusivity, solubility) depend on c and tau for the specific electrolyte are not given."
+      ],
+      "excluded_misapplications": [
+        "Using the empirical interaction terms from the inapplicable oil-film regression (A42_P12_OIL_FILM) as a justified model for the liquid electrolyte system.",
+        "Asserting a specific form of coupling (e.g., peak shift vs. amplitude change) without a supporting mechanistic argument."
+      ]
+    }
+  ],
+  "overall_evidence_limits": "The provided evidence consists of review articles, theoretical discussions, and experiments on related but distinct systems. No single source provides direct measurements of corrosion current for E690 steel across the full range of temperature, NaCl concentration, and liquid-film thickness. All model construction relies on transferring physical principles and phenomenological forms from these sources, requiring explicit statement of transfer assumptions and recognizing that the models are hypotheses to be tested, not verified mechanisms.",
+  "construction_families": [
+    {
+      "construction_family_id": "H1_ACTIVATION",
+      "hypothesis_id": "H1",
+      "process_or_closure_assumption": "The corrosion rate is governed by a single, dominant thermally activated process, which can be described by an Arrhenius-like law.",
+      "scientific_basis_and_limits": "Based on the general principle of activated kinetics in electrochemistry, supported by the form of the temperature acceleration factor in A22_EQ4. This model may not be accurate if multiple competing temperature-dependent processes are significant.",
+      "mathematical_distinction_to_test": "An exponential dependence on inverse temperature, `exp(-B/tau)`, versus a local polynomial approximation or a null response.",
+      "evidence_ids": [
+        "A22_EQ4"
+      ]
+    },
+    {
+      "construction_family_id": "H2_PROMOTION_SATURATION",
+      "hypothesis_id": "H2",
+      "process_or_closure_assumption": "Salt promotes corrosion, but the effect diminishes at high concentrations, approaching a plateau. This can be modeled with a saturating function.",
+      "scientific_basis_and_limits": "Based on the general promoting effect of chlorides (A11_EQ3, A22_EQ6) combined with the physical expectation of a limiting factor at high concentration (e.g., finite number of active sites, or conductivity no longer being limiting).",
+      "mathematical_distinction_to_test": "A function that is monotonically increasing but has a finite limit as c -> infinity (e.g., `c/(K+c)`), distinct from an unbounded or non-monotone function.",
+      "evidence_ids": [
+        "A11_EQ3",
+        "A22_EQ6"
+      ]
+    },
+    {
+      "construction_family_id": "H2_PROMOTION_ATTENUATION",
+      "hypothesis_id": "H2",
+      "process_or_closure_assumption": "Salt promotes corrosion up to a point, after which a competing process (e.g., reduced oxygen solubility) causes the rate to decrease, resulting in an interior maximum.",
+      "scientific_basis_and_limits": "Extends the promotion mechanism (A11_EQ3, A22_EQ6) by postulating a high-concentration inhibiting process. This is a plausible hypothesis but lacks direct evidence for the downturn in the provided sources.",
+      "mathematical_distinction_to_test": "A non-monotone function with a single interior maximum, distinct from any monotone function.",
+      "evidence_ids": [
+        "A11_EQ3",
+        "A22_EQ6"
+      ]
+    },
+    {
+      "construction_family_id": "H3_TRANSPORT_AVAILABILITY",
+      "hypothesis_id": "H3",
+      "process_or_closure_assumption": "The corrosion rate is a product of an increasing function of h (representing electrolyte availability) and a decreasing function of h (representing oxygen transport limitation).",
+      "scientific_basis_and_limits": "This combines the concept of an availability-limited thin-film regime with the transport-limited thick-film regime (A33_P4), which can explain the reported peak (A10_P3). The exact forms of the two competing functions are not specified by the evidence.",
+      "mathematical_distinction_to_test": "A function with an interior maximum, distinct from monotone increasing or decreasing alternatives.",
+      "evidence_ids": [
+        "A10_P3",
+        "A33_P4"
+      ]
+    },
+    {
+      "construction_family_id": "H4_AMPLITUDE_COUPLING",
+      "hypothesis_id": "H4",
+      "process_or_closure_assumption": "Environmental conditions (c, tau) primarily affect the overall rate of reaction kinetics, scaling the amplitude of the film-thickness response without changing its characteristic shape or peak location.",
+      "scientific_basis_and_limits": "This assumes that the main effect of temperature and salinity is on kinetic prefactors or surface availability, rather than on the diffusion process that sets the length scale. This is a simpler form of interaction to test against.",
+      "mathematical_distinction_to_test": "A multiplicatively separable form `g(c, tau) * f(h)`, where the shape of `f(h)` is invariant.",
+      "evidence_ids": [
+        "A33_P4"
+      ]
+    },
+    {
+      "construction_family_id": "H4_SCALE_COUPLING",
+      "hypothesis_id": "H4",
+      "process_or_closure_assumption": "Environmental conditions (c, tau) primarily affect the physical properties (e.g., oxygen diffusivity) that determine the characteristic length scale of the film-thickness response, shifting its peak location.",
+      "scientific_basis_and_limits": "Based on the principle that diffusion coefficients are temperature and salinity dependent (related to A33_P4). This would directly impact the thickness at which transport limitation becomes dominant.",
+      "mathematical_distinction_to_test": "A non-separable form where the environment variables appear inside the film-thickness function, such as `f(h / h_scale(c, tau))`, which shifts the function's features along the h-axis.",
+      "evidence_ids": [
+        "A33_P4"
+      ]
+    }
+  ],
+  "unjustified_routes": [
+    "Directly applying the full empirical regression equation for steel thickness loss under an oil film (A42_P12_OIL_FILM) to model corrosion current under a liquid electrolyte film.",
+    "Using equations for atmospheric chloride deposition (A11_EQ3, A22_EQ6) as direct quantitative laws for NaCl concentration in a liquid film without re-derivation and justification of the change in variables.",
+    "Modeling the effect of uniform liquid-film thickness (h) using physics or correlations derived from evolving, non-uniform droplet experiments (A50_P10_DROPLETS).",
+    "Claiming a model is a proven physical mechanism solely because it is based on a phenomenological equation from a review paper, without acknowledging the underlying assumptions and limitations."
+  ]
+}

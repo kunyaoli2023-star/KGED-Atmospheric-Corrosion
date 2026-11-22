@@ -1,0 +1,164 @@
+{
+  "agent": "Agent 4: Front analysis (WHOLE_PARETO_FRONTIER_ANALYST, exact original prompt, zero hints)",
+  "n_runs": 5,
+  "total_api_attempts": 5,
+  "first_try_valid_rate": 1.0,
+  "schema_failure_count": 0,
+  "unique_response_sha256_count": 5,
+  "action_tuple_jaccard": {
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "pairs": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "parent_target_axis_jaccard": {
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "pairs": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "cited_equation_key_jaccard": {
+    "mean": 0.7429,
+    "std": 0.21,
+    "min": 0.5714,
+    "max": 1.0,
+    "pairs": [
+      1.0,
+      0.5714,
+      1.0,
+      0.5714,
+      0.5714,
+      1.0,
+      0.5714,
+      0.5714,
+      1.0,
+      0.5714
+    ]
+  },
+  "cited_evidence_id_jaccard": {
+    "mean": 0.5831,
+    "std": 0.2055,
+    "min": 0.3846,
+    "max": 1.0,
+    "pairs": [
+      1.0,
+      0.3846,
+      0.5385,
+      0.4167,
+      0.3846,
+      0.5385,
+      0.4167,
+      0.6,
+      0.9091,
+      0.6429
+    ]
+  },
+  "per_run_action_tuples": [
+    [
+      [
+        "H2",
+        "COMPARE_EXISTING_FORMS",
+        "C_wt"
+      ]
+    ],
+    [
+      [
+        "H2",
+        "COMPARE_EXISTING_FORMS",
+        "C_wt"
+      ]
+    ],
+    [
+      [
+        "H2",
+        "COMPARE_EXISTING_FORMS",
+        "C_wt"
+      ]
+    ],
+    [
+      [
+        "H2",
+        "COMPARE_EXISTING_FORMS",
+        "C_wt"
+      ]
+    ],
+    [
+      [
+        "H2",
+        "COMPARE_EXISTING_FORMS",
+        "C_wt"
+      ]
+    ]
+  ],
+  "call_stats": [
+    {
+      "role": "WHOLE_PARETO_FRONTIER_ANALYST",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "79e1fe51cc04a80ca1312aec613f89eda54528df3f28a4601d091327fb1ff88e",
+      "response_sha256": "bfb8f3407ac94356889ebe58f890f1733149999ac849ad8ca915c4539847a6fa",
+      "seconds": 92.55
+    },
+    {
+      "role": "WHOLE_PARETO_FRONTIER_ANALYST",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "79e1fe51cc04a80ca1312aec613f89eda54528df3f28a4601d091327fb1ff88e",
+      "response_sha256": "2fc1e4af94e74d88fae10ceb3fbd58ad74b5987dd5b8525da1a2e994afd712a3",
+      "seconds": 99.3
+    },
+    {
+      "role": "WHOLE_PARETO_FRONTIER_ANALYST",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "79e1fe51cc04a80ca1312aec613f89eda54528df3f28a4601d091327fb1ff88e",
+      "response_sha256": "69e8a207bc600416c9015ca20a554c1341361e5a3b25606d1d02377dbdc4c348",
+      "seconds": 81.01
+    },
+    {
+      "role": "WHOLE_PARETO_FRONTIER_ANALYST",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "79e1fe51cc04a80ca1312aec613f89eda54528df3f28a4601d091327fb1ff88e",
+      "response_sha256": "902dea9413e23da7ce336412557b44bf6795f694156cc1224e99907b16d2d5bb",
+      "seconds": 89.17
+    },
+    {
+      "role": "WHOLE_PARETO_FRONTIER_ANALYST",
+      "attempt_count": 1,
+      "first_try_valid": true,
+      "schema_failures": [],
+      "prompt_sha256": "79e1fe51cc04a80ca1312aec613f89eda54528df3f28a4601d091327fb1ff88e",
+      "response_sha256": "7f53b2a7a556c67da95854e200fc0ee2c86ea484fabcf756eb3e86d491bdf71f",
+      "seconds": 109.39
+    }
+  ]
+}

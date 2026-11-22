@@ -1,0 +1,92 @@
+{
+  "proposals": [
+    {
+      "proposal_id": "cycle_1_H1_0::H1_ARRHENIUS_LOGARITHMIC_1",
+      "hypothesis_id": "H1",
+      "family": "H1_ARRHENIUS",
+      "scientific_argument": "This proposal introduces a logarithmic dependence on temperature as a simple, phenomenological rival to the Arrhenius and linear forms. This form exhibits diminishing returns, where the effect of increasing temperature slows down at higher temperatures. It provides a different curvature compared to the existing models and serves as a test for whether a concave response is favored by the data over the convex Arrhenius or linear forms.",
+      "source_links": [
+        {
+          "evidence_id": "A22_EQ4",
+          "supports": "ANALOGY_ONLY",
+          "source_to_module_mapping": "A22_EQ4 provides general context for temperature acceleration in corrosion, but does not specify a logarithmic form. This proposal is a phenomenological closure to test alternative curvatures for the temperature response."
+        }
+      ],
+      "evidence_gap": "The corpus lacks direct evidence for any specific functional form of temperature dependence for the E690 steel system. This logarithmic form is a plausible phenomenological alternative that has not yet been tested.",
+      "construction_family_id": "H1_ARRHENIUS",
+      "mathematical_distinction": "A logarithmic dependence on temperature, `log(tau)`, which is strictly concave (diminishing returns). This is contrasted with the convex Arrhenius form (`1-1/tau`), the linear form (`tau-1`), and the flexible-curvature power-law form.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The log-corrosion current will increase with temperature, but the rate of increase will slow down at higher temperatures, following a logarithmic curve."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:logarithmic",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "cycle_1_H1_1::H1_ARRHENIUS_POWER_2",
+      "hypothesis_id": "H1",
+      "family": "H1_ARRHENIUS",
+      "scientific_argument": "This proposal introduces a power-law dependence on temperature. This is a flexible phenomenological form that can capture either concave (exponent < 1) or convex (exponent > 1) behavior, providing a more general local approximation than the fixed-curvature linear or logarithmic models. It serves as a rival to test the specific curvature implied by the Arrhenius model against a more flexible alternative.",
+      "source_links": [
+        {
+          "evidence_id": "A22_EQ4",
+          "supports": "ANALOGY_ONLY",
+          "source_to_module_mapping": "A22_EQ4 provides general context for temperature acceleration in corrosion, but does not specify a power-law form for temperature. This proposal is a phenomenological closure to test a flexible-curvature alternative."
+        }
+      ],
+      "evidence_gap": "The corpus lacks direct evidence for any specific functional form of temperature dependence for the E690 steel system. This power-law form is a flexible phenomenological alternative that has not yet been tested.",
+      "construction_family_id": "H1_ARRHENIUS",
+      "mathematical_distinction": "A power-law dependence `tau**p1`, which can be either concave or convex depending on the fitted exponent `p1`. This contrasts with the fixed curvatures of the Arrhenius, linear, and logarithmic models.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The log-corrosion current will follow a power-law relationship with temperature, allowing for either accelerating or decelerating increase."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:power_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "cycle_1_H1_2::H1_ARRHENIUS_TANH_SATURATION_3",
+      "hypothesis_id": "H1",
+      "family": "H1_ARRHENIUS",
+      "scientific_argument": "This proposal introduces a hyperbolic tangent (tanh) saturation model. Similar to the already-evaluated exponential saturation model, this form represents a process that is activated by temperature but eventually limited by another, temperature-insensitive factor. The `tanh` function provides a different saturation profile (symmetric S-shape) compared to the exponential form, offering an alternative way to model this phenomenological behavior and test the robustness of the saturation hypothesis.",
+      "source_links": [
+        {
+          "evidence_id": "A22_EQ4",
+          "supports": "ANALOGY_ONLY",
+          "source_to_module_mapping": "A22_EQ4 provides general context for temperature acceleration. This proposal models a potential saturation of that effect, which is a phenomenological closure not directly supported by the source."
+        }
+      ],
+      "evidence_gap": "The corpus lacks direct evidence for a saturating temperature effect in this system. This `tanh` form provides an alternative mathematical representation of saturation to the already-tested exponential form.",
+      "construction_family_id": "H1_ARRHENIUS",
+      "mathematical_distinction": "A saturating function with a symmetric, S-shaped profile (`tanh`) contrasted with the asymmetric profile of the already-evaluated exponential saturation model (`1-exp(-p1*tau)`).",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The effect of temperature on corrosion current will diminish at higher temperatures, approaching a plateau, with a specific S-shaped transition."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:T_LOCAL",
+      "template_id": "template:H1:tanh_saturation",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "coverage_not_claimed": [
+    "No compositions of H1 templates (e.g., SUM_LOG_RESPONSES) are proposed. The H1 question concerns the dominant temperature effect, and there is no evidence in the corpus to suggest a competition between two distinct temperature-driven processes that would justify a composite model."
+  ],
+  "why_stop_adding_forms": "All available `NOT_EVALUATED` templates for H1 in the mathematical graph have been proposed. The existing pool already contains the primary Arrhenius form, a linear rival, a null control, and an exponential saturation rival. The new proposals add logarithmic, power-law, and an alternative saturation form. This set of proposals sufficiently covers the space of simple, monotonic temperature dependencies for this stage of discovery. Further compositions are not justified by the evidence."
+}

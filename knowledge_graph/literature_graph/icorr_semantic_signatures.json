@@ -1,0 +1,2336 @@
+[
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = a + b*Cl*t_wet_5_25 + c*Cl*t_wet_25_35 + d*S*t_wet_5_25 + e*S*t_wet_25_35 + f*Cl*t_rain + g*S*t_rain + h*mm_per_t_rain",
+    "term_analysis": {
+      "Time": "t_wet_5_25 (Linear), t_wet_25_35 (Linear), t_rain (Linear), mm_per_t_rain (Linear)",
+      "Temp": "None (Temperature influence is implicit via time of wetness ranges)",
+      "RH": "None",
+      "Cl": "Linear (Cl)",
+      "Interaction": "Pollutant-Time interactions (Cl*t_wet, S*t_wet, Cl*t_rain, S*t_rain)"
+    },
+    "reason": "This is a general empirical regression model for atmospheric corrosion, incorporating linear effects of chloride and sulfur dioxide deposition rates, time of wetness in specific temperature ranges, and rainfall characteristics, including various pollutant-time interactions.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = (17.74 ± 26.52) + ((2.47 ± 0.07)*Cl + (0.071 ± 0.009)*S)*t_wet_5_25 - (1.5 ± 0.07)*Cl*t_wet_25_35",
+    "term_analysis": {
+      "Time": "t_wet_5_25 (Linear), t_wet_25_35 (Linear)",
+      "Temp": "None (Temperature influence is implicit via time of wetness ranges)",
+      "RH": "None",
+      "Cl": "Linear (Cl)",
+      "Interaction": "Pollutant-Time interactions (Cl*t_wet_5_25, S*t_wet_5_25, Cl*t_wet_25_35)"
+    },
+    "reason": "This is a specific empirical regression model for outdoor carbon steel corrosion, showing linear effects of chloride and SO2 deposition rates interacting with time of wetness in different temperature ranges.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = (31.55 ± 77.95) + ((2.02 ± 0.62)*Cl + (0.13 ± 0.08)*S)*t_wet_5_25 - (1.06 ± 0.62)*Cl*t_wet_25_35",
+    "term_analysis": {
+      "Time": "t_wet_5_25 (Linear), t_wet_25_35 (Linear)",
+      "Temp": "None (Temperature influence is implicit via time of wetness ranges)",
+      "RH": "None",
+      "Cl": "Linear (Cl)",
+      "Interaction": "Pollutant-Time interactions (Cl*t_wet_5_25, S*t_wet_5_25, Cl*t_wet_25_35)"
+    },
+    "reason": "This is a specific empirical regression model for indoor carbon steel corrosion, showing linear effects of chloride and SO2 deposition rates interacting with time of wetness in different temperature ranges.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "17_Outdoor and indoor atmospheric corrosion of carbon steel.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = (21.29 ± 101.07) + ((0.62 ± 0.07)*t_rain + (1.59 ± 0.45)*t_wet_5_25 - (1.11 ± 0.44)*t_wet_25_35)*Cl + (0.09 ± 0.06)*S*t_wet_25_35",
+    "term_analysis": {
+      "Time": "t_rain (Linear), t_wet_5_25 (Linear), t_wet_25_35 (Linear)",
+      "Temp": "None (Temperature influence is implicit via time of wetness ranges)",
+      "RH": "None",
+      "Cl": "Linear (Cl)",
+      "Interaction": "Pollutant-Time interactions (Cl*t_rain, Cl*t_wet_5_25, Cl*t_wet_25_35, S*t_wet_25_35)"
+    },
+    "reason": "This is a combined empirical regression model for both outdoor and indoor conditions, showing linear effects of rainfall time, time of wetness, and deposition rates of chloride and SO2, with various pollutant-time interactions.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A + B*Cl*t_wet_5_25 + C*Cl*t_wet_25_35 + D*S*t_wet_5_25 + E*S*t_wet_25_35 + F*Cl_rain + G*S_rain + H*Rainfall_mm",
+    "term_analysis": {
+      "Time": "t_wet_5_25, t_wet_25_35 (Linear)",
+      "Temp": "t_wet_5_25, t_wet_25_35 (Threshold)",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*t_wet, S*t_wet, Cl*Rainfall, S*Rainfall, Rainfall_mm"
+    },
+    "reason": "This is a general empirical model for atmospheric corrosion, incorporating linear effects of pollutants, time of wetness (temperature-conditioned), and rainfall cleansing. The coefficients 'a' through 'h' represent empirical constants.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Threshold | RH:None | Cl:Linear | Inter:T*Cl"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A + B*Cl_rain + C*S*t_wet_5_25 + D*Rainfall_mm",
+    "term_analysis": {
+      "Time": "t_wet_5_25 (Linear)",
+      "Temp": "t_wet_5_25 (Threshold)",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*Rainfall, S*t_wet, Rainfall_mm"
+    },
+    "reason": "This empirical model calculates the outdoor atmospheric corrosion rate for copper, showing linear dependence on chloride (interacting with rainfall), SO2 (interacting with time of wetness), and rainfall amount. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Threshold | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A*Cl*t_wet_5_25 + B*S*t_wet_5_25",
+    "term_analysis": {
+      "Time": "t_wet_5_25 (Linear)",
+      "Temp": "t_wet_5_25 (Threshold)",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*t_wet, S*t_wet"
+    },
+    "reason": "This empirical model calculates the indoor atmospheric corrosion rate for copper, showing linear dependence on chloride and SO2, both interacting with time of wetness at a specific temperature range. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Threshold | RH:None | Cl:Linear | Inter:T*Cl"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = (A*Cl + B*S)*t_wet_5_25 - C*Cl_rain + D*Rainfall_mm",
+    "term_analysis": {
+      "Time": "t_wet_5_25 (Linear)",
+      "Temp": "t_wet_5_25 (Threshold)",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*t_wet, S*t_wet, Cl*Rainfall, Rainfall_mm"
+    },
+    "reason": "This empirical model calculates the combined outdoor and indoor atmospheric corrosion rate for copper, incorporating linear effects of chloride and SO2 (interacting with time of wetness), and rainfall characteristics. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Threshold | RH:None | Cl:Linear | Inter:T*Cl"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A + B*Cl_rain",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*Rainfall"
+    },
+    "reason": "This empirical model calculates the outdoor atmospheric corrosion rate for zinc, primarily influenced by the linear interaction of chloride deposition rate and rainfall. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq6",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = (A*Cl + B*S)*t_wet_5_25 - C*Cl*t_wet_25_35",
+    "term_analysis": {
+      "Time": "t_wet_5_25, t_wet_25_35 (Linear)",
+      "Temp": "t_wet_5_25, t_wet_25_35 (Threshold)",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*t_wet, S*t_wet"
+    },
+    "reason": "This empirical model calculates the indoor atmospheric corrosion rate for zinc, showing linear dependence on chloride and SO2, both interacting with time of wetness at different temperature ranges. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Threshold | RH:None | Cl:Linear | Inter:T*Cl"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A + (B*t_wet_5_25 - C*t_wet_25_35 + D*Rainfall_duration)*Cl + E*Rainfall_mm",
+    "term_analysis": {
+      "Time": "t_wet_5_25, t_wet_25_35 (Linear)",
+      "Temp": "t_wet_5_25, t_wet_25_35 (Threshold)",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*t_wet, Cl*Rainfall_duration, Rainfall_mm"
+    },
+    "reason": "This empirical model calculates the combined outdoor and indoor atmospheric corrosion rate for zinc, considering time of wetness at different temperature ranges, chloride deposition rate, and rainfall characteristics. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Threshold | RH:None | Cl:Linear | Inter:T*Cl"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A + B*Cl_rain",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*Rainfall"
+    },
+    "reason": "This empirical model calculates the outdoor atmospheric corrosion rate for aluminium, primarily influenced by the linear interaction of chloride deposition rate and rainfall. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A*Cl*t_wet_5_25 + B*S*t_wet_5_25",
+    "term_analysis": {
+      "Time": "t_wet_5_25 (Linear)",
+      "Temp": "t_wet_5_25 (Threshold)",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*t_wet, S*t_wet"
+    },
+    "reason": "This empirical model calculates the indoor atmospheric corrosion rate for aluminium, showing linear dependence on chloride and SO2, both interacting with time of wetness at a specific temperature range. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Threshold | RH:None | Cl:Linear | Inter:T*Cl"
+  },
+  {
+    "id": "5_Outdoor and indoor atmospheric corrosion of non-ferrous metals.pdf_Eq10",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A + (B*Cl + C*S)*t_wet_5_25 - (D*Rainfall_duration + E*t_wet_25_35)*Cl - F*Rainfall_mm",
+    "term_analysis": {
+      "Time": "t_wet_5_25, t_wet_25_35 (Linear)",
+      "Temp": "t_wet_5_25, t_wet_25_35 (Threshold)",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "Cl*t_wet, S*t_wet, Cl*Rainfall_duration, Cl*t_wet_25_35, Rainfall_mm"
+    },
+    "reason": "This empirical model calculates the combined outdoor and indoor atmospheric corrosion rate for aluminium, considering chloride and SO2 deposition rates, time of wetness at different temperature ranges, and rainfall characteristics. The coefficients are derived from regression analysis.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Threshold | RH:None | Cl:Linear | Inter:T*Cl"
+  },
+  {
+    "id": "23_XRD and SEM studies of the layer of corrosion products for carbon steel in various different environments in the province of Las Palmas (The Canary Is.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "term_analysis": {
+      "Time": null,
+      "Temp": null,
+      "RH": null,
+      "Cl": null,
+      "Interaction": null
+    },
+    "reason": "This formula defines the ratio of chloride ion concentration to hydroxyl ion concentration (r'), which is used to predict the formation of specific corrosion products (e.g., goethite or akaganeite). It does not directly quantify or predict a corrosion rate (i.e., icorr, mass loss, or penetration depth).",
+    "signature": null
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_Cl = -594.8 + 2.75 * i_corr_noCl",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is an empirical linear regression relating mass loss under chloride conditions to mass loss under natural conditions. It does not explicitly model environmental variables like time, temperature, RH, or chloride concentration as independent terms.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_Cl = 6.13 + 2.75 * i_corr_noCl",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "Similar to Eq1, this formula is an empirical linear regression for copper, relating mass loss under chloride conditions to mass loss under natural conditions, without explicit independent environmental variables.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 61.12 + 0.19 * Cl – 0.41 * Rain_Amount",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "0.19 * Cl (Linear)",
+      "Interaction": "None"
+    },
+    "reason": "This is an empirical linear regression model for monthly steel mass loss, directly incorporating chloride deposition rate and rainfall amount as linear terms. Time is implicitly fixed (monthly).",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 6.68 + 0.011 * Cl – 0.016 * Rain_Amount",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "0.011 * Cl (Linear)",
+      "Interaction": "None"
+    },
+    "reason": "Similar to Eq3, this is an empirical linear regression model for three-monthly copper mass loss, with linear terms for chloride deposition rate and rainfall amount. Time is implicitly fixed (three-monthly).",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = a * t^b",
+    "term_analysis": {
+      "Time": "t^b (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is the general bi-logarithm equation, a widely used semi-empirical model for atmospheric corrosion kinetics, describing mass loss as a power function of exposure time.",
+    "signature": "Semi-Empirical | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq6",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = a * t^b * Cl^c * (Rain_Amount/Rainy_Days)^d",
+    "term_analysis": {
+      "Time": "t^b (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Cl^c (Power)",
+      "Interaction": "None"
+    },
+    "reason": "This model extends the bi-logarithm equation (Eq5) by incorporating chloride deposition rate and the rain washing effect (rainfall amount per rainy day) as power-law terms, making it a semi-empirical model.",
+    "signature": "Semi-Empirical | Time:Power-law | T:None | RH:None | Cl:Power | Inter:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 18.8516 * t^1.0947 * Cl^0.4313 * (Rain_Amount/Rainy_Days)^-0.2447",
+    "term_analysis": {
+      "Time": "t^1.0947 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Cl^0.4313 (Power)",
+      "Interaction": "None"
+    },
+    "reason": "This is a specific instance of the extended bi-logarithm model (Eq6) for steel, showing mass loss as a power function of time, chloride deposition, and the inverse power of the rain washing effect.",
+    "signature": "Semi-Empirical | Time:Power-law | T:None | RH:None | Cl:Power | Inter:None"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq8",
+    "is_icorr_model": false,
+    "standardized_formula": "Not applicable",
+    "term_analysis": {
+      "Time": "Not applicable",
+      "Temp": "Not applicable",
+      "RH": "Not applicable",
+      "Cl": "Not applicable",
+      "Interaction": "Not applicable"
+    },
+    "reason": "This formula describes an ARIMA (Autoregressive Integrated Moving Average) scheme, specifically a first-order autoregressive model, used for correcting auto-correlation in regression residuals, not for predicting corrosion rate.",
+    "signature": "Not applicable"
+  },
+  {
+    "id": "11_Changes in atmospheric corrosion rate caused by chloride ions depending on rain regime.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 1.2466 * t^0.7858 * Cl^0.2616 * (Rain_Amount/Rainy_Days)^-0.2379",
+    "term_analysis": {
+      "Time": "t^0.7858 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Cl^0.2616 (Power)",
+      "Interaction": "None"
+    },
+    "reason": "This is a specific instance of the extended bi-logarithm model (Eq6) for copper, showing mass loss as a power function of time, chloride deposition, and the inverse power of the rain washing effect.",
+    "signature": "Semi-Empirical | Time:Power-law | T:None | RH:None | Cl:Power | Inter:None"
+  },
+  {
+    "id": "24_Corrosion monitoring of nickel-containing steels in marine atmospheric environment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A * exp(-Ea/T) * exp(B*RH) * Cl^C",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(-Ea/T) (Arrhenius)",
+      "RH": "exp(B*RH) (Exponential)",
+      "Cl": "Cl^C (Power)",
+      "Interaction": "None"
+    },
+    "reason": "The Stern-Geary equation defines instantaneous corrosion current density. While the equation itself doesn't explicitly contain environmental variables, the underlying corrosion process it describes in a marine atmospheric environment is activation-controlled and highly dependent on temperature (Arrhenius), relative humidity (exponential), and chloride concentration (power-law). The formula provides an instantaneous rate, hence no explicit time dependence.",
+    "signature": "Activation-Controlled | Time:None | T:Arrhenius | RH:Exponential | Cl:Power | Inter:None"
+  },
+  {
+    "id": "24_Corrosion monitoring of nickel-containing steels in marine atmospheric environment.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "d = K * t * A * exp(-Ea/T) * exp(B*RH) * Cl^C",
+    "term_analysis": {
+      "Time": "t (Linear)",
+      "Temp": "exp(-Ea/T) (Arrhenius)",
+      "RH": "exp(B*RH) (Exponential)",
+      "Cl": "Cl^C (Power)",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates cumulative corrosion thickness loss (d) from total charge (Q). Total charge is the integral of instantaneous corrosion current density (i_corr) over time. Assuming a constant i_corr over the integration period, Q is linearly proportional to time. The environmental dependencies (Temperature, RH, Chloride) are inherited from the underlying i_corr kinetics, which are activation-controlled in a marine atmospheric environment.",
+    "signature": "Activation-Controlled | Time:Linear | T:Arrhenius | RH:Exponential | Cl:Power | Inter:None"
+  },
+  {
+    "id": "4_Kinetics of atmospheric corrosion of mild steel, zinc, galvanized iron and aluminium at 10 exposure stations in India.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_loss = K * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical power law model describes total corrosion loss (mass_loss) as a function of exposure time (t). The constants K and n are empirically derived and implicitly incorporate environmental factors and material properties.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "4_Kinetics of atmospheric corrosion of mild steel, zinc, galvanized iron and aluminium at 10 exposure stations in India.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "log(mass_loss) = log(K) + n * log(t)",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is the logarithmic transformation of the empirical power law model (Eq1), used for linear regression analysis to determine the constants K and n. The underlying physical dependence on time remains a power law.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "19_Weatherability of 09CuPCrNi steel in a tropical marine environment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "cr = Δd / Δt",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the average corrosion rate (cr) over a discrete time interval (Δt) based on the measured change in thickness loss (Δd). It does not incorporate environmental variables (Temperature, Relative Humidity, Chloride) or model the evolution of corrosion with total exposure time.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "d_penetration = (mass_loss / (rho * A)) * 10^4",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is a conversion from weight loss to penetration depth, not a predictive model of corrosion behavior based on environmental parameters or time.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "d_penetration = A * t^B",
+    "term_analysis": {
+      "Time": "t^B (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula predicts cumulative thickness loss as a power-law function of exposure time, with empirical constants A and B. It does not explicitly include environmental factors.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "1_Corrosion of low carbon steel in atmospheric environments of different chloride content.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "d_penetration = A * t_1^(B_1 - B_2) * t^(B_2)",
+    "term_analysis": {
+      "Time": "t^(B_2) (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula predicts cumulative thickness loss with a power-law dependence on time, accounting for a transition time in marine environments. It uses empirical constants but lacks explicit environmental variables.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "penetration_depth = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical equation directly models penetration depth (thickness loss) as a function of exposure time, representing the extent of corrosion.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "penetration_depth = (mass_loss * 10^4) / (rho * Area)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is a conversion equation to calculate thickness loss from measured weight loss, density, and exposed area. It does not predict corrosion rate or extent based on time or environmental variables.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "log(penetration_depth) = log(A) + n * log(t)",
+    "term_analysis": {
+      "Time": "log(t) (Logarithmic)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is the logarithmic transformation of Eq. 1, used for linear regression to determine constants for the power-law corrosion kinetics model, thus predicting corrosion extent.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "cr_avg = (penetration_depth_m - penetration_depth_m_minus_1) / (t_m - t_m_minus_1)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the average corrosion velocity between two measured points. It is a definition for calculating observed rates, not a predictive model based on environmental or time variables.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "2_The atmospheric corrosion kinetics of low carbon steel in a tropical marine environment.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "cr_inst = A * n * t^(n-1)",
+    "term_analysis": {
+      "Time": "t^(n-1) (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation calculates the instantaneous corrosion velocity (rate) by taking the first derivative of the empirical thickness loss equation (Eq. 1) with respect to time.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "20_Atmospheric corrosion of mild steel.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_loss = A * t^B",
+    "term_analysis": {
+      "Time": "t^B (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "The formula directly models total metal loss (C) over exposure time (t), which is a fundamental measure of corrosion. The description explicitly links C to 'long-term atmospheric corrosion of steel'.",
+    "signature": "Diffusion-Limited | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes the cumulative corrosion weight gain (AW) as a power function of time (t, replacing N cycles). While not an instantaneous rate, 'mass loss' (or gain) is considered a form of corrosion outcome in the prompt. The parameters A and n are empirical constants derived from experimental data in a specific environment, thus environmental factors are embedded rather than explicit.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = 0.00064565 * t^0.95",
+    "term_analysis": {
+      "Time": "t^0.95 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This specific formula describes the cumulative corrosion weight gain (AW) for the first stage as a power function of time (t, replacing N cycles). The constant (10^-3.19) and exponent (0.95) are empirically derived from experiments in a simulated coastal-industrial atmosphere, embedding environmental influences within these constants.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "7_Evolution of atmospheric corrosion of MnCuP weathering steel in a simulated coastal-industrial atmosphere.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = 0.00218776 * t^0.56",
+    "term_analysis": {
+      "Time": "t^0.56 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This specific formula describes the cumulative corrosion weight gain (AW) for the second stage as a power function of time (t, replacing N cycles). The constant (10^-2.66) and exponent (0.56) are empirically derived from experiments in a simulated coastal-industrial atmosphere, embedding environmental influences within these constants.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "6_Long-term monitoring of atmospheric corrosion at weathering steel bridges by an electrochemical impedance method.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = (1.7e-5) * (Z_10mHz)^0.16",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula empirically correlates the average corrosion current density (i_corr) with the average impedance at 10 mHz (Z_10mHz). It is a relationship between two measured corrosion-related parameters and does not directly incorporate environmental variables or time as explicit inputs.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "6_Long-term monitoring of atmospheric corrosion at weathering steel bridges by an electrochemical impedance method.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "corrosion_loss = 0.4354 * rust_thickness - 5.7118",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes an empirical linear regression between corrosion thickness loss (corrosion_loss) and the thickness of the rust layer (rust_thickness). It correlates two physical dimensions related to corrosion and does not directly incorporate environmental variables or time as explicit inputs.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "cr = mass_loss / (density * area * t)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the corrosion rate (penetration rate) based on measured mass loss over a specific duration. It is a calculation from experimental data rather than a predictive model incorporating environmental variables. The time variable 't' serves to normalize the total mass loss into a rate, implying a constant rate over the measurement period.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "15_Relation Between Open Circuit Potential and Polarization Resistance with Rust and Corrosion Monitoring of Mild Steel.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "Rp = (ΔE / Δi) | E=Ecorr",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines Linear Polarization Resistance (Rp) as a measurement technique. While Rp is inversely proportional to the corrosion current density (i_corr) via the Stern-Geary equation (i_corr = B/Rp), the formula itself does not explicitly include environmental variables like time, temperature, relative humidity, or chloride concentration in its mathematical form.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = C0_prime / t + alpha_prime",
+    "term_analysis": {
+      "Time": "t^-1 (Power) and t^0 (Constant)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation directly describes the instantaneous corrosion rate (σ) as a function of time (τ).",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_avg = (C_final - C_initial) / (t_final - t_initial)",
+    "term_analysis": {
+      "Time": "Implicit (derived from C values at different times)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation defines the average corrosion rate between two time points based on measured corrosion losses.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq6",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_stationary = (C_8yr - C_6yr) / 2yr",
+    "term_analysis": {
+      "Time": "None (specific calculation at fixed time interval)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation calculates a specific stationary corrosion rate (α) from empirical data points.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = C1_prime * n_prime * t^(n_prime - 1)",
+    "term_analysis": {
+      "Time": "t^(n-1) (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation calculates the instantaneous corrosion rate (σins) by differentiating the power function for corrosion loss (Eq. 1).",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "21_Long-term prediction of metal corrosion losses in atmosphere using a power-linear function.pdf_Eq11",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = b_prime * r_corr_prime * t^(b_prime - 1)",
+    "term_analysis": {
+      "Time": "t^(b-1) (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation calculates the corrosion rate by differentiating the power-law function for corrosion loss (Eq. 10).",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "D = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical power-law model describes thickness reduction (penetration depth) over time. The constants A and n implicitly account for environmental factors, but the formula does not explicitly show dependencies on T, RH, or Cl.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "D = β * t^α",
+    "term_analysis": {
+      "Time": "t^α (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical power-law model describes mean pit depth (penetration depth) over time. The constants β and α implicitly account for environmental factors, but the formula does not explicitly show dependencies on T, RH, or Cl.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = (D_n - D_{n-1}) / (t_n - t_{n-1})",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation defines the average corrosion velocity (corrosion rate) from discrete measurements of penetration depth over a time interval. It does not model the functional dependence of the rate on time or environmental factors.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = α * β * t^(α-1)",
+    "term_analysis": {
+      "Time": "t^(α-1) (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical model for instantaneous corrosion velocity (corrosion rate) is derived from a power-law pit depth model. The constants α and β implicitly account for environmental factors, but the formula does not explicitly show dependencies on T, RH, or Cl.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = V₀ * (1 + (t/T₀))^(α-1)",
+    "term_analysis": {
+      "Time": "(1 + (t/T₀))^(α-1) (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical 'Interpolation Equation' models the pit propagation rate (corrosion rate). The constants V₀, T₀, and α implicitly account for environmental factors, but the formula does not explicitly show dependencies on T, RH, or Cl.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "12_Corrosion behavior of X65 pipeline steel Comparison of wet-Dry cycle and full immersion.pdf_Eq10",
+    "is_icorr_model": true,
+    "standardized_formula": "D = (V₀ * T₀ / α) * ((1 + (t / T₀))^α - 1)",
+    "term_analysis": {
+      "Time": "((1 + (t / T₀))^α - 1) (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical model for maximum pit depth (penetration depth) is derived by integrating the IE model for pit propagation rate. The constants V₀, T₀, and α implicitly account for environmental factors, but the formula does not explicitly show dependencies on T, RH, or Cl.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "Not applicable",
+    "term_analysis": {
+      "Time": "Not applicable",
+      "Temp": "Not applicable",
+      "RH": "Not applicable",
+      "Cl": "Not applicable",
+      "Interaction": "Not applicable"
+    },
+    "reason": "This formula calculates the coefficient of determination (R²), which is a statistical metric, not a corrosion rate prediction model.",
+    "signature": "Not applicable"
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "Not applicable",
+    "term_analysis": {
+      "Time": "Not applicable",
+      "Temp": "Not applicable",
+      "RH": "Not applicable",
+      "Cl": "Not applicable",
+      "Interaction": "Not applicable"
+    },
+    "reason": "This formula calculates the Mean Absolute Error (MAE), which is a statistical metric, not a corrosion rate prediction model.",
+    "signature": "Not applicable"
+  },
+  {
+    "id": "18_Corrosion rate prediction and influencing factors evaluation of low-alloy steels in marine atmosphere using machine learning approach.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "CR = A_T * T + A_RH * RH + A_P * P + A_Solar * Solar + A_Cl * Cl + A_S * S + A_t * t + A_Elements * Alloying_Elements + C",
+    "term_analysis": {
+      "Time": "A_t * t (Linear)",
+      "Temp": "A_T * T (Linear)",
+      "RH": "A_RH * RH (Linear)",
+      "Cl": "A_Cl * Cl (Linear)",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts 'Corrosion rate' based on environmental and material factors using a Multiple Linear Regression (MLR) approach.",
+    "signature": "Empirical-Fitting | Time:Linear | T:Linear | RH:Linear | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "AF(RH) = (RH / RH_0)^A",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "Power (RH^A)",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes an acceleration factor due to relative humidity, not direct corrosion loss or rate.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:Power | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "AF(RH) = ([RH * (1 - RH_0)] / [RH_0 * (1 - RH)])^A",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "Power (Complex Power)",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes an acceleration factor due to relative humidity, not direct corrosion loss or rate.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:Power | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "AF(RH) = exp(A * (RH - RH_0))",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "Exponential (exp(A*RH))",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes an acceleration factor due to relative humidity, not direct corrosion loss or rate.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:Exponential | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "AF(T) = e^(B * (1/T_0 - 1/T))",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "Arrhenius (e^(B/T))",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes an acceleration factor due to temperature, not direct corrosion loss or rate. The temperature dependence is Arrhenius-like.",
+    "signature": "Activation-Controlled | Time:None | T:Arrhenius | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "AF(S) = (S / S_0)^E",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes an acceleration factor due to sulfur dioxide concentration, not direct corrosion loss or rate.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "AF(Cl) = (Cl / Cl_0)^G",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Power (Cl^G)",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes an acceleration factor due to chloride deposition rate, not direct corrosion loss or rate.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Power | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = C1 * t^n",
+    "term_analysis": {
+      "Time": "Power-law (t^n)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts atmospheric corrosion loss (C) over time.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "log(i_corr) = { n1*log(t), if t <= t1; n1*log(t1) + n2*log(t/t1), if t > t1 }",
+    "term_analysis": {
+      "Time": "Logarithmic (log(t))",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts the logarithm of atmospheric corrosion loss (log C) over time.",
+    "signature": "Empirical-Fitting | Time:Logarithmic | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = { rav*t, if t <= 10; rav*10 + rlin*(t-10), if t > 10 }",
+    "term_analysis": {
+      "Time": "Linear (A*t)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts atmospheric corrosion loss (C) over time using a bi-linear model.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq10",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = { C1*t^n, if t <= ts; Cts + alpha*(t-ts), if t > ts }",
+    "term_analysis": {
+      "Time": "Power-law (t^n) and Linear (A*t)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts atmospheric corrosion loss (C) over time using a power-linear model.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq11",
+    "is_icorr_model": true,
+    "standardized_formula": "alpha = (C_8 - C_6) / 2",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation estimates the stationary corrosion rate (alpha) from corrosion loss values at specific times.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq12",
+    "is_icorr_model": true,
+    "standardized_formula": "alpha = C1 * n * ts^(n-1)",
+    "term_analysis": {
+      "Time": "Power-law (ts^(n-1))",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This equation estimates the stationary corrosion rate (alpha) derived from a power function model's instantaneous rate at time ts.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq13",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = a + b*S + c*Cl + d*TOW",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Linear (c*Cl)",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts corrosion loss (C) based on environmental factors in a linear dose-response manner.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq14",
+    "is_icorr_model": true,
+    "standardized_formula": "ln(i_corr) = a + b*ln(S) + c*ln(Cl) + d*ln(TOW)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Logarithmic (ln(Cl))",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts the logarithm of corrosion loss (ln C) based on environmental factors in a log-linear dose-response manner.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Logarithmic | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq15",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = a + (b*T5_25 + c*T25_35 + d*train)*Cl + (e*T5_25 + f*T25_35 + g*train)*S + h*R/train",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Linear (Cl)",
+      "Interaction": "T*Cl"
+    },
+    "reason": "This formula directly predicts corrosion loss (C). TOW categories (T5_25, T25_35) are temperature-related, and they interact multiplicatively with Cl and S.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Linear | Inter:T*Cl"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq16",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = a1 + a2*tw + a3*RH + a4*D + a5*T + a6*Cl + a7*S",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "Linear (a5*T)",
+      "RH": "Linear (a3*RH)",
+      "Cl": "Linear (a6*Cl)",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts corrosion loss (C) based on various environmental factors in a linear fashion.",
+    "signature": "Empirical-Fitting | Time:None | T:Linear | RH:Linear | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq17",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = fdry(T, RH, S, O3) * t^k + fwet(R, H+) * t^m",
+    "term_analysis": {
+      "Time": "Power-law (t^k, t^m)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts corrosion loss (C) by separating dry and wet deposition terms, each with a power-law time dependence. The specific forms of T, RH, S, O3, R, H+ are not detailed here.",
+    "signature": "Semi-Empirical | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq18",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 1.82 + (0.041*R + 1.37*N)*t + (1.71 + 0.471*S^0.22 * e^(0.018*R) * e^(f(T)))*t",
+    "term_analysis": {
+      "Time": "Linear (t)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "T*S"
+    },
+    "reason": "This model predicts zinc corrosion loss (C) with a linear time dependence. The temperature function f(T) is piecewise linear, leading to an exponential dependence on T (e^(f(T))), which is not explicitly covered by the 'Temp_Op' categories. The S and T terms are multiplicative, indicating interaction.",
+    "signature": "Semi-Empirical | Time:Linear | T:None | RH:None | Cl:None | Inter:T*S"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq19",
+    "is_icorr_model": false,
+    "standardized_formula": "f(T) = { 0.062*(T-10), if T < 10; -0.021*(T-10), if T > 10 }",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "Linear (A*T) and Threshold",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines a piecewise linear temperature function, not direct corrosion loss or rate.",
+    "signature": "Empirical-Fitting | Time:None | T:Linear | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq20",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = fdry(S) + fdry(Cl) + fwet(H+)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This model predicts corrosion loss (C) by summing the effects of dry deposition of sulfur dioxide, dry deposition of chlorides, and wet deposition of hydrogen ions. The specific forms of T, RH, Cl, S are detailed in subsequent equations.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq21",
+    "is_icorr_model": true,
+    "standardized_formula": "fdry(S) = A * S^B * e^(C1*RH + g1*T)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "Exponential (exp(A*RH))",
+      "Cl": "None",
+      "Interaction": "T*RH"
+    },
+    "reason": "This function describes a component of corrosion loss. The temperature dependence is linear in the exponent (e^(g1*T)), which is not explicitly covered by 'Temp_Op' categories. RH is exponential, and T and RH interact multiplicatively in the exponential term.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:Exponential | Cl:None | Inter:T*RH"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq22",
+    "is_icorr_model": true,
+    "standardized_formula": "fdry(Cl) = D * Cl^E * e^(m1*RH + k1*T)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "Exponential (exp(A*RH))",
+      "Cl": "Power (Cl^E)",
+      "Interaction": "T*RH"
+    },
+    "reason": "This function describes a component of corrosion loss. The temperature dependence is linear in the exponent (e^(k1*T)), which is not explicitly covered by 'Temp_Op' categories. RH is exponential, Cl is power-law, and T and RH interact multiplicatively in the exponential term.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:Exponential | Cl:Power | Inter:T*RH"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq23",
+    "is_icorr_model": false,
+    "standardized_formula": "n = A*(B*C1 - G)^2 + D",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes an exponent 'n', which characterizes corrosion product protection, not direct corrosion loss or rate.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq24",
+    "is_icorr_model": false,
+    "standardized_formula": "K = A * t^B * (TOW/C_const)^D * (1 + S/E)^F * (1 + Cl/G)^H * (t + T_0)",
+    "term_analysis": {
+      "Time": "Power-law (t^B * (t+T_0))",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Power (Cl^H)",
+      "Interaction": "T*Cl"
+    },
+    "reason": "This formula predicts a corrosion parameter (K), not direct corrosion loss or rate. TOW is related to temperature and humidity, so its multiplicative interaction with Cl implies a T*Cl interaction.",
+    "signature": "Semi-Empirical | Time:Power-law | T:None | RH:None | Cl:Power | Inter:T*Cl"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq25",
+    "is_icorr_model": false,
+    "standardized_formula": "K = f(T) * f(DO) * f(S_salinity) * f(pH) * f(V)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This combined model calculates a correction factor (K), not direct corrosion loss or rate. Salinity (S_salinity) is not 'Cl' in the context of atmospheric corrosion, and the interaction T*S_salinity is not covered by the specified 'Inter_Op' categories.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq26",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = a * exp(-Ea/(k*T)) * exp(gamma*RH) * exp(eta*S) * exp(lambda*Cl)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "Arrhenius (exp(-Ea/(k*T)))",
+      "RH": "Exponential (exp(A*RH))",
+      "Cl": "None",
+      "Interaction": "T*RH"
+    },
+    "reason": "This generalized Eyring model describes corrosion behavior, interpreted as a rate. All environmental factors are multiplicative exponentials, implying interactions. The Cl dependence is exponential (exp(lambda*Cl)), which is not explicitly covered by the 'Cl_Op' categories.",
+    "signature": "Activation-Controlled | Time:None | T:Arrhenius | RH:Exponential | Cl:None | Inter:T*RH"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq27",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = a * exp(beta*T + gamma*RH + eta*S + lambda*Cl)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "Exponential (exp(A*RH))",
+      "Cl": "None",
+      "Interaction": "T*RH"
+    },
+    "reason": "This generalized log-linear model predicts corrosion behavior, interpreted as a rate. The T dependence is linear in the exponent (exp(beta*T)), which is not explicitly covered by 'Temp_Op' categories. The Cl dependence is exponential (exp(lambda*Cl)), which is not explicitly covered by 'Cl_Op' categories. All factors in the exponent interact multiplicatively when exponentiated.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:Exponential | Cl:None | Inter:T*RH"
+  },
+  {
+    "id": "22_Atmospheric corrosion prediction a review.pdf_Eq28",
+    "is_icorr_model": false,
+    "standardized_formula": "y = beta0 + sum(betai*xi) + sum(sum(betaij*xi*xj)) + sum(betaii*xi^2) + epsilon",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "Generic"
+    },
+    "reason": "This is a general quadratic response surface model, not specific to corrosion rate or its typical influencing factors.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:Generic"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_gain = 2.27 * t + 0.89",
+    "term_analysis": {
+      "Time": "t (Linear)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is an empirical linear fit describing the corrosion weight gain (mass_gain) for carbon steel over time (t, represented by CCT cycles) during the first corrosion stage. Environmental factors like temperature, relative humidity, and chloride concentration are implicit in the experimental conditions but are not explicit variables in the formula.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_gain = 1.54 * t + 25.85",
+    "term_analysis": {
+      "Time": "t (Linear)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is an empirical linear fit describing the corrosion weight gain (mass_gain) for carbon steel over time (t, represented by CCT cycles) during the second corrosion stage. Environmental factors like temperature, relative humidity, and chloride concentration are implicit in the experimental conditions but are not explicit variables in the formula.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_gain = 1.74 * t + 0.88",
+    "term_analysis": {
+      "Time": "t (Linear)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is an empirical linear fit describing the corrosion weight gain (mass_gain) for weathering steel over time (t, represented by CCT cycles) during the first corrosion stage. Environmental factors like temperature, relative humidity, and chloride concentration are implicit in the experimental conditions but are not explicit variables in the formula.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_gain = 0.83 * t + 34.50",
+    "term_analysis": {
+      "Time": "t (Linear)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is an empirical linear fit describing the corrosion weight gain (mass_gain) for weathering steel over time (t, represented by CCT cycles) during the second corrosion stage. Environmental factors like temperature, relative humidity, and chloride concentration are implicit in the experimental conditions but are not explicit variables in the formula.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "3_Evolution of rust layers on carbon steel and weathering steel in high humidity and heat marine atmospheric corrosion.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "R_p = R_r + R_t",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the total polarization resistance (R_p) as the sum of the resistance of the rust layer (R_r) and the charge transfer resistance (R_t). While R_p is inversely proportional to the corrosion rate (i_corr = B/R_p, where B is a constant), this formula itself is a definitional relationship for R_p, not a direct predictive model for i_corr, nor does it explicitly include environmental variables like time, temperature, relative humidity, or chloride concentration.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "46_Structure of the rust layer of weathering steel in A high chloride environment A detailed characterization via HRTEM, STEM-EDS, and FIB-SEM.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "AW = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical formula directly models the cumulative weight gain (AW), a measure of corrosion, as a power function of the CCT number (N), which serves as a proxy for exposure time (t).",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "46_Structure of the rust layer of weathering steel in A high chloride environment A detailed characterization via HRTEM, STEM-EDS, and FIB-SEM.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "log(AW) = log(A) + n * log(t)",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is the logarithmic transformation of the first empirical formula (AW = A * N^n), used for linear regression. The underlying kinetic dependence on time (N) remains a power-law.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "term_analysis": null,
+    "reason": "This formula describes the impedance of a Constant Phase Element (CPE) in Electrochemical Impedance Spectroscopy (EIS), which models non-ideal capacitive behavior. It is a component of an EIS equivalent circuit, not a direct prediction of corrosion rate (e.g., icorr, mass loss, or penetration depth).",
+    "signature": null
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "term_analysis": null,
+    "reason": "This formula quantifies the percentage loss in reduction of area, which is a measure of stress corrosion cracking (SCC) sensitivity, a mechanical property related to cracking. It does not directly predict uniform corrosion rate (e.g., icorr, mass loss, or penetration depth).",
+    "signature": null
+  },
+  {
+    "id": "48_Stress corrosion cracking behavior of rusted X100 steel under the combined action of Cl- and HSO3- in a wet-dry cycle environment.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": null,
+    "term_analysis": null,
+    "reason": "This formula quantifies the percentage loss in elongation, which is a measure of stress corrosion cracking (SCC) sensitivity, a mechanical property related to cracking. It does not directly predict uniform corrosion rate (e.g., icorr, mass loss, or penetration depth).",
+    "signature": null
+  },
+  {
+    "id": "16_Study on corrosion behavior and mechanism of AISI 4135 steel in marine environments based on field exposure experiment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "CR_mm/y = 0.00327 * (a * i_corr) / (n * D)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is a direct conversion of corrosion current density (i_corr) to corrosion rate in millimeters per year, based on Faraday's law. It uses material properties (atomic weight 'a', number of electrons 'n', density 'D') and a unit conversion constant. It does not explicitly include environmental variables like time, temperature, relative humidity, or chloride concentration; these dependencies would be embedded within the i_corr value itself, which is an input to this formula.",
+    "signature": "Activation-Controlled | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the stress concentration factor (K_t) due to a corrosion pit's geometry (depth 'd' and radius 'r'). It describes the mechanical impact of corrosion morphology rather than the kinetics or rate of material degradation.",
+    "signature": ""
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula represents a linear regression of the corrosion fatigue S-N curve, relating the logarithm of fatigue life (logN) to the applied peak stress (σ_max). It quantifies the mechanical degradation under cyclic loading in a corrosive environment, not the rate of material loss due to corrosion.",
+    "signature": ""
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula represents a linear regression of the corrosion fatigue S-N curve for pre-corroded steel, relating the logarithm of fatigue life (logN) to the applied peak stress (σ_max). It quantifies the mechanical degradation under cyclic loading in a corrosive environment, not the rate of material loss due to corrosion.",
+    "signature": ""
+  },
+  {
+    "id": "45_Corrosion characteristics of Q690qE high-strength bridge steel in simulated coastal-industrial environment and its influence on mechanical and corrosi.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula represents a linear regression of the corrosion fatigue S-N curve for pre-corroded steel, relating the logarithm of fatigue life (logN) to the applied peak stress (σ_max). It quantifies the mechanical degradation under cyclic loading in a corrosive environment, not the rate of material loss due to corrosion.",
+    "signature": ""
+  },
+  {
+    "id": "49_Corrosion behaviors and mechanical properties of Q235 steel pipes collapsing due to corrosion after 25-year service in urban industrial atmospheric en.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "Corrosion_Extent_Pm = (m_initial - m_final) / m_initial",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the relative mass loss (or mass loss fraction) based on initial (m_initial) and final (m_final) mass measurements. It is a post-corrosion calculation used to quantify the extent of corrosion observed, rather than a predictive model that incorporates time, temperature, relative humidity, or chloride concentration as independent variables.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "50_Monitoring atmospheric corrosion under multi-droplet conditions by electrical resistance sensor measurement.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "ΔH(t) = h₀ * (1 - (R_ref(t₀)/R_ref(t)) / (R_sens(t₀)/R_sens(t)))",
+    "term_analysis": {
+      "Time": "Implicit (via R_sens(t) and R_ref(t))",
+      "Temp": "Compensated (via R_ref(t) ratio)",
+      "RH": "None (not explicitly present)",
+      "Cl": "None (not explicitly present)",
+      "Interaction": "None (not explicitly present)"
+    },
+    "reason": "This formula calculates the corrosion depth (penetration depth, ΔH(t)) from electrical resistance sensor measurements. It is a measurement interpretation model, not a predictive kinetic model that explicitly relates corrosion to environmental variables (T, RH, Cl). It is designed to compensate for temperature effects using a reference track. The time dependence of corrosion is implicitly captured by the change in sensor resistance over time, but its specific mathematical form is not defined by this equation itself.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "26_New insights into the effect of chloride ions on structure and composition of rust layers.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "CR = (K * Δm) / (S * t)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the average corrosion rate (CR) based on measured mass loss (Δm), exposed surface area (S), and test duration (t). It is a direct calculation from experimental data rather than a predictive model that describes the dependence of corrosion rate on environmental variables like temperature, humidity, or chloride concentration. Therefore, it does not contain explicit terms for T, RH, or Cl as independent variables, nor does it describe a time-dependent evolution of the corrosion rate itself.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "cr = (mass_loss / (S * t * rho)) * C",
+    "term_analysis": {
+      "Time": "t^-1 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the average corrosion rate (cr) from gravimetric mass loss measurements (mass_loss) over exposure time (t) and surface area (S), considering material density (rho) and a conversion constant (C). It is a calculation method from empirical data and does not explicitly model environmental factors like temperature, relative humidity, or chloride concentration.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_loss = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is a general empirical power law model describing corrosion loss (mass_loss) as a function of exposure time (t). It uses constants A and n, which are typically derived from experimental fitting, but does not explicitly include environmental variables.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "27_Research on marine atmospheric corrosion behavior of carbon steel during Western Pacific voyage.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_loss = 10.558 * t^0.6827",
+    "term_analysis": {
+      "Time": "t^0.6827 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is a specific empirical power law model, derived from experimental data (R² = 0.93), predicting mass loss (mass_loss) as a function of exposure time (t) for Q235 carbon steel. It is a fitted instance of the general power model (Eq2) and does not explicitly include environmental variables.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = mass_loss / (area * t)",
+    "term_analysis": {
+      "Time": "t^(-1) (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the average corrosion rate based on measured total mass loss, surface area, and exposure time. It is a fundamental calculation from empirical data.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "D = a * t^b",
+    "term_analysis": {
+      "Time": "t^b (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates total attack (mass loss per unit area), not the corrosion rate. The term 'rcorr' in the original expression represents a constant coefficient 'a'.",
+    "signature": "N/A"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "D = a * t + c",
+    "term_analysis": {
+      "Time": "t (Linear)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates total attack (mass loss per unit area), not the corrosion rate. The variable 'rcorr' is identified as a typo for 't' (exposure time) in the source document.",
+    "signature": "N/A"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = β₀ + β₁*T + β₂*RH + β₃*Cl + β₄*S",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "T (Linear)",
+      "RH": "RH (Linear)",
+      "Cl": "Cl (Linear)",
+      "Interaction": "None"
+    },
+    "reason": "This is a multiple linear regression model directly predicting the corrosion rate based on environmental parameters.",
+    "signature": "Empirical-Fitting | Time:None | T:Linear | RH:Linear | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 2.12 * Cl - 36.8",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "Cl (Linear)",
+      "Interaction": "None"
+    },
+    "reason": "This is a simplified linear regression model predicting the corrosion rate based solely on the chloride deposition rate (Cl).",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Linear | Inter:None"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq6",
+    "is_icorr_model": false,
+    "standardized_formula": "Cl = 345.9 * s^(-0.42)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "s^(-0.42) (Power, where s is distance from shore influencing Cl)",
+      "Interaction": "None"
+    },
+    "reason": "This formula predicts the chloride deposition rate (CDR), not the corrosion rate.",
+    "signature": "N/A"
+  },
+  {
+    "id": "28_Geo-mapping atmospheric corrosion in Mauritius.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 733.3 * s^(-0.42) - 36.8",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "s^(-0.42) (Power, where s is distance from shore influencing Cl)",
+      "Interaction": "None"
+    },
+    "reason": "This formula predicts the corrosion rate by combining the linear regression model for corrosion rate (Eq5) with the power law for chloride deposition rate (Eq6), where 's' is distance from shore.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:Power | Inter:None"
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq19",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 7.7 * (S^0.47 + 0.68 * Cl^0.58) * exp(0.024 * RH + 0.095 * (T - 10) + 0.00035 * P)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(A*T) (Exponential)",
+      "RH": "exp(A*RH) (Exponential)",
+      "Cl": "Cl^n (Power)",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts 'first-year corrosion loss' (K1) for carbon steel, which is a measure of corrosion rate/mass loss. It is a dose-response function incorporating environmental factors.",
+    "signature": "Semi-Empirical | Time:None | T:Exponential | RH:Exponential | Cl:Power | Inter:None"
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq20",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 0.55 * (S^0.36 + 0.64 * Cl^0.27) * exp(0.023 * RH + 0.025 * (T - 10) + 0.00035 * P)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(A*T) (Exponential)",
+      "RH": "exp(A*RH) (Exponential)",
+      "Cl": "Cl^n (Power)",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts 'first-year corrosion loss' (K1) for zinc, which is a measure of corrosion rate/mass loss. It is a dose-response function incorporating environmental factors.",
+    "signature": "Semi-Empirical | Time:None | T:Exponential | RH:Exponential | Cl:Power | Inter:None"
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq21",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 0.50 * (S^0.38 + 0.61 * Cl^0.62) * exp(0.025 * RH + 0.085 * (T - 10) + 0.0003 * P)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(A*T) (Exponential)",
+      "RH": "exp(A*RH) (Exponential)",
+      "Cl": "Cl^n (Power)",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts 'first-year corrosion loss' (K1) for copper, which is a measure of corrosion rate/mass loss. It is a dose-response function incorporating environmental factors.",
+    "signature": "Semi-Empirical | Time:None | T:Exponential | RH:Exponential | Cl:Power | Inter:None"
+  },
+  {
+    "id": "29_A chloride deposition model for predicting the categories of atmospheric corrosivity in coastal areas.pdf_Eq22",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = 0.010 * (S^0.67 + 0.46 * Cl^0.85) * exp(0.039 * RH + 0.032 * (T - 10) - 0.0001 * P)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(A*T) (Exponential)",
+      "RH": "exp(A*RH) (Exponential)",
+      "Cl": "Cl^n (Power)",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly predicts 'first-year corrosion loss' (K1) for aluminum, which is a measure of corrosion rate/mass loss. It is a dose-response function incorporating environmental factors.",
+    "signature": "Semi-Empirical | Time:None | T:Exponential | RH:Exponential | Cl:Power | Inter:None"
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "C = A * t^B",
+    "term_analysis": {
+      "Time": "t^B (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is a general empirical power law model describing corrosion loss (C) as a function of time (t), with A and B being empirical constants that implicitly depend on environmental factors.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "C = 0.28 * t^0.73",
+    "term_analysis": {
+      "Time": "t^0.73 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is a specific empirical power law model for corrosion loss (C) of weathering steel in Port Louis, where the constants are derived from experimental data for that specific high salinity environment. Time (t) is the only explicit variable.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "30_Atmospheric Corrosion of Weathering and Mild Steels in the High Salinity Environment of Mauritius.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "C = 0.11 * t^0.95",
+    "term_analysis": {
+      "Time": "t^0.95 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is a specific empirical power law model for corrosion loss (C) of carbon steel in Port Louis, where the constants are derived from experimental data for that specific high salinity environment. Time (t) is the only explicit variable.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "31_Mechanism of Carbon Steel Corrosion in Accelerated Corrosion Tests.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "CD = S_initial_thickness * ((R_ref_initial / R_sens_initial) - (R_ref_current / R_sens_current))",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates corrosion depth (penetration depth) based on changes in electrical resistance of a sensing element relative to a protected reference. While the underlying corrosion process leading to these resistance changes is inherently dependent on time, temperature, relative humidity, and chloride concentration, these environmental variables are not explicitly present in this formula. Therefore, the formula itself does not directly predict the mathematical form of these dependencies, but rather provides a method to quantify the resulting depth from measured resistance values.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = A * t^B",
+    "term_analysis": {
+      "Time": "t^B (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes the corrosion rate as a power law function of time, with constants A and B empirically fitted to observed data.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq6",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_initial = 0.061 * exp(-0.062 * T)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(-0.062 * T) (None)",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the initial corrosion rate as an empirical exponential function of average seawater temperature. The exponential form exp(A*T) does not fit the specified 'Arrhenius', 'Linear', or 'Power' categories for Temp_Op.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "Corrosion_Loss_Ca = 0.0325 + 0.32 * exp(0.0562 * T)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(0.0562 * T) (None)",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates corrosion loss at a transition phase as an empirical exponential function of average seawater temperature. The exponential form exp(A*T) does not fit the specified 'Arrhenius', 'Linear', or 'Power' categories for Temp_Op.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "Corrosion_Loss_Cs = 0.141 - 0.00133 * T",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "-0.00133 * T (Linear)",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates corrosion loss at the start of Mode 2 as an empirical linear function of average seawater temperature.",
+    "signature": "Empirical-Fitting | Time:None | T:Linear | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq10",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_rb = 0.25 * i_corr_ra",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines a direct proportional relationship between two corrosion rates (rb and ra), likely derived from empirical observations within the bimodal model.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "32_Predicting corrosion for life estimation of ocean and coastal steel infrastructure.pdf_Eq11",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_long_term = 0.039 * exp(0.0254 * T)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(0.0254 * T) (None)",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the long-term corrosion rate as an empirical exponential function of average seawater temperature. The exponential form exp(A*T) does not fit the specified 'Arrhenius', 'Linear', or 'Power' categories for Temp_Op.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_cat = i_0_cat * (1 - i_corr_cat / i_lim) * exp(alpha * eta * F / (R * T))",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(alpha * eta * F / (R * T)) (Arrhenius)",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula describes the cathodic current density, which equals the corrosion current density at the corrosion potential. It shows an Arrhenius dependence on temperature and includes a diffusion-limiting term (i_lim).",
+    "signature": "Diffusion-Limited | Time:None | T:Arrhenius | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_an = i_0_an * (exp(alpha * eta * F / (R * T)) - exp(-alpha * eta * F / (R * T)))",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "exp(alpha * eta * F / (R * T)) (Arrhenius)",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This Butler-Volmer equation describes the anodic current density, which equals the corrosion current density at the corrosion potential. It shows an Arrhenius dependence on temperature, characteristic of activation-controlled processes.",
+    "signature": "Activation-Controlled | Time:None | T:Arrhenius | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_loss = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This power law empirically describes the cumulative corrosion weight loss over time. It does not explicitly include environmental factors like temperature, relative humidity, or chloride concentration.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "33_Corrosion Mechanism and Simulation of Q235 Steel in Typical Marine Atmospheric Environment.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "cr = (mass_initial - mass_final) / (S * rho * t)",
+    "term_analysis": {
+      "Time": "t^-1 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the average corrosion rate (weight loss per unit area per unit time) from experimental measurements. It is a definition of average rate rather than a predictive model incorporating environmental variables.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "mass_loss = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This empirical equation directly describes corrosion mass loss (AW) as a power function of time (N, number of corrosion test cycles). It is a direct prediction of mass loss.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "34_Reveal the corrosion mechanism of Al-containing bainitic rail steel in the simulated marine atmospheric environment.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "log(mass_loss) = log(A) + n * log(t)",
+    "term_analysis": {
+      "Time": "log(t) (Logarithmic)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is the logarithmic transformation of Eq1, which describes corrosion mass loss. While the equation explicitly shows a logarithmic dependence on time, it represents an underlying power-law kinetic relationship for mass loss over time.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "ΔW = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula directly models weight gain (ΔW), a measure of corrosion, as a function of exposure time (N, represented as t) using an empirical power law. The constants A and n are derived from experimental data.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq2",
+    "is_icorr_model": false,
+    "standardized_formula": "Not applicable",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This Mott-Schottky equation describes the semiconductor properties (donor density, flat band potential) of the rust layer, not the overall corrosion rate (mass loss, penetration depth, or current).",
+    "signature": "Not applicable"
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "Not applicable",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This Mott-Schottky equation describes the semiconductor properties (acceptor density, flat band potential) of the rust layer, not the overall corrosion rate (mass loss, penetration depth, or current).",
+    "signature": "Not applicable"
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "Not applicable",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the thickness of the space charge layer, a property of the rust layer's semiconductor behavior, not the overall corrosion rate (mass loss, penetration depth, or current).",
+    "signature": "Not applicable"
+  },
+  {
+    "id": "35_Understanding the Structure and Electrochemical Behavior of the Rust Layer Formed on a High-Strength Low-Alloy Structural Steel under Cyclic Exposure .pdf_Eq5",
+    "is_icorr_model": false,
+    "standardized_formula": "Not applicable",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula provides a simplified relationship for the thickness of the space charge layer, a property of the rust layer's semiconductor behavior, not the overall corrosion rate (mass loss, penetration depth, or current).",
+    "signature": "Not applicable"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "penetration_depth = (10 * mass_loss) / (S * density)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines thickness loss (penetration depth) from measured weight loss, exposed area, and material density. It is a conversion, not a predictive model based on environmental parameters.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_mm_per_year = (8760 * penetration_depth) / t",
+    "term_analysis": {
+      "Time": "Linear",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the corrosion rate in millimeters per year based on thickness loss and exposure time. It is a conversion, not a predictive model based on environmental parameters.",
+    "signature": "Empirical-Fitting | Time:Linear | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq3",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr = G * Vp",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula relates current density to the peak-to-peak SVET voltage signal, serving as a measurement conversion rather than a predictive model for corrosion rate based on environmental factors.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq4",
+    "is_icorr_model": true,
+    "standardized_formula": "penetration_depth = A * t^n",
+    "term_analysis": {
+      "Time": "Power-law",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is a classical empirical model for atmospheric corrosion, predicting thickness loss as a power function of time. The constants A and n implicitly depend on environmental factors but are not explicitly shown.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq5",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_element = i_corr_element_0 * exp((alpha * F * n_element * overpotential_element) / (R * T))",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "Arrhenius",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is a form of the Butler-Volmer equation, describing the current density for the dissolution of a specific metallic element. It explicitly includes temperature in an Arrhenius-like exponential term. Environmental factors like chloride and humidity would implicitly influence the exchange current density (i_corr_element_0) and overpotential (overpotential_element).",
+    "signature": "Activation-Controlled | Time:None | T:Arrhenius | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq6",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_oxygen_reduction = i_corr_oxygen_reduction_0 * exp((-4 * (1-alpha) * F * overpotential_oxygen) / (R * T))",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "Arrhenius",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is a form of the Butler-Volmer equation for the oxygen reduction reaction, a cathodic process in corrosion. It explicitly includes temperature in an Arrhenius-like exponential term. Environmental factors would implicitly influence the exchange current density (i_corr_oxygen_reduction_0) and overpotential (overpotential_oxygen).",
+    "signature": "Activation-Controlled | Time:None | T:Arrhenius | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq7",
+    "is_icorr_model": true,
+    "standardized_formula": "penetration_depth_layers_element = (i_corr_element * 10^5) / (n_element * F)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the equivalent number of atomic layers dissolved for an element over a fixed time duration (10^5 seconds) based on its current density. It's a conversion, not a predictive model based on environmental factors, though the input current density (i_corr_element) would be environmentally dependent.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "L'_E1 = (1 - (1-f_E1)^LE2) / f_E1",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula is part of a geometric series dissolution model, calculating the equivalent number of completely dissolved atomic layers for a single element. It describes a mechanistic aspect of dissolution, where LE2 (total dissolved layers) would be time-dependent, but time is not explicit in this formula.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq10",
+    "is_icorr_model": true,
+    "standardized_formula": "L'_E1_plus_E2 = L'_E1 + (1-f_E1)^(LE2-1) * (1 - (1-f_E1-f_E2)^(LE3-LE2)) / (f_E1+f_E2)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula extends the geometric series dissolution model for a system with two stacked elements, describing the state of dissolved layers. It's a mechanistic description, where LE2 and LE3 (total dissolved layers) would be time-dependent, but time is not explicit in this formula.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq11",
+    "is_icorr_model": true,
+    "standardized_formula": "L'_E1_plus_E2_plus_E3 = L'_E1_plus_E2 + (1-f_E1)^(LE2-1) * (1-f_E1-f_E2)^(LE3-LE2) * (1 - (1-f_E1-f_E2-f_E3)^(LE4-LE3)) / (f_E1+f_E2+f_E3)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula further extends the geometric series dissolution model for a system with three stacked elements, describing the state of dissolved layers. It's a mechanistic description, where LE2, LE3, and LE4 (total dissolved layers) would be time-dependent, but time is not explicit in this formula.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq12",
+    "is_icorr_model": true,
+    "standardized_formula": "L'_E1_plus_..._plus_Ek = L'_E1_plus_..._plus_Ek-1 + (1-f_E1)^(LE2-1) * ... * (1-f_E1-...-f_Ek-1)^(LEk-LEk-1) * (1 - (1-f_E1-...-f_Ek)^(LEk+1-LEk)) / (f_E1+...+f_Ek)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This general formula extends the geometric series dissolution model for multiple stacked elements, describing the state of dissolved layers. It's a mechanistic description, where LEk terms (total dissolved layers) would be time-dependent, but time is not explicit in this formula.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq13",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_E1 = f_E1 * i_E1",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the current density contribution of an alloy element based on its atomic fraction and dissolution current density. The elemental dissolution current density (i_E1) would be environmentally dependent (e.g., via Eq5), but time, temperature, RH, and chloride are not explicit in this formula.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq14",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_E2 = (f_E2 / (1-f_E1)) * (L'_E1 / (L'_E1 - f_E1)) * i_E2",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the current density contribution of alloy element E2, considering the atomic fractions and dissolution current densities of E1 and E2, and the dissolved layers of E1. It's a component of a larger corrosion model, where i_E2 and L'_E1 would be environmentally and time-dependent.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq15",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_E3 = (f_E3 / (1-f_E1-f_E2)) * (L'_E1_plus_E2 - f_E1 - f_E2) * (n_E3/n_E1) * i_E1",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the current density contribution of alloy element E3, considering the dissolution of other elements and their atomic fractions. It's a component of a larger corrosion model, where i_E1 and L'_E1_plus_E2 would be environmentally and time-dependent.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq16",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_Ek = (f_Ek / (1-f_E1-...-f_Ek-1)) * (L'_E1_plus_..._plus_Ek-1 - f_E1 - ... - f_Ek-1) * (n_Ek/n_E1) * i_E1",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This general formula calculates the current density contribution of an alloy element Ek, considering the dissolution of preceding elements and their atomic fractions. It's a component of a larger corrosion model, where i_E1 and L'_E1_plus_..._plus_Ek-1 would be environmentally and time-dependent.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq17",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_E_total = L'_E * i_E",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the total current density of an element when multiple atomic layers are completely dissolved, combining the number of dissolved layers (L'E) with the elemental current density (iE). Both L'E and iE would be environmentally and time-dependent.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "36_Insight into the excellent corrosion resistance of a new type of weathering steel in high chloride environment by dissolution-diffusion-deposition-syn.pdf_Eq18",
+    "is_icorr_model": true,
+    "standardized_formula": "i_corr_E_adjusted = (f_E / f_E1) * i_E1 * (n_E / n_E1) + i'_E",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates an adjusted current density for an element, combining its dissolution with a base element's current density and the total current density from Eq17. It's a component of a larger corrosion model, where i_E1 and i'_E would be environmentally and time-dependent.",
+    "signature": "Semi-Empirical | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "Corrosion_Depth = A * t^n",
+    "term_analysis": {
+      "Time": "t^n (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is a classical power function model for atmospheric corrosion, predicting cumulative corrosion (e.g., mass loss or penetration depth) over time. The constant 'A' (representing C₁) implicitly incorporates environmental factors like T, RH, and Cl, but the formula itself does not explicitly show their functional dependence.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "log(Corrosion_Depth) = log(A) + n * log(t)",
+    "term_analysis": {
+      "Time": "n * log(t) (Logarithmic)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This is the logarithmic transformation of the classical power function model (Eq1), used for linearization and fitting. It predicts cumulative corrosion (e.g., mass loss or penetration depth) over time, with the constant 'A' (representing C₁) implicitly incorporating environmental factors. Although the expression uses log(t), the underlying physical model for Corrosion_Depth is a power-law function of time.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq3",
+    "is_icorr_model": false,
+    "standardized_formula": "None",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the hyperfine magnetic field at a given temperature and is used to estimate average particle size from Mössbauer data. It does not predict corrosion rate or cumulative corrosion.",
+    "signature": "None"
+  },
+  {
+    "id": "37_Atmospheric corrosion of Ni-advanced weathering steels in a marine atmosphere of moderate salinity 10 years of exposure.pdf_Eq4",
+    "is_icorr_model": false,
+    "standardized_formula": "None",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula quantifies the nanosized (superparamagnetic) goethite fraction by subtracting Mössbauer spectroscopy data. It does not predict corrosion rate or cumulative corrosion.",
+    "signature": "None"
+  },
+  {
+    "id": "40_Atmospheric corrosion prediction of carbon steel and weathering steel based on big data technology.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "CR = K_unit_conversion * (mass_loss) / (Area * t)",
+    "term_analysis": {
+      "Time": "t^-1 (Power)",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the average corrosion rate (V, standardized as CR) from measured mass loss (Wo-W1, standardized as mass_loss) over an exposure time (T in the original formula, standardized as t) and exposure area (S, standardized as Area). While it defines the target variable for corrosion prediction, it is not a predictive model based on environmental factors like temperature, relative humidity, or chloride concentration. The inverse relationship with time (t^-1) reflects an average rate calculation over a period, rather than a time-dependent corrosion mechanism where the rate itself changes with time as a power law. The constant 8760 is a unit conversion factor.",
+    "signature": "Empirical-Fitting | Time:Power-law | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "41_Effect of Drying on the Corrosion of Carbon Steel, Zinc, Aluminium and AZ31B Magnesium Alloy During Cyclic Accelerated Corrosion Tests.pdf_Eq1",
+    "is_icorr_model": false,
+    "standardized_formula": "R = p * l / (w * t)",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the electrical resistance of a material based on its resistivity and geometric dimensions. It is a fundamental electrical property calculation, not a model for corrosion rate or depth.",
+    "signature": "None"
+  },
+  {
+    "id": "41_Effect of Drying on the Corrosion of Carbon Steel, Zinc, Aluminium and AZ31B Magnesium Alloy During Cyclic Accelerated Corrosion Tests.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "CD = t_init * ( (R_ref,init / R_sens,init) * (R_ref / R_sens) )",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates the corrosion depth (CD) based on the change in electrical resistance of a sensing track relative to a reference track. While it determines corrosion depth, it is a sensor-based measurement technique rather than a predictive model that relates corrosion depth directly to environmental variables (time, temperature, humidity, chloride concentration). The 't_init' refers to initial thickness, not time as an independent variable for corrosion progression. Temperature compensation is implicitly handled by the resistance ratios, but temperature is not an explicit variable in the formula.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq1",
+    "is_icorr_model": true,
+    "standardized_formula": "ΔH(t) = H_0 * (1 - (R_ref(t_0) / R_ref(t)) * (R_sen(t) / R_sen(t_0)))",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula calculates thickness loss based on electrical resistance measurements over time. It is a direct measurement method, not a predictive model based on environmental variables.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq2",
+    "is_icorr_model": true,
+    "standardized_formula": "CR(t) = d(ΔH(t)) / dt",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "None",
+      "RH": "None",
+      "Cl": "None",
+      "Interaction": "None"
+    },
+    "reason": "This formula defines the instantaneous corrosion rate as the derivative of thickness loss with respect to time. It is a definitional equation, not a predictive model based on environmental parameters.",
+    "signature": "Empirical-Fitting | Time:None | T:None | RH:None | Cl:None | Inter:None"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq8",
+    "is_icorr_model": true,
+    "standardized_formula": "TL = a + b * T^2 + c * RH^2 + d * Cl^2 + e * T + f * RH + g * Cl + h * T * RH + i * T * Cl + j * RH * Cl",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "T^2 (Power)",
+      "RH": "RH^2 (Power)",
+      "Cl": "Cl^2 (Power)",
+      "Interaction": "T*Cl"
+    },
+    "reason": "This is a general multiple nonlinear regression model for thickness loss, empirically fitting environmental factors (temperature, relative humidity, and salt concentration) including interaction terms.",
+    "signature": "Empirical-Fitting | Time:None | T:Power | RH:Power | Cl:Power | Inter:T*Cl"
+  },
+  {
+    "id": "42_Atmospheric corrosion of mild steel under thin oil film Emulsification, dispersion, and simulation of saline microdroplets in the oil phase.pdf_Eq9",
+    "is_icorr_model": true,
+    "standardized_formula": "TL = 366937.34 + 0.001 * T^2 - 3.34E-6 * RH^2 - 0.01 * Cl^2 - 14677.52 * T - 4077.08 * RH - 3.32 * Cl + 163.08 * T * RH + 0.05 * T * Cl + 0.04 * RH * Cl",
+    "term_analysis": {
+      "Time": "None",
+      "Temp": "T^2 (Power)",
+      "RH": "RH^2 (Power)",
+      "Cl": "Cl^2 (Power)",
+      "Interaction": "T*Cl"
+    },
+    "reason": "This is a specific empirical multiple nonlinear regression model for thickness loss, with derived coefficients, fitting environmental factors (temperature, relative humidity, and salt concentration) including interaction terms.",
+    "signature": "Empirical-Fitting | Time:None | T:Power | RH:Power | Cl:Power | Inter:T*Cl"
+  }
+]

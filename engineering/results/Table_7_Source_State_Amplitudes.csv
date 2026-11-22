@@ -1,0 +1,3 @@
+Equation,a0,a1,a2,a3,a3_over_a0,unanchored_source_rmse_um
+Five-parameter KGED,7.175907,6.495417,4.849154,4.374162,0.609562,22.8161
+Eight-parameter KGED,7.423217,6.560196,4.769858,4.198068,0.565532,22.9614

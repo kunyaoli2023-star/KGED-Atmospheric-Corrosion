@@ -1,0 +1,1065 @@
+[
+  {
+    "alias": "M01",
+    "module_id": "M_21895f6307781255d4ddec1f",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H1_0::H1_ARRHENIUS_ACTIVATED_1",
+      "hypothesis_id": "H1",
+      "expression": "p0 * (1 - 1 / tau)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "dimensionless activation strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M02",
+    "module_id": "M_de1e1b8821052978aec489a5",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H1_1::H1_LOCAL_LINEAR_2",
+      "hypothesis_id": "H1",
+      "expression": "p0 * (tau - 1)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive temperature slope",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M03",
+    "module_id": "M_8455e977a70e3c61e3efd7d9",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H1_2::H1_NULL_CONTROL_3",
+      "hypothesis_id": "H1",
+      "expression": "0",
+      "parameters": [],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M04",
+    "module_id": "M_79a3a7f28799042950a56557",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H1_3::H1_LOCAL_SATURATION_4",
+      "hypothesis_id": "H1",
+      "expression": "p0 * (1 - exp(-p1 * tau))",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M05",
+    "module_id": "M_94c99e51d278733720d1cae7",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H2_0::prop_H2_01_logarithmic",
+      "hypothesis_id": "H2",
+      "expression": "p0 * log1p(c)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive chloride response strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M06",
+    "module_id": "M_e1ff14efe4e0524d89ba2d16",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H2_1::prop_H2_02_power_law",
+      "hypothesis_id": "H2",
+      "expression": "p0 * c ** p1",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M07",
+    "module_id": "M_4eba75c5d16c6375153059c4",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H2_2::prop_H2_03_saturation",
+      "hypothesis_id": "H2",
+      "expression": "p0 * c / (p1 + c)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "promotion strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation scale",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M08",
+    "module_id": "M_30288b5dd6f10c69a6fadefa",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H2_3::prop_H2_04_peak_bell",
+      "hypothesis_id": "H2",
+      "expression": "log1p(p0 * c * exp(-p1 * c))",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M09",
+    "module_id": "M_b436aa62ca9c4c55ff3772a9",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H2_4::prop_H2_05_null_control",
+      "hypothesis_id": "H2",
+      "expression": "0",
+      "parameters": [],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M10",
+    "module_id": "M_1da87ee52891ea3c7af3651e",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H2_5::prop_H2_06_composite_peak",
+      "hypothesis_id": "H2",
+      "expression": "p0 * c / (p1 + c) - p2 * c ** p3",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation scale",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "promotion strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p3",
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M11",
+    "module_id": "M_251820d7e14a1d1004b8555e",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H3_0::prop_H3_01_bell_peak",
+      "hypothesis_id": "H3",
+      "expression": "log1p(p0 * h * exp(-p1 * h))",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M12",
+    "module_id": "M_e505f3a1334eba1c867b4c89",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H3_1::prop_H3_02_compositional_peak",
+      "hypothesis_id": "H3",
+      "expression": "p0 * h / (p1 + h) + -p2 * h",
+      "parameters": [
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "positive attenuation strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "film response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive film scale",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M13",
+    "module_id": "M_161f87184863a31f2aad50ee",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H3_2::prop_H3_03_saturation_rival",
+      "hypothesis_id": "H3",
+      "expression": "p0 * h / (p1 + h)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "film response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive film scale",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M14",
+    "module_id": "M_c4b70a671789dbc3966ddf22",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H3_3::prop_H3_04_attenuation_rival",
+      "hypothesis_id": "H3",
+      "expression": "-p0 * h",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive attenuation strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M15",
+    "module_id": "M_0cca932592f48e429bb19676",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H3_4::prop_H3_05_null_control",
+      "hypothesis_id": "H3",
+      "expression": "0",
+      "parameters": [],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M16",
+    "module_id": "M_65ba18bc5abdf9c83efde9ff",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H4_0::prop_H4_01_separable_null",
+      "hypothesis_id": "H4",
+      "expression": "0",
+      "parameters": [],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M17",
+    "module_id": "M_1bd2c0ffdd46f18ce97ddf4d",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H4_1::prop_H4_02_salt_film_coupling",
+      "hypothesis_id": "H4",
+      "expression": "p0 * c * h / (1 + p1 * h)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "salt-film coupling strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive film attenuation",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M18",
+    "module_id": "M_634a61a6576543e55e0b689d",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H4_2::prop_H4_03_salt_film_log_coupling",
+      "hypothesis_id": "H4",
+      "expression": "log1p(p0 * c * h)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive salt-film coupling",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M19",
+    "module_id": "M_8ee887bfc946017ec943cbc6",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H4_3::prop_H4_04_thermal_film_coupling",
+      "hypothesis_id": "H4",
+      "expression": "p0 * (tau - 1) * h / (1 + p1 * h)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "thermal-film coupling strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive film attenuation",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M20",
+    "module_id": "M_62d69aaa34312b872a832315",
+    "round": 1,
+    "proposal": {
+      "proposal_id": "initial_0_H4_4::prop_H4_05_additive_couplings",
+      "hypothesis_id": "H4",
+      "expression": "p0 * c * h / (1 + p1 * h) + p2 * (tau - 1) * h / (1 + p3 * h)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "salt-film coupling strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive film attenuation",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "thermal-film coupling strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p3",
+          "domain": "POSITIVE",
+          "meaning": "positive film attenuation",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M21",
+    "module_id": "M_8433a8a7b904d5d53d124936",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H1_0::prop_H1_01_logarithmic",
+      "hypothesis_id": "H1",
+      "expression": "p0 * log(tau)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive temperature elasticity",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M22",
+    "module_id": "M_fe9a92670d7061d9d8acdfd2",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H1_1::prop_H1_02_power_response",
+      "hypothesis_id": "H1",
+      "expression": "p0 * tau ** p1",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M23",
+    "module_id": "M_8a9e89f01450597f0dce71de",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H1_2::prop_H1_03_tanh_saturation",
+      "hypothesis_id": "H1",
+      "expression": "p0 * tanh(p1 * tau)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M24",
+    "module_id": "M_3062450ee29920913d071224",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_0::prop_H2_01_power_bell",
+      "hypothesis_id": "H2",
+      "expression": "log1p(p0 * c ** p1 * exp(-p2 * c))",
+      "parameters": [
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive growth exponent",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M25",
+    "module_id": "M_0887dc0220edeb64f8898943",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_1::prop_H2_02_gaussian_peak",
+      "hypothesis_id": "H2",
+      "expression": "-(c - p0) ** 2 / p1 ** 2",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive width",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive peak coordinate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M26",
+    "module_id": "M_ee13f88f2b99a6d2058a17d3",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_2::prop_H2_03_explicit_competition",
+      "hypothesis_id": "H2",
+      "expression": "p0 * c / (p1 + c) - p2 * c",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation scale",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "promotion strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "attenuation strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M27",
+    "module_id": "M_d6b0d394e4f604e27cec8ac1",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_3::prop_H2_04_exp_saturation",
+      "hypothesis_id": "H2",
+      "expression": "p0 * (1 - exp(-p1 * c))",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M28",
+    "module_id": "M_c7e88390f02b3bd3a25901a3",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_4::prop_H2_05_tanh_saturation",
+      "hypothesis_id": "H2",
+      "expression": "p0 * tanh(p1 * c)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M29",
+    "module_id": "M_411da03641d19c599d9907ae",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_5::prop_H2_06_log_minus_power",
+      "hypothesis_id": "H2",
+      "expression": "p0 * log1p(c) - p1 * c ** p2",
+      "parameters": [
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive chloride response strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M30",
+    "module_id": "M_8088c25d24f28b8d3d3c46d3",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H3_0::d10a350de7b20d5c_H3_0",
+      "hypothesis_id": "H3",
+      "expression": "log1p(p0 * h ** p1 * exp(-p2 * h))",
+      "parameters": [
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive growth exponent",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M31",
+    "module_id": "M_3b37320ee10d70de6aea8aa5",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H3_1::d10a350de7b20d5c_H3_1",
+      "hypothesis_id": "H3",
+      "expression": "-(h - p0) ** 2 / p1 ** 2",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive width",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive peak coordinate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M32",
+    "module_id": "M_48ee3fafcbeaeef3bdc7c62c",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H3_2::d10a350de7b20d5c_H3_2",
+      "hypothesis_id": "H3",
+      "expression": "p0 * (1 - exp(-p1 * h)) + -p2 * h",
+      "parameters": [
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "positive attenuation strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M33",
+    "module_id": "M_1e0715a68adf5b8675ca1c7c",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H3_3::d10a350de7b20d5c_H3_3",
+      "hypothesis_id": "H3",
+      "expression": "p0 * h ** p1",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M34",
+    "module_id": "M_8ff58b34a4130d8e274eea4f",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H3_4::d10a350de7b20d5c_H3_4",
+      "hypothesis_id": "H3",
+      "expression": "p0 * tanh(p1 * h)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M35",
+    "module_id": "M_0b784e416a82f8ab8e374f34",
+    "round": 2,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H3_5::d10a350de7b20d5c_H3_5",
+      "hypothesis_id": "H3",
+      "expression": "log(h) - log(p0 + h ** 2)",
+      "parameters": [
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive squared film scale",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M36",
+    "module_id": "M_fd7c31718e7e7b9da7ff3728",
+    "round": 3,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_2::prop_H2_03_skewed_gaussian",
+      "hypothesis_id": "H2",
+      "expression": "-(c - p0) ** 2 / p1 ** 2 + p2 * log1p(c)",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive width",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "positive chloride response strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive peak coordinate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M37",
+    "module_id": "M_e1d1b43acf0247c9f1b6ba45",
+    "round": 3,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_3::prop_H2_04_composite_saturation",
+      "hypothesis_id": "H2",
+      "expression": "p0 * c / (p1 + c) + p2 * tanh(p3 * c)",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation scale",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "promotion strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p3",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M38",
+    "module_id": "M_6f22bd3e8960856f13aed748",
+    "round": 4,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_0::H2_PROPOSAL_3_1",
+      "hypothesis_id": "H2",
+      "expression": "log1p(p0 * c ** p1 * exp(-p2 * c)) - p3 * c ** p4",
+      "parameters": [
+        {
+          "name": "p4",
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p3",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "positive decay rate",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive growth exponent",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "positive strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M39",
+    "module_id": "M_0ccb9d56379ca29a07cf7654",
+    "round": 4,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_1::H2_PROPOSAL_3_2",
+      "hypothesis_id": "H2",
+      "expression": "p0 * c / (p1 + c) - p2 * c - p3 * c / (p4 + c)",
+      "parameters": [
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "attenuation strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p3",
+          "domain": "POSITIVE",
+          "meaning": "promotion strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p4",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation scale",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "promotion strength",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation scale",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M40",
+    "module_id": "M_6a1e89f1becf824ffc2ccb47",
+    "round": 4,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_2::H2_PROPOSAL_3_3",
+      "hypothesis_id": "H2",
+      "expression": "p0 * c ** p1 - p2 * log1p(c)",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "positive chloride response strength",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  },
+  {
+    "alias": "M41",
+    "module_id": "M_4b671326037b638fcd5ec5ef",
+    "round": 4,
+    "proposal": {
+      "proposal_id": "revised_hypotheses_0_H2_4::H2_PROPOSAL_3_5",
+      "hypothesis_id": "H2",
+      "expression": "p0 * c ** p1 + p2 * tanh(p3 * c)",
+      "parameters": [
+        {
+          "name": "p1",
+          "domain": "POSITIVE",
+          "meaning": "positive power exponent",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p0",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p2",
+          "domain": "POSITIVE",
+          "meaning": "response amplitude",
+          "dimension": "dimensionless"
+        },
+        {
+          "name": "p3",
+          "domain": "POSITIVE",
+          "meaning": "positive saturation rate",
+          "dimension": "dimensionless"
+        }
+      ],
+      "conditions": []
+    }
+  }
+]

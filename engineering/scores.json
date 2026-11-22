@@ -1,0 +1,96 @@
+[
+  {
+    "model": "parsimonious",
+    "case": "linhai",
+    "role": "source_calibration",
+    "increment_r2": 0.8904144925379075,
+    "actual_final_depth_um": 272.147009481601,
+    "predicted_final_depth_um": 230.3445099513131,
+    "endpoint_error_pct": -15.360264149113867,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 22.816095600932975
+  },
+  {
+    "model": "best_accuracy",
+    "case": "linhai",
+    "role": "source_calibration",
+    "increment_r2": 0.8889846749256698,
+    "actual_final_depth_um": 272.147009481601,
+    "predicted_final_depth_um": 229.6684421381543,
+    "endpoint_error_pct": -15.608684227088132,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 22.961350841407103
+  },
+  {
+    "model": "parsimonious",
+    "case": "jinhai",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9526324968559388,
+    "actual_final_depth_um": 223.495030132935,
+    "predicted_final_depth_um": 223.26995714586312,
+    "endpoint_error_pct": -0.10070603670158092,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 14.025964007326408,
+    "evaluation_protocol": "Eq_16_initial_depth_anchored"
+  },
+  {
+    "model": "best_accuracy",
+    "case": "jinhai",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9188672431340952,
+    "actual_final_depth_um": 223.495030132935,
+    "predicted_final_depth_um": 233.3531474570685,
+    "endpoint_error_pct": 4.4108888319663695,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 18.35653008903038,
+    "evaluation_protocol": "Eq_16_initial_depth_anchored"
+  },
+  {
+    "model": "parsimonious",
+    "case": "pool",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9349149355628332,
+    "actual_final_depth_um": 419.623321882245,
+    "predicted_final_depth_um": 417.5729547959579,
+    "endpoint_error_pct": -0.48862086051129583,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 32.38399859283927,
+    "evaluation_protocol": "Eq_16_initial_depth_anchored"
+  },
+  {
+    "model": "best_accuracy",
+    "case": "pool",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9350439472322054,
+    "actual_final_depth_um": 419.623321882245,
+    "predicted_final_depth_um": 498.04092206327505,
+    "endpoint_error_pct": 18.68761722520171,
+    "increment_scored_points": 8,
+    "depth_rmse_um": 32.35188687737841,
+    "evaluation_protocol": "Eq_16_initial_depth_anchored"
+  },
+  {
+    "model": "parsimonious",
+    "case": "ksc",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9629054573164086,
+    "actual_final_depth_um": 103.18471337579618,
+    "predicted_final_depth_um": 99.79908913397026,
+    "endpoint_error_pct": -3.2811296664609255,
+    "increment_scored_points": 9,
+    "depth_rmse_um": 4.9585175025064165,
+    "evaluation_protocol": "Eq_16_initial_depth_anchored"
+  },
+  {
+    "model": "best_accuracy",
+    "case": "ksc",
+    "role": "retrospective_target_prediction",
+    "increment_r2": 0.9641560289256906,
+    "actual_final_depth_um": 103.18471337579618,
+    "predicted_final_depth_um": 105.578844455589,
+    "endpoint_error_pct": 2.3202381452313214,
+    "increment_scored_points": 9,
+    "depth_rmse_um": 4.8742174368752185,
+    "evaluation_protocol": "Eq_16_initial_depth_anchored"
+  }
+]

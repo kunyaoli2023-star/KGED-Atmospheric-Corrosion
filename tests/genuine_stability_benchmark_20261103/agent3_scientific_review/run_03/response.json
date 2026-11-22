@@ -1,0 +1,134 @@
+{
+  "verdicts": [
+    {
+      "proposal_id": "initial_0_H1_0::H1_ARRHENIUS_ACTIVATED_1",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The proposal correctly identifies that the Arrhenius-like form is analogous to the temperature acceleration factor in the review source A22_EQ4. The source provides a general principle, not a specific law for the target experiment's corrosion current.",
+      "process_to_math_judgment": "The Arrhenius form is a standard and appropriate phenomenological closure for a thermally activated process as described in H1.",
+      "critical_issues": [],
+      "caveats": [
+        "The applicability of the general Arrhenius form from a review paper to the specific experimental system is a modeling assumption.",
+        "No experimental data is provided to directly validate this temperature dependence for E690 steel under a thin electrolyte film."
+      ]
+    },
+    {
+      "proposal_id": "initial_0_H1_1::H1_LOCAL_LINEAR_2",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "No source is cited, which is acceptable for a simple phenomenological rival model.",
+      "process_to_math_judgment": "A linear model is a valid and standard choice for a simple baseline or rival hypothesis, representing a local Taylor approximation of the temperature response.",
+      "critical_issues": [],
+      "caveats": [
+        "This is a purely phenomenological model and is not expected to be physically valid over a wide temperature range, but serves as a useful null hypothesis against more complex forms."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H2_0::prop_H2_01_power_bell",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The use of a power law for the promotion term is reasonably inspired by the form in A22_EQ6, although the source discusses atmospheric deposition, not concentration in a liquid film. The overall bell shape is a phenomenological closure, not derived from a single source.",
+      "process_to_math_judgment": "The combination of a power-law promotion and exponential attenuation within a log1p framework is a flexible and mathematically sound method for modeling a peak response that is zero at zero concentration.",
+      "critical_issues": [],
+      "caveats": [
+        "The functional form is a phenomenological closure, not derived from first principles.",
+        "The numerical checks indicate a potential derivative singularity, which may affect model fitting and interpretation."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H2_1::prop_H2_02_gaussian_peak",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "No source is cited, which is acceptable for a phenomenological rival model.",
+      "process_to_math_judgment": "A Gaussian function (parabolic in log-space) is a standard and valid way to model a symmetric peak, providing a clear contrast to asymmetric models.",
+      "critical_issues": [],
+      "caveats": [
+        "This is a purely phenomenological closure; there is no evidence provided to suggest the peak in concentration response should be symmetric."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H2_2::prop_H2_03_explicit_competition",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "No source is cited, which is acceptable for a model built from phenomenological components.",
+      "process_to_math_judgment": "The model correctly implements a peak by subtracting an attenuating term from a saturating promotion term. This is a valid construction for representing competing processes.",
+      "critical_issues": [],
+      "caveats": [
+        "The specific functional forms for promotion (saturating) and attenuation (linear) are modeling assumptions.",
+        "The model's trend is unconstrained; depending on parameter values, it may not produce a peak within the domain of interest."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H3_0::d10a350de7b20d5c_H3_0",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The model is consistent with the qualitative evidence. A10_P3 reports a peak corrosion rate at an intermediate thickness, and A33_P4 describes oxygen transport limitation, which supports the attenuation at higher thicknesses. The model implements this general process.",
+      "process_to_math_judgment": "The power-law bell shape is a flexible and mathematically sound phenomenological closure for a peak response, analogous to its use for H2.",
+      "critical_issues": [],
+      "caveats": [
+        "The specific mathematical form is a phenomenological closure, not derived from the evidence.",
+        "The primary experimental paper (A14) uses only a single film thickness, so no data is available from that source to test this hypothesis."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H3_1::d10a350de7b20d5c_H3_1",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The model is consistent with the qualitative evidence for a peak (A10_P3, A33_P4) but makes the additional assumption of symmetry, which is not specified in the sources.",
+      "process_to_math_judgment": "A Gaussian function is a valid phenomenological choice for modeling a symmetric peak, serving as a good rival to asymmetric models.",
+      "critical_issues": [],
+      "caveats": [
+        "The assumption of a symmetric peak is not directly supported by evidence.",
+        "The primary experimental paper (A14) uses only a single film thickness, providing no data to test this hypothesis."
+      ]
+    },
+    {
+      "proposal_id": "revised_hypotheses_0_H3_2::d10a350de7b20d5c_H3_2",
+      "verdict": "ELIGIBLE_WITH_CAVEATS",
+      "source_fidelity": "The model correctly embodies the concept of competing processes (availability vs. transport limitation) described qualitatively in the sources (A10_P3, A33_P4) by combining monotonic functions.",
+      "process_to_math_judgment": "Constructing a peak by summing two opposing monotonic functions (exponential saturation and linear decay) is a valid and mechanistically intuitive approach.",
+      "critical_issues": [],
+      "caveats": [
+        "The specific functional forms used for the competing processes are modeling assumptions.",
+        "The primary experimental paper (A14) uses only a single film thickness, providing no data to test this hypothesis."
+      ]
+    },
+    {
+      "proposal_id": "blind_nc_01::H1_inverted_thermal_activation",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "The model contradicts the linked source A22_EQ4, which describes an acceleration (increase) of corrosion with temperature.",
+      "process_to_math_judgment": "The mathematical expression `-p0 * (tau - 1)` with `p0>0` is a monotonically decreasing function of temperature `tau`. This directly contradicts the process argument which claims it represents a monotonically increasing trend due to thermal activation.",
+      "critical_issues": [
+        "The mathematical form of the model shows a decreasing trend with temperature, which is the opposite of the stated process argument ('increase monotonically') and the cited evidence for thermal activation."
+      ],
+      "caveats": []
+    },
+    {
+      "proposal_id": "blind_nc_02::H2_cross_axis_film_leakage",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "Not applicable, as the primary issue is a scope violation.",
+      "process_to_math_judgment": "The model expression `p0 * (c - 3.5) + p1 * (h - 1)` is a function of both concentration `c` and film thickness `h`. This violates the scope of hypothesis H2, which asks for the effect of `c` at a fixed `h`.",
+      "critical_issues": [
+        "The proposal is for hypothesis H2 (effect of `c`), but the mathematical expression includes the variable `h`, violating the ceteris paribus condition of the scientific question."
+      ],
+      "caveats": []
+    },
+    {
+      "proposal_id": "blind_nc_03::H3_monotone_sum_claimed_as_peak",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "The model contradicts the qualitative behavior of a peak suggested by sources A10_P3 and A33_P4.",
+      "process_to_math_judgment": "The mathematical expression is the sum of two monotonically increasing functions (`p0*h/(p1+h)` and `p2*h`). The result is necessarily a monotonically increasing function. This cannot represent the claimed 'interior thin-film corrosion peak' or a decrease at large `h`.",
+      "critical_issues": [
+        "The process argument claims the model implements an 'interior...peak', but the mathematical expression is a sum of increasing functions and is therefore strictly increasing. The mathematics do not match the claimed physical behavior."
+      ],
+      "caveats": []
+    },
+    {
+      "proposal_id": "blind_nc_04::H2_false_source_equation_claim",
+      "verdict": "QUARANTINE",
+      "source_fidelity": "The proposal falsely claims to be a direct copy of an equation from source A14_P2_FIXED_FILM. The source describes an experiment at a single, fixed film thickness and presents no such analytical equation for a corrosion peak.",
+      "process_to_math_judgment": "While the mathematical form itself is a valid phenomenological closure for a peak, its justification is based on a false claim about its origin.",
+      "critical_issues": [
+        "The source link to A14_P2_FIXED_FILM makes a false claim of fidelity, stating it 'Directly copies the exact analytical chloride salting-out peak equation derived in A14_P2_FIXED_FILM.' The cited source contains no such equation."
+      ],
+      "caveats": []
+    }
+  ],
+  "missing_distinct_alternatives": [
+    "H4"
+  ],
+  "scope_assessment": "The proposals cover hypotheses H1, H2, and H3 with a reasonable set of rival functional forms, including mechanistic-inspired compositions and purely phenomenological shapes (e.g., symmetric vs. asymmetric peaks). However, no proposals were submitted for H4, which addresses the interaction between environmental variables (T, C) and the film thickness (h) response. This represents a significant gap, as it leaves the question of coupling between variables entirely unexplored."
+}

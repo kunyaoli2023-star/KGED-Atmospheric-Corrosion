@@ -1,0 +1,20 @@
+*.py[cod]
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+engineering/results_reproduced/
+
+# Secret / API credential files (never commit)
+source.json
+**/source.json
+.env
+.env.*
+*.key
+*.pem
+*credentials*.json
+*secret*.json

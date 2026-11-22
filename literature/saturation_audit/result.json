@@ -1,0 +1,14 @@
+{
+  "schema": "kged_corrosion_model_category_saturation_v1",
+  "paper_count": 50,
+  "formula_count": 302,
+  "quantitative_corrosion_equation_count": 122,
+  "category_saturation": {
+    "observed_unique_categories": 9,
+    "actual_order_last_novel_paper": 33,
+    "new_categories_last_10_papers": 0,
+    "saturation_paper_count": 42,
+    "passes_saturation_rule": true
+  },
+  "claim_boundary": "Saturation of the 9 canonical corrosion-model categories across the 50-paper literature corpus (Supplementary Section M1.1.2 & Fig. S1)."
+}

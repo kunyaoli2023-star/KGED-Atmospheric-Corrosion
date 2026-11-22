@@ -1,0 +1,475 @@
+{
+  "type": "object",
+  "properties": {
+    "overall_interpretation": {
+      "type": "string"
+    },
+    "axis_diagnoses": {
+      "type": "object",
+      "properties": {
+        "AXIS_shape_group": {
+          "type": "string"
+        },
+        "AXIS_T_C": {
+          "type": "string"
+        },
+        "AXIS_h_um": {
+          "type": "string"
+        },
+        "AXIS_C_wt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "AXIS_shape_group",
+        "AXIS_T_C",
+        "AXIS_h_um",
+        "AXIS_C_wt"
+      ],
+      "additionalProperties": false
+    },
+    "frontier_comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string"
+          },
+          "interpretation": {
+            "type": "string"
+          },
+          "equation_keys": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "8ac350c64d789ea9f9c706119927a14969a6269c2732973e0162051d97b613d7",
+                "bc68cfac28cc865f943b6de19ce7f19b4265c6c1a98f2323d79f7848d87f458b",
+                "56eefb93004933fbfc83aa42f667f72f15bfca670e4c5f647fc466826c3e57cc",
+                "b291da3286c337518e1641e7ae0760d8ae525e533831fceea05d4f6922393dde",
+                "e69cbeef468438684a1ad571877f23525c684bb5772166f18737a621f21de28a",
+                "b399e9bbf3531a39ebb621a74117ad5d55e35773aeeb99328ea15d2a2e0c66ee",
+                "5adb13b0cc427a76efd646949986d99bb41a72e7efd30a1a4705300a9aa74380",
+                "b741696eaf66b37920ebf8c5d2f8ba9e1c8baeebe8601867f467d96033c1a0a4",
+                "6bc8ee87ee5f986ff009057c89aac5aa3b9ebeca1d773a42cadc79a679d4990c",
+                "29527fe489cb3c4c12929962773944dbacd6d316560e4fa2867ec1670847af93",
+                "ca972ec00f02eeedec6f0db937297a3c072679dccbfc160e761e0ac83afed506",
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+              ]
+            },
+            "minItems": 1
+          },
+          "limits": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": [
+                "SPACE",
+                "SELECTION",
+                "STRUCTURE_COMPARISONS",
+                "COMPLETED_COMPARISONS",
+                "DATA_COVERAGE",
+                "AXIS_shape_group",
+                "AXIS_T_C",
+                "AXIS_h_um",
+                "AXIS_C_wt",
+                "H4_COVERAGE",
+                "TESTED_MODULES",
+                "FIT_0",
+                "RESIDUAL_0",
+                "MATH_0_0",
+                "MATH_0_1",
+                "MATH_0_2",
+                "FIT_1",
+                "RESIDUAL_1",
+                "MATH_1_0",
+                "MATH_1_1",
+                "MATH_1_2",
+                "FIT_2",
+                "RESIDUAL_2",
+                "MATH_2_0",
+                "MATH_2_1",
+                "MATH_2_2",
+                "FIT_3",
+                "RESIDUAL_3",
+                "MATH_3_0",
+                "MATH_3_1",
+                "MATH_3_2",
+                "FIT_4",
+                "RESIDUAL_4",
+                "MATH_4_0",
+                "MATH_4_1",
+                "FIT_5",
+                "RESIDUAL_5",
+                "MATH_5_0",
+                "MATH_5_1",
+                "FIT_6",
+                "RESIDUAL_6",
+                "MATH_6_0",
+                "FIT_7",
+                "RESIDUAL_7",
+                "MATH_7_0",
+                "MATH_7_1",
+                "FIT_8",
+                "RESIDUAL_8",
+                "MATH_8_0",
+                "MATH_8_1",
+                "FIT_9",
+                "RESIDUAL_9",
+                "MATH_9_0",
+                "FIT_10",
+                "RESIDUAL_10",
+                "MATH_10_0",
+                "FIT_11",
+                "RESIDUAL_11"
+              ]
+            }
+          },
+          "claim_status": {
+            "type": "string",
+            "enum": [
+              "NUMERICAL_COMPARISON",
+              "CONDITIONAL_INTERPRETATION"
+            ]
+          },
+          "observation": {
+            "type": "string"
+          },
+          "alternative_explanation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "topic",
+          "interpretation",
+          "equation_keys",
+          "limits",
+          "evidence_ids",
+          "claim_status",
+          "observation",
+          "alternative_explanation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "common_limitations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string"
+          },
+          "interpretation": {
+            "type": "string"
+          },
+          "equation_keys": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "8ac350c64d789ea9f9c706119927a14969a6269c2732973e0162051d97b613d7",
+                "bc68cfac28cc865f943b6de19ce7f19b4265c6c1a98f2323d79f7848d87f458b",
+                "56eefb93004933fbfc83aa42f667f72f15bfca670e4c5f647fc466826c3e57cc",
+                "b291da3286c337518e1641e7ae0760d8ae525e533831fceea05d4f6922393dde",
+                "e69cbeef468438684a1ad571877f23525c684bb5772166f18737a621f21de28a",
+                "b399e9bbf3531a39ebb621a74117ad5d55e35773aeeb99328ea15d2a2e0c66ee",
+                "5adb13b0cc427a76efd646949986d99bb41a72e7efd30a1a4705300a9aa74380",
+                "b741696eaf66b37920ebf8c5d2f8ba9e1c8baeebe8601867f467d96033c1a0a4",
+                "6bc8ee87ee5f986ff009057c89aac5aa3b9ebeca1d773a42cadc79a679d4990c",
+                "29527fe489cb3c4c12929962773944dbacd6d316560e4fa2867ec1670847af93",
+                "ca972ec00f02eeedec6f0db937297a3c072679dccbfc160e761e0ac83afed506",
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+              ]
+            },
+            "minItems": 1
+          },
+          "limits": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": [
+                "SPACE",
+                "SELECTION",
+                "STRUCTURE_COMPARISONS",
+                "COMPLETED_COMPARISONS",
+                "DATA_COVERAGE",
+                "AXIS_shape_group",
+                "AXIS_T_C",
+                "AXIS_h_um",
+                "AXIS_C_wt",
+                "H4_COVERAGE",
+                "TESTED_MODULES",
+                "FIT_0",
+                "RESIDUAL_0",
+                "MATH_0_0",
+                "MATH_0_1",
+                "MATH_0_2",
+                "FIT_1",
+                "RESIDUAL_1",
+                "MATH_1_0",
+                "MATH_1_1",
+                "MATH_1_2",
+                "FIT_2",
+                "RESIDUAL_2",
+                "MATH_2_0",
+                "MATH_2_1",
+                "MATH_2_2",
+                "FIT_3",
+                "RESIDUAL_3",
+                "MATH_3_0",
+                "MATH_3_1",
+                "MATH_3_2",
+                "FIT_4",
+                "RESIDUAL_4",
+                "MATH_4_0",
+                "MATH_4_1",
+                "FIT_5",
+                "RESIDUAL_5",
+                "MATH_5_0",
+                "MATH_5_1",
+                "FIT_6",
+                "RESIDUAL_6",
+                "MATH_6_0",
+                "FIT_7",
+                "RESIDUAL_7",
+                "MATH_7_0",
+                "MATH_7_1",
+                "FIT_8",
+                "RESIDUAL_8",
+                "MATH_8_0",
+                "MATH_8_1",
+                "FIT_9",
+                "RESIDUAL_9",
+                "MATH_9_0",
+                "FIT_10",
+                "RESIDUAL_10",
+                "MATH_10_0",
+                "FIT_11",
+                "RESIDUAL_11"
+              ]
+            }
+          },
+          "claim_status": {
+            "type": "string",
+            "enum": [
+              "NUMERICAL_COMPARISON",
+              "CONDITIONAL_INTERPRETATION"
+            ]
+          },
+          "observation": {
+            "type": "string"
+          },
+          "alternative_explanation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "topic",
+          "interpretation",
+          "equation_keys",
+          "limits",
+          "evidence_ids",
+          "claim_status",
+          "observation",
+          "alternative_explanation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "next_hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parent_hypothesis_id": {
+            "type": "string",
+            "enum": [
+              "H1",
+              "H2",
+              "H3",
+              "H4"
+            ]
+          },
+          "claim": {
+            "type": "string"
+          },
+          "reason_from_frontier": {
+            "type": "string"
+          },
+          "equation_keys": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "8ac350c64d789ea9f9c706119927a14969a6269c2732973e0162051d97b613d7",
+                "bc68cfac28cc865f943b6de19ce7f19b4265c6c1a98f2323d79f7848d87f458b",
+                "56eefb93004933fbfc83aa42f667f72f15bfca670e4c5f647fc466826c3e57cc",
+                "b291da3286c337518e1641e7ae0760d8ae525e533831fceea05d4f6922393dde",
+                "e69cbeef468438684a1ad571877f23525c684bb5772166f18737a621f21de28a",
+                "b399e9bbf3531a39ebb621a74117ad5d55e35773aeeb99328ea15d2a2e0c66ee",
+                "5adb13b0cc427a76efd646949986d99bb41a72e7efd30a1a4705300a9aa74380",
+                "b741696eaf66b37920ebf8c5d2f8ba9e1c8baeebe8601867f467d96033c1a0a4",
+                "6bc8ee87ee5f986ff009057c89aac5aa3b9ebeca1d773a42cadc79a679d4990c",
+                "29527fe489cb3c4c12929962773944dbacd6d316560e4fa2867ec1670847af93",
+                "ca972ec00f02eeedec6f0db937297a3c072679dccbfc160e761e0ac83afed506",
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+              ]
+            },
+            "minItems": 1
+          },
+          "testable_prediction": {
+            "type": "string"
+          },
+          "falsification": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "COMPARE_EXISTING_FORMS",
+              "AUDIT_ASSEMBLY_RULE",
+              "PROPOSE_NEW_TEMPLATE"
+            ]
+          },
+          "why_existing_space_is_insufficient": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": [
+                "SPACE",
+                "SELECTION",
+                "STRUCTURE_COMPARISONS",
+                "COMPLETED_COMPARISONS",
+                "DATA_COVERAGE",
+                "AXIS_shape_group",
+                "AXIS_T_C",
+                "AXIS_h_um",
+                "AXIS_C_wt",
+                "H4_COVERAGE",
+                "TESTED_MODULES",
+                "FIT_0",
+                "RESIDUAL_0",
+                "MATH_0_0",
+                "MATH_0_1",
+                "MATH_0_2",
+                "FIT_1",
+                "RESIDUAL_1",
+                "MATH_1_0",
+                "MATH_1_1",
+                "MATH_1_2",
+                "FIT_2",
+                "RESIDUAL_2",
+                "MATH_2_0",
+                "MATH_2_1",
+                "MATH_2_2",
+                "FIT_3",
+                "RESIDUAL_3",
+                "MATH_3_0",
+                "MATH_3_1",
+                "MATH_3_2",
+                "FIT_4",
+                "RESIDUAL_4",
+                "MATH_4_0",
+                "MATH_4_1",
+                "FIT_5",
+                "RESIDUAL_5",
+                "MATH_5_0",
+                "MATH_5_1",
+                "FIT_6",
+                "RESIDUAL_6",
+                "MATH_6_0",
+                "FIT_7",
+                "RESIDUAL_7",
+                "MATH_7_0",
+                "MATH_7_1",
+                "FIT_8",
+                "RESIDUAL_8",
+                "MATH_8_0",
+                "MATH_8_1",
+                "FIT_9",
+                "RESIDUAL_9",
+                "MATH_9_0",
+                "FIT_10",
+                "RESIDUAL_10",
+                "MATH_10_0",
+                "FIT_11",
+                "RESIDUAL_11"
+              ]
+            }
+          },
+          "control": {
+            "type": "string"
+          },
+          "challenger": {
+            "type": "string"
+          },
+          "baseline_equation_key": {
+            "type": "string"
+          },
+          "challenger_module_id": {
+            "type": "string"
+          },
+          "target_axis": {
+            "type": "string",
+            "enum": [
+              "shape_group",
+              "T_C",
+              "C_wt",
+              "h_um"
+            ]
+          },
+          "evaluation": {
+            "type": "string",
+            "enum": [
+              "SAME_FOLDS_PARETO_AND_SHAPE_CHECKS"
+            ]
+          }
+        },
+        "required": [
+          "parent_hypothesis_id",
+          "claim",
+          "reason_from_frontier",
+          "equation_keys",
+          "testable_prediction",
+          "falsification",
+          "action",
+          "why_existing_space_is_insufficient",
+          "evidence_ids",
+          "control",
+          "challenger",
+          "baseline_equation_key",
+          "challenger_module_id",
+          "target_axis",
+          "evaluation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "why_not_claim_convergence": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "overall_interpretation",
+    "axis_diagnoses",
+    "frontier_comparisons",
+    "common_limitations",
+    "next_hypotheses",
+    "why_not_claim_convergence"
+  ],
+  "additionalProperties": false
+}

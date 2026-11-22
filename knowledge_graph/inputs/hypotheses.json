@@ -1,0 +1,75 @@
+{
+  "status": "Operational contracts for the four previously agreed scientific questions; not newly discovered hypotheses and not conclusions imposed on the candidates.",
+  "normalization_note": "Keep the four questions, remove any requirement to reproduce a prior equation or six-coefficient baseline. Explicitly identify h as liquid electrolyte thickness, not rust or metal loss. Distinguish H2 plateau from decline and H4 smooth coupling from a required abrupt switch.",
+  "hypotheses": [
+    {
+      "hypothesis_id": "H1",
+      "question": "How does temperature affect corrosion current at fixed NaCl concentration and liquid-film thickness?",
+      "primary_claim": "Activated interfacial kinetics can generate a predominantly increasing temperature response over the measured interval.",
+      "rivals": [
+        "Weak or absent temperature effect",
+        "A limited-temperature local approximation",
+        "A competing temperature-sensitive process can attenuate or reverse the response"
+      ],
+      "variables": [
+        "tau"
+      ],
+      "derivative_axis": "tau",
+      "falsification": "Replicated fixed-c,h measurements show a non-monotone or decreasing trend inconsistent with the admitted parameter conditions.",
+      "evidence_needed": "An activation law or explicit temperature-sensitive process, with the dependent quantity and material differences stated."
+    },
+    {
+      "hypothesis_id": "H2",
+      "question": "Does salt promotion remain monotone, saturate, or compete with an attenuating process?",
+      "primary_claim": "Salt can promote conductivity/depassivation while a competing process reduces the incremental benefit; plateau and actual decline are distinct alternatives.",
+      "rivals": [
+        "Strictly monotone promotion without attenuation",
+        "Only inhibition",
+        "Saturation without a maximum",
+        "Promotion followed by an interior maximum"
+      ],
+      "variables": [
+        "c"
+      ],
+      "derivative_axis": "c",
+      "falsification": "A broad fixed-tau,h concentration sweep fails to show the behavior predicted by a particular candidate.",
+      "evidence_needed": "Separate evidence for salt promotion and for any inhibition/oxygen/activity mechanism; no turning point inferred from the word chloride alone."
+    },
+    {
+      "hypothesis_id": "H3",
+      "question": "How does liquid electrolyte thickness balance electrolyte continuity with transport limitation?",
+      "primary_claim": "Competing thin-film availability and thick-film transport effects can produce an interior maximum; it must compete against monotone alternatives.",
+      "rivals": [
+        "Monotone transport limitation",
+        "Monotone availability-limited increase",
+        "No thickness sensitivity",
+        "An interior minimum requires a separately justified competition"
+      ],
+      "variables": [
+        "h"
+      ],
+      "derivative_axis": "h",
+      "falsification": "A dense fixed-tau,c thickness sweep spanning the predicted extremum is monotone or the extremum is not reproducible.",
+      "evidence_needed": "Liquid-electrolyte-film evidence or an explicitly qualified analogy; rust-film protective growth is not interchangeable with liquid-film thickness."
+    },
+    {
+      "hypothesis_id": "H4",
+      "question": "Does the liquid-film response change with salinity or temperature?",
+      "primary_claim": "Environment can modify transport or availability scales, changing film-response amplitude, characteristic thickness or peak location; neither a particular length law nor abrupt switching is imposed.",
+      "rivals": [
+        "Environment-invariant thickness response",
+        "Amplitude coupling without peak movement",
+        "Characteristic-length coupling with peak movement",
+        "A smooth regime crossover"
+      ],
+      "variables": [
+        "tau",
+        "c",
+        "h"
+      ],
+      "derivative_axis": "h",
+      "falsification": "Crossed environment-thickness measurements do not distinguish the coupled candidate from an invariant control.",
+      "evidence_needed": "Evidence connecting environment to liquid-film transport/wetting or an explicit proposed analogy; main-effect salt changes alone do not prove film coupling."
+    }
+  ]
+}

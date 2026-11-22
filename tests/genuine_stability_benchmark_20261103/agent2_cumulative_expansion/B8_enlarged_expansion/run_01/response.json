@@ -1,0 +1,164 @@
+{
+  "H1": [
+    {
+      "proposal_id": "R2B8_H1_0",
+      "hypothesis_id": "H1",
+      "family": "H1_NULL_CONTROL",
+      "scientific_argument": "This is a null hypothesis control model, re-proposed to serve as a baseline. It posits that temperature has no statistically significant effect on the corrosion current within the measured experimental range. Per the round's instructions, H1 forms are not a priority, but a baseline is required for model comparison.",
+      "source_links": [],
+      "evidence_gap": "The purpose of this module is not to be supported by evidence, but to serve as a statistical benchmark against which other models are tested.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A constant (zero) response to temperature, contrasted with any model that includes a temperature-dependent term. It tests the basic hypothesis that temperature is a relevant variable.",
+      "question_links": [
+        {
+          "hypothesis_id": "H1",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The corrosion current will not show any systematic trend with temperature."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "CONTROL",
+      "template_id": "template:H1:null",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H2": [
+    {
+      "proposal_id": "R2B8_H2_0",
+      "hypothesis_id": "H2",
+      "family": "H2_POWER_BELL",
+      "scientific_argument": "This model addresses the systematic bias observed in the previous round's bell-shaped model for salt concentration. By introducing a power exponent on the growth term (`c**p1`), this `power_bell_log1p` template offers greater flexibility in the shape of the initial rise of the peak. This may better capture the competition between chloride promotion and oxygen-solubility-driven attenuation, which is the core of H2's 'decline' alternative.",
+      "source_links": [],
+      "evidence_gap": "The functional form is a phenomenological closure. While the peak is motivated by competing mechanisms, the specific mathematical form and its parameters are not derived from first principles or specific literature equations.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "This form, `log1p(p0*c**p1*exp(-p2*c))`, is a more flexible bell-shaped curve than the previous `bell_log1p` model. The additional exponent `p1` allows the initial rising slope to be non-linear (concave or convex), potentially correcting the systematic residuals seen in the previous round.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will exhibit a peak with respect to salt concentration, with a shape that is more flexible than a simple exponential rise and decay."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:power_bell_log1p",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "R2B8_H2_1",
+      "hypothesis_id": "H2",
+      "family": "H2_GAUSSIAN_PEAK",
+      "scientific_argument": "This model proposes an alternative functional form for the peak response to salinity. A Gaussian (quadratic in log-space) peak is symmetric around its maximum. This provides a distinct alternative to the asymmetric `bell_log1p` family of models. Testing a symmetric peak helps determine if the observed asymmetry in the data is a robust feature or an artifact of the previous model's functional form.",
+      "source_links": [],
+      "evidence_gap": "This is a phenomenological closure. There is no specific physical theory provided that predicts a perfectly symmetric Gaussian peak for corrosion rate vs. salinity.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A symmetric peak shape, `-(c-p0)**2/p1**2`, where the rate of increase towards the peak mirrors the rate of decrease after the peak. This contrasts with the asymmetric shapes of the `bell_log1p` and `power_bell_log1p` templates.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will exhibit a symmetric, bell-shaped peak with respect to salt concentration."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:gaussian_log_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "R2B8_H2_2",
+      "hypothesis_id": "H2",
+      "family": "H2_COMPETITION_SAT_LIN",
+      "scientific_argument": "This model explicitly constructs the competing process of H2 by subtracting a linear attenuating term from a saturating promotion term. The saturation term (`p0*c/(p1+c)`) represents a promotional effect (e.g., increased conductivity) reaching a limit. The subtracted linear term (`-p2*c`) represents an attenuating process that increases with concentration (e.g., decreasing oxygen solubility). This form is more directly interpretable than the `bell_log1p` family.",
+      "source_links": [],
+      "evidence_gap": "The linear form of the attenuation term is a simplification. The actual dependence of oxygen solubility on salinity is not perfectly linear over a wide range.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "This is an explicit difference of two simple functions (saturating promotion, linear attenuation). Unlike the `bell_log1p` family, the promotion and attenuation effects are represented by separate, additive terms in log-space, which may offer different fitting dynamics and interpretability.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a peak resulting from the competition between a saturating promotion and a linear attenuation."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:competition",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "R2B8_H2_3",
+      "hypothesis_id": "H2",
+      "family": "H2_COMPOSITE_PEAK_FLEXIBLE",
+      "scientific_argument": "This proposal explicitly follows the instruction to re-test a flexible competition model. It constructs the peak by taking the difference between a saturating promotion term (`template:H2:saturation`) and a power-law attenuation term (`template:H2:power_response`). This allows the attenuation to be non-linear, which is more physically plausible than a simple linear decay, and directly addresses the need for a more flexible competition form to resolve the systematic bias.",
+      "source_links": [],
+      "evidence_gap": "This is a phenomenological composition. The specific choice of a saturating function for promotion and a power-law for attenuation is a hypothesis about the functional forms of the competing processes, not a derived law.",
+      "construction_family_id": "construction:DIFFERENCE_LOG_RESPONSES",
+      "mathematical_distinction": "A composite model formed by the difference of two templates, `saturation` and `power_response`. This is more flexible than the single `template:H2:competition` (which assumes linear attenuation) and structurally different from the `bell_log1p` family, representing the competing processes as an explicit subtraction.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "The corrosion current will show a peak resulting from the competition of a saturating promotion and a power-law attenuation, potentially providing a better fit than simpler peak models."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:saturation",
+      "right_template_id": "template:H2:power_response",
+      "operation": "DIFFERENCE_LOG_RESPONSES"
+    }
+  ],
+  "H3": [
+    {
+      "proposal_id": "R2B8_H3_0",
+      "hypothesis_id": "H3",
+      "family": "H3_NULL_CONTROL",
+      "scientific_argument": "This is a null hypothesis control model, re-proposed to serve as a baseline. It posits that liquid film thickness has no statistically significant effect on the corrosion current. Per the round's instructions, the existing H3 peak model is performing well and no new forms are required, but this baseline is necessary for robust model selection.",
+      "source_links": [],
+      "evidence_gap": "The purpose of this module is not to be supported by evidence, but to serve as a statistical benchmark against which other models are tested.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A constant (zero) response to film thickness, contrasted with any model that includes a thickness-dependent term. It tests the basic hypothesis that thickness is a relevant variable.",
+      "question_links": [
+        {
+          "hypothesis_id": "H3",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The corrosion current will not show any systematic trend with film thickness."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "CONTROL",
+      "template_id": "template:H3:null",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "H4": [
+    {
+      "proposal_id": "R2B8_H4_0",
+      "hypothesis_id": "H4",
+      "family": "H4_NULL_CONTROL",
+      "scientific_argument": "This is the null hypothesis for H4, proposing that the effects of environmental conditions (temperature, salinity) and film thickness are independent and additive in the log-current domain (i.e., a separable model). Per the round's instructions, new coupling forms are not recommended until the main effects (H2) are better resolved. This null model serves as the essential baseline to determine if any coupling term is statistically justified in future rounds.",
+      "source_links": [],
+      "evidence_gap": "This module represents the absence of coupling, so it is not supported by evidence for coupling but rather serves as the default model to be disproven by evidence of interaction.",
+      "construction_family_id": "construction:SELECT",
+      "mathematical_distinction": "A separable model (represented by a zero contribution from the H4 term) versus any non-separable model f(tau,c,h). This tests the fundamental premise of H4 that variable interactions are significant.",
+      "question_links": [
+        {
+          "hypothesis_id": "H4",
+          "relation": "RIVAL_CONTROL",
+          "observable_prediction": "The shape of the corrosion current vs. film thickness curve will be the same regardless of temperature or salinity; only the overall level of the curve may shift."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "CONTROL",
+      "template_id": "template:H4:null",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ]
+}

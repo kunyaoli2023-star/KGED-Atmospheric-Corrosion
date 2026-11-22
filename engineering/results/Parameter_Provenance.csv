@@ -1,0 +1,15 @@
+parameter,value,role
+RH0_pct,55.0,Wetting threshold (Eq. 11)
+alpha,0.3,Wetting exponent (Eq. 11)
+J0_mg_m2_day,1500.0,Chloride half-saturation flux (Eq. 11)
+Hmin_um,50.0,Minimum effective film thickness
+Hmax_um,1000.0,Maximum effective film thickness
+T_ref_C,25.0,Field reference temperature for I* and ablations (Eq. 13)
+H_field_ref_um,500.0,Field reference film thickness for I* and ablations (Eq. 13)
+H_field_ref_over_Hmax,0.5,"Mid-range reference film-thickness ratio H_field_ref/H_max in I* = 0.5 * i_corr(T_ref, C_bg, H_field_ref) (Eq. 13)"
+Cbg_wt_pct,0.11392,Background effective NaCl concentration
+Ccap_wt_pct,0.1644,Saturation cap effective NaCl concentration
+tau_u,0.25,Fixed characteristic dose scale
+lambda_a,0.03,Fixed Tikhonov smoothness weight
+s_a,5.0,Amplitude scale in Tikhonov smoothness penalty (SI Section M1.4)
+Gamma_um_cm2_per_A_s,0.368658,Divalent iron Faraday conversion factor (um [A s cm^-2]^-1)

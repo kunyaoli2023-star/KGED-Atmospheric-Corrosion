@@ -1,0 +1,140 @@
+{
+  "proposals": [
+    {
+      "proposal_id": "prop_H2_C1_01_competition",
+      "hypothesis_id": "H2",
+      "family": "Saturating Promotion with Linear Attenuation",
+      "scientific_argument": "This model explicitly implements the promotion-attenuation hypothesis. A saturating term `p0*c/(p1+c)` represents a promoting process (e.g., increased conductivity) that has a maximum effect. A subtracted linear term `-p2*c` represents an attenuating process (e.g., reduced oxygen solubility, simplified as linear) that becomes more dominant at high concentrations. The difference can produce a peak, directly testing the `H2_PROMOTION_ATTENUATION` concept.",
+      "source_links": [
+        {
+          "evidence_id": "A22_EQ6",
+          "supports": "The promotion part of the model is conceptually supported by the idea of a chloride acceleration factor.",
+          "source_to_module_mapping": "The saturating term `p0*c/(p1+c)` is a phenomenological closure for promotion, analogous to the general principle in A22_EQ6."
+        }
+      ],
+      "evidence_gap": "No direct evidence for the specific functional forms (saturation for promotion, linear for attenuation) or their combination. The attenuation mechanism and its linear form are a phenomenological closure.",
+      "construction_family_id": "H2_PROMOTION_ATTENUATION",
+      "mathematical_distinction": "A peak model constructed by subtracting a linear attenuation from a saturating promotion. This is distinct from single-expression peak models like `bell_log1p` and allows for a different peak shape and tail behavior at high concentrations.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "Corrosion current will first increase, potentially reach a maximum, and then decrease, approaching a linear decline at high concentrations."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:competition",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "prop_H2_C1_02_gaussian",
+      "hypothesis_id": "H2",
+      "family": "Symmetric Gaussian Peak",
+      "scientific_argument": "This model provides an alternative phenomenological representation of the promotion-attenuation process, resulting in a peak. It assumes the response follows a symmetric Gaussian (bell) curve around an optimal concentration. This tests whether the observed peak is symmetric, contrasting with the potentially asymmetric shapes of other peak models like `bell_log1p`.",
+      "source_links": [],
+      "evidence_gap": "No evidence supports a specifically symmetric, Gaussian shape for the concentration dependence. This is a purely phenomenological rival to test the peak's symmetry.",
+      "construction_family_id": "H2_PROMOTION_ATTENUATION",
+      "mathematical_distinction": "A symmetric peak shape (Gaussian) contrasted with the asymmetric shapes of `bell_log1p` or the `competition` model. It tests the symmetry of the promotion-attenuation effect around the peak.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "Corrosion current will show a symmetric bell-shaped response to concentration, with a single peak."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:gaussian_log_response",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "prop_H2_C1_03_power_bell",
+      "hypothesis_id": "H2",
+      "family": "Power-Law Promotion with Exponential Attenuation",
+      "scientific_argument": "This model is a more flexible version of the already-evaluated `bell_log1p` model. It replaces the linear promotion term (`p0*c`) inside the `log1p` with a power-law term (`p0*c**p1`). This allows the initial promotion phase to be either concave (`p1`<1) or convex (`p1`>1), which is more consistent with the flexibility of the power-law model mentioned in A22_EQ6. It tests whether a non-linear initial promotion provides a better fit before the exponential attenuation takes over.",
+      "source_links": [
+        {
+          "evidence_id": "A22_EQ6",
+          "supports": "Supports using a power-law form for the initial promotion phase of the corrosion response.",
+          "source_to_module_mapping": "The `c**p1` term is directly analogous to the power-law acceleration factor in A22_EQ6."
+        }
+      ],
+      "evidence_gap": "The combination of power-law promotion and exponential attenuation within a `log1p` closure is a phenomenological construct, not directly derived from evidence.",
+      "construction_family_id": "H2_PROMOTION_ATTENUATION",
+      "mathematical_distinction": "A peak model with a power-law initial rise, contrasted with the linear initial rise of `bell_log1p`. This allows for more flexible curvature in the promotion phase.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "Corrosion current will show a peak, with the initial increase following a flexible power-law curve rather than a simple linear trend."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_COMPETING_PEAK",
+      "template_id": "template:H2:power_bell_log1p",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "prop_H2_C1_04_exp_saturation",
+      "hypothesis_id": "H2",
+      "family": "Exponential Saturation",
+      "scientific_argument": "This model tests the 'plateau' alternative of the H2 hypothesis, where the promoting effect of chloride saturates at high concentrations without causing a decline. It provides a different functional form for saturation compared to the already-evaluated Michaelis-Menten form (`template:H2:saturation`). This exponential approach to a limit is common in physical processes and serves as a distinct rival to both peak models and other saturation models.",
+      "source_links": [
+        {
+          "evidence_id": "A11_EQ3",
+          "supports": "Supports the general idea of promotion by chloride.",
+          "source_to_module_mapping": "This model represents a saturating form of the promotion suggested by the positive coefficient on [Cl] in A11_EQ3."
+        }
+      ],
+      "evidence_gap": "No direct evidence for this specific exponential saturation form. The plateau is a phenomenological closure.",
+      "construction_family_id": "H2_PROMOTION_ATTENUATION",
+      "mathematical_distinction": "A monotonic, concave saturation curve (`1-exp(-p1*c)`) that is mathematically distinct from the Michaelis-Menten form (`c/(p1+c)`) and the `tanh` form. It tests the specific shape of the approach to the plateau.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "Corrosion current will increase with concentration and approach a plateau, with the rate of increase slowing exponentially."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_MONOTONE",
+      "template_id": "template:H2:exponential_saturation",
+      "right_template_id": "",
+      "operation": "SELECT"
+    },
+    {
+      "proposal_id": "prop_H2_C1_05_tanh_saturation",
+      "hypothesis_id": "H2",
+      "family": "Hyperbolic Tangent Saturation",
+      "scientific_argument": "This model also tests the 'plateau' alternative of H2. The hyperbolic tangent (`tanh`) function can represent cooperative binding or activation phenomena, where the initial response is slow (convex) before accelerating and then saturating. This provides a sigmoidal (S-shaped) saturation curve, which is mathematically distinct from the purely concave shapes of other saturation models. It tests for a more complex, cooperative promotion mechanism.",
+      "source_links": [
+        {
+          "evidence_id": "A11_EQ3",
+          "supports": "Supports the general idea of promotion by chloride.",
+          "source_to_module_mapping": "This model represents a saturating form of the promotion suggested by the positive coefficient on [Cl] in A11_EQ3."
+        }
+      ],
+      "evidence_gap": "No direct evidence for a cooperative, sigmoidal saturation process. This form is a phenomenological closure to test for such a shape.",
+      "construction_family_id": "H2_PROMOTION_ATTENUATION",
+      "mathematical_distinction": "A sigmoidal (S-shaped) saturation curve, which is distinct from the purely concave shapes of exponential or Michaelis-Menten saturation. It tests for an initial accelerating response.",
+      "question_links": [
+        {
+          "hypothesis_id": "H2",
+          "relation": "IMPLEMENTATION",
+          "observable_prediction": "Corrosion current will show an S-shaped increase with concentration before leveling off at a plateau."
+        }
+      ],
+      "contrast_links": [],
+      "process_id": "process:C_MONOTONE",
+      "template_id": "template:H2:tanh_saturation",
+      "right_template_id": "",
+      "operation": "SELECT"
+    }
+  ],
+  "coverage_not_claimed": [],
+  "why_stop_adding_forms": "The proposals cover all unevaluated templates for H2 in the knowledge graph. This includes multiple distinct forms for both the 'peak' and 'plateau' scenarios of the H2 hypothesis, providing a comprehensive set of new candidates to test against existing models."
+}
